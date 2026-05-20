@@ -144,7 +144,7 @@ This project is deliberately narrow. The following are **out of scope** and will
 - **No cross-reference links to other codes or jurisprudence.** We extract internal Civil Code cross-references via regex (`citation_edges.csv`), but we do not link out to the Revised Statutes, the Code of Civil Procedure, or case law.
 - **No historical versions.** Each scrape captures the code as it appeared on that day. We do not maintain a time-series of amendments — though `acts_citations` does enumerate every amending act, so the amendment history is recoverable from the record.
 - **No semantic enrichment.** No topic tagging, no embeddings, no AI-generated summaries. `chunks.jsonl` is designed to feed those downstream systems; we don't ship them ourselves.
-- **No other codes.** Civil Code only. The Children's Code, Code of Civil Procedure, Code of Criminal Procedure, Code of Evidence, and Revised Statutes are separate corpora and not in scope here.
+- **Other codes not yet shipped.** The current release is Civil Code only. The Louisiana Revised Statutes are planned next, followed by the Children's Code, Code of Civil Procedure, Code of Criminal Procedure, and Code of Evidence. See [ROADMAP.md](ROADMAP.md). Until those land, they remain out of scope for feature requests against the current corpus.
 - **English text only.** The Civil Code is published in English; the historic French text of the 1825/1870 codes is not included.
 
 ## Operational policy
