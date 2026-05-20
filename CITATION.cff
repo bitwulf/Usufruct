@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: "Usufruct: A structured corpus of the Louisiana Civil Code"
+message: "If you use this dataset or the code that produced it, please cite as below."
+type: dataset
+authors:
+  - family-names: "Usufruct contributors"
+    email: "logicalappeals@gmail.com"
+repository-code: "https://github.com/bitwulf/usufruct"
+url: "https://github.com/bitwulf/usufruct"
+license: MIT
+keywords:
+  - "louisiana civil code"
+  - "legal corpus"
+  - "civil law"
+  - "statutory text"
+  - "rag"
+  - "legal nlp"
+abstract: >
+  Usufruct is a structured corpus of every article of the Louisiana Civil
+  Code — the only civil-law (not common-law) code in the United States.
+  Each article is captured as a validated JSON record with status (active,
+  repealed, reserved, or blank), hierarchy path (Book → Title → Chapter →
+  Section → Subsection → §), structured acts citations, and provenance
+  metadata (source URL, SHA-256 hash, scrape timestamp). The corpus
+  includes derived artifacts for downstream use: a nested hierarchical
+  tree, a citation-edges CSV, RAG-ready chunks, and per-article markdown.
+  The pipeline that produces it is reproducible from public sources and
+  ships as MIT-licensed code in the same repository.
+preferred-citation:
+  type: dataset
+  title: "Usufruct: A structured corpus of the Louisiana Civil Code"
+  authors:
+    - family-names: "Usufruct contributors"
+      email: "logicalappeals@gmail.com"
+  year: 2026
+  url: "https://github.com/bitwulf/usufruct"

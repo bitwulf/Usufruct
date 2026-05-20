@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-05-20T15:10:06Z",
+  "totals": {
+    "containers": 410,
+    "articles_in_index": 2512,
+    "articles_emitted": 3623,
+    "by_status": {
+      "active": 2214,
+      "repealed": 572,
+      "blank": 837
+    }
+  },
+  "sources": {
+    "hierarchy": "https://lcco.law.lsu.edu/?uid=1&ver=en",
+    "legis_toc": "https://legis.la.gov/legis/Laws_Toc.aspx?folder=67&level=Parent",
+    "legis_article_template": "https://legis.la.gov/legis/Law.aspx?d={d}"
+  },
+  "completeness": {
+    "by_book": [
+      {
+        "bucket": "Preliminary Title",
+        "active": 15,
+        "repealed": 0,
+        "reserved": 0,
+        "blank": 8,
+        "total": 23
+      },
+      {
+        "bucket": "Book I",
+        "active": 185,
+        "repealed": 51,
+        "reserved": 0,
+        "blank": 194,
+        "total": 430
+      },
+      {
+        "bucket": "Book II",
+        "active": 376,
+        "repealed": 51,
+        "reserved": 0,
+        "blank": 1,
+        "total": 428
+      },
+      {
+        "bucket": "Book III",
+        "active": 1603,
+        "repealed": 464,
+        "reserved": 0,
+        "blank": 633,
+        "total": 2700
+      },
+      {
+        "bucket": "Book IV",
+        "active": 35,
+        "repealed": 6,
+        "reserved": 0,
+        "blank": 1,
+        "total": 42
+      }
+    ],
+    "tree_max_depth": 5,
+    "total_citation_edges": 146,
+    "rag_chunks": 2214,
+    "markdown_files": 3623
+  }
+}

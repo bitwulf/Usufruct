@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Type checkers / linters
+.mypy_cache/
+.ruff_cache/
+
+# IDE / editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Pipeline outputs — large and reproducible; ship via GitHub Releases instead.
+data/raw/
+data/articles/
+data/articles.jsonl
+data/markdown/
+data/chunks.jsonl
+data/citation_edges.csv
+data/tree.json
+snapshots/
+
+# AI-assist files used during development — kept local, not shipped publicly.
+CLAUDE.md
+prompt.md
+.claude/
+
+# Logs and temp files
+*.log
+*.tmp
+*.bak
