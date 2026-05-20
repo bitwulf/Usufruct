@@ -30,6 +30,17 @@ gh release download TAG --repo bitwulf/usufruct --pattern '*.zip'
 
 You do **not** need to run the scraper to use the data. The scraper is included so the corpus is reproducible end-to-end, but most users should just download the latest release.
 
+### Verify a release
+
+Every release ships with a `.sha256` sidecar. To confirm a release is publicly reachable, downloads cleanly, matches its published checksum, and contains the expected artifacts:
+
+```sh
+scripts/verify_release.sh             # verifies the latest release
+scripts/verify_release.sh 2026-05-20  # verifies a specific tag
+```
+
+The script depends only on `bash`, `curl`, `python3`, `shasum`, `unzip`, and `find` — no `gh` required.
+
 ## Sample record
 
 ```json
