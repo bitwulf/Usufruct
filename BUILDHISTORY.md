@@ -183,3 +183,167 @@ README's "Get the data" section already points at this workflow.
   but not blocking for a respectable public launch.
 - A `docs/` folder with deep-dive design notes split out of README — the
   current README is dense but still navigable.
+
+## 2026-05-21 — LRS pipeline scaffolded (Phases 1, 3, 4)
+
+Implementation of `lars-test/LRS_IMPLEMENTATION_PLAN.md`. Goal was to bolt
+the Louisiana Revised Statutes corpus onto the existing repo as a strictly
+additive sub-package — zero behavior change for the CC pipeline.
+
+### Package layout (all new)
+
+```
+src/usufruct/lrs/
+├── corpus.py                  URN form, URL templates, citation form
+├── fetch/                     Thin wrappers around the shared CachedClient
+│   ├── justia_root.py
+│   ├── justia_title.py
+│   └── legis_section.py
+├── parse/
+│   ├── justia_root_parser.py        index.html → 54 Title listings
+│   ├── justia_title_parser.py       title-N.html → (containers, sections)
+│   ├── legis_lrs_toc_parser.py      Law.aspx?d= TOC anchors (Phase 2 helper)
+│   └── legis_section_parser.py      Law.aspx?d=N → ParsedRSSection
+├── pipeline/
+│   ├── paths.py                     LRSPaths (writes under data/rs/)
+│   ├── hierarchy.py                 LRS-specific interval index by (title, sect)
+│   └── orchestrate.py               Phase1/2/3/4 wiring + manifests/snapshot
+└── model/
+    └── schema.py              RSSection, Container, ContainerLevel,
+                               HierarchyNode (LRS-flavored), section_sort_key
+```
+
+`cli.py` gained an additive `rs` subparser group. The existing flat CC
+subcommands keep their exact behavior.
+
+### CC back-compat: contract honored
+
+Per the plan's strict-isolation rule, **no edits** to anything under
+`src/usufruct/{fetch,parse,pipeline,model}/`. The two pre-approved
+genericization exceptions (`pipeline/hierarchy.py`, `pipeline/tree.py`) were
+**not needed**: the LRS data model is different enough (keyed on
+`(title, section)` not just `article_number`, with deeper container chains
+including `subtitle`/`part`/`subpart`/`subgroup`) that a parallel
+implementation in `src/usufruct/lrs/pipeline/` was cleaner than retrofitting
+the CC modules. Convergence can happen later in the planned `Provision`
+refactor.
+
+All 60 CC tests still pass with zero modification.
+
+### Schema decisions
+
+- `RSSection.section_number` is a **string** for parity with CC's
+  `article_number`. `"30.1"` and `"43.1.1"` are single logical sections.
+  `section_sort_key` returns `(int, int, int)` tuples to accommodate the
+  rare third decimal (e.g., 14:43.1.1).
+- `Container` is corpus-specific: includes `parent_chain: List[(level,
+  number)]` because the same chapter/part/subpart numbers repeat across
+  Titles. Disambiguation flows through the chain.
+- `ContainerLevel` is a string enum (vs. CC's `Literal` alias) so the LRS
+  parser can use enum members without fighting the type system. Pydantic
+  config `use_enum_values=True` keeps the JSON shape identical.
+- `HierarchyNode` is **redefined** in the LRS schema. The CC version's
+  `level` field is a `Literal` restricted to CC levels (`preliminary_title`,
+  `book`, `title`, `chapter`, `section`, `subsection`, `paragraph`); LRS
+  levels like `part`/`subpart`/`subgroup`/`subtitle` would fail validation
+  if we tried to reuse it. The shapes are identical; the literal is the
+  only thing that differs. `ActsCitation` *is* reused unchanged from CC.
+
+### Parser findings against the four fixtures
+
+| Fixture | Containers | Sections | Repealed (anchor) | NOTE: |
+| ---- | ---: | ---: | ---: | ---: |
+| `index.html` | 54 (Titles) | — | — | — |
+| `title-1.html` | 3 | 41 | 0 | 0 |
+| `title-14.html` | 70 | 711 | 56 | 6 |
+| `title-47.html` | 235 | 2665 | 408 | 24 |
+
+Title 14's 711 sections and Title 47's 2665 sections match the plan's
+volume table exactly. Title 14's repealed count (56) is higher than the
+plan's "~25" estimate — that estimate appears low; this is the corpus
+truth. Title 47's 408 repealed sections is a large fraction of the Title
+(15%) and worth flagging.
+
+### HTML quirks the parser handles
+
+The Justia per-Title pages use a `<strong class="heading-6 font-w-bold">`
+block whose internal `<p>` tags have inconsistent closing-tag casing
+(`</P>` vs `</p>`) and often end mid-`<p>` (the closing `</strong>` lands
+inside an unclosed `<p>`). BeautifulSoup with `lxml` normalizes most of
+this. The parser walks `<p>` children inside each strong block and:
+
+1. Drops empty `<p>` and the `LOUISIANA REVISED STATUTES` banner.
+2. Pulls out `NOTE:` paragraphs into a side channel (`data/rs/notes.jsonl`).
+3. Classifies each remaining `<p>` by regex against TITLE / SUBTITLE /
+   CHAPTER / PART / SUBPART / numbered-subgroup. Continuation lines
+   (multi-line headings like `SUBPART F. WITHHOLDING INCOME TAX ON WAGES,
+   AND / DECLARATION OF TAX BY INDIVIDUALS`) get concatenated into one
+   heading.
+4. Maintains a per-level context dict. Setting one level resets all deeper
+   levels (the "stateful diff" rule).
+5. Idempotent on exact duplicates: Title 1's two consecutive
+   `CHAPTER 2. MISCELLANEOUS` headers collapse to one container.
+
+The slug-to-section rule (`rs-14-30-1` → `30.1`) is straightforward
+join-the-rest-with-`.`.
+
+### Known limitations
+
+- **Phase 2 (legis section ID discovery)** is partially implemented. The
+  parser for the legis per-Title TOC HTML exists
+  (`parse_legis_title_toc`), but the orchestrator does not yet fetch all
+  55 legis TOC pages — instead, `run_phase2_with_index` accepts a
+  pre-built mapping and emits the join. For real-world use, the next step
+  is wiring `run_phase2_fetch` to walk the legis root TOC for folder IDs
+  and then fetch each Title TOC. This is fine for now because no LRS
+  release is being cut yet; tests pass with a fixture-backed mapping.
+- **`parse_acts_citation_line` skips special-session entries** like
+  `Acts 2002, 1st Ex. Sess., No. 128, §2`. The R.S. 14:30 fixture has one
+  such entry, and the parser returns 28 of 29 acts. CC tests don't hit
+  this pattern so it never surfaced. The fix would extend the regex in
+  `parse/acts_parser.py`, but that's a touch on CC code, which the plan
+  treats as escalation-required. Flagged for follow-up.
+- **Wave 1 / Wave 2 fixtures not yet downloaded.** The plan lists 13
+  pinned regression fixtures; this initial scaffolding only used 4 Justia
+  pages + 1 legis section. Future waves should fetch the remaining
+  fixtures (`rs-1-1.html`, `rs-14-67.html`, `rs-9-2800.html`, etc.) and
+  add their tests.
+- **Phase 4 citation extractor** uses a minimal regex set: `R.S. T:S`
+  (intra-LRS), `Civil Code Article N` (LRS → CC), and `Code of Civil
+  Procedure / Code of Criminal Procedure / Code of Evidence Article N`
+  (LRS → other-corpus stubs with empty `dst_urn`). It validates fine
+  against R.S. 14:30 (one `R.S. 14:107.1(C)(1)` self-edge, two
+  `Code of Criminal Procedure Article 782` CrP edges). The CC pipeline's
+  citation extractor is unchanged.
+
+### Tests
+
+42 new tests across 5 modules:
+
+- `test_lrs_justia_root.py` (4) — root index, 54 Titles, name extraction.
+- `test_lrs_justia_title.py` (15) — Title 1 banner/dup-chapter,
+  Title 14 letter-hyphen subparts + subgroups + NOTE filtering + repealed
+  anchor, Title 47 subtitles + subpart letter gap.
+- `test_lrs_legis_section.py` (9) — `rs-14-30` parse: citation, heading,
+  body, status, acts-raw, entity decoding, shared-CC-parser interop.
+- `test_lrs_orchestrate.py` (7) — Phase 1 hierarchy + section index file
+  output, Phase 3 record assembly, JSONL schema round-trip, repealed and
+  blank synthesis paths, manifest + validation report written.
+- `test_lrs_phase4.py` (7) — tree.json shape, citation edges CSV header
+  + R.S./CrP edges, chunks include only actives, markdown per section,
+  active body vs. repealed stub, manifest completeness block.
+
+`.venv/bin/pytest` → **102 passed** (60 CC + 42 LRS), zero regressions.
+
+### What's not yet there
+
+- Pilot release artifacts for Title 1 (Wave 1) or Title 14 (Wave 2). The
+  scaffolding will produce them; the next step is wiring the Phase 2
+  fetcher and running the pipeline against the real legis.la.gov site at
+  1 req/s. Per the plan, that means ~55 fetches for Phase 2 then 41-711
+  per pilot wave for Phase 3.
+- `verify_release.sh` updates for an LRS variant — defer until first
+  release tag is cut.
+- The cross-corpus integration test (one CC article + one Title 9 LRS
+  section coexisting in one run) — defer to Wave 3 (Title 9) work.
+

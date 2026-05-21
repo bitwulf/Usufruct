@@ -54,3 +54,6 @@ prompt.md
 *.log
 *.tmp
 *.bak
+
+#MISC
+lars-test/
