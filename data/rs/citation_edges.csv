@@ -807,3 +807,1504 @@ urn:us-la:rs:14:403.10,rs,14:403.10,rs,40:1021,urn:us-la:rs:40:1021,R.S. 40:1021
 urn:us-la:rs:14:403.10,rs,14:403.10,rs,40:1021,urn:us-la:rs:40:1021,R.S. 40:1021,1233
 urn:us-la:rs:14:511,rs,14:511,rs,9:3500,urn:us-la:rs:9:3500,R.S. 9:3500,500
 urn:us-la:rs:14:601,rs,14:601,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,3352
+urn:us-la:rs:9:58,rs,9:58,rs,17:1371,urn:us-la:rs:17:1371,R.S. 17:1371,1741
+urn:us-la:rs:9:59,rs,9:59,rs,9:58,urn:us-la:rs:9:58,R.S. 9:58,287
+urn:us-la:rs:9:60,rs,9:60,rs,42:1102,urn:us-la:rs:42:1102,R.S. 42:1102,98
+urn:us-la:rs:9:65,rs,9:65,rs,42:1102,urn:us-la:rs:42:1102,R.S. 42:1102,292
+urn:us-la:rs:9:105,rs,9:105,rs,9:101,urn:us-la:rs:9:101,R.S. 9:101,21
+urn:us-la:rs:9:123,rs,9:123,rs,9:121,urn:us-la:rs:9:121,R.S. 9:121,125
+urn:us-la:rs:9:130,rs,9:130,rs,9:122,urn:us-la:rs:9:122,R.S. 9:122,547
+urn:us-la:rs:9:132,rs,9:132,rs,14:12,urn:us-la:rs:14:12,R.S. 14:12,564
+urn:us-la:rs:9:132,rs,9:132,rs,14:10,urn:us-la:rs:14:10,R.S. 14:10,629
+urn:us-la:rs:9:132,rs,9:132,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,815
+urn:us-la:rs:9:153,rs,9:153,rs,27:602,urn:us-la:rs:27:602,R.S. 27:602,5420
+urn:us-la:rs:9:154,rs,9:154,rs,15:86.1,urn:us-la:rs:15:86.1,R.S. 15:86.1,3673
+urn:us-la:rs:9:154,rs,9:154,rs,18:1505.2,urn:us-la:rs:18:1505.2,R.S. 18:1505.2,6214
+urn:us-la:rs:9:154.1,rs,9:154.1,rs,9:154,urn:us-la:rs:9:154,R.S. 9:154,37
+urn:us-la:rs:9:154.1,rs,9:154.1,rs,9:154,urn:us-la:rs:9:154,R.S. 9:154,230
+urn:us-la:rs:9:157.1,rs,9:157.1,rs,9:154,urn:us-la:rs:9:154,R.S. 9:154,130
+urn:us-la:rs:9:160,rs,9:160,rs,9:159,urn:us-la:rs:9:159,R.S. 9:159,38
+urn:us-la:rs:9:160,rs,9:160,rs,10:8,urn:us-la:rs:10:8,R.S. 10:8,1149
+urn:us-la:rs:9:160,rs,9:160,rs,9:162,urn:us-la:rs:9:162,R.S. 9:162,1468
+urn:us-la:rs:9:162,rs,9:162,rs,9:171,urn:us-la:rs:9:171,R.S. 9:171,1797
+urn:us-la:rs:9:165,rs,9:165,rs,9:164,urn:us-la:rs:9:164,R.S. 9:164,249
+urn:us-la:rs:9:165,rs,9:165,rs,9:165.1,urn:us-la:rs:9:165.1,R.S. 9:165.1,2605
+urn:us-la:rs:9:165.1,rs,9:165.1,rs,39:1367,urn:us-la:rs:39:1367,R.S. 39:1367,6130
+urn:us-la:rs:9:165.1,rs,9:165.1,rs,13:5121,urn:us-la:rs:13:5121,R.S. 13:5121,7552
+urn:us-la:rs:9:165.1,rs,9:165.1,rs,39:1444,urn:us-la:rs:39:1444,R.S. 39:1444,10064
+urn:us-la:rs:9:166,rs,9:166,rs,9:156,urn:us-la:rs:9:156,R.S. 9:156,1309
+urn:us-la:rs:9:166,rs,9:166,rs,9:156,urn:us-la:rs:9:156,R.S. 9:156,1649
+urn:us-la:rs:9:167,rs,9:167,rs,9:168,urn:us-la:rs:9:168,R.S. 9:168,629
+urn:us-la:rs:9:167,rs,9:167,rs,9:163,urn:us-la:rs:9:163,R.S. 9:163,890
+urn:us-la:rs:9:167,rs,9:167,rs,9:163,urn:us-la:rs:9:163,R.S. 9:163,1089
+urn:us-la:rs:9:171,rs,9:171,rs,9:159,urn:us-la:rs:9:159,R.S. 9:159,1232
+urn:us-la:rs:9:172,rs,9:172,rs,9:173,urn:us-la:rs:9:173,R.S. 9:173,2844
+urn:us-la:rs:9:173,rs,9:173,rs,9:159,urn:us-la:rs:9:159,R.S. 9:159,44
+urn:us-la:rs:9:173,rs,9:173,rs,9:159,urn:us-la:rs:9:159,R.S. 9:159,856
+urn:us-la:rs:9:175,rs,9:175,rs,9:172,urn:us-la:rs:9:172,R.S. 9:172,275
+urn:us-la:rs:9:176,rs,9:176,rs,13:4202,urn:us-la:rs:13:4202,R.S. 13:4202,184
+urn:us-la:rs:9:179,rs,9:179,rs,9:171,urn:us-la:rs:9:171,R.S. 9:171,560
+urn:us-la:rs:9:182,rs,9:182,rs,9:161,urn:us-la:rs:9:161,R.S. 9:161,1365
+urn:us-la:rs:9:182,rs,9:182,rs,9:165,urn:us-la:rs:9:165,R.S. 9:165,4297
+urn:us-la:rs:9:203,rs,9:203,rs,9:204,urn:us-la:rs:9:204,R.S. 9:204,1071
+urn:us-la:rs:9:211,rs,9:211,civcode,90,urn:us-la:civcode:art:90,Civil Code Article 90,34
+urn:us-la:rs:9:223,rs,9:223,rs,14:133,urn:us-la:rs:14:133,R.S. 14:133,2002
+urn:us-la:rs:9:223,rs,9:223,rs,14:133,urn:us-la:rs:14:133,R.S. 14:133,2805
+urn:us-la:rs:9:224,rs,9:224,rs,9:223,urn:us-la:rs:9:223,R.S. 9:223,54
+urn:us-la:rs:9:224,rs,9:224,rs,44:1,urn:us-la:rs:44:1,R.S. 44:1,1213
+urn:us-la:rs:9:224,rs,9:224,rs,14:133,urn:us-la:rs:14:133,R.S. 14:133,1742
+urn:us-la:rs:9:224,rs,9:224,rs,9:224,urn:us-la:rs:9:224,R.S. 9:224,1932
+urn:us-la:rs:9:224,rs,9:224,rs,46:236.1.1,urn:us-la:rs:46:236.1.1,R.S. 46:236.1.1,3581
+urn:us-la:rs:9:225,rs,9:225,rs,9:226,urn:us-la:rs:9:226,R.S. 9:226,140
+urn:us-la:rs:9:225,rs,9:225,rs,9:228,urn:us-la:rs:9:228,R.S. 9:228,299
+urn:us-la:rs:9:226,rs,9:226,rs,9:228,urn:us-la:rs:9:228,R.S. 9:228,1415
+urn:us-la:rs:9:227,rs,9:227,rs,9:228,urn:us-la:rs:9:228,R.S. 9:228,506
+urn:us-la:rs:9:228,rs,9:228,rs,9:227,urn:us-la:rs:9:227,R.S. 9:227,235
+urn:us-la:rs:9:228,rs,9:228,rs,9:227,urn:us-la:rs:9:227,R.S. 9:227,1012
+urn:us-la:rs:9:237,rs,9:237,rs,9:307,urn:us-la:rs:9:307,R.S. 9:307,1237
+urn:us-la:rs:9:242,rs,9:242,rs,9:241,urn:us-la:rs:9:241,R.S. 9:241,360
+urn:us-la:rs:9:243,rs,9:243,rs,9:241,urn:us-la:rs:9:241,R.S. 9:241,26
+urn:us-la:rs:9:243,rs,9:243,rs,9:242,urn:us-la:rs:9:242,R.S. 9:242,250
+urn:us-la:rs:9:255,rs,9:255,rs,9:224,urn:us-la:rs:9:224,R.S. 9:224,124
+urn:us-la:rs:9:272,rs,9:272,rs,9:224,urn:us-la:rs:9:224,R.S. 9:224,633
+urn:us-la:rs:9:272,rs,9:272,rs,9:273,urn:us-la:rs:9:273,R.S. 9:273,734
+urn:us-la:rs:9:272,rs,9:272,rs,9:307,urn:us-la:rs:9:307,R.S. 9:307,1083
+urn:us-la:rs:9:272,rs,9:272,civcode,101,urn:us-la:civcode:art:101,Civil Code Article 101,957
+urn:us-la:rs:9:273,rs,9:273,rs,9:272,urn:us-la:rs:9:272,R.S. 9:272,2633
+urn:us-la:rs:9:301,rs,9:301,rs,9:1441,urn:us-la:rs:9:1441,R.S. 9:1441,56
+urn:us-la:rs:9:301,rs,9:301,rs,9:1443,urn:us-la:rs:9:1443,R.S. 9:1443,463
+urn:us-la:rs:9:303,rs,9:303,rs,46:236.11,urn:us-la:rs:46:236.11,R.S. 46:236.11,1398
+urn:us-la:rs:9:303,rs,9:303,rs,46:236.1.1,urn:us-la:rs:46:236.1.1,R.S. 46:236.1.1,1549
+urn:us-la:rs:9:304,rs,9:304,rs,9:307,urn:us-la:rs:9:307,R.S. 9:307,376
+urn:us-la:rs:9:304,rs,9:304,civcode,102,urn:us-la:civcode:art:102,Civil Code Article 102,202
+urn:us-la:rs:9:304,rs,9:304,civcode,103,urn:us-la:civcode:art:103,Civil Code Article 103,267
+urn:us-la:rs:9:304,rs,9:304,civcode,102,urn:us-la:civcode:art:102,Civil Code Article 102,1064
+urn:us-la:rs:9:304,rs,9:304,ccp,3954,,Code of Civil Procedure Article 3954,741
+urn:us-la:rs:9:309,rs,9:309,civcode,2332,urn:us-la:civcode:art:2332,Civil Code Article 2332,1579
+urn:us-la:rs:9:311,rs,9:311,rs,9:315.1,urn:us-la:rs:9:315.1,R.S. 9:315.1,1969
+urn:us-la:rs:9:311,rs,9:311,rs,9:311.1,urn:us-la:rs:9:311.1,R.S. 9:311.1,3273
+urn:us-la:rs:9:311,rs,9:311,rs,9:311.1,urn:us-la:rs:9:311.1,R.S. 9:311.1,3379
+urn:us-la:rs:9:311,rs,9:311,rs,9:311.1,urn:us-la:rs:9:311.1,R.S. 9:311.1,3857
+urn:us-la:rs:9:311,rs,9:311,rs,46:236.1.1,urn:us-la:rs:46:236.1.1,R.S. 46:236.1.1,4313
+urn:us-la:rs:9:311.1,rs,9:311.1,rs,46:236.1.1,urn:us-la:rs:46:236.1.1,R.S. 46:236.1.1,683
+urn:us-la:rs:9:311.1,rs,9:311.1,rs,9:315.22,urn:us-la:rs:9:315.22,R.S. 9:315.22,3410
+urn:us-la:rs:9:313,rs,9:313,rs,44:1,urn:us-la:rs:44:1,R.S. 44:1,272
+urn:us-la:rs:9:313,rs,9:313,rs,46:236.10,urn:us-la:rs:46:236.10,R.S. 46:236.10,1652
+urn:us-la:rs:9:314,rs,9:314,civcode,103,urn:us-la:civcode:art:103,Civil Code Article 103,249
+urn:us-la:rs:9:315,rs,9:315,rs,9:315.19,urn:us-la:rs:9:315.19,R.S. 9:315.19,7162
+urn:us-la:rs:9:315.1,rs,9:315.1,rs,9:315.22,urn:us-la:rs:9:315.22,R.S. 9:315.22,2427
+urn:us-la:rs:9:315.1,rs,9:315.1,rs,9:315.2,urn:us-la:rs:9:315.2,R.S. 9:315.2,3249
+urn:us-la:rs:9:315.2,rs,9:315.2,rs,9:315.11,urn:us-la:rs:9:315.11,R.S. 9:315.11,1466
+urn:us-la:rs:9:315.2,rs,9:315.2,rs,9:315.19,urn:us-la:rs:9:315.19,R.S. 9:315.19,1855
+urn:us-la:rs:9:315.2,rs,9:315.2,rs,9:315.1,urn:us-la:rs:9:315.1,R.S. 9:315.1,2133
+urn:us-la:rs:9:315.4,rs,9:315.4,rs,46:236.1.2,urn:us-la:rs:46:236.1.2,R.S. 46:236.1.2,767
+urn:us-la:rs:9:315.8,rs,9:315.8,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,1144
+urn:us-la:rs:9:315.8,rs,9:315.8,rs,9:315.20,urn:us-la:rs:9:315.20,R.S. 9:315.20,2420
+urn:us-la:rs:9:315.9,rs,9:315.9,rs,9:315,urn:us-la:rs:9:315,R.S. 9:315,1420
+urn:us-la:rs:9:315.9,rs,9:315.9,rs,9:315.20,urn:us-la:rs:9:315.20,R.S. 9:315.20,1794
+urn:us-la:rs:9:315.10,rs,9:315.10,rs,9:315.20,urn:us-la:rs:9:315.20,R.S. 9:315.20,874
+urn:us-la:rs:9:315.11,rs,9:315.11,rs,9:311.1,urn:us-la:rs:9:311.1,R.S. 9:311.1,2358
+urn:us-la:rs:9:315.13,rs,9:315.13,rs,9:315.19,urn:us-la:rs:9:315.19,R.S. 9:315.19,124
+urn:us-la:rs:9:315.13,rs,9:315.13,rs,9:315.11,urn:us-la:rs:9:315.11,R.S. 9:315.11,281
+urn:us-la:rs:9:315.13,rs,9:315.13,rs,9:315.19,urn:us-la:rs:9:315.19,R.S. 9:315.19,468
+urn:us-la:rs:9:315.13,rs,9:315.13,rs,9:315.19,urn:us-la:rs:9:315.19,R.S. 9:315.19,700
+urn:us-la:rs:9:315.13,rs,9:315.13,civcode,141,urn:us-la:civcode:art:141,Civil Code Article 141,918
+urn:us-la:rs:9:315.14,rs,9:315.14,rs,28:451.2,urn:us-la:rs:28:451.2,R.S. 28:451.2,144
+urn:us-la:rs:9:315.14,rs,9:315.14,rs,28:451.2,urn:us-la:rs:28:451.2,R.S. 28:451.2,615
+urn:us-la:rs:9:315.14,rs,9:315.14,rs,9:315.22.1,urn:us-la:rs:9:315.22.1,R.S. 9:315.22.1,819
+urn:us-la:rs:9:315.14,rs,9:315.14,rs,9:315.22.1,urn:us-la:rs:9:315.22.1,R.S. 9:315.22.1,1302
+urn:us-la:rs:9:315.18,rs,9:315.18,rs,9:315.19,urn:us-la:rs:9:315.19,R.S. 9:315.19,44
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.8,urn:us-la:rs:9:315.8,R.S. 9:315.8,94
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.2,urn:us-la:rs:9:315.2,R.S. 9:315.2,671
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.2,urn:us-la:rs:9:315.2,R.S. 9:315.2,938
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.2,urn:us-la:rs:9:315.2,R.S. 9:315.2,1019
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.2,urn:us-la:rs:9:315.2,R.S. 9:315.2,1123
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.3,urn:us-la:rs:9:315.3,R.S. 9:315.3,1166
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.4,urn:us-la:rs:9:315.4,R.S. 9:315.4,1225
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.5,urn:us-la:rs:9:315.5,R.S. 9:315.5,1343
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.6,urn:us-la:rs:9:315.6,R.S. 9:315.6,1435
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.7,urn:us-la:rs:9:315.7,R.S. 9:315.7,1529
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.8,urn:us-la:rs:9:315.8,R.S. 9:315.8,1647
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,2284
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.2,urn:us-la:rs:9:315.2,R.S. 9:315.2,2850
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.2,urn:us-la:rs:9:315.2,R.S. 9:315.2,3116
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.2,urn:us-la:rs:9:315.2,R.S. 9:315.2,3196
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.2,urn:us-la:rs:9:315.2,R.S. 9:315.2,3299
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,3376
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,3500
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,3639
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,3800
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.3,urn:us-la:rs:9:315.3,R.S. 9:315.3,3990
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.4,urn:us-la:rs:9:315.4,R.S. 9:315.4,4048
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.5,urn:us-la:rs:9:315.5,R.S. 9:315.5,4160
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.6,urn:us-la:rs:9:315.6,R.S. 9:315.6,4251
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.7,urn:us-la:rs:9:315.7,R.S. 9:315.7,4344
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,4573
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,4954
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,5065
+urn:us-la:rs:9:315.20,rs,9:315.20,rs,9:315.9,urn:us-la:rs:9:315.9,R.S. 9:315.9,5245
+urn:us-la:rs:9:315.22,rs,9:315.22,rs,28:451.2,urn:us-la:rs:28:451.2,R.S. 28:451.2,1482
+urn:us-la:rs:9:315.22,rs,9:315.22,rs,9:315.22.1,urn:us-la:rs:9:315.22.1,R.S. 9:315.22.1,1869
+urn:us-la:rs:9:315.24,rs,9:315.24,civcode,2036,urn:us-la:civcode:art:2036,Civil Code Article 2036,328
+urn:us-la:rs:9:315.31,rs,9:315.31,ccp,222,,Code of Civil Procedure Article 222,675
+urn:us-la:rs:9:315.31,rs,9:315.31,ccp,224,,Code of Civil Procedure Article 224,820
+urn:us-la:rs:9:315.32,rs,9:315.32,rs,9:311.1,urn:us-la:rs:9:311.1,R.S. 9:311.1,1710
+urn:us-la:rs:9:315.34,rs,9:315.34,rs,9:315.33,urn:us-la:rs:9:315.33,R.S. 9:315.33,1404
+urn:us-la:rs:9:315.44,rs,9:315.44,rs,14:74,urn:us-la:rs:14:74,R.S. 14:74,988
+urn:us-la:rs:9:315.44,rs,9:315.44,rs,9:315.41,urn:us-la:rs:9:315.41,R.S. 9:315.41,1116
+urn:us-la:rs:9:315.45,rs,9:315.45,rs,32:863,urn:us-la:rs:32:863,R.S. 32:863,1773
+urn:us-la:rs:9:315.46,rs,9:315.46,rs,9:315.44,urn:us-la:rs:9:315.44,R.S. 9:315.44,1658
+urn:us-la:rs:9:322,rs,9:322,rs,13:4291,urn:us-la:rs:13:4291,R.S. 13:4291,391
+urn:us-la:rs:9:324,rs,9:324,rs,9:323,urn:us-la:rs:9:323,R.S. 9:323,134
+urn:us-la:rs:9:327,rs,9:327,civcode,112,urn:us-la:civcode:art:112,Civil Code Article 112,49
+urn:us-la:rs:9:331,rs,9:331,ccp,5185,,Code of Civil Procedure Article 5185,3621
+urn:us-la:rs:9:331.1,rs,9:331.1,rs,9:397.2,urn:us-la:rs:9:397.2,R.S. 9:397.2,398
+urn:us-la:rs:9:331.3,rs,9:331.3,rs,9:331,urn:us-la:rs:9:331,R.S. 9:331,209
+urn:us-la:rs:9:331.3,rs,9:331.3,ccp,5185,,Code of Civil Procedure Article 5185,4049
+urn:us-la:rs:9:335,rs,9:335,rs,29:721,urn:us-la:rs:29:721,R.S. 29:721,694
+urn:us-la:rs:9:341,rs,9:341,rs,9:362,urn:us-la:rs:9:362,R.S. 9:362,168
+urn:us-la:rs:9:341,rs,9:341,rs,46:2132,urn:us-la:rs:46:2132,R.S. 46:2132,213
+urn:us-la:rs:9:341,rs,9:341,rs,46:2132,urn:us-la:rs:46:2132,R.S. 46:2132,283
+urn:us-la:rs:9:341,rs,9:341,rs,9:364,urn:us-la:rs:9:364,R.S. 9:364,343
+urn:us-la:rs:9:341,rs,9:341,rs,9:362,urn:us-la:rs:9:362,R.S. 9:362,800
+urn:us-la:rs:9:341,rs,9:341,rs,46:2132,urn:us-la:rs:46:2132,R.S. 46:2132,1995
+urn:us-la:rs:9:341,rs,9:341,rs,14:403,urn:us-la:rs:14:403,R.S. 14:403,2040
+urn:us-la:rs:9:341,rs,9:341,civcode,134,urn:us-la:civcode:art:134,Civil Code Article 134,1438
+urn:us-la:rs:9:344,rs,9:344,civcode,136,urn:us-la:civcode:art:136,Civil Code Article 136,1629
+urn:us-la:rs:9:348,rs,9:348,rs,29:7,urn:us-la:rs:29:7,R.S. 29:7,312
+urn:us-la:rs:9:348,rs,9:348,rs,9:332,urn:us-la:rs:9:332,R.S. 9:332,1789
+urn:us-la:rs:9:355.2,rs,9:355.2,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,1864
+urn:us-la:rs:9:355.2,rs,9:355.2,rs,46:2151,urn:us-la:rs:46:2151,R.S. 46:2151,1920
+urn:us-la:rs:9:355.2,rs,9:355.2,rs,9:372.1,urn:us-la:rs:9:372.1,R.S. 9:372.1,2134
+urn:us-la:rs:9:355.4,rs,9:355.4,rs,9:355.5,urn:us-la:rs:9:355.5,R.S. 9:355.5,200
+urn:us-la:rs:9:355.4,rs,9:355.4,rs,9:355.5,urn:us-la:rs:9:355.5,R.S. 9:355.5,434
+urn:us-la:rs:9:355.5,rs,9:355.5,rs,13:3204,urn:us-la:rs:13:3204,R.S. 13:3204,196
+urn:us-la:rs:9:355.5,rs,9:355.5,rs,9:355.4,urn:us-la:rs:9:355.4,R.S. 9:355.4,278
+urn:us-la:rs:9:355.7,rs,9:355.7,rs,13:3204,urn:us-la:rs:13:3204,R.S. 13:3204,399
+urn:us-la:rs:9:355.7,rs,9:355.7,rs,9:355.4,urn:us-la:rs:9:355.4,R.S. 9:355.4,705
+urn:us-la:rs:9:355.9,rs,9:355.9,rs,9:355.4,urn:us-la:rs:9:355.4,R.S. 9:355.4,32
+urn:us-la:rs:9:355.9,rs,9:355.9,rs,9:355.7,urn:us-la:rs:9:355.7,R.S. 9:355.7,230
+urn:us-la:rs:9:355.9,rs,9:355.9,rs,9:355.7,urn:us-la:rs:9:355.7,R.S. 9:355.7,295
+urn:us-la:rs:9:355.11,rs,9:355.11,rs,9:355.12,urn:us-la:rs:9:355.12,R.S. 9:355.12,343
+urn:us-la:rs:9:355.16,rs,9:355.16,rs,9:355.14,urn:us-la:rs:9:355.14,R.S. 9:355.14,171
+urn:us-la:rs:9:355.17,rs,9:355.17,rs,9:355.2,urn:us-la:rs:9:355.2,R.S. 9:355.2,428
+urn:us-la:rs:9:355.19,rs,9:355.19,ccp,863,,Code of Civil Procedure Article 863,446
+urn:us-la:rs:9:358.3,rs,9:358.3,rs,9:334,urn:us-la:rs:9:334,R.S. 9:334,460
+urn:us-la:rs:9:359.5,rs,9:359.5,rs,9:355.1,urn:us-la:rs:9:355.1,R.S. 9:355.1,227
+urn:us-la:rs:9:359.5,rs,9:359.5,ccp,3945,,Code of Civil Procedure Article 3945,805
+urn:us-la:rs:9:359.6,rs,9:359.6,rs,9:359.5,urn:us-la:rs:9:359.5,R.S. 9:359.5,547
+urn:us-la:rs:9:359.6,rs,9:359.6,civcode,136,urn:us-la:civcode:art:136,Civil Code Article 136,298
+urn:us-la:rs:9:359.10,rs,9:359.10,rs,9:345,urn:us-la:rs:9:345,R.S. 9:345,306
+urn:us-la:rs:9:359.11,rs,9:359.11,rs,13:1814,urn:us-la:rs:13:1814,R.S. 13:1814,351
+urn:us-la:rs:9:359.11,rs,9:359.11,rs,13:1819,urn:us-la:rs:13:1819,R.S. 13:1819,493
+urn:us-la:rs:9:359.13,rs,9:359.13,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,180
+urn:us-la:rs:9:359.13,rs,9:359.13,rs,9:361,urn:us-la:rs:9:361,R.S. 9:361,291
+urn:us-la:rs:9:361,rs,9:361,rs,46:2121,urn:us-la:rs:46:2121,R.S. 46:2121,95
+urn:us-la:rs:9:362,rs,9:362,rs,14:41,urn:us-la:rs:14:41,R.S. 14:41,2557
+urn:us-la:rs:9:364,rs,9:364,rs,9:362,urn:us-la:rs:9:362,R.S. 9:362,114
+urn:us-la:rs:9:364,rs,9:364,rs,46:2132,urn:us-la:rs:46:2132,R.S. 46:2132,159
+urn:us-la:rs:9:364,rs,9:364,rs,46:2132,urn:us-la:rs:46:2132,R.S. 46:2132,271
+urn:us-la:rs:9:364,rs,9:364,rs,14:403,urn:us-la:rs:14:403,R.S. 14:403,316
+urn:us-la:rs:9:364,rs,9:364,rs,9:362,urn:us-la:rs:9:362,R.S. 9:362,971
+urn:us-la:rs:9:364,rs,9:364,rs,40:964,urn:us-la:rs:40:964,R.S. 40:964,1162
+urn:us-la:rs:9:364,rs,9:364,rs,9:341,urn:us-la:rs:9:341,R.S. 9:341,2353
+urn:us-la:rs:9:364,rs,9:364,rs,9:341,urn:us-la:rs:9:341,R.S. 9:341,2595
+urn:us-la:rs:9:364,rs,9:364,civcode,134,urn:us-la:civcode:art:134,Civil Code Article 134,1258
+urn:us-la:rs:9:364,rs,9:364,civcode,133,urn:us-la:civcode:art:133,Civil Code Article 133,2061
+urn:us-la:rs:9:364.1,rs,9:364.1,rs,9:357,urn:us-la:rs:9:357,R.S. 9:357,1695
+urn:us-la:rs:9:366,rs,9:366,rs,9:362,urn:us-la:rs:9:362,R.S. 9:362,152
+urn:us-la:rs:9:366,rs,9:366,rs,46:2136.2,urn:us-la:rs:46:2136.2,R.S. 46:2136.2,285
+urn:us-la:rs:9:366,rs,9:366,rs,46:2136.2,urn:us-la:rs:46:2136.2,R.S. 46:2136.2,647
+urn:us-la:rs:9:366,rs,9:366,rs,46:2136.2,urn:us-la:rs:46:2136.2,R.S. 46:2136.2,958
+urn:us-la:rs:9:368,rs,9:368,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,59
+urn:us-la:rs:9:368,rs,9:368,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,202
+urn:us-la:rs:9:371,rs,9:371,rs,6:285,urn:us-la:rs:6:285,R.S. 6:285,363
+urn:us-la:rs:9:372,rs,9:372,rs,46:2136.2,urn:us-la:rs:46:2136.2,R.S. 46:2136.2,363
+urn:us-la:rs:9:372,rs,9:372,rs,46:2136.2,urn:us-la:rs:46:2136.2,R.S. 46:2136.2,729
+urn:us-la:rs:9:372,rs,9:372,rs,46:2136.2,urn:us-la:rs:46:2136.2,R.S. 46:2136.2,1040
+urn:us-la:rs:9:374,rs,9:374,rs,9:1149.2,urn:us-la:rs:9:1149.2,R.S. 9:1149.2,1110
+urn:us-la:rs:9:374,rs,9:374,rs,9:1149.2,urn:us-la:rs:9:1149.2,R.S. 9:1149.2,2431
+urn:us-la:rs:9:374,rs,9:374,civcode,2369.3,urn:us-la:civcode:art:2369.3,Civil Code Article 2369.3,5424
+urn:us-la:rs:9:375,rs,9:375,rs,9:374,urn:us-la:rs:9:374,R.S. 9:374,570
+urn:us-la:rs:9:377.3,rs,9:377.3,rs,9:377.4,urn:us-la:rs:9:377.4,R.S. 9:377.4,103
+urn:us-la:rs:9:377.6,rs,9:377.6,rs,9:377.7,urn:us-la:rs:9:377.7,R.S. 9:377.7,336
+urn:us-la:rs:9:377.7,rs,9:377.7,rs,46:2132,urn:us-la:rs:46:2132,R.S. 46:2132,217
+urn:us-la:rs:9:377.9,rs,9:377.9,rs,9:377.10,urn:us-la:rs:9:377.10,R.S. 9:377.10,294
+urn:us-la:rs:9:377.9,rs,9:377.9,rs,46:2132,urn:us-la:rs:46:2132,R.S. 46:2132,1037
+urn:us-la:rs:9:377.9,rs,9:377.9,rs,46:2132,urn:us-la:rs:46:2132,R.S. 46:2132,1368
+urn:us-la:rs:9:377.10,rs,9:377.10,rs,9:377.9,urn:us-la:rs:9:377.9,R.S. 9:377.9,27
+urn:us-la:rs:9:377.11,rs,9:377.11,rs,9:377.9,urn:us-la:rs:9:377.9,R.S. 9:377.9,27
+urn:us-la:rs:9:377.14,rs,9:377.14,rs,9:377.9,urn:us-la:rs:9:377.9,R.S. 9:377.9,1456
+urn:us-la:rs:9:377.16,rs,9:377.16,rs,9:377.17,urn:us-la:rs:9:377.17,R.S. 9:377.17,14
+urn:us-la:rs:9:377.17,rs,9:377.17,rs,9:377.16,urn:us-la:rs:9:377.16,R.S. 9:377.16,34
+urn:us-la:rs:9:377.17,rs,9:377.17,rs,9:377.16,urn:us-la:rs:9:377.16,R.S. 9:377.16,457
+urn:us-la:rs:9:377.18,rs,9:377.18,rs,9:377.16,urn:us-la:rs:9:377.16,R.S. 9:377.16,44
+urn:us-la:rs:9:377.18,rs,9:377.18,rs,44:1,urn:us-la:rs:44:1,R.S. 44:1,181
+urn:us-la:rs:9:377.18,rs,9:377.18,rs,9:377.16,urn:us-la:rs:9:377.16,R.S. 9:377.16,728
+urn:us-la:rs:9:377.18,rs,9:377.18,rs,9:377.16,urn:us-la:rs:9:377.16,R.S. 9:377.16,1295
+urn:us-la:rs:9:377.18,rs,9:377.18,rs,9:377.16,urn:us-la:rs:9:377.16,R.S. 9:377.16,2421
+urn:us-la:rs:9:377.19,rs,9:377.19,rs,9:377.4,urn:us-la:rs:9:377.4,R.S. 9:377.4,53
+urn:us-la:rs:9:377.19,rs,9:377.19,rs,9:377.14,urn:us-la:rs:9:377.14,R.S. 9:377.14,103
+urn:us-la:rs:9:377.19,rs,9:377.19,rs,9:377.5,urn:us-la:rs:9:377.5,R.S. 9:377.5,777
+urn:us-la:rs:9:377.19,rs,9:377.19,rs,9:377.16,urn:us-la:rs:9:377.16,R.S. 9:377.16,867
+urn:us-la:rs:9:382,rs,9:382,rs,9:381,urn:us-la:rs:9:381,R.S. 9:381,136
+urn:us-la:rs:9:384,rs,9:384,rs,9:381,urn:us-la:rs:9:381,R.S. 9:381,140
+urn:us-la:rs:9:384,rs,9:384,civcode,2332,urn:us-la:civcode:art:2332,Civil Code Article 2332,810
+urn:us-la:rs:9:395,rs,9:395,rs,46:236.10,urn:us-la:rs:46:236.10,R.S. 46:236.10,1063
+urn:us-la:rs:9:396,rs,9:396,rs,46:236.1.1,urn:us-la:rs:46:236.1.1,R.S. 46:236.1.1,1240
+urn:us-la:rs:9:397.3,rs,9:397.3,rs,13:3201,urn:us-la:rs:13:3201,R.S. 13:3201,2018
+urn:us-la:rs:9:397.3,rs,9:397.3,ccp,1314,,Code of Civil Procedure Article 1314,1083
+urn:us-la:rs:9:398,rs,9:398,rs,9:397.3,urn:us-la:rs:9:397.3,R.S. 9:397.3,422
+urn:us-la:rs:9:398.1,rs,9:398.1,rs,9:397.1,urn:us-la:rs:9:397.1,R.S. 9:397.1,333
+urn:us-la:rs:9:398.2,rs,9:398.2,rs,9:397,urn:us-la:rs:9:397,R.S. 9:397,1910
+urn:us-la:rs:9:399.1,rs,9:399.1,rs,9:396,urn:us-la:rs:9:396,R.S. 9:396,2399
+urn:us-la:rs:9:399.1,rs,9:399.1,rs,9:397.3,urn:us-la:rs:9:397.3,R.S. 9:397.3,2727
+urn:us-la:rs:9:401,rs,9:401,civcode,186,urn:us-la:civcode:art:186,Civil Code Article 186,56
+urn:us-la:rs:9:402.1,rs,9:402.1,civcode,190.1,urn:us-la:civcode:art:190.1,Civil Code Article 190.1,58
+urn:us-la:rs:9:403,rs,9:403,ccp,2087,,Code of Civil Procedure Article 2087,984
+urn:us-la:rs:9:404,rs,9:404,civcode,198,urn:us-la:civcode:art:198,Civil Code Article 198,26
+urn:us-la:rs:9:406,rs,9:406,rs,46:236.1.2,urn:us-la:rs:46:236.1.2,R.S. 46:236.1.2,1092
+urn:us-la:rs:9:406,rs,9:406,rs,9:396,urn:us-la:rs:9:396,R.S. 9:396,1855
+urn:us-la:rs:9:406,rs,9:406,rs,9:396,urn:us-la:rs:9:396,R.S. 9:396,3564
+urn:us-la:rs:9:406,rs,9:406,rs,9:397.3,urn:us-la:rs:9:397.3,R.S. 9:397.3,3934
+urn:us-la:rs:9:408,rs,9:408,civcode,185,urn:us-la:civcode:art:185,Civil Code Article 185,73
+urn:us-la:rs:9:410,rs,9:410,civcode,197,urn:us-la:civcode:art:197,Civil Code Article 197,31
+urn:us-la:rs:9:410,rs,9:410,civcode,197,urn:us-la:civcode:art:197,Civil Code Article 197,409
+urn:us-la:rs:9:461,rs,9:461,civcode,212,urn:us-la:civcode:art:212,Civil Code Article 212,57
+urn:us-la:rs:9:462,rs,9:462,civcode,214,urn:us-la:civcode:art:214,Civil Code Article 214,42
+urn:us-la:rs:9:463,rs,9:463,civcode,212,urn:us-la:civcode:art:212,Civil Code Article 212,79
+urn:us-la:rs:9:463,rs,9:463,civcode,212,urn:us-la:civcode:art:212,Civil Code Article 212,231
+urn:us-la:rs:9:575,rs,9:575,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,201
+urn:us-la:rs:9:751,rs,9:751,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,683
+urn:us-la:rs:9:751,rs,9:751,rs,9:768,urn:us-la:rs:9:768,R.S. 9:768,750
+urn:us-la:rs:9:751,rs,9:751,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,1807
+urn:us-la:rs:9:752,rs,9:752,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,91
+urn:us-la:rs:9:753,rs,9:753,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,984
+urn:us-la:rs:9:753,rs,9:753,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,1199
+urn:us-la:rs:9:753,rs,9:753,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,1423
+urn:us-la:rs:9:754,rs,9:754,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,103
+urn:us-la:rs:9:755,rs,9:755,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,85
+urn:us-la:rs:9:755,rs,9:755,rs,9:753,urn:us-la:rs:9:753,R.S. 9:753,247
+urn:us-la:rs:9:755,rs,9:755,rs,9:753,urn:us-la:rs:9:753,R.S. 9:753,403
+urn:us-la:rs:9:755,rs,9:755,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,706
+urn:us-la:rs:9:756,rs,9:756,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,200
+urn:us-la:rs:9:756,rs,9:756,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,496
+urn:us-la:rs:9:757,rs,9:757,rs,9:755,urn:us-la:rs:9:755,R.S. 9:755,94
+urn:us-la:rs:9:757,rs,9:757,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,280
+urn:us-la:rs:9:757,rs,9:757,rs,9:753,urn:us-la:rs:9:753,R.S. 9:753,340
+urn:us-la:rs:9:757,rs,9:757,rs,9:753,urn:us-la:rs:9:753,R.S. 9:753,519
+urn:us-la:rs:9:759,rs,9:759,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,3370
+urn:us-la:rs:9:761,rs,9:761,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,161
+urn:us-la:rs:9:761,rs,9:761,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,383
+urn:us-la:rs:9:761,rs,9:761,rs,9:753,urn:us-la:rs:9:753,R.S. 9:753,451
+urn:us-la:rs:9:761,rs,9:761,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,482
+urn:us-la:rs:9:761,rs,9:761,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,586
+urn:us-la:rs:9:763,rs,9:763,rs,9:762,urn:us-la:rs:9:762,R.S. 9:762,353
+urn:us-la:rs:9:765,rs,9:765,rs,9:754,urn:us-la:rs:9:754,R.S. 9:754,192
+urn:us-la:rs:9:765,rs,9:765,rs,9:768,urn:us-la:rs:9:768,R.S. 9:768,383
+urn:us-la:rs:9:768,rs,9:768,rs,9:753,urn:us-la:rs:9:753,R.S. 9:753,28
+urn:us-la:rs:9:768,rs,9:768,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,59
+urn:us-la:rs:9:768,rs,9:768,rs,9:753,urn:us-la:rs:9:753,R.S. 9:753,379
+urn:us-la:rs:9:768,rs,9:768,rs,9:753,urn:us-la:rs:9:753,R.S. 9:753,468
+urn:us-la:rs:9:768,rs,9:768,rs,9:759,urn:us-la:rs:9:759,R.S. 9:759,715
+urn:us-la:rs:9:768,rs,9:768,rs,9:754,urn:us-la:rs:9:754,R.S. 9:754,899
+urn:us-la:rs:9:768,rs,9:768,rs,9:754,urn:us-la:rs:9:754,R.S. 9:754,3148
+urn:us-la:rs:9:769,rs,9:769,rs,9:767,urn:us-la:rs:9:767,R.S. 9:767,521
+urn:us-la:rs:9:769,rs,9:769,rs,9:768,urn:us-la:rs:9:768,R.S. 9:768,899
+urn:us-la:rs:9:771,rs,9:771,rs,9:752,urn:us-la:rs:9:752,R.S. 9:752,55
+urn:us-la:rs:9:975,rs,9:975,rs,40:1061.14,urn:us-la:rs:40:1061.14,R.S. 40:1061.14,908
+urn:us-la:rs:9:975,rs,9:975,rs,9:975,urn:us-la:rs:9:975,R.S. 9:975,2539
+urn:us-la:rs:9:1022,rs,9:1022,rs,47:2405,urn:us-la:rs:47:2405,R.S. 47:2405,1914
+urn:us-la:rs:9:1023,rs,9:1023,rs,9:1022,urn:us-la:rs:9:1022,R.S. 9:1022,862
+urn:us-la:rs:9:1051,rs,9:1051,rs,12:207,urn:us-la:rs:12:207,R.S. 12:207,1924
+urn:us-la:rs:9:1102.2,rs,9:1102.2,rs,56:1841,urn:us-la:rs:56:1841,R.S. 56:1841,4405
+urn:us-la:rs:9:1103,rs,9:1103,rs,49:214.5.4,urn:us-la:rs:49:214.5.4,R.S. 49:214.5.4,737
+urn:us-la:rs:9:1107,rs,9:1107,rs,9:5661,urn:us-la:rs:9:5661,R.S. 9:5661,466
+urn:us-la:rs:9:1113,rs,9:1113,civcode,811,urn:us-la:civcode:art:811,Civil Code Article 811,95
+urn:us-la:rs:9:1121.104,rs,9:1121.104,rs,9:1121.101,urn:us-la:rs:9:1121.101,R.S. 9:1121.101,34
+urn:us-la:rs:9:1122.103,rs,9:1122.103,rs,9:2730,urn:us-la:rs:9:2730,R.S. 9:2730,445
+urn:us-la:rs:9:1122.119,rs,9:1122.119,rs,9:1122.110,urn:us-la:rs:9:1122.110,R.S. 9:1122.110,70
+urn:us-la:rs:9:1122.119,rs,9:1122.119,rs,9:1121.107,urn:us-la:rs:9:1121.107,R.S. 9:1121.107,125
+urn:us-la:rs:9:1123.107,rs,9:1123.107,rs,9:1123.112,urn:us-la:rs:9:1123.112,R.S. 9:1123.112,53
+urn:us-la:rs:9:1123.112,rs,9:1123.112,rs,9:1121.107,urn:us-la:rs:9:1121.107,R.S. 9:1121.107,6361
+urn:us-la:rs:9:1123.112,rs,9:1123.112,rs,9:1122.120,urn:us-la:rs:9:1122.120,R.S. 9:1122.120,6555
+urn:us-la:rs:9:1123.116,rs,9:1123.116,rs,9:1123.115,urn:us-la:rs:9:1123.115,R.S. 9:1123.115,117
+urn:us-la:rs:9:1123.116,rs,9:1123.116,rs,9:1123.115,urn:us-la:rs:9:1123.115,R.S. 9:1123.115,567
+urn:us-la:rs:9:1123.116,rs,9:1123.116,rs,33:4720.12,urn:us-la:rs:33:4720.12,R.S. 33:4720.12,1602
+urn:us-la:rs:9:1123.116,rs,9:1123.116,rs,33:4720.26,urn:us-la:rs:33:4720.26,R.S. 33:4720.26,1954
+urn:us-la:rs:9:1123.116,rs,9:1123.116,rs,33:4717.3,urn:us-la:rs:33:4717.3,R.S. 33:4717.3,2230
+urn:us-la:rs:9:1124.109,rs,9:1124.109,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,705
+urn:us-la:rs:9:1124.109,rs,9:1124.109,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,2043
+urn:us-la:rs:9:1131.3,rs,9:1131.3,rs,9:1131.4,urn:us-la:rs:9:1131.4,R.S. 9:1131.4,740
+urn:us-la:rs:9:1131.3,rs,9:1131.3,rs,9:1131.17,urn:us-la:rs:9:1131.17,R.S. 9:1131.17,869
+urn:us-la:rs:9:1131.3,rs,9:1131.3,rs,9:1121.101,urn:us-la:rs:9:1121.101,R.S. 9:1121.101,1469
+urn:us-la:rs:9:1131.4,rs,9:1131.4,rs,9:1121.101,urn:us-la:rs:9:1121.101,R.S. 9:1121.101,6279
+urn:us-la:rs:9:1131.4,rs,9:1131.4,rs,9:1122.101,urn:us-la:rs:9:1122.101,R.S. 9:1122.101,6442
+urn:us-la:rs:9:1131.4,rs,9:1131.4,rs,9:1122.106,urn:us-la:rs:9:1122.106,R.S. 9:1122.106,6581
+urn:us-la:rs:9:1131.4,rs,9:1131.4,rs,9:1131.9.2,urn:us-la:rs:9:1131.9.2,R.S. 9:1131.9.2,7423
+urn:us-la:rs:9:1131.5,rs,9:1131.5,rs,9:2730,urn:us-la:rs:9:2730,R.S. 9:2730,415
+urn:us-la:rs:9:1131.7,rs,9:1131.7,rs,9:1131.8,urn:us-la:rs:9:1131.8,R.S. 9:1131.8,190
+urn:us-la:rs:9:1131.9,rs,9:1131.9,rs,9:1121.101,urn:us-la:rs:9:1121.101,R.S. 9:1121.101,207
+urn:us-la:rs:9:1131.9,rs,9:1131.9,rs,9:1121.105,urn:us-la:rs:9:1121.105,R.S. 9:1121.105,313
+urn:us-la:rs:9:1131.9,rs,9:1131.9,rs,9:1131.22,urn:us-la:rs:9:1131.22,R.S. 9:1131.22,615
+urn:us-la:rs:9:1131.13,rs,9:1131.13,rs,9:1131.10.1,urn:us-la:rs:9:1131.10.1,R.S. 9:1131.10.1,127
+urn:us-la:rs:9:1131.17,rs,9:1131.17,rs,9:1131.16,urn:us-la:rs:9:1131.16,R.S. 9:1131.16,3198
+urn:us-la:rs:9:1131.17,rs,9:1131.17,rs,9:1131.16,urn:us-la:rs:9:1131.16,R.S. 9:1131.16,3559
+urn:us-la:rs:9:1131.18,rs,9:1131.18,rs,9:1131.11,urn:us-la:rs:9:1131.11,R.S. 9:1131.11,131
+urn:us-la:rs:9:1131.20,rs,9:1131.20,rs,9:1131.8,urn:us-la:rs:9:1131.8,R.S. 9:1131.8,563
+urn:us-la:rs:9:1131.26,rs,9:1131.26,rs,37:1461,urn:us-la:rs:37:1461,R.S. 37:1461,41
+urn:us-la:rs:9:1131.26,rs,9:1131.26,rs,9:1131.17,urn:us-la:rs:9:1131.17,R.S. 9:1131.17,278
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.32,urn:us-la:rs:9:1141.32,R.S. 9:1141.32,1758
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.19,urn:us-la:rs:9:1141.19,R.S. 9:1141.19,1876
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.25,urn:us-la:rs:9:1141.25,R.S. 9:1141.25,2123
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.6,urn:us-la:rs:9:1141.6,R.S. 9:1141.6,2552
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:2601,urn:us-la:rs:9:2601,R.S. 9:2601,4731
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.8,urn:us-la:rs:9:1141.8,R.S. 9:1141.8,5912
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.28,urn:us-la:rs:9:1141.28,R.S. 9:1141.28,6369
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.15,urn:us-la:rs:9:1141.15,R.S. 9:1141.15,6619
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.12,urn:us-la:rs:9:1141.12,R.S. 9:1141.12,8665
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.28,urn:us-la:rs:9:1141.28,R.S. 9:1141.28,9552
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.28,urn:us-la:rs:9:1141.28,R.S. 9:1141.28,9712
+urn:us-la:rs:9:1141.2,rs,9:1141.2,rs,9:1141.28,urn:us-la:rs:9:1141.28,R.S. 9:1141.28,10274
+urn:us-la:rs:9:1141.2,rs,9:1141.2,civcode,24,urn:us-la:civcode:art:24,Civil Code Article 24,7077
+urn:us-la:rs:9:1141.2,rs,9:1141.2,civcode,3136,urn:us-la:civcode:art:3136,Civil Code Article 3136,8355
+urn:us-la:rs:9:1141.5,rs,9:1141.5,rs,9:1141.9,urn:us-la:rs:9:1141.9,R.S. 9:1141.9,615
+urn:us-la:rs:9:1141.5,rs,9:1141.5,rs,9:1141.6,urn:us-la:rs:9:1141.6,R.S. 9:1141.6,891
+urn:us-la:rs:9:1141.5,rs,9:1141.5,rs,9:1141.6,urn:us-la:rs:9:1141.6,R.S. 9:1141.6,1336
+urn:us-la:rs:9:1141.5,rs,9:1141.5,rs,9:1141.19,urn:us-la:rs:9:1141.19,R.S. 9:1141.19,1583
+urn:us-la:rs:9:1141.5,rs,9:1141.5,rs,9:1141.14,urn:us-la:rs:9:1141.14,R.S. 9:1141.14,2411
+urn:us-la:rs:9:1141.5,rs,9:1141.5,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,2727
+urn:us-la:rs:9:1141.5,rs,9:1141.5,rs,9:1141.14,urn:us-la:rs:9:1141.14,R.S. 9:1141.14,3036
+urn:us-la:rs:9:1141.7,rs,9:1141.7,rs,9:1141.5,urn:us-la:rs:9:1141.5,R.S. 9:1141.5,49
+urn:us-la:rs:9:1141.7,rs,9:1141.7,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,181
+urn:us-la:rs:9:1141.7,rs,9:1141.7,rs,9:1141.5,urn:us-la:rs:9:1141.5,R.S. 9:1141.5,949
+urn:us-la:rs:9:1141.7,rs,9:1141.7,rs,33:113,urn:us-la:rs:33:113,R.S. 33:113,1205
+urn:us-la:rs:9:1141.7,rs,9:1141.7,rs,9:1141.5,urn:us-la:rs:9:1141.5,R.S. 9:1141.5,1851
+urn:us-la:rs:9:1141.7,rs,9:1141.7,rs,9:1141.6,urn:us-la:rs:9:1141.6,R.S. 9:1141.6,2378
+urn:us-la:rs:9:1141.7,rs,9:1141.7,rs,9:1141.5,urn:us-la:rs:9:1141.5,R.S. 9:1141.5,2938
+urn:us-la:rs:9:1141.8,rs,9:1141.8,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,593
+urn:us-la:rs:9:1141.9,rs,9:1141.9,rs,33:5051,urn:us-la:rs:33:5051,R.S. 33:5051,693
+urn:us-la:rs:9:1141.9,rs,9:1141.9,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,859
+urn:us-la:rs:9:1141.10,rs,9:1141.10,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,613
+urn:us-la:rs:9:1141.11,rs,9:1141.11,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,737
+urn:us-la:rs:9:1141.14,rs,9:1141.14,rs,9:1141.7,urn:us-la:rs:9:1141.7,R.S. 9:1141.7,51
+urn:us-la:rs:9:1141.14,rs,9:1141.14,rs,9:1141.7,urn:us-la:rs:9:1141.7,R.S. 9:1141.7,698
+urn:us-la:rs:9:1141.14,rs,9:1141.14,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,4487
+urn:us-la:rs:9:1141.15,rs,9:1141.15,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,367
+urn:us-la:rs:9:1141.15,rs,9:1141.15,rs,9:1141.6,urn:us-la:rs:9:1141.6,R.S. 9:1141.6,1939
+urn:us-la:rs:9:1141.16,rs,9:1141.16,rs,9:1141.28,urn:us-la:rs:9:1141.28,R.S. 9:1141.28,1335
+urn:us-la:rs:9:1141.17,rs,9:1141.17,rs,9:1141.20,urn:us-la:rs:9:1141.20,R.S. 9:1141.20,27
+urn:us-la:rs:9:1141.17,rs,9:1141.17,rs,9:1141.19,urn:us-la:rs:9:1141.19,R.S. 9:1141.19,396
+urn:us-la:rs:9:1141.17,rs,9:1141.17,rs,9:1141.20,urn:us-la:rs:9:1141.20,R.S. 9:1141.20,469
+urn:us-la:rs:9:1141.17,rs,9:1141.17,rs,9:1141.21,urn:us-la:rs:9:1141.21,R.S. 9:1141.21,1022
+urn:us-la:rs:9:1141.17,rs,9:1141.17,rs,9:1141.19,urn:us-la:rs:9:1141.19,R.S. 9:1141.19,1350
+urn:us-la:rs:9:1141.18,rs,9:1141.18,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,503
+urn:us-la:rs:9:1141.19,rs,9:1141.19,rs,9:1141.15,urn:us-la:rs:9:1141.15,R.S. 9:1141.15,397
+urn:us-la:rs:9:1141.20,rs,9:1141.20,rs,9:1141.34,urn:us-la:rs:9:1141.34,R.S. 9:1141.34,142
+urn:us-la:rs:9:1141.20,rs,9:1141.20,rs,9:1141.29,urn:us-la:rs:9:1141.29,R.S. 9:1141.29,2127
+urn:us-la:rs:9:1141.20,rs,9:1141.20,rs,9:1141.32,urn:us-la:rs:9:1141.32,R.S. 9:1141.32,3202
+urn:us-la:rs:9:1141.20,rs,9:1141.20,rs,12:201,urn:us-la:rs:12:201,R.S. 12:201,5268
+urn:us-la:rs:9:1141.21,rs,9:1141.21,rs,9:1141.17,urn:us-la:rs:9:1141.17,R.S. 9:1141.17,365
+urn:us-la:rs:9:1141.21,rs,9:1141.21,rs,9:1141.38,urn:us-la:rs:9:1141.38,R.S. 9:1141.38,622
+urn:us-la:rs:9:1141.21,rs,9:1141.21,rs,12:201,urn:us-la:rs:12:201,R.S. 12:201,1562
+urn:us-la:rs:9:1141.21,rs,9:1141.21,rs,9:2792.7,urn:us-la:rs:9:2792.7,R.S. 9:2792.7,1780
+urn:us-la:rs:9:1141.21,rs,9:1141.21,rs,12:1,urn:us-la:rs:12:1,R.S. 12:1,2059
+urn:us-la:rs:9:1141.21,rs,9:1141.21,rs,9:1141.34,urn:us-la:rs:9:1141.34,R.S. 9:1141.34,2663
+urn:us-la:rs:9:1141.22,rs,9:1141.22,rs,9:1141.7,urn:us-la:rs:9:1141.7,R.S. 9:1141.7,1132
+urn:us-la:rs:9:1141.24,rs,9:1141.24,rs,9:1141.22,urn:us-la:rs:9:1141.22,R.S. 9:1141.22,97
+urn:us-la:rs:9:1141.26,rs,9:1141.26,rs,9:1141.38,urn:us-la:rs:9:1141.38,R.S. 9:1141.38,317
+urn:us-la:rs:9:1141.26,rs,9:1141.26,rs,9:1141.38,urn:us-la:rs:9:1141.38,R.S. 9:1141.38,1160
+urn:us-la:rs:9:1141.27,rs,9:1141.27,rs,9:1141.28,urn:us-la:rs:9:1141.28,R.S. 9:1141.28,314
+urn:us-la:rs:9:1141.27,rs,9:1141.27,rs,9:1141.38,urn:us-la:rs:9:1141.38,R.S. 9:1141.38,1176
+urn:us-la:rs:9:1141.28,rs,9:1141.28,rs,9:1141.38,urn:us-la:rs:9:1141.38,R.S. 9:1141.38,4116
+urn:us-la:rs:9:1141.29,rs,9:1141.29,rs,9:1141.4,urn:us-la:rs:9:1141.4,R.S. 9:1141.4,1144
+urn:us-la:rs:9:1141.29,rs,9:1141.29,civcode,2655,urn:us-la:civcode:art:2655,Civil Code Article 2655,2523
+urn:us-la:rs:9:1141.32,rs,9:1141.32,rs,9:1141.6,urn:us-la:rs:9:1141.6,R.S. 9:1141.6,606
+urn:us-la:rs:9:1141.36,rs,9:1141.36,rs,9:1141.43,urn:us-la:rs:9:1141.43,R.S. 9:1141.43,1219
+urn:us-la:rs:9:1141.37,rs,9:1141.37,rs,9:1141.14,urn:us-la:rs:9:1141.14,R.S. 9:1141.14,673
+urn:us-la:rs:9:1141.38,rs,9:1141.38,ccp,1313,,Code of Civil Procedure Article 1313,181
+urn:us-la:rs:9:1141.38,rs,9:1141.38,ccp,1313,,Code of Civil Procedure Article 1313,568
+urn:us-la:rs:9:1141.42,rs,9:1141.42,rs,9:1141.43,urn:us-la:rs:9:1141.43,R.S. 9:1141.43,130
+urn:us-la:rs:9:1141.42,rs,9:1141.42,rs,9:1141.48,urn:us-la:rs:9:1141.48,R.S. 9:1141.48,272
+urn:us-la:rs:9:1141.42,rs,9:1141.42,rs,9:1141.44,urn:us-la:rs:9:1141.44,R.S. 9:1141.44,331
+urn:us-la:rs:9:1141.42,rs,9:1141.42,rs,9:1141.43,urn:us-la:rs:9:1141.43,R.S. 9:1141.43,691
+urn:us-la:rs:9:1141.43,rs,9:1141.43,rs,9:1141.5,urn:us-la:rs:9:1141.5,R.S. 9:1141.5,885
+urn:us-la:rs:9:1141.43,rs,9:1141.43,rs,9:1141.24,urn:us-la:rs:9:1141.24,R.S. 9:1141.24,1178
+urn:us-la:rs:9:1141.43,rs,9:1141.43,rs,9:1141.46,urn:us-la:rs:9:1141.46,R.S. 9:1141.46,3206
+urn:us-la:rs:9:1141.43,rs,9:1141.43,rs,9:1141.7,urn:us-la:rs:9:1141.7,R.S. 9:1141.7,5393
+urn:us-la:rs:9:1141.47,rs,9:1141.47,rs,9:1141.38,urn:us-la:rs:9:1141.38,R.S. 9:1141.38,668
+urn:us-la:rs:9:1141.49,rs,9:1141.49,rs,9:1141.9,urn:us-la:rs:9:1141.9,R.S. 9:1141.9,378
+urn:us-la:rs:9:1141.49,rs,9:1141.49,rs,9:1141.7,urn:us-la:rs:9:1141.7,R.S. 9:1141.7,655
+urn:us-la:rs:9:1141.50,rs,9:1141.50,rs,33:114,urn:us-la:rs:33:114,R.S. 33:114,254
+urn:us-la:rs:9:1145,rs,9:1145,rs,9:1123.101,urn:us-la:rs:9:1123.101,R.S. 9:1123.101,90
+urn:us-la:rs:9:1145,rs,9:1145,rs,9:1146,urn:us-la:rs:9:1146,R.S. 9:1146,838
+urn:us-la:rs:9:1146,rs,9:1146,ccp,1313,,Code of Civil Procedure Article 1313,290
+urn:us-la:rs:9:1146,rs,9:1146,ccp,1313,,Code of Civil Procedure Article 1313,672
+urn:us-la:rs:9:1147,rs,9:1147,rs,9:1146,urn:us-la:rs:9:1146,R.S. 9:1146,778
+urn:us-la:rs:9:1148,rs,9:1148,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,2444
+urn:us-la:rs:9:1148,rs,9:1148,ccp,3752,,Code of Civil Procedure Article 3752,333
+urn:us-la:rs:9:1148,rs,9:1148,ccp,3752,,Code of Civil Procedure Article 3752,637
+urn:us-la:rs:9:1148,rs,9:1148,ccp,3752,,Code of Civil Procedure Article 3752,1515
+urn:us-la:rs:9:1148,rs,9:1148,ccp,3752,,Code of Civil Procedure Article 3752,1820
+urn:us-la:rs:9:1149.2,rs,9:1149.2,rs,32:701,urn:us-la:rs:32:701,R.S. 32:701,200
+urn:us-la:rs:9:1149.2,rs,9:1149.2,rs,40:1301,urn:us-la:rs:40:1301,R.S. 40:1301,328
+urn:us-la:rs:9:1149.3,rs,9:1149.3,rs,9:1149.6,urn:us-la:rs:9:1149.6,R.S. 9:1149.6,32
+urn:us-la:rs:9:1149.5,rs,9:1149.5,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,183
+urn:us-la:rs:9:1149.6,rs,9:1149.6,rs,32:412.1,urn:us-la:rs:32:412.1,R.S. 32:412.1,2729
+urn:us-la:rs:9:1152,rs,9:1152,rs,9:1151,urn:us-la:rs:9:1151,R.S. 9:1151,2895
+urn:us-la:rs:9:1253,rs,9:1253,rs,48:491,urn:us-la:rs:48:491,R.S. 48:491,63
+urn:us-la:rs:9:1255,rs,9:1255,civcode,697,urn:us-la:civcode:art:697,Civil Code Article 697,362
+urn:us-la:rs:9:1255,rs,9:1255,civcode,775,urn:us-la:civcode:art:775,Civil Code Article 775,435
+urn:us-la:rs:9:1276,rs,9:1276,civcode,608,urn:us-la:civcode:art:608,Civil Code Article 608,279
+urn:us-la:rs:9:1287,rs,9:1287,rs,9:1285,urn:us-la:rs:9:1285,R.S. 9:1285,337
+urn:us-la:rs:9:1421,rs,9:1421,rs,10:8,urn:us-la:rs:10:8,R.S. 10:8,961
+urn:us-la:rs:9:1442,rs,9:1442,rs,9:1441,urn:us-la:rs:9:1441,R.S. 9:1441,60
+urn:us-la:rs:9:1442,rs,9:1442,rs,9:1443,urn:us-la:rs:9:1443,R.S. 9:1443,370
+urn:us-la:rs:9:1443,rs,9:1443,rs,9:1441,urn:us-la:rs:9:1441,R.S. 9:1441,81
+urn:us-la:rs:9:1454.1,rs,9:1454.1,rs,9:1451,urn:us-la:rs:9:1451,R.S. 9:1451,184
+urn:us-la:rs:9:1513,rs,9:1513,rs,6:312,urn:us-la:rs:6:312,R.S. 6:312,1578
+urn:us-la:rs:9:1514,rs,9:1514,rs,6:664,urn:us-la:rs:6:664,R.S. 6:664,2440
+urn:us-la:rs:9:1516,rs,9:1516,rs,30:105,urn:us-la:rs:30:105,R.S. 30:105,1705
+urn:us-la:rs:9:1516,rs,9:1516,rs,47:2413,urn:us-la:rs:47:2413,R.S. 47:2413,1865
+urn:us-la:rs:9:1551,rs,9:1551,rs,8:655,urn:us-la:rs:8:655,R.S. 8:655,74
+urn:us-la:rs:9:1551,rs,9:1551,rs,8:655,urn:us-la:rs:8:655,R.S. 8:655,528
+urn:us-la:rs:9:1551,rs,9:1551,rs,8:655,urn:us-la:rs:8:655,R.S. 8:655,3841
+urn:us-la:rs:9:1551,rs,9:1551,rs,8:655,urn:us-la:rs:8:655,R.S. 8:655,4381
+urn:us-la:rs:9:1590,rs,9:1590,rs,9:1581,urn:us-la:rs:9:1581,R.S. 9:1581,0
+urn:us-la:rs:9:1590,rs,9:1590,rs,9:1588,urn:us-la:rs:9:1588,R.S. 9:1588,31
+urn:us-la:rs:9:1615,rs,9:1615,rs,9:1611,urn:us-la:rs:9:1611,R.S. 9:1611,0
+urn:us-la:rs:9:1702,rs,9:1702,civcode,807,urn:us-la:civcode:art:807,Civil Code Article 807,547
+urn:us-la:rs:9:1711,rs,9:1711,rs,10:1,urn:us-la:rs:10:1,R.S. 10:1,391
+urn:us-la:rs:9:1725,rs,9:1725,rs,9:2235,urn:us-la:rs:9:2235,R.S. 9:2235,1124
+urn:us-la:rs:9:1783,rs,9:1783,rs,6:626,urn:us-la:rs:6:626,R.S. 6:626,708
+urn:us-la:rs:9:1790,rs,9:1790,rs,9:2069,urn:us-la:rs:9:2069,R.S. 9:2069,22
+urn:us-la:rs:9:1833,rs,9:1833,rs,9:1831,urn:us-la:rs:9:1831,R.S. 9:1831,192
+urn:us-la:rs:9:1841,rs,9:1841,rs,9:1843,urn:us-la:rs:9:1843,R.S. 9:1843,491
+urn:us-la:rs:9:1841,rs,9:1841,rs,9:1844,urn:us-la:rs:9:1844,R.S. 9:1844,599
+urn:us-la:rs:9:1891,rs,9:1891,rs,9:1803,urn:us-la:rs:9:1803,R.S. 9:1803,37
+urn:us-la:rs:9:1891,rs,9:1891,rs,9:1831,urn:us-la:rs:9:1831,R.S. 9:1831,50
+urn:us-la:rs:9:1891,rs,9:1891,rs,9:1841,urn:us-la:rs:9:1841,R.S. 9:1841,80
+urn:us-la:rs:9:1891,rs,9:1891,rs,9:1894,urn:us-la:rs:9:1894,R.S. 9:1894,1383
+urn:us-la:rs:9:1893,rs,9:1893,rs,9:2068,urn:us-la:rs:9:2068,R.S. 9:2068,237
+urn:us-la:rs:9:1897,rs,9:1897,rs,9:1899,urn:us-la:rs:9:1899,R.S. 9:1899,181
+urn:us-la:rs:9:1904,rs,9:1904,rs,9:1899,urn:us-la:rs:9:1899,R.S. 9:1899,204
+urn:us-la:rs:9:1904,rs,9:1904,rs,9:1902,urn:us-la:rs:9:1902,R.S. 9:1902,294
+urn:us-la:rs:9:1905,rs,9:1905,rs,9:1899,urn:us-la:rs:9:1899,R.S. 9:1899,153
+urn:us-la:rs:9:1953,rs,9:1953,rs,9:2004,urn:us-la:rs:9:2004,R.S. 9:2004,552
+urn:us-la:rs:9:1971,rs,9:1971,civcode,1521,urn:us-la:civcode:art:1521,Civil Code Article 1521,149
+urn:us-la:rs:9:1972,rs,9:1972,rs,9:1895,urn:us-la:rs:9:1895,R.S. 9:1895,282
+urn:us-la:rs:9:1975,rs,9:1975,rs,9:1978,urn:us-la:rs:9:1978,R.S. 9:1978,22
+urn:us-la:rs:9:1975,rs,9:1975,rs,9:1891,urn:us-la:rs:9:1891,R.S. 9:1891,232
+urn:us-la:rs:9:1975,rs,9:1975,rs,9:1906,urn:us-la:rs:9:1906,R.S. 9:1906,252
+urn:us-la:rs:9:1978,rs,9:1978,rs,9:1973,urn:us-la:rs:9:1973,R.S. 9:1973,73
+urn:us-la:rs:9:1979,rs,9:1979,rs,9:1973,urn:us-la:rs:9:1973,R.S. 9:1973,92
+urn:us-la:rs:9:1990,rs,9:1990,rs,9:1809,urn:us-la:rs:9:1809,R.S. 9:1809,1246
+urn:us-la:rs:9:2003,rs,9:2003,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,76
+urn:us-la:rs:9:2003,rs,9:2003,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,453
+urn:us-la:rs:9:2011,rs,9:2011,civcode,1521,urn:us-la:civcode:art:1521,Civil Code Article 1521,781
+urn:us-la:rs:9:2014,rs,9:2014,rs,9:1955,urn:us-la:rs:9:1955,R.S. 9:1955,273
+urn:us-la:rs:9:2025,rs,9:2025,rs,9:2031,urn:us-la:rs:9:2031,R.S. 9:2031,223
+urn:us-la:rs:9:2031,rs,9:2031,rs,9:1891,urn:us-la:rs:9:1891,R.S. 9:1891,854
+urn:us-la:rs:9:2045,rs,9:2045,rs,9:2025,urn:us-la:rs:9:2025,R.S. 9:2025,305
+urn:us-la:rs:9:2068,rs,9:2068,rs,9:1841,urn:us-la:rs:9:1841,R.S. 9:1841,1031
+urn:us-la:rs:9:2092,rs,9:2092,rs,9:1752,urn:us-la:rs:9:1752,R.S. 9:1752,2387
+urn:us-la:rs:9:2092,rs,9:2092,rs,9:1752,urn:us-la:rs:9:1752,R.S. 9:1752,2552
+urn:us-la:rs:9:2097,rs,9:2097,rs,9:2081,urn:us-la:rs:9:2081,R.S. 9:2081,1181
+urn:us-la:rs:9:2097,rs,9:2097,rs,9:2096,urn:us-la:rs:9:2096,R.S. 9:2096,1201
+urn:us-la:rs:9:2111,rs,9:2111,rs,9:2061,urn:us-la:rs:9:2061,R.S. 9:2061,20
+urn:us-la:rs:9:2126,rs,9:2126,rs,9:2191,urn:us-la:rs:9:2191,R.S. 9:2191,1395
+urn:us-la:rs:9:2146,rs,9:2146,rs,9:2151.2,urn:us-la:rs:9:2151.2,R.S. 9:2151.2,361
+urn:us-la:rs:9:2146,rs,9:2146,rs,9:2149,urn:us-la:rs:9:2149,R.S. 9:2149,647
+urn:us-la:rs:9:2147,rs,9:2147,rs,9:2149,urn:us-la:rs:9:2149,R.S. 9:2149,693
+urn:us-la:rs:9:2150,rs,9:2150,rs,9:2151.2,urn:us-la:rs:9:2151.2,R.S. 9:2151.2,888
+urn:us-la:rs:9:2154,rs,9:2154,rs,9:2152,urn:us-la:rs:9:2152,R.S. 9:2152,25
+urn:us-la:rs:9:2156,rs,9:2156,rs,9:2145,urn:us-la:rs:9:2145,R.S. 9:2145,2560
+urn:us-la:rs:9:2159,rs,9:2159,rs,9:2158,urn:us-la:rs:9:2158,R.S. 9:2158,45
+urn:us-la:rs:9:2160,rs,9:2160,rs,9:2158,urn:us-la:rs:9:2158,R.S. 9:2158,43
+urn:us-la:rs:9:2161,rs,9:2161,rs,9:2158,urn:us-la:rs:9:2158,R.S. 9:2158,113
+urn:us-la:rs:9:2161,rs,9:2161,rs,9:2158,urn:us-la:rs:9:2158,R.S. 9:2158,464
+urn:us-la:rs:9:2162,rs,9:2162,rs,9:2160,urn:us-la:rs:9:2160,R.S. 9:2160,44
+urn:us-la:rs:9:2162,rs,9:2162,rs,9:2158,urn:us-la:rs:9:2158,R.S. 9:2158,157
+urn:us-la:rs:9:2162,rs,9:2162,rs,9:2233,urn:us-la:rs:9:2233,R.S. 9:2233,261
+urn:us-la:rs:9:2163,rs,9:2163,rs,9:2158,urn:us-la:rs:9:2158,R.S. 9:2158,112
+urn:us-la:rs:9:2164,rs,9:2164,rs,9:2158,urn:us-la:rs:9:2158,R.S. 9:2158,274
+urn:us-la:rs:9:2164,rs,9:2164,rs,9:2158,urn:us-la:rs:9:2158,R.S. 9:2158,611
+urn:us-la:rs:9:2234,rs,9:2234,civcode,3458,urn:us-la:civcode:art:3458,Civil Code Article 3458,1594
+urn:us-la:rs:9:2234,rs,9:2234,civcode,3461,urn:us-la:civcode:art:3461,Civil Code Article 3461,1642
+urn:us-la:rs:9:2242,rs,9:2242,rs,22:46,urn:us-la:rs:22:46,R.S. 22:46,103
+urn:us-la:rs:9:2242,rs,9:2242,rs,23:1195,urn:us-la:rs:23:1195,R.S. 23:1195,158
+urn:us-la:rs:9:2260.5,rs,9:2260.5,rs,9:2260.3,urn:us-la:rs:9:2260.3,R.S. 9:2260.3,90
+urn:us-la:rs:9:2260.6,rs,9:2260.6,rs,9:2260.7,urn:us-la:rs:9:2260.7,R.S. 9:2260.7,817
+urn:us-la:rs:9:2260.8,rs,9:2260.8,rs,9:2260.7,urn:us-la:rs:9:2260.7,R.S. 9:2260.7,354
+urn:us-la:rs:9:2260.10,rs,9:2260.10,rs,9:2260.5,urn:us-la:rs:9:2260.5,R.S. 9:2260.5,179
+urn:us-la:rs:9:2260.13,rs,9:2260.13,rs,9:2260.3,urn:us-la:rs:9:2260.3,R.S. 9:2260.3,326
+urn:us-la:rs:9:2260.13,rs,9:2260.13,rs,9:2260.3,urn:us-la:rs:9:2260.3,R.S. 9:2260.3,527
+urn:us-la:rs:9:2260.13,rs,9:2260.13,rs,9:2260.2,urn:us-la:rs:9:2260.2,R.S. 9:2260.2,1315
+urn:us-la:rs:9:2260.17,rs,9:2260.17,rs,9:2260.6,urn:us-la:rs:9:2260.6,R.S. 9:2260.6,651
+urn:us-la:rs:9:2260.18,rs,9:2260.18,rs,9:2260.2,urn:us-la:rs:9:2260.2,R.S. 9:2260.2,149
+urn:us-la:rs:9:2262.1,rs,9:2262.1,rs,9:1783,urn:us-la:rs:9:1783,R.S. 9:1783,453
+urn:us-la:rs:9:2262.2,rs,9:2262.2,rs,9:2262.4,urn:us-la:rs:9:2262.4,R.S. 9:2262.4,2657
+urn:us-la:rs:9:2262.2,rs,9:2262.2,rs,9:2262.4,urn:us-la:rs:9:2262.4,R.S. 9:2262.4,2824
+urn:us-la:rs:9:2272,rs,9:2272,rs,9:2273,urn:us-la:rs:9:2273,R.S. 9:2273,805
+urn:us-la:rs:9:2272,rs,9:2272,rs,9:2275,urn:us-la:rs:9:2275,R.S. 9:2275,982
+urn:us-la:rs:9:2281,rs,9:2281,rs,9:2282,urn:us-la:rs:9:2282,R.S. 9:2282,11
+urn:us-la:rs:9:2281,rs,9:2281,rs,9:2282,urn:us-la:rs:9:2282,R.S. 9:2282,519
+urn:us-la:rs:9:2282,rs,9:2282,rs,9:2281,urn:us-la:rs:9:2281,R.S. 9:2281,112
+urn:us-la:rs:9:2282,rs,9:2282,rs,9:2281,urn:us-la:rs:9:2281,R.S. 9:2281,1210
+urn:us-la:rs:9:2337.6,rs,9:2337.6,rs,9:2332,urn:us-la:rs:9:2332,R.S. 9:2332,821
+urn:us-la:rs:9:2337.6,rs,9:2337.6,rs,9:2332,urn:us-la:rs:9:2332,R.S. 9:2332,1413
+urn:us-la:rs:9:2341,rs,9:2341,rs,27:201,urn:us-la:rs:27:201,R.S. 27:201,4828
+urn:us-la:rs:9:2341,rs,9:2341,rs,9:2341,urn:us-la:rs:9:2341,R.S. 9:2341,12094
+urn:us-la:rs:9:2341,rs,9:2341,rs,9:2347,urn:us-la:rs:9:2347,R.S. 9:2347,13006
+urn:us-la:rs:9:2343,rs,9:2343,rs,14:138,urn:us-la:rs:14:138,R.S. 14:138,94
+urn:us-la:rs:9:2343,rs,9:2343,rs,39:1597,urn:us-la:rs:39:1597,R.S. 39:1597,3746
+urn:us-la:rs:9:2343,rs,9:2343,rs,9:2343,urn:us-la:rs:9:2343,R.S. 9:2343,3839
+urn:us-la:rs:9:2343,rs,9:2343,rs,9:2343,urn:us-la:rs:9:2343,R.S. 9:2343,4960
+urn:us-la:rs:9:2343,rs,9:2343,rs,49:951,urn:us-la:rs:49:951,R.S. 49:951,5592
+urn:us-la:rs:9:2343,rs,9:2343,rs,49:966,urn:us-la:rs:49:966,R.S. 49:966,5780
+urn:us-la:rs:9:2343,rs,9:2343,rs,40:600.6,urn:us-la:rs:40:600.6,R.S. 40:600.6,5886
+urn:us-la:rs:9:2346,rs,9:2346,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,600
+urn:us-la:rs:9:2346,rs,9:2346,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,784
+urn:us-la:rs:9:2346,rs,9:2346,rs,24:514,urn:us-la:rs:24:514,R.S. 24:514,907
+urn:us-la:rs:9:2347,rs,9:2347,rs,18:1281,urn:us-la:rs:18:1281,R.S. 18:1281,859
+urn:us-la:rs:9:2347,rs,9:2347,rs,18:1281,urn:us-la:rs:18:1281,R.S. 18:1281,2460
+urn:us-la:rs:9:2347,rs,9:2347,rs,39:991,urn:us-la:rs:39:991,R.S. 39:991,12822
+urn:us-la:rs:9:2347,rs,9:2347,rs,42:264,urn:us-la:rs:42:264,R.S. 42:264,16955
+urn:us-la:rs:9:2347,rs,9:2347,rs,9:2341,urn:us-la:rs:9:2341,R.S. 9:2341,17955
+urn:us-la:rs:9:2347,rs,9:2347,rs,47:2128,urn:us-la:rs:47:2128,R.S. 47:2128,19255
+urn:us-la:rs:9:2347,rs,9:2347,rs,9:2341,urn:us-la:rs:9:2341,R.S. 9:2341,19860
+urn:us-la:rs:9:2348,rs,9:2348,rs,9:2271,urn:us-la:rs:9:2271,R.S. 9:2271,408
+urn:us-la:rs:9:2349,rs,9:2349,rs,9:2090,urn:us-la:rs:9:2090,R.S. 9:2090,393
+urn:us-la:rs:9:2349,rs,9:2349,rs,42:1112,urn:us-la:rs:42:1112,R.S. 42:1112,742
+urn:us-la:rs:9:2349,rs,9:2349,rs,9:2087,urn:us-la:rs:9:2087,R.S. 9:2087,850
+urn:us-la:rs:9:2349,rs,9:2349,rs,9:2792.1.1,urn:us-la:rs:9:2792.1.1,R.S. 9:2792.1.1,2537
+urn:us-la:rs:9:2349,rs,9:2349,rs,9:2350,urn:us-la:rs:9:2350,R.S. 9:2350,3259
+urn:us-la:rs:9:2350,rs,9:2350,rs,9:2191,urn:us-la:rs:9:2191,R.S. 9:2191,158
+urn:us-la:rs:9:2350.2,rs,9:2350.2,rs,9:2337.2,urn:us-la:rs:9:2337.2,R.S. 9:2337.2,987
+urn:us-la:rs:9:2350.2,rs,9:2350.2,rs,9:2337.2,urn:us-la:rs:9:2337.2,R.S. 9:2337.2,1134
+urn:us-la:rs:9:2351,rs,9:2351,rs,9:2352,urn:us-la:rs:9:2352,R.S. 9:2352,351
+urn:us-la:rs:9:2353,rs,9:2353,rs,9:2351,urn:us-la:rs:9:2351,R.S. 9:2351,21
+urn:us-la:rs:9:2353,rs,9:2353,civcode,156,urn:us-la:civcode:art:156,Civil Code Article 156,102
+urn:us-la:rs:9:2371,rs,9:2371,civcode,1544,urn:us-la:civcode:art:1544,Civil Code Article 1544,191
+urn:us-la:rs:9:2372,rs,9:2372,civcode,1502,urn:us-la:civcode:art:1502,Civil Code Articles 1502,145
+urn:us-la:rs:9:2372,rs,9:2372,civcode,1505,urn:us-la:civcode:art:1505,Civil Code Article 1505,388
+urn:us-la:rs:9:2372,rs,9:2372,civcode,1234,urn:us-la:civcode:art:1234,Civil Code Article 1234,461
+urn:us-la:rs:9:2373,rs,9:2373,civcode,1502,urn:us-la:civcode:art:1502,Civil Code Articles 1502,192
+urn:us-la:rs:9:2373,rs,9:2373,civcode,1505,urn:us-la:civcode:art:1505,Civil Code Article 1505,435
+urn:us-la:rs:9:2373,rs,9:2373,civcode,1234,urn:us-la:civcode:art:1234,Civil Code Article 1234,506
+urn:us-la:rs:9:2434,rs,9:2434,rs,9:2436,urn:us-la:rs:9:2436,R.S. 9:2436,860
+urn:us-la:rs:9:2434,rs,9:2434,rs,9:2432,urn:us-la:rs:9:2432,R.S. 9:2432,937
+urn:us-la:rs:9:2435,rs,9:2435,rs,9:2432,urn:us-la:rs:9:2432,R.S. 9:2432,1525
+urn:us-la:rs:9:2438,rs,9:2438,rs,9:2431,urn:us-la:rs:9:2431,R.S. 9:2431,0
+urn:us-la:rs:9:2447,rs,9:2447,rs,49:222,urn:us-la:rs:49:222,R.S. 49:222,60
+urn:us-la:rs:9:2502,rs,9:2502,civcode,1617,urn:us-la:civcode:art:1617,Civil Code Articles 1617,215
+urn:us-la:rs:9:2502,rs,9:2502,civcode,1617,urn:us-la:civcode:art:1617,Civil Code Articles 1617,375
+urn:us-la:rs:9:2503,rs,9:2503,civcode,938,urn:us-la:civcode:art:938,Civil Code Article 938,106
+urn:us-la:rs:9:2503,rs,9:2503,civcode,938,urn:us-la:civcode:art:938,Civil Code Article 938,329
+urn:us-la:rs:9:2616,rs,9:2616,rs,10:3,urn:us-la:rs:10:3,R.S. 10:3,110
+urn:us-la:rs:9:2616,rs,9:2616,rs,10:7,urn:us-la:rs:10:7,R.S. 10:7,153
+urn:us-la:rs:9:2616,rs,9:2616,rs,10:1,urn:us-la:rs:10:1,R.S. 10:1,1958
+urn:us-la:rs:9:2616,rs,9:2616,rs,10:3,urn:us-la:rs:10:3,R.S. 10:3,2204
+urn:us-la:rs:9:2618,rs,9:2618,rs,9:2612,urn:us-la:rs:9:2612,R.S. 9:2612,35
+urn:us-la:rs:9:2618,rs,9:2618,rs,9:2612,urn:us-la:rs:9:2612,R.S. 9:2612,1471
+urn:us-la:rs:9:2620,rs,9:2620,rs,24:175,urn:us-la:rs:24:175,R.S. 24:175,60
+urn:us-la:rs:9:2621,rs,9:2621,rs,9:2619,urn:us-la:rs:9:2619,R.S. 9:2619,1353
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,809
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,6:951,urn:us-la:rs:6:951,R.S. 6:951,1650
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,9:3539,urn:us-la:rs:9:3539,R.S. 9:3539,2020
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,9:3540,urn:us-la:rs:9:3540,R.S. 9:3540,2036
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,9:3539,urn:us-la:rs:9:3539,R.S. 9:3539,2146
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,9:3538,urn:us-la:rs:9:3538,R.S. 9:3538,2341
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,9:3541,urn:us-la:rs:9:3541,R.S. 9:3541,2361
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,9:3539,urn:us-la:rs:9:3539,R.S. 9:3539,2491
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,9:3540,urn:us-la:rs:9:3540,R.S. 9:3540,2507
+urn:us-la:rs:9:2711.1,rs,9:2711.1,rs,51:1401,urn:us-la:rs:51:1401,R.S. 51:1401,2667
+urn:us-la:rs:9:2713,rs,9:2713,rs,9:2713.1,urn:us-la:rs:9:2713.1,R.S. 9:2713.1,17
+urn:us-la:rs:9:2713.1,rs,9:2713.1,rs,9:2713.5,urn:us-la:rs:9:2713.5,R.S. 9:2713.5,2179
+urn:us-la:rs:9:2713.1,rs,9:2713.1,rs,9:2713.2,urn:us-la:rs:9:2713.2,R.S. 9:2713.2,4037
+urn:us-la:rs:9:2713.1,rs,9:2713.1,rs,9:2713.6,urn:us-la:rs:9:2713.6,R.S. 9:2713.6,5890
+urn:us-la:rs:9:2713.3,rs,9:2713.3,rs,9:2713.8,urn:us-la:rs:9:2713.8,R.S. 9:2713.8,647
+urn:us-la:rs:9:2713.8,rs,9:2713.8,rs,9:2713.6,urn:us-la:rs:9:2713.6,R.S. 9:2713.6,993
+urn:us-la:rs:9:2713.8,rs,9:2713.8,rs,9:2713.5,urn:us-la:rs:9:2713.5,R.S. 9:2713.5,1361
+urn:us-la:rs:9:2713.8,rs,9:2713.8,rs,9:2713.5,urn:us-la:rs:9:2713.5,R.S. 9:2713.5,1542
+urn:us-la:rs:9:2713.9,rs,9:2713.9,rs,9:2713.5,urn:us-la:rs:9:2713.5,R.S. 9:2713.5,1968
+urn:us-la:rs:9:2713.9,rs,9:2713.9,rs,9:2713.6,urn:us-la:rs:9:2713.6,R.S. 9:2713.6,2029
+urn:us-la:rs:9:2716,rs,9:2716,rs,9:3351,urn:us-la:rs:9:3351,R.S. 9:3351,1641
+urn:us-la:rs:9:2717.1,rs,9:2717.1,rs,40:2608,urn:us-la:rs:40:2608,R.S. 40:2608,5175
+urn:us-la:rs:9:2717.1,rs,9:2717.1,rs,14:90.1,urn:us-la:rs:14:90.1,R.S. 14:90.1,5191
+urn:us-la:rs:9:2717.1,rs,9:2717.1,civcode,24,urn:us-la:civcode:art:24,Civil Code Article 24,9707
+urn:us-la:rs:9:2717.1,rs,9:2717.1,civcode,24,urn:us-la:civcode:art:24,Civil Code Article 24,10737
+urn:us-la:rs:9:2717.1,rs,9:2717.1,ccp,3751,,Code of Civil Procedure Article 3751,3528
+urn:us-la:rs:9:2717.1,rs,9:2717.1,ccp,2331,,Code of Civil Procedure Article 2331,5781
+urn:us-la:rs:9:2717.4,rs,9:2717.4,rs,17:407.33,urn:us-la:rs:17:407.33,R.S. 17:407.33,5328
+urn:us-la:rs:9:2717.4,rs,9:2717.4,rs,17:3140.1,urn:us-la:rs:17:3140.1,R.S. 17:3140.1,5670
+urn:us-la:rs:9:2717.4,rs,9:2717.4,rs,25:225,urn:us-la:rs:25:225,R.S. 25:225,5764
+urn:us-la:rs:9:2718.1,rs,9:2718.1,rs,9:2720.5,urn:us-la:rs:9:2720.5,R.S. 9:2720.5,364
+urn:us-la:rs:9:2720,rs,9:2720,rs,9:2718.1,urn:us-la:rs:9:2718.1,R.S. 9:2718.1,530
+urn:us-la:rs:9:2720.2,rs,9:2720.2,rs,40:1165.1,urn:us-la:rs:40:1165.1,R.S. 40:1165.1,465
+urn:us-la:rs:9:2720.2,rs,9:2720.2,rs,9:2720.5,urn:us-la:rs:9:2720.5,R.S. 9:2720.5,2009
+urn:us-la:rs:9:2720.4,rs,9:2720.4,rs,15:587,urn:us-la:rs:15:587,R.S. 15:587,1001
+urn:us-la:rs:9:2720.5,rs,9:2720.5,rs,9:2720,urn:us-la:rs:9:2720,R.S. 9:2720,556
+urn:us-la:rs:9:2720.6,rs,9:2720.6,rs,9:2720.9,urn:us-la:rs:9:2720.9,R.S. 9:2720.9,238
+urn:us-la:rs:9:2720.13,rs,9:2720.13,rs,40:32,urn:us-la:rs:40:32,R.S. 40:32,1345
+urn:us-la:rs:9:2736,rs,9:2736,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,256
+urn:us-la:rs:9:2742,rs,9:2742,civcode,3338,urn:us-la:civcode:art:3338,Civil Code Article 3338,112
+urn:us-la:rs:9:2743,rs,9:2743,rs,47:2180,urn:us-la:rs:47:2180,R.S. 47:2180,1915
+urn:us-la:rs:9:2761,rs,9:2761,rs,44:119,urn:us-la:rs:44:119,R.S. 44:119,46
+urn:us-la:rs:9:2771,rs,9:2771,rs,37:2150.1,urn:us-la:rs:37:2150.1,R.S. 37:2150.1,92
+urn:us-la:rs:9:2772,rs,9:2772,rs,37:682,urn:us-la:rs:37:682,R.S. 37:682,665
+urn:us-la:rs:9:2772,rs,9:2772,rs,37:2150.1,urn:us-la:rs:37:2150.1,R.S. 37:2150.1,1026
+urn:us-la:rs:9:2772,rs,9:2772,rs,37:682,urn:us-la:rs:37:682,R.S. 37:682,2021
+urn:us-la:rs:9:2772,rs,9:2772,rs,37:682,urn:us-la:rs:37:682,R.S. 37:682,2564
+urn:us-la:rs:9:2772,rs,9:2772,rs,37:2150.1,urn:us-la:rs:37:2150.1,R.S. 37:2150.1,2879
+urn:us-la:rs:9:2772,rs,9:2772,rs,37:682,urn:us-la:rs:37:682,R.S. 37:682,5226
+urn:us-la:rs:9:2772,rs,9:2772,rs,9:2771,urn:us-la:rs:9:2771,R.S. 9:2771,6658
+urn:us-la:rs:9:2772,rs,9:2772,civcode,1953,urn:us-la:civcode:art:1953,Civil Code Article 1953,6451
+urn:us-la:rs:9:2773,rs,9:2773,civcode,667,urn:us-la:civcode:art:667,Civil Code Article 667,209
+urn:us-la:rs:9:2780.1,rs,9:2780.1,rs,9:3306,urn:us-la:rs:9:3306,R.S. 9:3306,348
+urn:us-la:rs:9:2780.1,rs,9:2780.1,rs,9:3306,urn:us-la:rs:9:3306,R.S. 9:3306,592
+urn:us-la:rs:9:2780.1,rs,9:2780.1,rs,9:3306,urn:us-la:rs:9:3306,R.S. 9:3306,804
+urn:us-la:rs:9:2780.1,rs,9:2780.1,rs,9:2780,urn:us-la:rs:9:2780,R.S. 9:2780,4883
+urn:us-la:rs:9:2780.1,rs,9:2780.1,rs,38:2195,urn:us-la:rs:38:2195,R.S. 38:2195,4898
+urn:us-la:rs:9:2781.1,rs,9:2781.1,rs,9:2781,urn:us-la:rs:9:2781,R.S. 9:2781,2195
+urn:us-la:rs:9:2781.1,rs,9:2781.1,rs,37:1431,urn:us-la:rs:37:1431,R.S. 37:1431,2294
+urn:us-la:rs:9:2781.2,rs,9:2781.2,rs,37:3392,urn:us-la:rs:37:3392,R.S. 37:3392,163
+urn:us-la:rs:9:2781.2,rs,9:2781.2,rs,37:1431,urn:us-la:rs:37:1431,R.S. 37:1431,2147
+urn:us-la:rs:9:2782.2,rs,9:2782.2,rs,10:3,urn:us-la:rs:10:3,R.S. 10:3,253
+urn:us-la:rs:9:2782.2,rs,9:2782.2,rs,10:3,urn:us-la:rs:10:3,R.S. 10:3,1500
+urn:us-la:rs:9:2784.1,rs,9:2784.1,rs,9:2781,urn:us-la:rs:9:2781,R.S. 9:2781,1828
+urn:us-la:rs:9:2789,rs,9:2789,rs,6:317,urn:us-la:rs:6:317,R.S. 6:317,194
+urn:us-la:rs:9:2789,rs,9:2789,civcode,510,urn:us-la:civcode:art:510,Civil Code Art. 510,258
+urn:us-la:rs:9:2790.6,rs,9:2790.6,rs,14:118,urn:us-la:rs:14:118,R.S. 14:118,108
+urn:us-la:rs:9:2790.6,rs,9:2790.6,rs,13:4202,urn:us-la:rs:13:4202,R.S. 13:4202,342
+urn:us-la:rs:9:2792.2,rs,9:2792.2,rs,33:2740.3,urn:us-la:rs:33:2740.3,R.S. 33:2740.3,750
+urn:us-la:rs:9:2792.2,rs,9:2792.2,rs,33:2740.8,urn:us-la:rs:33:2740.8,R.S. 33:2740.8,766
+urn:us-la:rs:9:2792.2,rs,9:2792.2,rs,33:2740.15,urn:us-la:rs:33:2740.15,R.S. 33:2740.15,786
+urn:us-la:rs:9:2792.7,rs,9:2792.7,rs,9:1121.101,urn:us-la:rs:9:1121.101,R.S. 9:1121.101,801
+urn:us-la:rs:9:2792.7,rs,9:2792.7,rs,9:1131.1,urn:us-la:rs:9:1131.1,R.S. 9:1131.1,899
+urn:us-la:rs:9:2792.7,rs,9:2792.7,rs,9:1141.1,urn:us-la:rs:9:1141.1,R.S. 9:1141.1,1002
+urn:us-la:rs:9:2792.9,rs,9:2792.9,rs,46:1601,urn:us-la:rs:46:1601,R.S. 46:1601,1753
+urn:us-la:rs:9:2792.10,rs,9:2792.10,rs,32:216,urn:us-la:rs:32:216,R.S. 32:216,59
+urn:us-la:rs:9:2793,rs,9:2793,rs,40:1137.2,urn:us-la:rs:40:1137.2,R.S. 40:1137.2,1703
+urn:us-la:rs:9:2793.8,rs,9:2793.8,rs,29:735.3.1,urn:us-la:rs:29:735.3.1,R.S. 29:735.3.1,1357
+urn:us-la:rs:9:2793.10,rs,9:2793.10,rs,29:735,urn:us-la:rs:29:735,R.S. 29:735,184
+urn:us-la:rs:9:2793.11,rs,9:2793.11,rs,40:2402,urn:us-la:rs:40:2402,R.S. 40:2402,487
+urn:us-la:rs:9:2793.11,rs,9:2793.11,rs,14:112.4,urn:us-la:rs:14:112.4,R.S. 14:112.4,507
+urn:us-la:rs:9:2793.11,rs,9:2793.11,rs,32:24,urn:us-la:rs:32:24,R.S. 32:24,1873
+urn:us-la:rs:9:2793.12,rs,9:2793.12,rs,40:1379.1,urn:us-la:rs:40:1379.1,R.S. 40:1379.1,134
+urn:us-la:rs:9:2793.12,rs,9:2793.12,rs,40:1379.1.3,urn:us-la:rs:40:1379.1.3,R.S. 40:1379.1.3,271
+urn:us-la:rs:9:2793.12,rs,9:2793.12,rs,14:95,urn:us-la:rs:14:95,R.S. 14:95,328
+urn:us-la:rs:9:2794,rs,9:2794,rs,37:1261,urn:us-la:rs:37:1261,R.S. 37:1261,81
+urn:us-la:rs:9:2794,rs,9:2794,rs,37:751,urn:us-la:rs:37:751,R.S. 37:751,128
+urn:us-la:rs:9:2794,rs,9:2794,rs,37:1041,urn:us-la:rs:37:1041,R.S. 37:1041,179
+urn:us-la:rs:9:2794,rs,9:2794,rs,37:2801,urn:us-la:rs:37:2801,R.S. 37:2801,244
+urn:us-la:rs:9:2794,rs,9:2794,rs,37:1261,urn:us-la:rs:37:1261,R.S. 37:1261,2803
+urn:us-la:rs:9:2794,rs,9:2794,rs,37:1261,urn:us-la:rs:37:1261,R.S. 37:1261,3575
+urn:us-la:rs:9:2795.1,rs,9:2795.1,rs,9:2800.51,urn:us-la:rs:9:2800.51,R.S. 9:2800.51,6489
+urn:us-la:rs:9:2795.1,rs,9:2795.1,rs,9:2795.1,urn:us-la:rs:9:2795.1,R.S. 9:2795.1,8245
+urn:us-la:rs:9:2795.3,rs,9:2795.3,rs,9:2800.51,urn:us-la:rs:9:2800.51,R.S. 9:2800.51,5963
+urn:us-la:rs:9:2795.3,rs,9:2795.3,rs,9:2795.3,urn:us-la:rs:9:2795.3,R.S. 9:2795.3,7335
+urn:us-la:rs:9:2795.4,rs,9:2795.4,rs,9:2800.51,urn:us-la:rs:9:2800.51,R.S. 9:2800.51,6199
+urn:us-la:rs:9:2795.4,rs,9:2795.4,rs,9:2795.4,urn:us-la:rs:9:2795.4,R.S. 9:2795.4,8151
+urn:us-la:rs:9:2795.5,rs,9:2795.5,rs,9:2800.51,urn:us-la:rs:9:2800.51,R.S. 9:2800.51,4158
+urn:us-la:rs:9:2795.5,rs,9:2795.5,rs,9:2795.5,urn:us-la:rs:9:2795.5,R.S. 9:2795.5,5148
+urn:us-la:rs:9:2796.3,rs,9:2796.3,rs,13:5101,urn:us-la:rs:13:5101,R.S. 13:5101,2229
+urn:us-la:rs:9:2796.3,rs,9:2796.3,rs,13:5106,urn:us-la:rs:13:5106,R.S. 13:5106,2315
+urn:us-la:rs:9:2797,rs,9:2797,rs,9:2797,urn:us-la:rs:9:2797,R.S. 9:2797,1462
+urn:us-la:rs:9:2797,rs,9:2797,rs,40:1237.1,urn:us-la:rs:40:1237.1,R.S. 40:1237.1,1502
+urn:us-la:rs:9:2797,rs,9:2797,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,1522
+urn:us-la:rs:9:2797,rs,9:2797,civcode,2322.1,urn:us-la:civcode:art:2322.1,Civil Code Article 2322.1,1475
+urn:us-la:rs:9:2798,rs,9:2798,rs,37:3301,urn:us-la:rs:37:3301,R.S. 37:3301,3026
+urn:us-la:rs:9:2798,rs,9:2798,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,3132
+urn:us-la:rs:9:2798.3,rs,9:2798.3,rs,17:416,urn:us-la:rs:17:416,R.S. 17:416,213
+urn:us-la:rs:9:2798.4,rs,9:2798.4,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,656
+urn:us-la:rs:9:2798.4,rs,9:2798.4,rs,40:964,urn:us-la:rs:40:964,R.S. 40:964,679
+urn:us-la:rs:9:2798.4,rs,9:2798.4,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,908
+urn:us-la:rs:9:2798.4,rs,9:2798.4,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,1093
+urn:us-la:rs:9:2798.4,rs,9:2798.4,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,1732
+urn:us-la:rs:9:2798.4,rs,9:2798.4,rs,40:964,urn:us-la:rs:40:964,R.S. 40:964,1755
+urn:us-la:rs:9:2798.4,rs,9:2798.4,civcode,2315.1,urn:us-la:civcode:art:2315.1,Civil Code Article 2315.1,154
+urn:us-la:rs:9:2798.5,rs,9:2798.5,rs,40:2842,urn:us-la:rs:40:2842,R.S. 40:2842,791
+urn:us-la:rs:9:2798.5,rs,9:2798.5,rs,40:2842,urn:us-la:rs:40:2842,R.S. 40:2842,854
+urn:us-la:rs:9:2798.5,rs,9:2798.5,rs,40:2842,urn:us-la:rs:40:2842,R.S. 40:2842,926
+urn:us-la:rs:9:2798.5,rs,9:2798.5,rs,9:2798.1,urn:us-la:rs:9:2798.1,R.S. 9:2798.1,1186
+urn:us-la:rs:9:2798.5,rs,9:2798.5,rs,13:5101,urn:us-la:rs:13:5101,R.S. 13:5101,1230
+urn:us-la:rs:9:2798.5,rs,9:2798.5,rs,40:1237.1,urn:us-la:rs:40:1237.1,R.S. 40:1237.1,1252
+urn:us-la:rs:9:2798.5,rs,9:2798.5,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,1279
+urn:us-la:rs:9:2799,rs,9:2799,rs,56:8,urn:us-la:rs:56:8,R.S. 56:8,1346
+urn:us-la:rs:9:2799,rs,9:2799,rs,40:3,urn:us-la:rs:40:3,R.S. 40:3,2061
+urn:us-la:rs:9:2799,rs,9:2799,rs,40:961,urn:us-la:rs:40:961,R.S. 40:961,2515
+urn:us-la:rs:9:2799.2,rs,9:2799.2,rs,14:225,urn:us-la:rs:14:225,R.S. 14:225,77
+urn:us-la:rs:9:2799.5,rs,9:2799.5,rs,40:1237.1,urn:us-la:rs:40:1237.1,R.S. 40:1237.1,7006
+urn:us-la:rs:9:2800,rs,9:2800,rs,40:384,urn:us-la:rs:40:384,R.S. 40:384,2340
+urn:us-la:rs:9:2800,rs,9:2800,civcode,2317,urn:us-la:civcode:art:2317,Civil Code Article 2317,40
+urn:us-la:rs:9:2800,rs,9:2800,civcode,2317,urn:us-la:civcode:art:2317,Civil Code Article 2317,628
+urn:us-la:rs:9:2800.2,rs,9:2800.2,rs,37:2351,urn:us-la:rs:37:2351,R.S. 37:2351,411
+urn:us-la:rs:9:2800.2,rs,9:2800.2,rs,37:1360.51,urn:us-la:rs:37:1360.51,R.S. 37:1360.51,479
+urn:us-la:rs:9:2800.2,rs,9:2800.2,rs,37:1261,urn:us-la:rs:37:1261,R.S. 37:1261,545
+urn:us-la:rs:9:2800.2,rs,9:2800.2,rs,37:2701,urn:us-la:rs:37:2701,R.S. 37:2701,613
+urn:us-la:rs:9:2800.3,rs,9:2800.3,rs,30:1148,urn:us-la:rs:30:1148,R.S. 30:1148,931
+urn:us-la:rs:9:2800.3,rs,9:2800.3,rs,30:1149.46,urn:us-la:rs:30:1149.46,R.S. 30:1149.46,947
+urn:us-la:rs:9:2800.6,rs,9:2800.6,civcode,660,urn:us-la:civcode:art:660,Civil Code Arts. 660,2082
+urn:us-la:rs:9:2800.12,rs,9:2800.12,rs,14:87.1,urn:us-la:rs:14:87.1,R.S. 14:87.1,570
+urn:us-la:rs:9:2800.12,rs,9:2800.12,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,1424
+urn:us-la:rs:9:2800.12,rs,9:2800.12,rs,14:87.1,urn:us-la:rs:14:87.1,R.S. 14:87.1,2335
+urn:us-la:rs:9:2800.12,rs,9:2800.12,rs,13:3201,urn:us-la:rs:13:3201,R.S. 13:3201,2694
+urn:us-la:rs:9:2800.15,rs,9:2800.15,rs,51:911.21,urn:us-la:rs:51:911.21,R.S. 51:911.21,614
+urn:us-la:rs:9:2800.15,rs,9:2800.15,rs,37:1437,urn:us-la:rs:37:1437,R.S. 37:1437,897
+urn:us-la:rs:9:2800.17,rs,9:2800.17,rs,32:702,urn:us-la:rs:32:702,R.S. 32:702,716
+urn:us-la:rs:9:2800.19,rs,9:2800.19,rs,14:19,urn:us-la:rs:14:19,R.S. 14:19,188
+urn:us-la:rs:9:2800.20,rs,9:2800.20,rs,13:3715.6,urn:us-la:rs:13:3715.6,R.S. 13:3715.6,107
+urn:us-la:rs:9:2800.20,rs,9:2800.20,rs,13:3715.6,urn:us-la:rs:13:3715.6,R.S. 13:3715.6,417
+urn:us-la:rs:9:2800.20,rs,9:2800.20,rs,13:3715.6,urn:us-la:rs:13:3715.6,R.S. 13:3715.6,793
+urn:us-la:rs:9:2800.23,rs,9:2800.23,civcode,225,urn:us-la:civcode:art:225,Civil Code Articles 225,37
+urn:us-la:rs:9:2800.24,rs,9:2800.24,rs,25:933,urn:us-la:rs:25:933,R.S. 25:933,1446
+urn:us-la:rs:9:2800.25,rs,9:2800.25,rs,23:1032,urn:us-la:rs:23:1032,R.S. 23:1032,2053
+urn:us-la:rs:9:2800.25,rs,9:2800.25,rs,23:1032,urn:us-la:rs:23:1032,R.S. 23:1032,2229
+urn:us-la:rs:9:2800.25,rs,9:2800.25,rs,23:1032,urn:us-la:rs:23:1032,R.S. 23:1032,2305
+urn:us-la:rs:9:2800.25,rs,9:2800.25,rs,23:1032,urn:us-la:rs:23:1032,R.S. 23:1032,2580
+urn:us-la:rs:9:2800.27,rs,9:2800.27,rs,23:1020.1,urn:us-la:rs:23:1020.1,R.S. 23:1020.1,1998
+urn:us-la:rs:9:2800.27,rs,9:2800.27,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,3258
+urn:us-la:rs:9:2800.28,rs,9:2800.28,rs,14:102.1,urn:us-la:rs:14:102.1,R.S. 14:102.1,195
+urn:us-la:rs:9:2800.29,rs,9:2800.29,rs,51:3211,urn:us-la:rs:51:3211,R.S. 51:3211,5579
+urn:us-la:rs:9:2800.30,rs,9:2800.30,rs,15:1181,urn:us-la:rs:15:1181,R.S. 15:1181,751
+urn:us-la:rs:9:2800.30,rs,9:2800.30,rs,15:1171,urn:us-la:rs:15:1171,R.S. 15:1171,959
+urn:us-la:rs:9:2800.30,rs,9:2800.30,rs,15:1171,urn:us-la:rs:15:1171,R.S. 15:1171,1546
+urn:us-la:rs:9:2800.52,rs,9:2800.52,rs,23:1032,urn:us-la:rs:23:1032,R.S. 23:1032,701
+urn:us-la:rs:9:2800.52,rs,9:2800.52,rs,9:2800.53,urn:us-la:rs:9:2800.53,R.S. 9:2800.53,831
+urn:us-la:rs:9:2800.52,rs,9:2800.52,civcode,2315,urn:us-la:civcode:art:2315,Civil Code Article 2315,376
+urn:us-la:rs:9:2800.53,rs,9:2800.53,rs,9:2797,urn:us-la:rs:9:2797,R.S. 9:2797,2205
+urn:us-la:rs:9:2800.53,rs,9:2800.53,civcode,2315,urn:us-la:civcode:art:2315,Civil Code Articles 2315,2494
+urn:us-la:rs:9:2800.54,rs,9:2800.54,rs,9:2800.55,urn:us-la:rs:9:2800.55,R.S. 9:2800.55,438
+urn:us-la:rs:9:2800.54,rs,9:2800.54,rs,9:2800.56,urn:us-la:rs:9:2800.56,R.S. 9:2800.56,522
+urn:us-la:rs:9:2800.54,rs,9:2800.54,rs,9:2800.57,urn:us-la:rs:9:2800.57,R.S. 9:2800.57,664
+urn:us-la:rs:9:2800.54,rs,9:2800.54,rs,9:2800.58,urn:us-la:rs:9:2800.58,R.S. 9:2800.58,830
+urn:us-la:rs:9:2800.54,rs,9:2800.54,rs,9:2800.55,urn:us-la:rs:9:2800.55,R.S. 9:2800.55,929
+urn:us-la:rs:9:2800.54,rs,9:2800.54,rs,9:2800.56,urn:us-la:rs:9:2800.56,R.S. 9:2800.56,1096
+urn:us-la:rs:9:2800.59,rs,9:2800.59,rs,9:2800.56,urn:us-la:rs:9:2800.56,R.S. 9:2800.56,19
+urn:us-la:rs:9:2800.59,rs,9:2800.59,rs,9:2800.56,urn:us-la:rs:9:2800.56,R.S. 9:2800.56,652
+urn:us-la:rs:9:2800.59,rs,9:2800.59,rs,9:2800.56,urn:us-la:rs:9:2800.56,R.S. 9:2800.56,735
+urn:us-la:rs:9:2800.59,rs,9:2800.59,rs,9:2800.57,urn:us-la:rs:9:2800.57,R.S. 9:2800.57,917
+urn:us-la:rs:9:2800.60,rs,9:2800.60,rs,9:2800.55,urn:us-la:rs:9:2800.55,R.S. 9:2800.55,831
+urn:us-la:rs:9:2800.62,rs,9:2800.62,rs,40:961,urn:us-la:rs:40:961,R.S. 40:961,206
+urn:us-la:rs:9:2800.62,rs,9:2800.62,rs,40:961,urn:us-la:rs:40:961,R.S. 40:961,509
+urn:us-la:rs:9:2800.62,rs,9:2800.62,rs,3:1481,urn:us-la:rs:3:1481,R.S. 3:1481,574
+urn:us-la:rs:9:2800.62,rs,9:2800.62,rs,3:1482,urn:us-la:rs:3:1482,R.S. 3:1482,645
+urn:us-la:rs:9:2800.62,rs,9:2800.62,rs,40:961,urn:us-la:rs:40:961,R.S. 40:961,2038
+urn:us-la:rs:9:2800.63,rs,9:2800.63,rs,3:1481,urn:us-la:rs:3:1481,R.S. 3:1481,1025
+urn:us-la:rs:9:2800.63,rs,9:2800.63,rs,40:961,urn:us-la:rs:40:961,R.S. 40:961,2243
+urn:us-la:rs:9:2800.68,rs,9:2800.68,rs,9:2800.64,urn:us-la:rs:9:2800.64,R.S. 9:2800.64,47
+urn:us-la:rs:9:2800.68,rs,9:2800.68,civcode,2323,urn:us-la:civcode:art:2323,Civil Code Article 2323,129
+urn:us-la:rs:9:2800.70,rs,9:2800.70,rs,9:2800.63,urn:us-la:rs:9:2800.63,R.S. 9:2800.63,759
+urn:us-la:rs:9:2800.70,rs,9:2800.70,rs,9:2800.63,urn:us-la:rs:9:2800.63,R.S. 9:2800.63,1315
+urn:us-la:rs:9:2800.70,rs,9:2800.70,rs,9:2800.64,urn:us-la:rs:9:2800.64,R.S. 9:2800.64,1339
+urn:us-la:rs:9:2800.74,rs,9:2800.74,rs,44:3,urn:us-la:rs:44:3,R.S. 44:3,568
+urn:us-la:rs:9:2800.75,rs,9:2800.75,rs,9:291,urn:us-la:rs:9:291,R.S. 9:291,97
+urn:us-la:rs:9:2800.77,rs,9:2800.77,rs,40:967,urn:us-la:rs:40:967,R.S. 40:967,3787
+urn:us-la:rs:9:2800.77,rs,9:2800.77,rs,40:978,urn:us-la:rs:40:978,R.S. 40:978,3934
+urn:us-la:rs:9:2800.77,rs,9:2800.77,civcode,2323,urn:us-la:civcode:art:2323,Civil Code Article 2323,2755
+urn:us-la:rs:9:2923,rs,9:2923,rs,9:2922,urn:us-la:rs:9:2922,R.S. 9:2922,44
+urn:us-la:rs:9:2926,rs,9:2926,rs,9:2921,urn:us-la:rs:9:2921,R.S. 9:2921,21
+urn:us-la:rs:9:2927,rs,9:2927,rs,9:2921,urn:us-la:rs:9:2921,R.S. 9:2921,32
+urn:us-la:rs:9:2941.1,rs,9:2941.1,rs,9:2941,urn:us-la:rs:9:2941,R.S. 9:2941,105
+urn:us-la:rs:9:2941.1,rs,9:2941.1,rs,47:2171,urn:us-la:rs:47:2171,R.S. 47:2171,1304
+urn:us-la:rs:9:2947,rs,9:2947,rs,9:2942,urn:us-la:rs:9:2942,R.S. 9:2942,165
+urn:us-la:rs:9:2984,rs,9:2984,rs,9:2971,urn:us-la:rs:9:2971,R.S. 9:2971,137
+urn:us-la:rs:9:3121,rs,9:3121,rs,3:3402,urn:us-la:rs:3:3402,R.S. 3:3402,48
+urn:us-la:rs:9:3132,rs,9:3132,rs,9:1121.101,urn:us-la:rs:9:1121.101,R.S. 9:1121.101,2573
+urn:us-la:rs:9:3132,rs,9:3132,rs,9:1131.1,urn:us-la:rs:9:1131.1,R.S. 9:1131.1,2629
+urn:us-la:rs:9:3132,rs,9:3132,rs,9:1141.1,urn:us-la:rs:9:1141.1,R.S. 9:1141.1,2692
+urn:us-la:rs:9:3137.2,rs,9:3137.2,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,396
+urn:us-la:rs:9:3137.2,rs,9:3137.2,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,650
+urn:us-la:rs:9:3137.2,rs,9:3137.2,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,1245
+urn:us-la:rs:9:3137.3,rs,9:3137.3,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,2269
+urn:us-la:rs:9:3137.5,rs,9:3137.5,rs,9:3137.4,urn:us-la:rs:9:3137.4,R.S. 9:3137.4,92
+urn:us-la:rs:9:3137.6,rs,9:3137.6,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,49
+urn:us-la:rs:9:3137.8,rs,9:3137.8,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,25
+urn:us-la:rs:9:3137.8,rs,9:3137.8,rs,10:1,urn:us-la:rs:10:1,R.S. 10:1,155
+urn:us-la:rs:9:3137.8,rs,9:3137.8,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,302
+urn:us-la:rs:9:3137.8,rs,9:3137.8,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,699
+urn:us-la:rs:9:3144,rs,9:3144,rs,9:3145,urn:us-la:rs:9:3145,R.S. 9:3145,2221
+urn:us-la:rs:9:3144,rs,9:3144,rs,9:3145,urn:us-la:rs:9:3145,R.S. 9:3145,2422
+urn:us-la:rs:9:3146,rs,9:3146,rs,9:3144,urn:us-la:rs:9:3144,R.S. 9:3144,179
+urn:us-la:rs:9:3149,rs,9:3149,rs,9:4201,urn:us-la:rs:9:4201,R.S. 9:4201,679
+urn:us-la:rs:9:3196,rs,9:3196,rs,9:3198,urn:us-la:rs:9:3198,R.S. 9:3198,775
+urn:us-la:rs:9:3196,rs,9:3196,rs,9:3197,urn:us-la:rs:9:3197,R.S. 9:3197,984
+urn:us-la:rs:9:3196,rs,9:3196,rs,9:3197,urn:us-la:rs:9:3197,R.S. 9:3197,1900
+urn:us-la:rs:9:3198.1,rs,9:3198.1,rs,9:3198,urn:us-la:rs:9:3198,R.S. 9:3198,1568
+urn:us-la:rs:9:3202,rs,9:3202,rs,9:3201,urn:us-la:rs:9:3201,R.S. 9:3201,83
+urn:us-la:rs:9:3221,rs,9:3221,civcode,2699,urn:us-la:civcode:art:2699,Civil Code Article 2699,44
+urn:us-la:rs:9:3252,rs,9:3252,rs,9:3251,urn:us-la:rs:9:3251,R.S. 9:3251,38
+urn:us-la:rs:9:3253,rs,9:3253,rs,9:3252,urn:us-la:rs:9:3252,R.S. 9:3252,27
+urn:us-la:rs:9:3258.1,rs,9:3258.1,rs,9:2601,urn:us-la:rs:9:2601,R.S. 9:2601,1004
+urn:us-la:rs:9:3259.1,rs,9:3259.1,rs,9:1149.2,urn:us-la:rs:9:1149.2,R.S. 9:1149.2,154
+urn:us-la:rs:9:3259.1,rs,9:3259.1,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,841
+urn:us-la:rs:9:3259.1,rs,9:3259.1,rs,6:969.6,urn:us-la:rs:6:969.6,R.S. 6:969.6,1253
+urn:us-la:rs:9:3259.1,rs,9:3259.1,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,1454
+urn:us-la:rs:9:3259.3,rs,9:3259.3,rs,9:1149.2,urn:us-la:rs:9:1149.2,R.S. 9:1149.2,1008
+urn:us-la:rs:9:3259.3,rs,9:3259.3,rs,9:3259.1,urn:us-la:rs:9:3259.1,R.S. 9:3259.1,1750
+urn:us-la:rs:9:3259.3,rs,9:3259.3,civcode,475,urn:us-la:civcode:art:475,Civil Code Article 475,858
+urn:us-la:rs:9:3259.3,rs,9:3259.3,ccp,4912,,Code of Civil Procedure Article 4912,6008
+urn:us-la:rs:9:3259.3,rs,9:3259.3,ccp,4912,,Code of Civil Procedure Article 4912,10468
+urn:us-la:rs:9:3260.1,rs,9:3260.1,ccp,2293,,Code of Civil Procedure Article 2293,405
+urn:us-la:rs:9:3261.1,rs,9:3261.1,rs,14:35.3,urn:us-la:rs:14:35.3,R.S. 14:35.3,622
+urn:us-la:rs:9:3261.1,rs,9:3261.1,rs,14:35.3,urn:us-la:rs:14:35.3,R.S. 14:35.3,1188
+urn:us-la:rs:9:3261.1,rs,9:3261.1,rs,46:2124,urn:us-la:rs:46:2124,R.S. 46:2124,1403
+urn:us-la:rs:9:3261.1,rs,9:3261.1,rs,9:3251,urn:us-la:rs:9:3251,R.S. 9:3251,7859
+urn:us-la:rs:9:3261.1,rs,9:3261.1,rs,9:3261.1,urn:us-la:rs:9:3261.1,R.S. 9:3261.1,9655
+urn:us-la:rs:9:3261.1,rs,9:3261.1,rs,9:3261.1,urn:us-la:rs:9:3261.1,R.S. 9:3261.1,11152
+urn:us-la:rs:9:3261.1,rs,9:3261.1,ccp,4701,,Code of Civil Procedure Article 4701,8966
+urn:us-la:rs:9:3261.1,rs,9:3261.1,ccp,863,,Code of Civil Procedure Article 863,12232
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,46:2187,urn:us-la:rs:46:2187,R.S. 46:2187,110
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,46:2186,urn:us-la:rs:46:2186,R.S. 46:2186,164
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,15:622,urn:us-la:rs:15:622,R.S. 15:622,360
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,15:541,urn:us-la:rs:15:541,R.S. 15:541,961
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,14:106,urn:us-la:rs:14:106,R.S. 14:106,1030
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,14:283.1,urn:us-la:rs:14:283.1,R.S. 14:283.1,1072
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,46:1842,urn:us-la:rs:46:1842,R.S. 46:1842,1237
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,9:3251,urn:us-la:rs:9:3251,R.S. 9:3251,3422
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,9:3261.2,urn:us-la:rs:9:3261.2,R.S. 9:3261.2,4916
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,14:125,urn:us-la:rs:14:125,R.S. 14:125,5410
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,14:125,urn:us-la:rs:14:125,R.S. 14:125,6055
+urn:us-la:rs:9:3261.2,rs,9:3261.2,rs,9:3261.2,urn:us-la:rs:9:3261.2,R.S. 9:3261.2,6293
+urn:us-la:rs:9:3303,rs,9:3303,rs,9:3303,urn:us-la:rs:9:3303,R.S. 9:3303,211
+urn:us-la:rs:9:3303,rs,9:3303,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,1011
+urn:us-la:rs:9:3304,rs,9:3304,rs,9:3312,urn:us-la:rs:9:3312,R.S. 9:3312,972
+urn:us-la:rs:9:3304,rs,9:3304,rs,9:3312,urn:us-la:rs:9:3312,R.S. 9:3312,1041
+urn:us-la:rs:9:3304,rs,9:3304,rs,9:3312,urn:us-la:rs:9:3312,R.S. 9:3312,1192
+urn:us-la:rs:9:3306,rs,9:3306,rs,9:3306,urn:us-la:rs:9:3306,R.S. 9:3306,2179
+urn:us-la:rs:9:3306,rs,9:3306,rs,10:1,urn:us-la:rs:10:1,R.S. 10:1,3509
+urn:us-la:rs:9:3306,rs,9:3306,rs,10:1,urn:us-la:rs:10:1,R.S. 10:1,7134
+urn:us-la:rs:9:3306,rs,9:3306,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,7174
+urn:us-la:rs:9:3306,rs,9:3306,civcode,471,urn:us-la:civcode:art:471,Civil Code Article 471,4948
+urn:us-la:rs:9:3310,rs,9:3310,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,331
+urn:us-la:rs:9:3310.1,rs,9:3310.1,rs,9:3342,urn:us-la:rs:9:3342,R.S. 9:3342,189
+urn:us-la:rs:9:3312,rs,9:3312,rs,9:3312,urn:us-la:rs:9:3312,R.S. 9:3312,1285
+urn:us-la:rs:9:3312,rs,9:3312,rs,9:3319,urn:us-la:rs:9:3319,R.S. 9:3319,1501
+urn:us-la:rs:9:3312,rs,9:3312,rs,9:3312,urn:us-la:rs:9:3312,R.S. 9:3312,2073
+urn:us-la:rs:9:3312,rs,9:3312,rs,9:3312,urn:us-la:rs:9:3312,R.S. 9:3312,2265
+urn:us-la:rs:9:3313,rs,9:3313,rs,9:3332,urn:us-la:rs:9:3332,R.S. 9:3332,762
+urn:us-la:rs:9:3313,rs,9:3313,rs,9:3333,urn:us-la:rs:9:3333,R.S. 9:3333,818
+urn:us-la:rs:9:3313,rs,9:3313,rs,9:3316,urn:us-la:rs:9:3316,R.S. 9:3316,881
+urn:us-la:rs:9:3313,rs,9:3313,rs,9:3529,urn:us-la:rs:9:3529,R.S. 9:3529,1095
+urn:us-la:rs:9:3313,rs,9:3313,rs,9:3314,urn:us-la:rs:9:3314,R.S. 9:3314,1145
+urn:us-la:rs:9:3313,rs,9:3313,rs,9:3315,urn:us-la:rs:9:3315,R.S. 9:3315,1199
+urn:us-la:rs:9:3313,rs,9:3313,rs,9:3312,urn:us-la:rs:9:3312,R.S. 9:3312,1473
+urn:us-la:rs:9:3314,rs,9:3314,rs,9:3314,urn:us-la:rs:9:3314,R.S. 9:3314,651
+urn:us-la:rs:9:3314,rs,9:3314,rs,9:3311,urn:us-la:rs:9:3311,R.S. 9:3311,1683
+urn:us-la:rs:9:3315,rs,9:3315,rs,9:3318,urn:us-la:rs:9:3318,R.S. 9:3318,1762
+urn:us-la:rs:9:3315,rs,9:3315,rs,9:3311,urn:us-la:rs:9:3311,R.S. 9:3311,2154
+urn:us-la:rs:9:3316,rs,9:3316,rs,9:3311,urn:us-la:rs:9:3311,R.S. 9:3311,1216
+urn:us-la:rs:9:3317,rs,9:3317,rs,9:3311,urn:us-la:rs:9:3311,R.S. 9:3311,1081
+urn:us-la:rs:9:3318,rs,9:3318,rs,9:3319,urn:us-la:rs:9:3319,R.S. 9:3319,487
+urn:us-la:rs:9:3318,rs,9:3318,rs,9:3320,urn:us-la:rs:9:3320,R.S. 9:3320,709
+urn:us-la:rs:9:3319,rs,9:3319,rs,9:3318,urn:us-la:rs:9:3318,R.S. 9:3318,225
+urn:us-la:rs:9:3319,rs,9:3319,rs,9:3319,urn:us-la:rs:9:3319,R.S. 9:3319,767
+urn:us-la:rs:9:3319,rs,9:3319,rs,9:3319,urn:us-la:rs:9:3319,R.S. 9:3319,2267
+urn:us-la:rs:9:3319,rs,9:3319,rs,9:3320,urn:us-la:rs:9:3320,R.S. 9:3320,2829
+urn:us-la:rs:9:3320,rs,9:3320,rs,9:3318,urn:us-la:rs:9:3318,R.S. 9:3318,90
+urn:us-la:rs:9:3322,rs,9:3322,rs,9:3321,urn:us-la:rs:9:3321,R.S. 9:3321,111
+urn:us-la:rs:9:3324,rs,9:3324,rs,9:3325,urn:us-la:rs:9:3325,R.S. 9:3325,328
+urn:us-la:rs:9:3325,rs,9:3325,rs,9:3324,urn:us-la:rs:9:3324,R.S. 9:3324,85
+urn:us-la:rs:9:3329,rs,9:3329,rs,9:3330,urn:us-la:rs:9:3330,R.S. 9:3330,25
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3329,urn:us-la:rs:9:3329,R.S. 9:3329,69
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3330,urn:us-la:rs:9:3330,R.S. 9:3330,1215
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3342,urn:us-la:rs:9:3342,R.S. 9:3342,1508
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3330,urn:us-la:rs:9:3330,R.S. 9:3330,1602
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3330,urn:us-la:rs:9:3330,R.S. 9:3330,1999
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3318,urn:us-la:rs:9:3318,R.S. 9:3318,2786
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3319,urn:us-la:rs:9:3319,R.S. 9:3319,2968
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3320,urn:us-la:rs:9:3320,R.S. 9:3320,3461
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3322,urn:us-la:rs:9:3322,R.S. 9:3322,3625
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3330,urn:us-la:rs:9:3330,R.S. 9:3330,3698
+urn:us-la:rs:9:3330,rs,9:3330,rs,9:3325,urn:us-la:rs:9:3325,R.S. 9:3325,3903
+urn:us-la:rs:9:3331,rs,9:3331,rs,9:3312,urn:us-la:rs:9:3312,R.S. 9:3312,605
+urn:us-la:rs:9:3332,rs,9:3332,rs,9:3542,urn:us-la:rs:9:3542,R.S. 9:3542,1360
+urn:us-la:rs:9:3335,rs,9:3335,rs,22:432,urn:us-la:rs:22:432,R.S. 22:432,297
+urn:us-la:rs:9:3338,rs,9:3338,rs,9:3312,urn:us-la:rs:9:3312,R.S. 9:3312,273
+urn:us-la:rs:9:3340,rs,9:3340,rs,9:3562,urn:us-la:rs:9:3562,R.S. 9:3562,52
+urn:us-la:rs:9:3341,rs,9:3341,rs,51:1401,urn:us-la:rs:51:1401,R.S. 51:1401,824
+urn:us-la:rs:9:3341,rs,9:3341,rs,9:3341,urn:us-la:rs:9:3341,R.S. 9:3341,903
+urn:us-la:rs:9:3342,rs,9:3342,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,2195
+urn:us-la:rs:9:3342,rs,9:3342,rs,9:3310.1,urn:us-la:rs:9:3310.1,R.S. 9:3310.1,2248
+urn:us-la:rs:9:3342,rs,9:3342,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,2660
+urn:us-la:rs:9:3342,rs,9:3342,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,2703
+urn:us-la:rs:9:3353,rs,9:3353,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,164
+urn:us-la:rs:9:3353,rs,9:3353,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,267
+urn:us-la:rs:9:3353,rs,9:3353,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,356
+urn:us-la:rs:9:3353,rs,9:3353,rs,9:3306,urn:us-la:rs:9:3306,R.S. 9:3306,446
+urn:us-la:rs:9:3353,rs,9:3353,rs,9:3306,urn:us-la:rs:9:3306,R.S. 9:3306,537
+urn:us-la:rs:9:3353,rs,9:3353,rs,9:3306,urn:us-la:rs:9:3306,R.S. 9:3306,625
+urn:us-la:rs:9:3353,rs,9:3353,rs,9:3306,urn:us-la:rs:9:3306,R.S. 9:3306,719
+urn:us-la:rs:9:3353,rs,9:3353,rs,10:1,urn:us-la:rs:10:1,R.S. 10:1,823
+urn:us-la:rs:9:3354,rs,9:3354,rs,9:3355,urn:us-la:rs:9:3355,R.S. 9:3355,508
+urn:us-la:rs:9:3355,rs,9:3355,rs,9:3357,urn:us-la:rs:9:3357,R.S. 9:3357,2529
+urn:us-la:rs:9:3361,rs,9:3361,rs,51:1401,urn:us-la:rs:51:1401,R.S. 51:1401,131
+urn:us-la:rs:9:3362,rs,9:3362,rs,9:3352,urn:us-la:rs:9:3352,R.S. 9:3352,42
+urn:us-la:rs:9:3402,rs,9:3402,rs,9:3421,urn:us-la:rs:9:3421,R.S. 9:3421,190
+urn:us-la:rs:9:3402,rs,9:3402,civcode,2806,urn:us-la:civcode:art:2806,Civil Code Articles 2806,356
+urn:us-la:rs:9:3410,rs,9:3410,rs,49:222,urn:us-la:rs:49:222,R.S. 49:222,60
+urn:us-la:rs:9:3410,rs,9:3410,rs,49:222,urn:us-la:rs:49:222,R.S. 49:222,354
+urn:us-la:rs:9:3422,rs,9:3422,rs,9:3401,urn:us-la:rs:9:3401,R.S. 9:3401,231
+urn:us-la:rs:9:3422,rs,9:3422,rs,9:3424,urn:us-la:rs:9:3424,R.S. 9:3424,626
+urn:us-la:rs:9:3423,rs,9:3423,rs,9:3422,urn:us-la:rs:9:3422,R.S. 9:3422,186
+urn:us-la:rs:9:3424,rs,9:3424,rs,9:3422,urn:us-la:rs:9:3422,R.S. 9:3422,55
+urn:us-la:rs:9:3424,rs,9:3424,rs,9:3422,urn:us-la:rs:9:3422,R.S. 9:3422,134
+urn:us-la:rs:9:3424,rs,9:3424,rs,13:3204,urn:us-la:rs:13:3204,R.S. 13:3204,742
+urn:us-la:rs:9:3426,rs,9:3426,rs,9:3422,urn:us-la:rs:9:3422,R.S. 9:3422,166
+urn:us-la:rs:9:3431,rs,9:3431,civcode,2817,urn:us-la:civcode:art:2817,Civil Code Article 2817,76
+urn:us-la:rs:9:3432,rs,9:3432,rs,49:222,urn:us-la:rs:49:222,R.S. 49:222,521
+urn:us-la:rs:9:3434,rs,9:3434,rs,9:3431,urn:us-la:rs:9:3431,R.S. 9:3431,35
+urn:us-la:rs:9:3444,rs,9:3444,rs,9:3443,urn:us-la:rs:9:3443,R.S. 9:3443,29
+urn:us-la:rs:9:3444,rs,9:3444,rs,12:1359,urn:us-la:rs:12:1359,R.S. 12:1359,1199
+urn:us-la:rs:9:3444,rs,9:3444,rs,12:1359,urn:us-la:rs:12:1359,R.S. 12:1359,1927
+urn:us-la:rs:9:3444,rs,9:3444,rs,9:3445,urn:us-la:rs:9:3445,R.S. 9:3445,2333
+urn:us-la:rs:9:3444,rs,9:3444,rs,12:1359,urn:us-la:rs:12:1359,R.S. 12:1359,2886
+urn:us-la:rs:9:3445,rs,9:3445,rs,9:3444,urn:us-la:rs:9:3444,R.S. 9:3444,113
+urn:us-la:rs:9:3445,rs,9:3445,rs,9:3444,urn:us-la:rs:9:3444,R.S. 9:3444,722
+urn:us-la:rs:9:3447,rs,9:3447,rs,9:3445,urn:us-la:rs:9:3445,R.S. 9:3445,703
+urn:us-la:rs:9:3447,rs,9:3447,rs,9:3443,urn:us-la:rs:9:3443,R.S. 9:3443,867
+urn:us-la:rs:9:3447,rs,9:3447,rs,9:3445,urn:us-la:rs:9:3445,R.S. 9:3445,955
+urn:us-la:rs:9:3447,rs,9:3447,rs,9:3446,urn:us-la:rs:9:3446,R.S. 9:3446,1599
+urn:us-la:rs:9:3447,rs,9:3447,rs,9:3446,urn:us-la:rs:9:3446,R.S. 9:3446,1882
+urn:us-la:rs:9:3500,rs,9:3500,rs,13:4202,urn:us-la:rs:13:4202,R.S. 13:4202,131
+urn:us-la:rs:9:3504,rs,9:3504,rs,9:3500,urn:us-la:rs:9:3500,R.S. 9:3500,83
+urn:us-la:rs:9:3504,rs,9:3504,rs,9:3500,urn:us-la:rs:9:3500,R.S. 9:3500,1264
+urn:us-la:rs:9:3504,rs,9:3504,rs,9:3500,urn:us-la:rs:9:3500,R.S. 9:3500,2495
+urn:us-la:rs:9:3504,rs,9:3504,rs,9:3502,urn:us-la:rs:9:3502,R.S. 9:3502,3760
+urn:us-la:rs:9:3504,rs,9:3504,rs,9:3500,urn:us-la:rs:9:3500,R.S. 9:3500,8779
+urn:us-la:rs:9:3504,rs,9:3504,rs,9:3510,urn:us-la:rs:9:3510,R.S. 9:3510,10033
+urn:us-la:rs:9:3504,rs,9:3504,rs,6:951,urn:us-la:rs:6:951,R.S. 6:951,10104
+urn:us-la:rs:9:3504,rs,9:3504,rs,9:3500,urn:us-la:rs:9:3500,R.S. 9:3500,10202
+urn:us-la:rs:9:3504,rs,9:3504,civcode,1939,urn:us-la:civcode:art:1939,Civil Code Art. 1939,2470
+urn:us-la:rs:9:3504,rs,9:3504,civcode,1939,urn:us-la:civcode:art:1939,Civil Code Art. 1939,8901
+urn:us-la:rs:9:3505,rs,9:3505,rs,9:3500,urn:us-la:rs:9:3500,R.S. 9:3500,80
+urn:us-la:rs:9:3505,rs,9:3505,rs,9:3502,urn:us-la:rs:9:3502,R.S. 9:3502,359
+urn:us-la:rs:9:3506,rs,9:3506,rs,9:3502,urn:us-la:rs:9:3502,R.S. 9:3502,18
+urn:us-la:rs:9:3506,rs,9:3506,rs,9:3500,urn:us-la:rs:9:3500,R.S. 9:3500,307
+urn:us-la:rs:9:3506,rs,9:3506,rs,9:3503,urn:us-la:rs:9:3503,R.S. 9:3503,394
+urn:us-la:rs:9:3506,rs,9:3506,rs,9:3504,urn:us-la:rs:9:3504,R.S. 9:3504,425
+urn:us-la:rs:9:3506.1,rs,9:3506.1,rs,9:3506,urn:us-la:rs:9:3506,R.S. 9:3506,37
+urn:us-la:rs:9:3509,rs,9:3509,rs,9:3501,urn:us-la:rs:9:3501,R.S. 9:3501,4404
+urn:us-la:rs:9:3509.1,rs,9:3509.1,rs,9:3504,urn:us-la:rs:9:3504,R.S. 9:3504,812
+urn:us-la:rs:9:3509.2,rs,9:3509.2,rs,6:242,urn:us-la:rs:6:242,R.S. 6:242,715
+urn:us-la:rs:9:3509.2,rs,9:3509.2,civcode,2001,urn:us-la:civcode:art:2001,Civil Code Article 2001,96
+urn:us-la:rs:9:3509.4,rs,9:3509.4,rs,29:721,urn:us-la:rs:29:721,R.S. 29:721,132
+urn:us-la:rs:9:3511,rs,9:3511,rs,9:3511,urn:us-la:rs:9:3511,R.S. 9:3511,32
+urn:us-la:rs:9:3511,rs,9:3511,rs,6:1081,urn:us-la:rs:6:1081,R.S. 6:1081,1713
+urn:us-la:rs:9:3511,rs,9:3511,rs,6:1081,urn:us-la:rs:6:1081,R.S. 6:1081,2071
+urn:us-la:rs:9:3511,rs,9:3511,rs,6:1081,urn:us-la:rs:6:1081,R.S. 6:1081,2833
+urn:us-la:rs:9:3512,rs,9:3512,rs,6:969.1,urn:us-la:rs:6:969.1,R.S. 6:969.1,953
+urn:us-la:rs:9:3514,rs,9:3514,rs,6:969.1,urn:us-la:rs:6:969.1,R.S. 6:969.1,420
+urn:us-la:rs:9:3514,rs,9:3514,rs,9:3560,urn:us-la:rs:9:3560,R.S. 9:3560,593
+urn:us-la:rs:9:3515,rs,9:3515,rs,9:3550,urn:us-la:rs:9:3550,R.S. 9:3550,2952
+urn:us-la:rs:9:3515,rs,9:3515,rs,37:1781,urn:us-la:rs:37:1781,R.S. 37:1781,3247
+urn:us-la:rs:9:3516,rs,9:3516,rs,6:969.1,urn:us-la:rs:6:969.1,R.S. 6:969.1,5716
+urn:us-la:rs:9:3516,rs,9:3516,rs,9:3529,urn:us-la:rs:9:3529,R.S. 9:3529,7217
+urn:us-la:rs:9:3516,rs,9:3516,rs,9:3530,urn:us-la:rs:9:3530,R.S. 9:3530,7263
+urn:us-la:rs:9:3516,rs,9:3516,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,7310
+urn:us-la:rs:9:3516,rs,9:3516,rs,6:1083,urn:us-la:rs:6:1083,R.S. 6:1083,8123
+urn:us-la:rs:9:3516,rs,9:3516,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,9652
+urn:us-la:rs:9:3516,rs,9:3516,rs,9:3529,urn:us-la:rs:9:3529,R.S. 9:3529,10608
+urn:us-la:rs:9:3516,rs,9:3516,rs,9:3530,urn:us-la:rs:9:3530,R.S. 9:3530,10738
+urn:us-la:rs:9:3517,rs,9:3517,rs,6:548,urn:us-la:rs:6:548,R.S. 6:548,1044
+urn:us-la:rs:9:3518.1,rs,9:3518.1,rs,49:975.1,urn:us-la:rs:49:975.1,R.S. 49:975.1,2700
+urn:us-la:rs:9:3518.2,rs,9:3518.2,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,78
+urn:us-la:rs:9:3518.4,rs,9:3518.4,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,50
+urn:us-la:rs:9:3518.4,rs,9:3518.4,rs,9:3578.3,urn:us-la:rs:9:3578.3,R.S. 9:3578.3,116
+urn:us-la:rs:9:3518.4,rs,9:3518.4,rs,9:3578.1,urn:us-la:rs:9:3578.1,R.S. 9:3578.1,308
+urn:us-la:rs:9:3518.4,rs,9:3518.4,rs,9:3560,urn:us-la:rs:9:3560,R.S. 9:3560,1442
+urn:us-la:rs:9:3520,rs,9:3520,rs,9:3521,urn:us-la:rs:9:3521,R.S. 9:3521,35
+urn:us-la:rs:9:3521,rs,9:3521,rs,9:3564,urn:us-la:rs:9:3564,R.S. 9:3564,366
+urn:us-la:rs:9:3521,rs,9:3521,rs,9:3564,urn:us-la:rs:9:3564,R.S. 9:3564,663
+urn:us-la:rs:9:3521,rs,9:3521,rs,9:3520,urn:us-la:rs:9:3520,R.S. 9:3520,1056
+urn:us-la:rs:9:3524,rs,9:3524,rs,9:3519,urn:us-la:rs:9:3519,R.S. 9:3519,2509
+urn:us-la:rs:9:3526,rs,9:3526,rs,6:242,urn:us-la:rs:6:242,R.S. 6:242,165
+urn:us-la:rs:9:3526,rs,9:3526,rs,9:3504,urn:us-la:rs:9:3504,R.S. 9:3504,422
+urn:us-la:rs:9:3527,rs,9:3527,rs,9:3519,urn:us-la:rs:9:3519,R.S. 9:3519,3382
+urn:us-la:rs:9:3527,rs,9:3527,rs,9:3532,urn:us-la:rs:9:3532,R.S. 9:3532,3488
+urn:us-la:rs:9:3527,rs,9:3527,rs,9:3519,urn:us-la:rs:9:3519,R.S. 9:3519,3801
+urn:us-la:rs:9:3529,rs,9:3529,rs,9:3527,urn:us-la:rs:9:3527,R.S. 9:3527,1053
+urn:us-la:rs:9:3530,rs,9:3530,rs,9:3578.1,urn:us-la:rs:9:3578.1,R.S. 9:3578.1,1798
+urn:us-la:rs:9:3530,rs,9:3530,rs,47:532.1,urn:us-la:rs:47:532.1,R.S. 47:532.1,2817
+urn:us-la:rs:9:3530,rs,9:3530,rs,32:707.2,urn:us-la:rs:32:707.2,R.S. 32:707.2,2926
+urn:us-la:rs:9:3530,rs,9:3530,rs,47:532.1,urn:us-la:rs:47:532.1,R.S. 47:532.1,3104
+urn:us-la:rs:9:3530,rs,9:3530,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,3435
+urn:us-la:rs:9:3532,rs,9:3532,rs,9:3519,urn:us-la:rs:9:3519,R.S. 9:3519,1889
+urn:us-la:rs:9:3533,rs,9:3533,rs,9:3527,urn:us-la:rs:9:3527,R.S. 9:3527,22
+urn:us-la:rs:9:3533,rs,9:3533,rs,9:3532,urn:us-la:rs:9:3532,R.S. 9:3532,202
+urn:us-la:rs:9:3534.1,rs,9:3534.1,rs,37:212,urn:us-la:rs:37:212,R.S. 37:212,2053
+urn:us-la:rs:9:3538,rs,9:3538,rs,9:2711.1,urn:us-la:rs:9:2711.1,R.S. 9:2711.1,1342
+urn:us-la:rs:9:3538,rs,9:3538,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,1360
+urn:us-la:rs:9:3540,rs,9:3540,rs,9:3538,urn:us-la:rs:9:3538,R.S. 9:3538,926
+urn:us-la:rs:9:3541,rs,9:3541,rs,9:3540,urn:us-la:rs:9:3540,R.S. 9:3540,79
+urn:us-la:rs:9:3545,rs,9:3545,rs,22:432,urn:us-la:rs:22:432,R.S. 22:432,395
+urn:us-la:rs:9:3550,rs,9:3550,rs,9:3561.1,urn:us-la:rs:9:3561.1,R.S. 9:3561.1,3286
+urn:us-la:rs:9:3550,rs,9:3550,rs,9:3527,urn:us-la:rs:9:3527,R.S. 9:3527,7267
+urn:us-la:rs:9:3550,rs,9:3550,rs,9:3529,urn:us-la:rs:9:3529,R.S. 9:3529,7323
+urn:us-la:rs:9:3550,rs,9:3550,rs,9:3530,urn:us-la:rs:9:3530,R.S. 9:3530,7374
+urn:us-la:rs:9:3550,rs,9:3550,rs,9:3534,urn:us-la:rs:9:3534,R.S. 9:3534,7434
+urn:us-la:rs:9:3550,rs,9:3550,rs,22:885,urn:us-la:rs:22:885,R.S. 22:885,11416
+urn:us-la:rs:9:3553,rs,9:3553,rs,9:3563,urn:us-la:rs:9:3563,R.S. 9:3563,1176
+urn:us-la:rs:9:3553,rs,9:3553,rs,9:3572.1,urn:us-la:rs:9:3572.1,R.S. 9:3572.1,1522
+urn:us-la:rs:9:3554.3,rs,9:3554.3,rs,13:4521,urn:us-la:rs:13:4521,R.S. 13:4521,32
+urn:us-la:rs:9:3556.1,rs,9:3556.1,rs,9:3564,urn:us-la:rs:9:3564,R.S. 9:3564,313
+urn:us-la:rs:9:3556.1,rs,9:3556.1,rs,9:3521,urn:us-la:rs:9:3521,R.S. 9:3521,387
+urn:us-la:rs:9:3557,rs,9:3557,rs,6:1081,urn:us-la:rs:6:1081,R.S. 6:1081,1641
+urn:us-la:rs:9:3559,rs,9:3559,rs,6:571,urn:us-la:rs:6:571,R.S. 6:571,102
+urn:us-la:rs:9:3559,rs,9:3559,rs,6:951,urn:us-la:rs:6:951,R.S. 6:951,193
+urn:us-la:rs:9:3559,rs,9:3559,rs,6:970,urn:us-la:rs:6:970,R.S. 6:970,209
+urn:us-la:rs:9:3560,rs,9:3560,rs,9:3557,urn:us-la:rs:9:3557,R.S. 9:3557,19
+urn:us-la:rs:9:3561,rs,9:3561,rs,9:3554.1,urn:us-la:rs:9:3554.1,R.S. 9:3554.1,1931
+urn:us-la:rs:9:3561,rs,9:3561,rs,9:3557,urn:us-la:rs:9:3557,R.S. 9:3557,2889
+urn:us-la:rs:9:3561,rs,9:3561,rs,9:3560,urn:us-la:rs:9:3560,R.S. 9:3560,2973
+urn:us-la:rs:9:3561.1,rs,9:3561.1,rs,9:3561,urn:us-la:rs:9:3561,R.S. 9:3561,1142
+urn:us-la:rs:9:3561.1,rs,9:3561.1,rs,9:3561,urn:us-la:rs:9:3561,R.S. 9:3561,1218
+urn:us-la:rs:9:3561.1,rs,9:3561.1,rs,9:3561,urn:us-la:rs:9:3561,R.S. 9:3561,1361
+urn:us-la:rs:9:3561.1,rs,9:3561.1,rs,6:121.8,urn:us-la:rs:6:121.8,R.S. 6:121.8,4614
+urn:us-la:rs:9:3561.2,rs,9:3561.2,rs,12:304,urn:us-la:rs:12:304,R.S. 12:304,244
+urn:us-la:rs:9:3561.2,rs,9:3561.2,rs,9:3422,urn:us-la:rs:9:3422,R.S. 9:3422,267
+urn:us-la:rs:9:3562,rs,9:3562,rs,9:3513,urn:us-la:rs:9:3513,R.S. 9:3513,374
+urn:us-la:rs:9:3563.1,rs,9:3563.1,rs,9:3563,urn:us-la:rs:9:3563,R.S. 9:3563,34
+urn:us-la:rs:9:3563.1,rs,9:3563.1,rs,9:3512,urn:us-la:rs:9:3512,R.S. 9:3512,310
+urn:us-la:rs:9:3563.1,rs,9:3563.1,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,483
+urn:us-la:rs:9:3568,rs,9:3568,rs,9:3571.1,urn:us-la:rs:9:3571.1,R.S. 9:3571.1,2521
+urn:us-la:rs:9:3571,rs,9:3571,rs,6:333,urn:us-la:rs:6:333,R.S. 6:333,177
+urn:us-la:rs:9:3571.3,rs,9:3571.3,rs,9:3571.1,urn:us-la:rs:9:3571.1,R.S. 9:3571.1,117
+urn:us-la:rs:9:3571.3,rs,9:3571.3,rs,9:3571.1,urn:us-la:rs:9:3571.1,R.S. 9:3571.1,196
+urn:us-la:rs:9:3571.3,rs,9:3571.3,rs,9:3571.1,urn:us-la:rs:9:3571.1,R.S. 9:3571.1,3813
+urn:us-la:rs:9:3572.2,rs,9:3572.2,rs,51:911.24,urn:us-la:rs:51:911.24,R.S. 51:911.24,2713
+urn:us-la:rs:9:3572.3,rs,9:3572.3,rs,9:3572.4,urn:us-la:rs:9:3572.4,R.S. 9:3572.4,485
+urn:us-la:rs:9:3572.3,rs,9:3572.3,rs,9:3572.12,urn:us-la:rs:9:3572.12,R.S. 9:3572.12,1620
+urn:us-la:rs:9:3572.5,rs,9:3572.5,rs,9:3572.8,urn:us-la:rs:9:3572.8,R.S. 9:3572.8,716
+urn:us-la:rs:9:3572.5,rs,9:3572.5,rs,9:3572.8,urn:us-la:rs:9:3572.8,R.S. 9:3572.8,1605
+urn:us-la:rs:9:3572.6,rs,9:3572.6,rs,9:3572.11,urn:us-la:rs:9:3572.11,R.S. 9:3572.11,457
+urn:us-la:rs:9:3572.8,rs,9:3572.8,rs,51:1408,urn:us-la:rs:51:1408,R.S. 51:1408,639
+urn:us-la:rs:9:3572.8,rs,9:3572.8,rs,51:1408,urn:us-la:rs:51:1408,R.S. 51:1408,845
+urn:us-la:rs:9:3572.10,rs,9:3572.10,rs,9:3572.11,urn:us-la:rs:9:3572.11,R.S. 9:3572.11,160
+urn:us-la:rs:9:3573.3,rs,9:3573.3,rs,9:3573.4,urn:us-la:rs:9:3573.4,R.S. 9:3573.4,380
+urn:us-la:rs:9:3573.4,rs,9:3573.4,rs,9:3573.10,urn:us-la:rs:9:3573.10,R.S. 9:3573.10,582
+urn:us-la:rs:9:3573.6,rs,9:3573.6,rs,9:3573.4,urn:us-la:rs:9:3573.4,R.S. 9:3573.4,464
+urn:us-la:rs:9:3573.10,rs,9:3573.10,rs,9:3573.4,urn:us-la:rs:9:3573.4,R.S. 9:3573.4,1118
+urn:us-la:rs:9:3573.12,rs,9:3573.12,rs,9:3573.10,urn:us-la:rs:9:3573.10,R.S. 9:3573.10,37
+urn:us-la:rs:9:3573.14,rs,9:3573.14,rs,9:3573.2,urn:us-la:rs:9:3573.2,R.S. 9:3573.2,74
+urn:us-la:rs:9:3578.3,rs,9:3578.3,rs,9:3578.4,urn:us-la:rs:9:3578.4,R.S. 9:3578.4,817
+urn:us-la:rs:9:3578.3,rs,9:3578.3,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,1383
+urn:us-la:rs:9:3578.4,rs,9:3578.4,rs,9:3529,urn:us-la:rs:9:3529,R.S. 9:3529,947
+urn:us-la:rs:9:3578.6,rs,9:3578.6,rs,9:3578.4,urn:us-la:rs:9:3578.4,R.S. 9:3578.4,239
+urn:us-la:rs:9:3580.4,rs,9:3580.4,rs,9:3580.3,urn:us-la:rs:9:3580.3,R.S. 9:3580.3,37
+urn:us-la:rs:9:3580.4,rs,9:3580.4,rs,9:3580.3,urn:us-la:rs:9:3580.3,R.S. 9:3580.3,539
+urn:us-la:rs:9:3580.7,rs,9:3580.7,rs,24:772,urn:us-la:rs:24:772,R.S. 24:772,965
+urn:us-la:rs:9:3580.12,rs,9:3580.12,rs,9:3580.2,urn:us-la:rs:9:3580.2,R.S. 9:3580.2,335
+urn:us-la:rs:9:3591.5,rs,9:3591.5,rs,9:3591.3,urn:us-la:rs:9:3591.3,R.S. 9:3591.3,399
+urn:us-la:rs:9:3591.7,rs,9:3591.7,rs,51:1401,urn:us-la:rs:51:1401,R.S. 51:1401,197
+urn:us-la:rs:9:3591.7,rs,9:3591.7,rs,9:3591.6,urn:us-la:rs:9:3591.6,R.S. 9:3591.6,305
+urn:us-la:rs:9:3591.7,rs,9:3591.7,rs,9:3591.6,urn:us-la:rs:9:3591.6,R.S. 9:3591.6,457
+urn:us-la:rs:9:3851,rs,9:3851,rs,9:3854,urn:us-la:rs:9:3854,R.S. 9:3854,1756
+urn:us-la:rs:9:3851,rs,9:3851,civcode,2995,urn:us-la:civcode:art:2995,Civil Code Article 2995,1871
+urn:us-la:rs:9:3851,rs,9:3851,ccp,3605,,Code of Civil Procedure Article 3605,1771
+urn:us-la:rs:9:3862,rs,9:3862,rs,9:3861,urn:us-la:rs:9:3861,R.S. 9:3861,1819
+urn:us-la:rs:9:3862,rs,9:3862,rs,9:3861,urn:us-la:rs:9:3861,R.S. 9:3861,2074
+urn:us-la:rs:9:3864,rs,9:3864,rs,9:3862,urn:us-la:rs:9:3862,R.S. 9:3862,59
+urn:us-la:rs:9:3867,rs,9:3867,rs,9:3862,urn:us-la:rs:9:3862,R.S. 9:3862,475
+urn:us-la:rs:9:3867,rs,9:3867,civcode,2985,urn:us-la:civcode:art:2985,Civil Code Articles 2985,289
+urn:us-la:rs:9:3867,rs,9:3867,civcode,2985,urn:us-la:civcode:art:2985,Civil Code Articles 2985,807
+urn:us-la:rs:9:3870,rs,9:3870,rs,9:3862,urn:us-la:rs:9:3862,R.S. 9:3862,78
+urn:us-la:rs:9:3880,rs,9:3880,rs,9:3879,urn:us-la:rs:9:3879,R.S. 9:3879,523
+urn:us-la:rs:9:3885,rs,9:3885,rs,9:3862,urn:us-la:rs:9:3862,R.S. 9:3862,1123
+urn:us-la:rs:9:3887,rs,9:3887,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,366
+urn:us-la:rs:9:3887,rs,9:3887,rs,9:3862,urn:us-la:rs:9:3862,R.S. 9:3862,565
+urn:us-la:rs:9:3887,rs,9:3887,rs,9:3862,urn:us-la:rs:9:3862,R.S. 9:3862,765
+urn:us-la:rs:9:3892,rs,9:3892,civcode,2985,urn:us-la:civcode:art:2985,Civil Code Articles 2985,34
+urn:us-la:rs:9:4103,rs,9:4103,rs,9:361,urn:us-la:rs:9:361,R.S. 9:361,421
+urn:us-la:rs:9:4103,rs,9:4103,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,479
+urn:us-la:rs:9:4103,rs,9:4103,rs,9:332,urn:us-la:rs:9:332,R.S. 9:332,607
+urn:us-la:rs:9:4104,rs,9:4104,rs,9:4105,urn:us-la:rs:9:4105,R.S. 9:4105,1338
+urn:us-la:rs:9:4105,rs,9:4105,rs,9:4106,urn:us-la:rs:9:4106,R.S. 9:4106,123
+urn:us-la:rs:9:4209,rs,9:4209,rs,9:4210,urn:us-la:rs:9:4210,R.S. 9:4210,311
+urn:us-la:rs:9:4230,rs,9:4230,rs,40:2102,urn:us-la:rs:40:2102,R.S. 40:2102,698
+urn:us-la:rs:9:4230,rs,9:4230,rs,40:2009.2,urn:us-la:rs:40:2009.2,R.S. 40:2009.2,751
+urn:us-la:rs:9:4230,rs,9:4230,rs,9:4231,urn:us-la:rs:9:4231,R.S. 9:4231,1094
+urn:us-la:rs:9:4230,rs,9:4230,rs,12:901,urn:us-la:rs:12:901,R.S. 12:901,1963
+urn:us-la:rs:9:4230,rs,9:4230,rs,12:981,urn:us-la:rs:12:981,R.S. 12:981,2044
+urn:us-la:rs:9:4231,rs,9:4231,rs,9:4201,urn:us-la:rs:9:4201,R.S. 9:4201,2090
+urn:us-la:rs:9:4233,rs,9:4233,rs,9:4204,urn:us-la:rs:9:4204,R.S. 9:4204,794
+urn:us-la:rs:9:4234,rs,9:4234,rs,9:4201,urn:us-la:rs:9:4201,R.S. 9:4201,163
+urn:us-la:rs:9:4241,rs,9:4241,rs,9:4248,urn:us-la:rs:9:4248,R.S. 9:4248,204
+urn:us-la:rs:9:4242,rs,9:4242,rs,9:4268,urn:us-la:rs:9:4268,R.S. 9:4268,336
+urn:us-la:rs:9:4242,rs,9:4242,rs,9:4265,urn:us-la:rs:9:4265,R.S. 9:4265,823
+urn:us-la:rs:9:4246,rs,9:4246,rs,9:4251,urn:us-la:rs:9:4251,R.S. 9:4251,27
+urn:us-la:rs:9:4253,rs,9:4253,rs,9:4252,urn:us-la:rs:9:4252,R.S. 9:4252,360
+urn:us-la:rs:9:4254,rs,9:4254,rs,9:4253,urn:us-la:rs:9:4253,R.S. 9:4253,469
+urn:us-la:rs:9:4254,rs,9:4254,rs,9:4252,urn:us-la:rs:9:4252,R.S. 9:4252,703
+urn:us-la:rs:9:4255,rs,9:4255,rs,9:4253,urn:us-la:rs:9:4253,R.S. 9:4253,64
+urn:us-la:rs:9:4256,rs,9:4256,rs,9:4246,urn:us-la:rs:9:4246,R.S. 9:4246,1363
+urn:us-la:rs:9:4265,rs,9:4265,rs,9:4263,urn:us-la:rs:9:4263,R.S. 9:4263,159
+urn:us-la:rs:9:4265,rs,9:4265,rs,9:4263,urn:us-la:rs:9:4263,R.S. 9:4263,315
+urn:us-la:rs:9:4270,rs,9:4270,rs,9:4271,urn:us-la:rs:9:4271,R.S. 9:4271,335
+urn:us-la:rs:9:4271,rs,9:4271,rs,9:4270,urn:us-la:rs:9:4270,R.S. 9:4270,466
+urn:us-la:rs:9:4271,rs,9:4271,rs,9:4260,urn:us-la:rs:9:4260,R.S. 9:4260,576
+urn:us-la:rs:9:4272,rs,9:4272,rs,9:4273,urn:us-la:rs:9:4273,R.S. 9:4273,774
+urn:us-la:rs:9:4273,rs,9:4273,rs,9:4271,urn:us-la:rs:9:4271,R.S. 9:4271,1480
+urn:us-la:rs:9:4274,rs,9:4274,rs,9:4246,urn:us-la:rs:9:4246,R.S. 9:4246,223
+urn:us-la:rs:9:4274,rs,9:4274,rs,9:4247,urn:us-la:rs:9:4247,R.S. 9:4247,365
+urn:us-la:rs:9:4274,rs,9:4274,rs,9:4273,urn:us-la:rs:9:4273,R.S. 9:4273,1939
+urn:us-la:rs:9:4275,rs,9:4275,rs,9:4276,urn:us-la:rs:9:4276,R.S. 9:4276,214
+urn:us-la:rs:9:4275,rs,9:4275,rs,9:4247,urn:us-la:rs:9:4247,R.S. 9:4247,433
+urn:us-la:rs:9:4276,rs,9:4276,rs,9:4247,urn:us-la:rs:9:4247,R.S. 9:4247,340
+urn:us-la:rs:9:4402,rs,9:4402,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,706
+urn:us-la:rs:9:4402,rs,9:4402,civcode,3173,urn:us-la:civcode:art:3173,Civil Code Article 3173,1131
+urn:us-la:rs:9:4501,rs,9:4501,rs,13:3881,urn:us-la:rs:13:3881,R.S. 13:3881,1361
+urn:us-la:rs:9:4502,rs,9:4502,rs,13:3881,urn:us-la:rs:13:3881,R.S. 13:3881,1783
+urn:us-la:rs:9:4502,rs,9:4502,rs,9:4501,urn:us-la:rs:9:4501,R.S. 9:4501,3764
+urn:us-la:rs:9:4502,rs,9:4502,rs,9:4501,urn:us-la:rs:9:4501,R.S. 9:4501,4115
+urn:us-la:rs:9:4512,rs,9:4512,rs,9:4511,urn:us-la:rs:9:4511,R.S. 9:4511,59
+urn:us-la:rs:9:4512,rs,9:4512,rs,9:4511,urn:us-la:rs:9:4511,R.S. 9:4511,347
+urn:us-la:rs:9:4513,rs,9:4513,rs,9:4511,urn:us-la:rs:9:4511,R.S. 9:4511,486
+urn:us-la:rs:9:4513,rs,9:4513,rs,9:4512,urn:us-la:rs:9:4512,R.S. 9:4512,502
+urn:us-la:rs:9:4543,rs,9:4543,rs,9:4721,urn:us-la:rs:9:4721,R.S. 9:4721,811
+urn:us-la:rs:9:4564,rs,9:4564,rs,9:4563,urn:us-la:rs:9:4563,R.S. 9:4563,72
+urn:us-la:rs:9:4564,rs,9:4564,rs,9:4561,urn:us-la:rs:9:4561,R.S. 9:4561,286
+urn:us-la:rs:9:4582,rs,9:4582,rs,9:4581,urn:us-la:rs:9:4581,R.S. 9:4581,46
+urn:us-la:rs:9:4622,rs,9:4622,rs,9:4621,urn:us-la:rs:9:4621,R.S. 9:4621,28
+urn:us-la:rs:9:4682,rs,9:4682,rs,9:4686,urn:us-la:rs:9:4686,R.S. 9:4686,190
+urn:us-la:rs:9:4687,rs,9:4687,rs,9:4688,urn:us-la:rs:9:4688,R.S. 9:4688,2719
+urn:us-la:rs:9:4689,rs,9:4689,rs,9:4687,urn:us-la:rs:9:4687,R.S. 9:4687,231
+urn:us-la:rs:9:4721,rs,9:4721,rs,9:4543,urn:us-la:rs:9:4543,R.S. 9:4543,552
+urn:us-la:rs:9:4741,rs,9:4741,civcode,3237,urn:us-la:civcode:art:3237,Civil Code Article 3237,175
+urn:us-la:rs:9:4751,rs,9:4751,rs,40:1131,urn:us-la:rs:40:1131,R.S. 40:1131,168
+urn:us-la:rs:9:4753,rs,9:4753,rs,9:4752,urn:us-la:rs:9:4752,R.S. 9:4752,28
+urn:us-la:rs:9:4758,rs,9:4758,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,1190
+urn:us-la:rs:9:4758,rs,9:4758,rs,13:3881,urn:us-la:rs:13:3881,R.S. 13:3881,1253
+urn:us-la:rs:9:4759,rs,9:4759,rs,32:1711,urn:us-la:rs:32:1711,R.S. 32:1711,4780
+urn:us-la:rs:9:4770,rs,9:4770,rs,9:4501,urn:us-la:rs:9:4501,R.S. 9:4501,53
+urn:us-la:rs:9:4770,rs,9:4770,rs,31:146,urn:us-la:rs:31:146,R.S. 31:146,126
+urn:us-la:rs:9:4770,rs,9:4770,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,984
+urn:us-la:rs:9:4770,rs,9:4770,civcode,2561,urn:us-la:civcode:art:2561,Civil Code Articles 2561,714
+urn:us-la:rs:9:4770,rs,9:4770,civcode,2707,urn:us-la:civcode:art:2707,Civil Code Article 2707,779
+urn:us-la:rs:9:4783,rs,9:4783,rs,9:4784,urn:us-la:rs:9:4784,R.S. 9:4784,641
+urn:us-la:rs:9:4784,rs,9:4784,rs,9:4783,urn:us-la:rs:9:4783,R.S. 9:4783,140
+urn:us-la:rs:9:4784,rs,9:4784,rs,10:1,urn:us-la:rs:10:1,R.S. 10:1,486
+urn:us-la:rs:9:4784,rs,9:4784,rs,13:3204,urn:us-la:rs:13:3204,R.S. 13:3204,4805
+urn:us-la:rs:9:4790,rs,9:4790,rs,32:708.1,urn:us-la:rs:32:708.1,R.S. 32:708.1,152
+urn:us-la:rs:9:4790,rs,9:4790,rs,13:3881,urn:us-la:rs:13:3881,R.S. 13:3881,199
+urn:us-la:rs:9:4790,rs,9:4790,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,309
+urn:us-la:rs:9:4790,rs,9:4790,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,545
+urn:us-la:rs:9:4792,rs,9:4792,rs,32:1714,urn:us-la:rs:32:1714,R.S. 32:1714,374
+urn:us-la:rs:9:4792,rs,9:4792,rs,32:1711,urn:us-la:rs:32:1711,R.S. 32:1711,763
+urn:us-la:rs:9:4792,rs,9:4792,rs,34:852.1,urn:us-la:rs:34:852.1,R.S. 34:852.1,868
+urn:us-la:rs:9:4792,rs,9:4792,rs,34:851.1,urn:us-la:rs:34:851.1,R.S. 34:851.1,932
+urn:us-la:rs:9:4795,rs,9:4795,rs,9:4794,urn:us-la:rs:9:4794,R.S. 9:4794,333
+urn:us-la:rs:9:4795,rs,9:4795,rs,9:4794,urn:us-la:rs:9:4794,R.S. 9:4794,812
+urn:us-la:rs:9:4795,rs,9:4795,rs,10:1,urn:us-la:rs:10:1,R.S. 10:1,2207
+urn:us-la:rs:9:4796,rs,9:4796,rs,9:4795,urn:us-la:rs:9:4795,R.S. 9:4795,59
+urn:us-la:rs:9:4802,rs,9:4802,rs,9:4812,urn:us-la:rs:9:4812,R.S. 9:4812,1416
+urn:us-la:rs:9:4802,rs,9:4802,rs,9:4811,urn:us-la:rs:9:4811,R.S. 9:4811,1527
+urn:us-la:rs:9:4803,rs,9:4803,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,29
+urn:us-la:rs:9:4803,rs,9:4803,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,67
+urn:us-la:rs:9:4803,rs,9:4803,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,157
+urn:us-la:rs:9:4803,rs,9:4803,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,255
+urn:us-la:rs:9:4803,rs,9:4803,rs,9:4804,urn:us-la:rs:9:4804,R.S. 9:4804,1604
+urn:us-la:rs:9:4803,rs,9:4803,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,1678
+urn:us-la:rs:9:4803,rs,9:4803,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,2336
+urn:us-la:rs:9:4803,rs,9:4803,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,2389
+urn:us-la:rs:9:4804,rs,9:4804,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,43
+urn:us-la:rs:9:4804,rs,9:4804,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,75
+urn:us-la:rs:9:4804,rs,9:4804,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,649
+urn:us-la:rs:9:4804,rs,9:4804,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,1547
+urn:us-la:rs:9:4804,rs,9:4804,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,2027
+urn:us-la:rs:9:4806,rs,9:4806,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,281
+urn:us-la:rs:9:4806,rs,9:4806,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,558
+urn:us-la:rs:9:4806,rs,9:4806,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,729
+urn:us-la:rs:9:4807,rs,9:4807,rs,9:4808,urn:us-la:rs:9:4808,R.S. 9:4808,247
+urn:us-la:rs:9:4808,rs,9:4808,rs,9:4811,urn:us-la:rs:9:4811,R.S. 9:4811,305
+urn:us-la:rs:9:4808,rs,9:4808,rs,9:4861,urn:us-la:rs:9:4861,R.S. 9:4861,1480
+urn:us-la:rs:9:4808,rs,9:4808,rs,9:4901,urn:us-la:rs:9:4901,R.S. 9:4901,1622
+urn:us-la:rs:9:4809,rs,9:4809,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,243
+urn:us-la:rs:9:4810,rs,9:4810,rs,1:55,urn:us-la:rs:1:55,R.S. 1:55,177
+urn:us-la:rs:9:4811,rs,9:4811,rs,9:4831,urn:us-la:rs:9:4831,R.S. 9:4831,104
+urn:us-la:rs:9:4811,rs,9:4811,rs,9:4820,urn:us-la:rs:9:4820,R.S. 9:4820,165
+urn:us-la:rs:9:4812,rs,9:4812,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,55
+urn:us-la:rs:9:4813,rs,9:4813,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,330
+urn:us-la:rs:9:4813,rs,9:4813,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,487
+urn:us-la:rs:9:4813,rs,9:4813,rs,9:4811,urn:us-la:rs:9:4811,R.S. 9:4811,775
+urn:us-la:rs:9:4813,rs,9:4813,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,913
+urn:us-la:rs:9:4813,rs,9:4813,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,1058
+urn:us-la:rs:9:4813,rs,9:4813,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,1429
+urn:us-la:rs:9:4820,rs,9:4820,rs,9:4811,urn:us-la:rs:9:4811,R.S. 9:4811,220
+urn:us-la:rs:9:4820,rs,9:4820,rs,9:4811,urn:us-la:rs:9:4811,R.S. 9:4811,1133
+urn:us-la:rs:9:4820,rs,9:4820,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,1803
+urn:us-la:rs:9:4820,rs,9:4820,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,1864
+urn:us-la:rs:9:4820,rs,9:4820,rs,9:4821,urn:us-la:rs:9:4821,R.S. 9:4821,1910
+urn:us-la:rs:9:4820,rs,9:4820,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,3371
+urn:us-la:rs:9:4820,rs,9:4820,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,3427
+urn:us-la:rs:9:4820,rs,9:4820,rs,9:4832,urn:us-la:rs:9:4832,R.S. 9:4832,3658
+urn:us-la:rs:9:4821,rs,9:4821,rs,33:1236,urn:us-la:rs:33:1236,R.S. 33:1236,460
+urn:us-la:rs:9:4821,rs,9:4821,rs,33:4752,urn:us-la:rs:33:4752,R.S. 33:4752,574
+urn:us-la:rs:9:4821,rs,9:4821,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,738
+urn:us-la:rs:9:4821,rs,9:4821,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,824
+urn:us-la:rs:9:4821,rs,9:4821,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,880
+urn:us-la:rs:9:4821,rs,9:4821,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,1425
+urn:us-la:rs:9:4821,rs,9:4821,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,1481
+urn:us-la:rs:9:4821,rs,9:4821,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,1571
+urn:us-la:rs:9:4821,rs,9:4821,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,1635
+urn:us-la:rs:9:4821,rs,9:4821,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,1738
+urn:us-la:rs:9:4821,rs,9:4821,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,1802
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,111
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,154
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4811,urn:us-la:rs:9:4811,R.S. 9:4811,487
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,553
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,1004
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4811,urn:us-la:rs:9:4811,R.S. 9:4811,1082
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,1530
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,1584
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4806,urn:us-la:rs:9:4806,R.S. 9:4806,5412
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,5662
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,6175
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,6645
+urn:us-la:rs:9:4822,rs,9:4822,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,6898
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,27
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,108
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,167
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,308
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4802,urn:us-la:rs:9:4802,R.S. 9:4802,683
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,787
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,915
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,1250
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4835,urn:us-la:rs:9:4835,R.S. 9:4835,1618
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4835,urn:us-la:rs:9:4835,R.S. 9:4835,1796
+urn:us-la:rs:9:4823,rs,9:4823,rs,9:4841,urn:us-la:rs:9:4841,R.S. 9:4841,1853
+urn:us-la:rs:9:4831,rs,9:4831,rs,9:4820,urn:us-la:rs:9:4820,R.S. 9:4820,551
+urn:us-la:rs:9:4832,rs,9:4832,rs,9:4820,urn:us-la:rs:9:4820,R.S. 9:4820,2075
+urn:us-la:rs:9:4833,rs,9:4833,rs,9:4806,urn:us-la:rs:9:4806,R.S. 9:4806,552
+urn:us-la:rs:9:4833,rs,9:4833,rs,44:114,urn:us-la:rs:44:114,R.S. 44:114,1922
+urn:us-la:rs:9:4833,rs,9:4833,rs,9:4823,urn:us-la:rs:9:4823,R.S. 9:4823,3237
+urn:us-la:rs:9:4833,rs,9:4833,ccp,3752,,Code of Civil Procedure Article 3752,3154
+urn:us-la:rs:9:4833,rs,9:4833,ccp,3752,,Code of Civil Procedure Article 3752,3372
+urn:us-la:rs:9:4841,rs,9:4841,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,32
+urn:us-la:rs:9:4841,rs,9:4841,rs,9:4811,urn:us-la:rs:9:4811,R.S. 9:4811,1268
+urn:us-la:rs:9:4841,rs,9:4841,rs,9:4811,urn:us-la:rs:9:4811,R.S. 9:4811,1580
+urn:us-la:rs:9:4841,rs,9:4841,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,3506
+urn:us-la:rs:9:4841,rs,9:4841,ccp,4657,,Code of Civil Procedure Article 4657,2961
+urn:us-la:rs:9:4842,rs,9:4842,rs,9:4843,urn:us-la:rs:9:4843,R.S. 9:4843,182
+urn:us-la:rs:9:4842,rs,9:4842,rs,9:4844,urn:us-la:rs:9:4844,R.S. 9:4844,299
+urn:us-la:rs:9:4845,rs,9:4845,rs,9:2615,urn:us-la:rs:9:2615,R.S. 9:2615,1175
+urn:us-la:rs:9:4846,rs,9:4846,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,110
+urn:us-la:rs:9:4851,rs,9:4851,rs,9:4801,urn:us-la:rs:9:4801,R.S. 9:4801,602
+urn:us-la:rs:9:4855,rs,9:4855,rs,9:4841,urn:us-la:rs:9:4841,R.S. 9:4841,761
+urn:us-la:rs:9:4858,rs,9:4858,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,844
+urn:us-la:rs:9:4858,rs,9:4858,rs,9:4822,urn:us-la:rs:9:4822,R.S. 9:4822,900
+urn:us-la:rs:9:4858,rs,9:4858,rs,9:4858,urn:us-la:rs:9:4858,R.S. 9:4858,932
+urn:us-la:rs:9:4861,rs,9:4861,rs,9:4862,urn:us-la:rs:9:4862,R.S. 9:4862,123
+urn:us-la:rs:9:4862,rs,9:4862,rs,9:4863,urn:us-la:rs:9:4863,R.S. 9:4863,73
+urn:us-la:rs:9:4863,rs,9:4863,rs,9:4862,urn:us-la:rs:9:4862,R.S. 9:4862,88
+urn:us-la:rs:9:4863,rs,9:4863,rs,9:4861,urn:us-la:rs:9:4861,R.S. 9:4861,612
+urn:us-la:rs:9:4863,rs,9:4863,rs,30:1,urn:us-la:rs:30:1,R.S. 30:1,2527
+urn:us-la:rs:9:4865,rs,9:4865,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,508
+urn:us-la:rs:9:4865,rs,9:4865,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,579
+urn:us-la:rs:9:4865,rs,9:4865,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,610
+urn:us-la:rs:9:4867,rs,9:4867,rs,9:4865,urn:us-la:rs:9:4865,R.S. 9:4865,246
+urn:us-la:rs:9:4867,rs,9:4867,rs,9:4865,urn:us-la:rs:9:4865,R.S. 9:4865,537
+urn:us-la:rs:9:4869,rs,9:4869,rs,9:4863,urn:us-la:rs:9:4863,R.S. 9:4863,32
+urn:us-la:rs:9:4869,rs,9:4869,rs,9:4864,urn:us-la:rs:9:4864,R.S. 9:4864,214
+urn:us-la:rs:9:4870,rs,9:4870,rs,30:32,urn:us-la:rs:30:32,R.S. 30:32,1164
+urn:us-la:rs:9:4873,rs,9:4873,rs,9:4862,urn:us-la:rs:9:4862,R.S. 9:4862,105
+urn:us-la:rs:9:4881,rs,9:4881,rs,9:4861,urn:us-la:rs:9:4861,R.S. 9:4861,56
+urn:us-la:rs:9:4882,rs,9:4882,rs,9:4883,urn:us-la:rs:9:4883,R.S. 9:4883,63
+urn:us-la:rs:9:4882,rs,9:4882,rs,9:4883,urn:us-la:rs:9:4883,R.S. 9:4883,280
+urn:us-la:rs:9:4883,rs,9:4883,rs,9:4861,urn:us-la:rs:9:4861,R.S. 9:4861,528
+urn:us-la:rs:9:4885,rs,9:4885,rs,9:4869,urn:us-la:rs:9:4869,R.S. 9:4869,1098
+urn:us-la:rs:9:4888,rs,9:4888,rs,30:32,urn:us-la:rs:30:32,R.S. 30:32,377
+urn:us-la:rs:9:4889,rs,9:4889,rs,9:4871,urn:us-la:rs:9:4871,R.S. 9:4871,18
+urn:us-la:rs:9:5013,rs,9:5013,rs,9:5011,urn:us-la:rs:9:5011,R.S. 9:5011,29
+urn:us-la:rs:9:5013,rs,9:5013,rs,9:5012,urn:us-la:rs:9:5012,R.S. 9:5012,44
+urn:us-la:rs:9:5013,rs,9:5013,rs,9:5011,urn:us-la:rs:9:5011,R.S. 9:5011,704
+urn:us-la:rs:9:5013,rs,9:5013,rs,9:5014,urn:us-la:rs:9:5014,R.S. 9:5014,833
+urn:us-la:rs:9:5013,rs,9:5013,rs,9:5012,urn:us-la:rs:9:5012,R.S. 9:5012,881
+urn:us-la:rs:9:5014,rs,9:5014,rs,9:5011,urn:us-la:rs:9:5011,R.S. 9:5011,48
+urn:us-la:rs:9:5014,rs,9:5014,rs,9:5013,urn:us-la:rs:9:5013,R.S. 9:5013,106
+urn:us-la:rs:9:5015,rs,9:5015,rs,9:5011,urn:us-la:rs:9:5011,R.S. 9:5011,115
+urn:us-la:rs:9:5016,rs,9:5016,rs,9:5012,urn:us-la:rs:9:5012,R.S. 9:5012,112
+urn:us-la:rs:9:5131,rs,9:5131,rs,31:203,urn:us-la:rs:31:203,R.S. 31:203,75
+urn:us-la:rs:9:5132,rs,9:5132,rs,9:5131,urn:us-la:rs:9:5131,R.S. 9:5131,113
+urn:us-la:rs:9:5133,rs,9:5133,rs,9:5131,urn:us-la:rs:9:5131,R.S. 9:5131,43
+urn:us-la:rs:9:5133,rs,9:5133,rs,9:5131,urn:us-la:rs:9:5131,R.S. 9:5131,1145
+urn:us-la:rs:9:5136,rs,9:5136,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,174
+urn:us-la:rs:9:5136,rs,9:5136,rs,9:5137,urn:us-la:rs:9:5137,R.S. 9:5137,266
+urn:us-la:rs:9:5137,rs,9:5137,rs,9:5136,urn:us-la:rs:9:5136,R.S. 9:5136,664
+urn:us-la:rs:9:5137,rs,9:5137,rs,9:5136,urn:us-la:rs:9:5136,R.S. 9:5136,941
+urn:us-la:rs:9:5138,rs,9:5138,rs,9:5136,urn:us-la:rs:9:5136,R.S. 9:5136,527
+urn:us-la:rs:9:5138,rs,9:5138,rs,9:5136,urn:us-la:rs:9:5136,R.S. 9:5136,1703
+urn:us-la:rs:9:5138,rs,9:5138,rs,9:5137,urn:us-la:rs:9:5137,R.S. 9:5137,1972
+urn:us-la:rs:9:5139,rs,9:5139,rs,9:5137,urn:us-la:rs:9:5137,R.S. 9:5137,65
+urn:us-la:rs:9:5139,rs,9:5139,rs,9:5137,urn:us-la:rs:9:5137,R.S. 9:5137,220
+urn:us-la:rs:9:5140.1,rs,9:5140.1,rs,9:5131,urn:us-la:rs:9:5131,R.S. 9:5131,87
+urn:us-la:rs:9:5140.1,rs,9:5140.1,rs,9:5135,urn:us-la:rs:9:5135,R.S. 9:5135,107
+urn:us-la:rs:9:5140.1,rs,9:5140.1,rs,6:826,urn:us-la:rs:6:826,R.S. 6:826,123
+urn:us-la:rs:9:5140.2,rs,9:5140.2,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,120
+urn:us-la:rs:9:5165,rs,9:5165,rs,9:5167.2,urn:us-la:rs:9:5167.2,R.S. 9:5167.2,5850
+urn:us-la:rs:9:5165,rs,9:5165,civcode,3319,urn:us-la:civcode:art:3319,Civil Code Article 3319,454
+urn:us-la:rs:9:5165,rs,9:5165,civcode,3366,urn:us-la:civcode:art:3366,Civil Code Article 3366,1891
+urn:us-la:rs:9:5165,rs,9:5165,civcode,3366,urn:us-la:civcode:art:3366,Civil Code Article 3366,2438
+urn:us-la:rs:9:5165,rs,9:5165,civcode,3366,urn:us-la:civcode:art:3366,Civil Code Article 3366,3177
+urn:us-la:rs:9:5165,rs,9:5165,civcode,3366,urn:us-la:civcode:art:3366,Civil Code Article 3366,3500
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5174,urn:us-la:rs:9:5174,R.S. 9:5174,2071
+urn:us-la:rs:9:5166,rs,9:5166,rs,14:125,urn:us-la:rs:14:125,R.S. 14:125,2084
+urn:us-la:rs:9:5166,rs,9:5166,rs,14:133,urn:us-la:rs:14:133,R.S. 14:133,2101
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5167,urn:us-la:rs:9:5167,R.S. 9:5167,3003
+urn:us-la:rs:9:5166,rs,9:5166,rs,22:46,urn:us-la:rs:22:46,R.S. 22:46,3710
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5167,urn:us-la:rs:9:5167,R.S. 9:5167,3784
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5167.1,urn:us-la:rs:9:5167.1,R.S. 9:5167.1,4408
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5167.1,urn:us-la:rs:9:5167.1,R.S. 9:5167.1,5380
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5168,urn:us-la:rs:9:5168,R.S. 9:5168,5589
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5169,urn:us-la:rs:9:5169,R.S. 9:5169,6185
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5170,urn:us-la:rs:9:5170,R.S. 9:5170,6636
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5170,urn:us-la:rs:9:5170,R.S. 9:5170,6832
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5172,urn:us-la:rs:9:5172,R.S. 9:5172,6924
+urn:us-la:rs:9:5166,rs,9:5166,rs,9:5174,urn:us-la:rs:9:5174,R.S. 9:5174,9516
+urn:us-la:rs:9:5166,rs,9:5166,rs,14:125,urn:us-la:rs:14:125,R.S. 14:125,9529
+urn:us-la:rs:9:5166,rs,9:5166,rs,14:133,urn:us-la:rs:14:133,R.S. 14:133,9546
+urn:us-la:rs:9:5166,rs,9:5166,civcode,3366,urn:us-la:civcode:art:3366,Civil Code Article 3366,7605
+urn:us-la:rs:9:5166,rs,9:5166,civcode,3366,urn:us-la:civcode:art:3366,Civil Code Article 3366,10360
+urn:us-la:rs:9:5167.1,rs,9:5167.1,rs,14:132,urn:us-la:rs:14:132,R.S. 14:132,3715
+urn:us-la:rs:9:5167.1,rs,9:5167.1,rs,22:512,urn:us-la:rs:22:512,R.S. 22:512,4225
+urn:us-la:rs:9:5167.1,rs,9:5167.1,rs,22:512,urn:us-la:rs:22:512,R.S. 22:512,4767
+urn:us-la:rs:9:5167.2,rs,9:5167.2,rs,9:5550,urn:us-la:rs:9:5550,R.S. 9:5550,884
+urn:us-la:rs:9:5167.2,rs,9:5167.2,civcode,3298,urn:us-la:civcode:art:3298,Civil Code Article 3298,953
+urn:us-la:rs:9:5168,rs,9:5168,rs,9:5170,urn:us-la:rs:9:5170,R.S. 9:5170,1729
+urn:us-la:rs:9:5169,rs,9:5169,evidence,902,,Code of Evidence Article 902,356
+urn:us-la:rs:9:5172,rs,9:5172,rs,9:5169,urn:us-la:rs:9:5169,R.S. 9:5169,47
+urn:us-la:rs:9:5172,rs,9:5172,rs,9:5169,urn:us-la:rs:9:5169,R.S. 9:5169,1577
+urn:us-la:rs:9:5172,rs,9:5172,evidence,902,,Code of Evidence Article 902,400
+urn:us-la:rs:9:5173,rs,9:5173,rs,9:5172,urn:us-la:rs:9:5172,R.S. 9:5172,90
+urn:us-la:rs:9:5173,rs,9:5173,rs,9:5172,urn:us-la:rs:9:5172,R.S. 9:5172,522
+urn:us-la:rs:9:5173,rs,9:5173,rs,9:5172,urn:us-la:rs:9:5172,R.S. 9:5172,650
+urn:us-la:rs:9:5173,rs,9:5173,rs,9:5172,urn:us-la:rs:9:5172,R.S. 9:5172,995
+urn:us-la:rs:9:5173.1,rs,9:5173.1,rs,9:5172,urn:us-la:rs:9:5172,R.S. 9:5172,106
+urn:us-la:rs:9:5173.1,rs,9:5173.1,rs,9:5172,urn:us-la:rs:9:5172,R.S. 9:5172,462
+urn:us-la:rs:9:5173.1,rs,9:5173.1,rs,9:5172,urn:us-la:rs:9:5172,R.S. 9:5172,687
+urn:us-la:rs:9:5173.1,rs,9:5173.1,rs,9:5172,urn:us-la:rs:9:5172,R.S. 9:5172,1046
+urn:us-la:rs:9:5174,rs,9:5174,rs,14:125,urn:us-la:rs:14:125,R.S. 14:125,1062
+urn:us-la:rs:9:5175,rs,9:5175,rs,44:114,urn:us-la:rs:44:114,R.S. 44:114,228
+urn:us-la:rs:9:5208,rs,9:5208,civcode,3388,urn:us-la:civcode:art:3388,C.C. Art. 3388,340
+urn:us-la:rs:9:5209,rs,9:5209,civcode,3389,urn:us-la:civcode:art:3389,C.C. Art. 3389,191
+urn:us-la:rs:9:5210,rs,9:5210,civcode,3390,urn:us-la:civcode:art:3390,C.C. Art. 3390,308
+urn:us-la:rs:9:5211,rs,9:5211,civcode,3391,urn:us-la:civcode:art:3391,C.C. Art. 3391,591
+urn:us-la:rs:9:5212,rs,9:5212,rs,35:12,urn:us-la:rs:35:12,R.S. 35:12,22
+urn:us-la:rs:9:5212,rs,9:5212,civcode,3392,urn:us-la:civcode:art:3392,C.C. Art. 3392,322
+urn:us-la:rs:9:5213,rs,9:5213,civcode,3393,urn:us-la:civcode:art:3393,C.C. Art. 3393,418
+urn:us-la:rs:9:5217,rs,9:5217,rs,13:844,urn:us-la:rs:13:844,R.S. 13:844,229
+urn:us-la:rs:9:5217,rs,9:5217,civcode,3298,urn:us-la:civcode:art:3298,Civil Code Article 3298,186
+urn:us-la:rs:9:5251,rs,9:5251,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,195
+urn:us-la:rs:9:5251,rs,9:5251,civcode,813,urn:us-la:civcode:art:813,Civil Code Articles 813,32
+urn:us-la:rs:9:5325,rs,9:5325,rs,9:3510,urn:us-la:rs:9:3510,R.S. 9:3510,253
+urn:us-la:rs:9:5325,rs,9:5325,rs,9:3568,urn:us-la:rs:9:3568,R.S. 9:3568,273
+urn:us-la:rs:9:5363.1,rs,9:5363.1,rs,9:1149.2,urn:us-la:rs:9:1149.2,R.S. 9:1149.2,572
+urn:us-la:rs:9:5363.1,rs,9:5363.1,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,741
+urn:us-la:rs:9:5388,rs,9:5388,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,366
+urn:us-la:rs:9:5393,rs,9:5393,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,126
+urn:us-la:rs:9:5394,rs,9:5394,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,87
+urn:us-la:rs:9:5394,rs,9:5394,rs,9:5386,urn:us-la:rs:9:5386,R.S. 9:5386,112
+urn:us-la:rs:9:5394,rs,9:5394,rs,9:5393,urn:us-la:rs:9:5393,R.S. 9:5393,132
+urn:us-la:rs:9:5394,rs,9:5394,rs,9:5367,urn:us-la:rs:9:5367,R.S. 9:5367,393
+urn:us-la:rs:9:5394,rs,9:5394,rs,9:5521,urn:us-la:rs:9:5521,R.S. 9:5521,451
+urn:us-la:rs:9:5394,rs,9:5394,rs,32:710,urn:us-la:rs:32:710,R.S. 32:710,564
+urn:us-la:rs:9:5394,rs,9:5394,rs,9:5388,urn:us-la:rs:9:5388,R.S. 9:5388,595
+urn:us-la:rs:9:5396,rs,9:5396,rs,33:5062,urn:us-la:rs:33:5062,R.S. 33:5062,99
+urn:us-la:rs:9:5396,rs,9:5396,rs,33:5065,urn:us-la:rs:33:5065,R.S. 33:5065,115
+urn:us-la:rs:9:5396,rs,9:5396,rs,33:5066,urn:us-la:rs:33:5066,R.S. 33:5066,400
+urn:us-la:rs:9:5396,rs,9:5396,rs,33:5066,urn:us-la:rs:33:5066,R.S. 33:5066,836
+urn:us-la:rs:9:5501,rs,9:5501,rs,9:5501.1,urn:us-la:rs:9:5501.1,R.S. 9:5501.1,761
+urn:us-la:rs:9:5501,rs,9:5501,rs,9:5501.1,urn:us-la:rs:9:5501.1,R.S. 9:5501.1,879
+urn:us-la:rs:9:5501.1,rs,9:5501.1,rs,13:841,urn:us-la:rs:13:841,R.S. 13:841,37
+urn:us-la:rs:9:5501.1,rs,9:5501.1,rs,9:5501,urn:us-la:rs:9:5501,R.S. 9:5501,447
+urn:us-la:rs:9:5501.1,rs,9:5501.1,rs,9:5501,urn:us-la:rs:9:5501,R.S. 9:5501,2047
+urn:us-la:rs:9:5503,rs,9:5503,rs,9:5501,urn:us-la:rs:9:5501,R.S. 9:5501,70
+urn:us-la:rs:9:5503,rs,9:5503,rs,9:5501.1,urn:us-la:rs:9:5501.1,R.S. 9:5501.1,355
+urn:us-la:rs:9:5503,rs,9:5503,rs,9:5501,urn:us-la:rs:9:5501,R.S. 9:5501,1657
+urn:us-la:rs:9:5504,rs,9:5504,rs,33:1236,urn:us-la:rs:33:1236,R.S. 33:1236,201
+urn:us-la:rs:9:5504,rs,9:5504,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,259
+urn:us-la:rs:9:5525,rs,9:5525,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,353
+urn:us-la:rs:9:5527,rs,9:5527,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,1332
+urn:us-la:rs:9:5531,rs,9:5531,rs,9:5523,urn:us-la:rs:9:5523,R.S. 9:5523,206
+urn:us-la:rs:9:5531,rs,9:5531,rs,9:5523,urn:us-la:rs:9:5523,R.S. 9:5523,433
+urn:us-la:rs:9:5531,rs,9:5531,rs,9:5523,urn:us-la:rs:9:5523,R.S. 9:5523,575
+urn:us-la:rs:9:5534,rs,9:5534,rs,9:5531,urn:us-la:rs:9:5531,R.S. 9:5531,390
+urn:us-la:rs:9:5534,rs,9:5534,rs,9:5532,urn:us-la:rs:9:5532,R.S. 9:5532,403
+urn:us-la:rs:9:5534,rs,9:5534,rs,9:5533,urn:us-la:rs:9:5533,R.S. 9:5533,420
+urn:us-la:rs:9:5538,rs,9:5538,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,141
+urn:us-la:rs:9:5538,rs,9:5538,rs,9:5522,urn:us-la:rs:9:5522,R.S. 9:5522,427
+urn:us-la:rs:9:5551,rs,9:5551,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,304
+urn:us-la:rs:9:5555,rs,9:5555,ccp,2636,,Code of Civil Procedure Article 2636,22
+urn:us-la:rs:9:5604,rs,9:5604,rs,37:71,urn:us-la:rs:37:71,R.S. 37:71,118
+urn:us-la:rs:9:5604,rs,9:5604,rs,37:71,urn:us-la:rs:37:71,R.S. 37:71,1664
+urn:us-la:rs:9:5604,rs,9:5604,civcode,3458,urn:us-la:civcode:art:3458,Civil Code Article 3458,1361
+urn:us-la:rs:9:5604,rs,9:5604,civcode,3461,urn:us-la:civcode:art:3461,Civil Code Article 3461,1409
+urn:us-la:rs:9:5604,rs,9:5604,civcode,1953,urn:us-la:civcode:art:1953,Civil Code Article 1953,2347
+urn:us-la:rs:9:5605,rs,9:5605,civcode,3458,urn:us-la:civcode:art:3458,Civil Code Article 3458,1559
+urn:us-la:rs:9:5605,rs,9:5605,civcode,3461,urn:us-la:civcode:art:3461,Civil Code Article 3461,1607
+urn:us-la:rs:9:5605,rs,9:5605,civcode,1953,urn:us-la:civcode:art:1953,Civil Code Article 1953,2448
+urn:us-la:rs:9:5605.1,rs,9:5605.1,rs,9:5605,urn:us-la:rs:9:5605,R.S. 9:5605,37
+urn:us-la:rs:9:5606,rs,9:5606,civcode,1953,urn:us-la:civcode:art:1953,Civil Code Article 1953,999
+urn:us-la:rs:9:5606,rs,9:5606,civcode,3458,urn:us-la:civcode:art:3458,Civil Code Article 3458,1164
+urn:us-la:rs:9:5606,rs,9:5606,civcode,3461,urn:us-la:civcode:art:3461,Civil Code Article 3461,1212
+urn:us-la:rs:9:5607,rs,9:5607,rs,37:682,urn:us-la:rs:37:682,R.S. 37:682,130
+urn:us-la:rs:9:5607,rs,9:5607,rs,37:141,urn:us-la:rs:37:141,R.S. 37:141,236
+urn:us-la:rs:9:5607,rs,9:5607,rs,37:3171,urn:us-la:rs:37:3171,R.S. 37:3171,310
+urn:us-la:rs:9:5607,rs,9:5607,rs,9:2772,urn:us-la:rs:9:2772,R.S. 9:2772,2170
+urn:us-la:rs:9:5607,rs,9:5607,civcode,3458,urn:us-la:civcode:art:3458,Civil Code Article 3458,1955
+urn:us-la:rs:9:5607,rs,9:5607,civcode,3461,urn:us-la:civcode:art:3461,Civil Code Article 3461,2002
+urn:us-la:rs:9:5607,rs,9:5607,civcode,2762,urn:us-la:civcode:art:2762,Civil Code Articles 2762,2186
+urn:us-la:rs:9:5607,rs,9:5607,civcode,1953,urn:us-la:civcode:art:1953,Civil Code Article 1953,2337
+urn:us-la:rs:9:5608,rs,9:5608,rs,9:3141,urn:us-la:rs:9:3141,R.S. 9:3141,879
+urn:us-la:rs:9:5608,rs,9:5608,civcode,1953,urn:us-la:civcode:art:1953,Civil Code Article 1953,570
+urn:us-la:rs:9:5610,rs,9:5610,civcode,3447,urn:us-la:civcode:art:3447,Civil Code Article 3447,1402
+urn:us-la:rs:9:5610,rs,9:5610,civcode,3458,urn:us-la:civcode:art:3458,Civil Code Article 3458,1549
+urn:us-la:rs:9:5610,rs,9:5610,civcode,3461,urn:us-la:civcode:art:3461,Civil Code Article 3461,1597
+urn:us-la:rs:9:5610,rs,9:5610,civcode,1953,urn:us-la:civcode:art:1953,Civil Code Article 1953,2079
+urn:us-la:rs:9:5625,rs,9:5625,rs,33:4722,urn:us-la:rs:33:4722,R.S. 33:4722,226
+urn:us-la:rs:9:5625,rs,9:5625,rs,33:4722,urn:us-la:rs:33:4722,R.S. 33:4722,972
+urn:us-la:rs:9:5625,rs,9:5625,rs,33:4722,urn:us-la:rs:33:4722,R.S. 33:4722,1286
+urn:us-la:rs:9:5625,rs,9:5625,rs,33:4722,urn:us-la:rs:33:4722,R.S. 33:4722,2292
+urn:us-la:rs:9:5625,rs,9:5625,rs,33:4722,urn:us-la:rs:33:4722,R.S. 33:4722,2723
+urn:us-la:rs:9:5628,rs,9:5628,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,280
+urn:us-la:rs:9:5628,rs,9:5628,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,1059
+urn:us-la:rs:9:5628,rs,9:5628,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,1171
+urn:us-la:rs:9:5628,rs,9:5628,rs,40:1231.2,urn:us-la:rs:40:1231.2,R.S. 40:1231.2,1260
+urn:us-la:rs:9:5628.1,rs,9:5628.1,rs,9:2797,urn:us-la:rs:9:2797,R.S. 9:2797,2324
+urn:us-la:rs:9:5628.1,rs,9:5628.1,rs,40:1237.1,urn:us-la:rs:40:1237.1,R.S. 40:1237.1,2364
+urn:us-la:rs:9:5628.1,rs,9:5628.1,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,2384
+urn:us-la:rs:9:5628.1,rs,9:5628.1,civcode,3458,urn:us-la:civcode:art:3458,Civil Code Article 3458,1400
+urn:us-la:rs:9:5628.1,rs,9:5628.1,civcode,3461,urn:us-la:civcode:art:3461,Civil Code Article 3461,1448
+urn:us-la:rs:9:5628.1,rs,9:5628.1,civcode,2322.1,urn:us-la:civcode:art:2322.1,Civil Code Article 2322.1,2337
+urn:us-la:rs:9:5633,rs,9:5633,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,500
+urn:us-la:rs:9:5633,rs,9:5633,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,13129
+urn:us-la:rs:9:5633,rs,9:5633,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,13266
+urn:us-la:rs:9:5633,rs,9:5633,rs,47:2223,urn:us-la:rs:47:2223,R.S. 47:2223,16902
+urn:us-la:rs:9:5633,rs,9:5633,rs,14:133,urn:us-la:rs:14:133,R.S. 14:133,22335
+urn:us-la:rs:9:5633,rs,9:5633,civcode,2924,urn:us-la:civcode:art:2924,Civil Code Article 2924,16222
+urn:us-la:rs:9:5633,rs,9:5633,civcode,2315,urn:us-la:civcode:art:2315,Civil Code Article 2315,22377
+urn:us-la:rs:9:5633,rs,9:5633,ccp,1914,,Code of Civil Procedure Article 1914,2537
+urn:us-la:rs:9:5633,rs,9:5633,ccp,2087,,Code of Civil Procedure Article 2087,2974
+urn:us-la:rs:9:5633,rs,9:5633,ccp,2166,,Code of Civil Procedure Article 2166,3410
+urn:us-la:rs:9:5633,rs,9:5633,ccp,3651,,Code of Civil Procedure Article 3651,14910
+urn:us-la:rs:9:5633,rs,9:5633,ccp,3651,,Code of Civil Procedure Article 3651,15064
+urn:us-la:rs:9:5633.1,rs,9:5633.1,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,829
+urn:us-la:rs:9:5633.1,rs,9:5633.1,rs,13:4202,urn:us-la:rs:13:4202,R.S. 13:4202,7245
+urn:us-la:rs:9:5633.1,rs,9:5633.1,rs,14:133,urn:us-la:rs:14:133,R.S. 14:133,12156
+urn:us-la:rs:9:5633.1,rs,9:5633.1,civcode,2315,urn:us-la:civcode:art:2315,Civil Code Article 2315,12198
+urn:us-la:rs:9:5633.1,rs,9:5633.1,ccp,3651,,Code of Civil Procedure Article 3651,5981
+urn:us-la:rs:9:5633.1,rs,9:5633.1,ccp,3651,,Code of Civil Procedure Article 3651,6130
+urn:us-la:rs:9:5633.1,rs,9:5633.1,ccp,3655,,Code of Civil Procedure Article 3655,13506
+urn:us-la:rs:9:5644,rs,9:5644,rs,9:5644,urn:us-la:rs:9:5644,R.S. 9:5644,957
+urn:us-la:rs:9:5685,rs,9:5685,civcode,3362,urn:us-la:civcode:art:3362,Civil Code Article 3362,1000
+urn:us-la:rs:9:5701,rs,9:5701,evidence,1001,,Code of Evidence Article 1001,85
+urn:us-la:rs:9:5801,rs,9:5801,civcode,2324,urn:us-la:civcode:art:2324,Civil Code Article 2324,34
+urn:us-la:rs:9:5801,rs,9:5801,civcode,3463,urn:us-la:civcode:art:3463,Civil Code Article 3463,428
+urn:us-la:rs:9:5811,rs,9:5811,civcode,1264,urn:us-la:civcode:art:1264,Civil Code Articles 1264,117
+urn:us-la:rs:9:5821,rs,9:5821,rs,9:5822,urn:us-la:rs:9:5822,R.S. 9:5822,855
+urn:us-la:rs:9:5824,rs,9:5824,rs,9:5822,urn:us-la:rs:9:5822,R.S. 9:5822,1470
+urn:us-la:rs:9:5824,rs,9:5824,rs,9:5822,urn:us-la:rs:9:5822,R.S. 9:5822,1945
+urn:us-la:rs:9:5825,rs,9:5825,rs,9:5822,urn:us-la:rs:9:5822,R.S. 9:5822,44
+urn:us-la:rs:9:5827,rs,9:5827,civcode,3472,urn:us-la:civcode:art:3472,Civil Code Article 3472,621
+urn:us-la:rs:9:6001,rs,9:6001,civcode,24,urn:us-la:civcode:art:24,Civil Code Article 24,2725

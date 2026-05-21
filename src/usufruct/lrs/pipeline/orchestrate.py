@@ -88,6 +88,30 @@ def _breadcrumb(path: List[HierarchyNode]) -> str:
     return " › ".join(_level_label_for_node(n) for n in path)
 
 
+def _hierarchy_path_from_justia_chain(
+    chain: List[Tuple[str, str, str]],
+) -> List[HierarchyNode]:
+    """Build a hierarchy_path from Phase 1's (level, number, name) triples.
+
+    Phase 1's Justia walker captures the full container chain for every
+    section at parse time (in document order, root-first). That chain is
+    the ground truth and disambiguates sibling containers that share
+    (level, number) under different parents — e.g., Title 9's multiple
+    ``code_title V`` containers under different code_books.
+
+    The runtime ``LRSHierarchyIndex.lookup`` re-derives chains from
+    overlapping section_range intervals and cannot disambiguate those
+    siblings — so for Title 9 it yields incoherent paths (e.g.
+    ``code_book I / code_title IV: PREDIAL SERVITUDES``, mixing parts from
+    different parent chains). Bypassing the lookup with this helper keeps
+    every section's chain coherent.
+    """
+    return [
+        HierarchyNode(level=lvl, number=num, name=name)
+        for (lvl, num, name) in chain
+    ]
+
+
 def _section_slug(title_number: str, section_number: str) -> str:
     safe_section = section_number.replace(".", "_")
     return f"rs_{title_number}_{safe_section}"
@@ -466,11 +490,16 @@ def run_phase3(
             # output URN (Justia is the hierarchy source of truth).
             pass
 
-        hierarchy_path = hierarchy_index.lookup(title_number, section_number)
+        justia_entry = justia_by_key.get((title_number, section_number))
+        if justia_entry is not None and justia_entry.container_chain:
+            hierarchy_path = _hierarchy_path_from_justia_chain(
+                justia_entry.container_chain
+            )
+        else:
+            hierarchy_path = hierarchy_index.lookup(title_number, section_number)
         breadcrumb = _breadcrumb(hierarchy_path)
 
         # Justia-side repeal note overrides legis status if more specific.
-        justia_entry = justia_by_key.get((title_number, section_number))
         if justia_entry and justia_entry.repealed and parsed.status == "active":
             parsed.status = "repealed"
             parsed.heading = None
@@ -522,7 +551,10 @@ def run_phase3(
         else:
             status = "repealed"
             acts_raw = s.repeal_note
-        path = hierarchy_index.lookup(s.title_number, s.section_number)
+        if s.container_chain:
+            path = _hierarchy_path_from_justia_chain(s.container_chain)
+        else:
+            path = hierarchy_index.lookup(s.title_number, s.section_number)
         out[urn] = RSSection(
             urn=urn,
             title_number=s.title_number,
@@ -542,25 +574,49 @@ def run_phase3(
             schema_version=LRS_SCHEMA_VERSION,
         )
 
-    # Persist.
+    # Persist in-scope per-section JSONs. Cleanup is scoped to the requested
+    # Titles so a pilot run (e.g. ``--titles 14``) does not wipe sections
+    # emitted by an earlier wave (e.g. Title 1 from Wave 1). When the run
+    # is full-corpus (``titles_set is None``), we sweep everything.
     sorted_records = sorted(
         out.values(),
         key=lambda r: (r.title_number, section_sort_key(r.section_number)),
     )
-    # Clear stale per-section files so renames/removals stay tidy.
-    for old in paths.sections_dir.glob("*.json"):
-        old.unlink()
+    paths.sections_dir.mkdir(parents=True, exist_ok=True)
+    for old in paths.sections_dir.glob("rs_*.json"):
+        if titles_set is None:
+            old.unlink()
+            continue
+        # Filename shape is rs_{title}_{section}.json; section may contain
+        # underscores (decimal sections like 30_1 → 30.1).
+        parts = old.stem.split("_", 2)
+        if len(parts) >= 3 and parts[1] in titles_set:
+            old.unlink()
+    for rec in sorted_records:
+        slug = _section_slug(rec.title_number, rec.section_number)
+        (paths.sections_dir / f"{slug}.json").write_text(
+            json.dumps(rec.model_dump(), indent=2, ensure_ascii=False)
+        )
+
+    # Reload the union of all sections on disk so sections.jsonl, the
+    # manifest, and the validation report reflect the full state — not just
+    # the current scope. This is what makes wave-by-wave building work:
+    # Wave 2 inherits Wave 1's records, Wave 3 inherits Waves 1+2's, etc.
+    union: Dict[str, RSSection] = {}
+    for path in paths.sections_dir.glob("rs_*.json"):
+        rec = RSSection.model_validate_json(path.read_text())
+        union[rec.urn] = rec
+    union_sorted = sorted(
+        union.values(),
+        key=lambda r: (r.title_number, section_sort_key(r.section_number)),
+    )
     with paths.sections_jsonl.open("w") as jl:
-        for rec in sorted_records:
-            slug = _section_slug(rec.title_number, rec.section_number)
-            (paths.sections_dir / f"{slug}.json").write_text(
-                json.dumps(rec.model_dump(), indent=2, ensure_ascii=False)
-            )
+        for rec in union_sorted:
             jl.write(json.dumps(rec.model_dump(), ensure_ascii=False) + "\n")
 
-    _write_manifest(paths, sorted_records, containers)
-    _write_validation_report(paths, sorted_records, justia_sections, section_index)
-    return out
+    _write_manifest(paths, union_sorted, containers)
+    _write_validation_report(paths, union_sorted, justia_sections, section_index)
+    return union
 
 
 # ---------- Phase 4: derived artifacts ----------

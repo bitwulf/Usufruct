@@ -810,3 +810,280 @@ also the wave that tests the cross-corpus citation flow for real (R.S.
 9:2800 is the marquee section and the existing CODE BOOK/CODE TITLE
 machinery from the Title 9/15 fix is the structural backbone).
 
+## 2026-05-21 — Hardening pass before Wave 3
+
+Two follow-ups from the Wave 2 entry above, landed before kicking off
+Wave 3.
+
+### Fix: `run_phase3` cleanup is now scoped to the requested Titles
+
+Before: `paths.sections_dir.glob("*.json")` deleted every section file
+regardless of which Titles were in scope. A `--titles 9` run after
+Waves 1+2 would have wiped 752 records. Worked around in Wave 2 by
+passing `--titles 1,14`, but the workaround gets uglier with each wave
+(`--titles 1,14,9,22,47` by Wave 4) and one forgotten flag silently
+trashes hours of fetch work.
+
+After: the cleanup glob filters to `parts[1] in titles_set` (filenames
+are `rs_{title}_{section}.json`). When `titles_set is None` (full-corpus
+run) the sweep is unchanged. Post-cleanup, the orchestrator reloads the
+union of all on-disk sections so `sections.jsonl`, the manifest, and the
+validation report reflect the full state — that's what makes
+wave-by-wave building work cleanly. `run_phase3` now returns the union
+instead of just the in-scope dict, so Phase 4 emits union artifacts too.
+
+Regression test `test_phase3_scoped_run_preserves_out_of_scope_section_files`
+seeds an out-of-scope `rs_99_1.json` sentinel, runs Phase 3 with
+`titles=["14"]`, and asserts the sentinel survives and flows through to
+the union JSONL + manifest.
+
+### Pin: rs-14-30.1 as a fixture-backed regression test
+
+The two synthetic-HTML "Added by Acts" tests from the Wave 2 entry are
+replaced by three fixture-backed tests against the real legis HTML for
+R.S. 14:30.1 (the canonical witness — added in 1973, 17 acts spanning
+1973→2025). Copied the cached `d=78398` page into
+`tests/fixtures/lrs/legis_sections/rs-14-30_1.html`.
+
+The fixture-backed pins are stronger than the synthetic ones because
+they catch any future legis HTML rewrap (a new wrapper div, a CSS class
+rename) that would silently break the parser — the synthetic HTML
+froze a known-good shape but couldn't have caught upstream drift.
+
+### Tally
+
+`.venv/bin/pytest` → **141 passed** (66 CC + 75 LRS), zero regressions.
+
+- `test_lrs_orchestrate.py`: 11 → 12 (+1 scoped-cleanup regression test).
+- `test_lrs_legis_section.py`: 19 → 20 (+3 fixture-backed rs-14-30.1
+  tests, −2 synthetic-HTML tests they replaced).
+- New fixture file: `tests/fixtures/lrs/legis_sections/rs-14-30_1.html`.
+
+### What's next
+
+Wave 3 is now unblocked. The cleanup-scope fix lets us run
+`usufruct rs phase3 --titles 9` without losing Wave 1+2 data, and the
+union-rebuild ensures the post-Wave-3 manifest shows Titles 1+14+9
+together. Estimated wall clock: 2,325 sections × 1 req/s ≈ 39 min.
+
+## 2026-05-21 — Wave 3 (Title 9) end-to-end + hierarchy-lookup fix
+
+Wave 3 fetched and emitted Title 9 — the Civil Code Ancillaries, the
+cross-corpus integration wave. R.S. 9:2800 ↔ CC 2315/2317 is the marquee
+case and `citation_edges.csv` now shows real LRS→CC traffic for the
+first time. The wave also surfaced a Phase-3 hierarchy-lookup bug that
+mangled the breadcrumb on 93.7% of Title 9 sections; fixed in this same
+session before claiming the wave done.
+
+### 1. Phase 3 fetch — 2,325 Title 9 sections in ~42 min
+
+```
+.venv/bin/usufruct rs phase3 --titles 1,14,9
+   # 2,325 fresh fetches at ~0.58 req/s → 42 min wall clock
+.venv/bin/usufruct rs phase4
+```
+
+The `1,14,9` belt-and-suspenders titles list is no longer required (the
+[hardening pass](#2026-05-21--hardening-pass-before-wave-3) scoped the
+cleanup glob), but kept for symmetry until Wave 4 picks a different
+convention. Observed rate (~0.58 req/s) is slightly under the planned
+1 req/s — legis response latency, not a throttle. No fetch errors.
+
+### 2. Discovery during spot-check: incoherent hierarchy_path on Title 9
+
+Eyeballing R.S. 9:2800 surfaced an immediate structural problem:
+
+```
+breadcrumb: Title 9 › Code Preliminary Title › Code Book I › Code Title IV ›
+            Chapter 1 › Part III › Subpart A
+```
+
+`Code Title IV: PREDIAL SERVITUDES` actually lives under `Code Book II`,
+not `Code Book I` (which is `OF PERSONS`). The path is structurally
+impossible — it mixes parts from different real chains. A grep across
+Title 9 quantified the spread:
+
+| Bucket | Count | % |
+| --- | ---: | ---: |
+| Title 9 active+repealed sections | 2,325 | 100% |
+| Incoherent (code_book, code_title) pair | 2,178 | **93.7%** |
+| Coherent | 147 | 6.3% |
+
+Title 1 and Title 14 had zero incoherent paths — they don't use
+`CODE BOOK` or `CODE TITLE` structure (flat hierarchies). The bug was
+exclusively Title-9-shaped.
+
+### 3. Root cause — `LRSHierarchyIndex.lookup` can't disambiguate siblings
+
+`src/usufruct/lrs/pipeline/hierarchy.py` builds an interval index keyed
+by `(title, level, number)`. But Title 9 has **multiple containers
+sharing (level, number) under different parents** — e.g., `code_title V`
+appears under code_books I, II, III, and IV (with completely different
+names: NATURAL JURIDICAL PERSONS, OWNERSHIP, QUASI CONTRACTS AND
+OFFENSES, etc.). `by_key` collapses these to one entry (the last seen),
+so `resolve_chain(c)` walks `c.parent_chain` and pulls back the wrong
+ancestor at every collision.
+
+`assign_ranges_from_sections` has a similar key collision on
+`(title, level, number, name)`: multiple `Part I: IN GENERAL`
+containers exist under different chapters. Their section_ranges merge
+into a single union (e.g., `[51-5504]` for a "Part I" that should only
+cover a small chapter), making range-based lookup pick the wrong leaf.
+
+The earlier `2026-05-21 — Discovered + fixed Title 9/15 CC-structure
+parsing` session correctly added the `code_book` / `code_preliminary_title`
+/ `code_title` enum values and made the **Phase 1 walker** produce
+coherent chains. That ground truth is stored as
+`JustiaSectionEntry.container_chain` — a list of `(level, number, name)`
+triples in document order. The runtime lookup was never reconciled with
+the walker fix.
+
+### 4. The fix — bypass the lookup, use Phase 1 ground truth
+
+`src/usufruct/lrs/pipeline/orchestrate.py`:
+
+- New helper `_hierarchy_path_from_justia_chain(chain) -> List[HierarchyNode]`
+  that converts the Phase 1 triples directly into a `HierarchyNode`
+  list. No re-derivation, no ambiguity.
+- `run_phase3` uses the helper for every section where the Justia
+  entry has a non-empty `container_chain` (effectively all of them); the
+  `hierarchy_index.lookup` call remains as a defensive fallback.
+- Same change at the backfill site (line 525) for synthesized
+  blank/repealed records that aren't in `legis_section_ids`.
+
+No edits to `hierarchy.py`. The `LRSHierarchyIndex` is still built and
+remains useful for callers that don't have a `JustiaSectionEntry` in
+scope; its lookup just isn't on the Phase 3 path anymore.
+
+Two new tests in `test_lrs_orchestrate.py`:
+
+- `test_hierarchy_path_from_justia_chain_preserves_coherent_chain` — a
+  unit test asserting the helper round-trips the real R.S. 9:2800 chain
+  (code_book III + code_title V) without mangling.
+- `test_phase3_uses_justia_chain_for_title9_marquee_section` — an
+  end-to-end pin against the Title 9 Justia fixture: Phase 1 walks
+  Title 9, Phase 3 runs with an empty `section_index` so R.S. 9:2800
+  goes through the backfill code path, and the emitted RSSection's
+  `hierarchy_path` must equal the Phase 1 `container_chain` exactly.
+
+After re-running Phase 3 (cached HTML, ~17 sec) and Phase 4:
+
+| Bucket | Before fix | After fix |
+| --- | ---: | ---: |
+| Title 9 sections with incoherent code_book/code_title pair | 2,178 | **0** |
+| R.S. 9:2800 breadcrumb | `Title 9 › ... › Code Book I › Code Title IV: PREDIAL SERVITUDES › ...` | `Title 9 › ... › Code Book III › Code Title V: QUASI CONTRACTS, OFFENSES › Chapter 2` |
+| `validation_report.sections_without_hierarchy` | 0 | 0 |
+| `citation_edges.csv` total | 2,309 | 2,309 (unchanged — fix doesn't touch citation extraction) |
+
+The fix is a one-line replacement at each call site plus a 12-line
+helper — small surface, no behavior change for Titles 1 & 14 (their
+`container_chain` was already coherent because they don't have the
+sibling-collision shape).
+
+### 5. Wave 3 final tallies
+
+`data/rs/` after Wave 3 + fix:
+
+| Artifact | Wave 2 | Wave 3 | Δ |
+| --- | ---: | ---: | ---: |
+| `sections/rs_{1,14,9}_*.json` | 752 | **3,077** | +2,325 |
+| `sections.jsonl` | 752 | 3,077 | +2,325 |
+| `manifest.json` active | 696 | 2,718 | +2,022 |
+| `manifest.json` repealed | 56 | 354 | +298 |
+| `manifest.json` blank | 0 | 5 | +5 |
+| `tree.json` max_depth | 7 | 7 | 0 |
+| `citation_edges.csv` total | 808 | **2,309** | +1,501 |
+| `chunks.jsonl` | 688 | 2,659 | +1,971 |
+| `markdown/title-*/*.md` | 752 | 3,077 | +2,325 |
+| `validation_report` hierarchy gaps | 0 | 0 | — |
+
+By-Title section counts: Title 1 = 41 (unchanged), Title 14 = 711
+(unchanged), Title 9 = 2,325 (new).
+
+### 6. Edges by destination corpus — the cross-corpus payoff
+
+| Destination | Wave 2 | Wave 3 | Δ |
+| --- | ---: | ---: | ---: |
+| `rs` (intra-LRS) | 766 | 2,098 | +1,332 |
+| `civcode` (LRS → Civil Code) | 0 | **129** | +129 |
+| `ccp` (LRS → Code of Civil Procedure) | 3 | 40 | +37 |
+| `crp` (LRS → Code of Criminal Procedure) | 39 | 39 | 0 |
+| `evidence` (LRS → Code of Evidence) | 0 | 3 | +3 |
+| **Total** | **808** | **2,309** | **+1,501** |
+
+**The 129 LRS→Civil Code edges is the marquee Wave 3 outcome** — the
+first cross-corpus integration that was the whole point of building
+Title 9 (Civil Code Ancillaries) before the other Titles. R.S. 9:2800
+contributes two of those edges, both citing CC Article 2317
+("Things in one's custody")  in the body of "Limitation of liability
+for public bodies." +3 LRS→evidence is a nice side effect — Title 9
+references the Code of Evidence in a few places that earlier Titles
+didn't.
+
+### 7. Title 9 acts-citation health
+
+`acts_citations` were parsed for 1,633 of 2,022 active Title 9 sections
+(80.8%). The 389 sections without parsed acts:
+
+| Bucket | Count | % of active |
+| --- | ---: | ---: |
+| Genuinely no acts text on legis | 363 | 18.0% |
+| Has raw text but parser missed it | **26** | 1.3% |
+
+The 26 parser misses cluster around three known shared-parser
+limitations (none specific to Title 9, none release-blocking):
+
+- **Multi-section single Act** (`§§1, 2`, `§§1-3`) — same family as
+  the Wave 1 R.S. 1:60 limitation. ~15 sections.
+- **Embedded `{{NOTE: ...}}` block** that bleeds across the act boundary
+  (e.g., R.S. 9:1253, 9:2372, 9:2373). ~5 sections.
+- **Trailing footnote markers** (`1 As appears in enrolled act`,
+  `1 26 U.S.C.A. §7425`) confusing the regex tail. ~6 sections.
+
+No new template variants in the body — the [Wave 2 three template
+classes](#2026-05-21--wave-2-title-14-end-to-end--two-parser-fixes)
+(modern semicolon, period-separated legacy, `Added by Acts`
+enactment) cover Title 9 too. Plus the structural fix above means
+hierarchy_path is right for all 2,022 active sections.
+
+### Tests
+
+`.venv/bin/pytest` → **143 passed** (66 CC + 77 LRS), zero regressions.
+
+- `test_lrs_orchestrate.py`: 12 → 14 (+2: helper unit test +
+  end-to-end Title 9 marquee pin).
+- All other test files unchanged.
+
+### Known gaps / follow-ups (none release-blocking)
+
+- 26 Title 9 active sections have raw acts text the shared CC parser
+  can't split — multi-section single-Act, embedded NOTE blocks, and
+  footnote-marker tails. ~1.3% of Title 9 active. Fixable with parser
+  work but not on Wave 3's critical path.
+- The underlying `LRSHierarchyIndex.lookup` is still buggy for any
+  caller without a `JustiaSectionEntry` in scope. The Phase 3 path
+  doesn't trigger it post-fix, but the index itself remains
+  ambiguous. A proper fix would key both `by_key` and
+  `sections_under` on the full parent path (parent_chain (lvl, num)
+  tuples + own (level, number)). Filed as a follow-up; we deliberately
+  shipped the surgical fix to stay within the wave's scope.
+- `assign_ranges_from_sections` produces buggy `section_range_*` values
+  for sibling-colliding containers (e.g., the various "Part I IN
+  GENERAL" containers across Title 9 all share the union range
+  [51-5504]). Same underlying cause as above; same follow-up.
+
+### What's next
+
+Wave 3 deliverable is in `data/rs/` and the snapshot remains deferred
+per the user's earlier decision (no tagging until go-ahead). Wave 4
+candidate is Title 22 (Insurance, ~1,500 sections) or Title 47
+(Taxation, ~2,500 sections) — both significantly larger; both
+exercise different domain vocabularies and may surface new acts-line
+patterns. Title 47 is also the largest non-Title-9 corpus and would
+stress the per-section throughput further.
+
+The hierarchy-index follow-up (proper fix in `hierarchy.py` keyed on
+full parent path) is independent of Wave 4 and could land at any
+point. Useful to do before any other consumer of `LRSHierarchyIndex`
+ships (currently none in the codebase).
+

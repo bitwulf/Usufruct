@@ -280,3 +280,171 @@ def test_validation_report_and_manifest_written(lrs_setup):
     manifest = json.loads(paths.manifest.read_text())
     assert manifest["corpus"] == "rs"
     assert "by_status" in manifest["totals"]
+
+
+def test_phase3_scoped_run_preserves_out_of_scope_section_files(lrs_setup):
+    """A pilot-mode run (``titles=["14"]``) must NOT delete section files
+    from prior waves. Earlier behavior wiped ``sections/*.json`` blindly,
+    so a Wave 2 ``--titles 14`` run would have erased the 41 Wave 1 Title 1
+    outputs. The fix scopes the cleanup glob and rebuilds sections.jsonl
+    + manifest from the union of all on-disk sections.
+
+    This test seeds a sentinel ``rs_99_1.json`` (a fake Title 99 record),
+    runs Phase 3 with ``titles=["14"]``, and asserts the sentinel survives
+    and flows through to the union artifacts.
+    """
+    from usufruct.lrs.model import RSSection as _RSSection
+    from usufruct.lrs.corpus import citation_for, urn_for
+
+    client, paths, containers, justia_sections = lrs_setup
+    section_index = run_phase2_with_index(
+        paths,
+        justia_sections=justia_sections,
+        legis_section_ids=TEST_SECTION_IDS,
+    )
+
+    # Seed a sentinel from an out-of-scope Title (99 — outside the run).
+    paths.sections_dir.mkdir(parents=True, exist_ok=True)
+    sentinel = _RSSection(
+        urn=urn_for("99", "1"),
+        title_number="99",
+        section_number="1",
+        citation=citation_for("99", "1"),
+        heading="Sentinel section",
+        text="Should survive a scoped Phase 3 run.",
+        status="active",
+        hierarchy_path=[],
+        breadcrumb="Title 99",
+        acts_citations=[],
+        acts_citations_raw=None,
+        source_url=None,
+        website_law_id=None,
+        scrape_timestamp="2026-05-21T00:00:00Z",
+        source_html_hash=None,
+    )
+    sentinel_path = paths.sections_dir / "rs_99_1.json"
+    sentinel_path.write_text(json.dumps(sentinel.model_dump(), indent=2))
+
+    # Scoped run — only Title 14 (the fixture-backed Title) is touched.
+    union = run_phase3(
+        client,
+        paths,
+        containers=containers,
+        justia_sections=justia_sections,
+        section_index=section_index,
+        titles=["14"],
+    )
+
+    # The sentinel file must still be on disk.
+    assert sentinel_path.exists(), (
+        "Scoped Phase 3 run wiped an out-of-scope section file"
+    )
+    # And the returned union dict + JSONL must include it.
+    assert "urn:us-la:rs:99:1" in union
+    with paths.sections_jsonl.open() as f:
+        urns = {json.loads(line)["urn"] for line in f if line.strip()}
+    assert "urn:us-la:rs:99:1" in urns
+    assert any(u.startswith("urn:us-la:rs:14:") for u in urns)
+    # The Phase 3 manifest reflects the union — sections_emitted counts the
+    # sentinel alongside the in-scope records. (The richer by-Title block
+    # comes from Phase 4's _augment_manifest, which is exercised in
+    # test_lrs_phase4.py.)
+    manifest = json.loads(paths.manifest.read_text())
+    assert manifest["totals"]["sections_emitted"] == len(union)
+    assert manifest["totals"]["sections_emitted"] > 1  # sentinel + Title 14
+
+
+def test_hierarchy_path_from_justia_chain_preserves_coherent_chain():
+    """Title 9 has multiple ``code_title V`` containers under different
+    code_books (e.g., code_book III's ``code_title V: OF QUASI CONTRACTS,
+    AND OF OFFENSES AND QUASI OFFENSES``, plus other Book's ``code_title V``s).
+
+    The runtime ``LRSHierarchyIndex.lookup`` keys ``by_key`` on
+    ``(title, level, number)`` only — it cannot disambiguate siblings that
+    share (level, number), and resolves each parent_chain ancestor
+    independently. The result is an incoherent path that mixes parts from
+    different actual chains (e.g., ``code_book I / code_title IV: PREDIAL
+    SERVITUDES`` where PREDIAL SERVITUDES actually lives under code_book II).
+
+    The Phase 1 ``JustiaSectionEntry.container_chain`` is the ground truth —
+    captured in document order at walk time. ``_hierarchy_path_from_justia_chain``
+    converts it directly, preserving coherence."""
+    from usufruct.lrs.pipeline.orchestrate import (
+        _hierarchy_path_from_justia_chain,
+    )
+
+    # Real R.S. 9:2800 chain from Phase 1.
+    chain = [
+        ("title", "9", "CIVIL CODE--ANCILLARIES"),
+        ("code_preliminary_title", "1", "[BLANK]"),
+        ("code_book", "III", "OF THE DIFFERENT MODES OF ACQUIRING THE OWNERSHIP OF THINGS"),
+        ("code_title", "V", "OF QUASI CONTRACTS, AND OF OFFENSES AND QUASI OFFENSES"),
+        ("chapter", "2", "OF OFFENSES AND QUASI OFFENSES"),
+    ]
+    path = _hierarchy_path_from_justia_chain(chain)
+    assert len(path) == 5
+    assert [(n.level, n.number, n.name) for n in path] == chain
+    # The code_book / code_title pair must be coherent — III + V (NOT
+    # mixed with PREDIAL SERVITUDES from Book II).
+    assert path[2].number == "III"
+    assert path[3].number == "V"
+    assert "QUASI" in path[3].name
+
+
+def test_phase3_uses_justia_chain_for_title9_marquee_section():
+    """End-to-end pin: after Phase 1 on the Title 9 Justia fixture, every
+    emitted Title 9 RSSection must have a coherent ``hierarchy_path`` that
+    matches its source ``container_chain`` from Phase 1 — no incoherent
+    code_book/code_title pairs from index-lookup ambiguity.
+
+    Title 9 has 31 ``Chapter 1`` containers across 4 CODE BOOKs and many
+    duplicate ``(level, number)`` pairs across CODE BOOKs. This test runs
+    a section that has no legis fixture through the backfill code path
+    (``section_index`` is empty, so every Justia section is synthesized
+    as a blank record) — that exercises the second call site of
+    ``_hierarchy_path_from_justia_chain``.
+    """
+    from usufruct.lrs.pipeline.orchestrate import run_phase3, run_phase2_with_index
+    import tempfile
+
+    fake = _FakeClient(fixture_root=FIX)
+    with tempfile.TemporaryDirectory() as tmp:
+        paths = LRSPaths(root=Path(tmp) / "data")
+        containers, justia_sections = run_phase1(fake, paths, titles=["9"])
+        # Locate R.S. 9:2800 in the Phase 1 output.
+        marquee = next(
+            (s for s in justia_sections
+             if s.title_number == "9" and s.section_number == "2800"),
+            None,
+        )
+        assert marquee is not None, "R.S. 9:2800 missing from Phase 1 walk"
+        expected = list(marquee.container_chain)
+        # Sanity: ground truth is coherent (code_book III + code_title V).
+        levels = {lvl: (num, name) for (lvl, num, name) in expected}
+        assert levels["code_book"][0] == "III"
+        assert levels["code_title"][0] == "V"
+
+        # Empty section_index → marquee goes through the backfill path
+        # (status="blank", no legis HTML fetched).
+        section_index = run_phase2_with_index(
+            paths,
+            justia_sections=justia_sections,
+            legis_section_ids={},
+        )
+        out = run_phase3(
+            fake,
+            paths,
+            containers=containers,
+            justia_sections=justia_sections,
+            section_index=section_index,
+            titles=["9"],
+        )
+        rec = out.get("urn:us-la:rs:9:2800")
+        assert rec is not None
+        # Coherent chain — every (level, number, name) matches Phase 1.
+        actual = [(n.level, n.number, n.name) for n in rec.hierarchy_path]
+        assert actual == expected, (
+            f"Title 9 hierarchy_path drifted from Phase 1 ground truth.\n"
+            f"  expected: {expected}\n"
+            f"  actual:   {actual}"
+        )

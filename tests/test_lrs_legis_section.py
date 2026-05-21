@@ -183,60 +183,72 @@ def test_rs_1_11_1_acts_round_trip_through_normalizer(rs_1_11_1):
     assert amendment.role == "amendment"
 
 
-# ---------- "Added by Acts ..." enactment form (R.S. 14:30.1 pattern) ----------
+# ---------- RS 14:30.1 pinned fixture ("Added by Acts ..." enactment form) ----
 #
-# The 1950 LRS codification used "Acts YYYY, ..." (bare) and "Amended by
-# Acts YYYY, ..." (history). Sections inserted later in the corpus use
-# "Added by Acts YYYY, ..." for the enactment. Title 14 has 81 such
-# sections (12% of its active sections). Before the fix, the parser
-# classified "Added by Acts ..." paragraphs as body text, so the whole
-# acts citation line bled into ``text`` and ``acts_citations_raw`` was
-# ``None``. Now: the body/acts split recognizes the third prefix, and the
-# LRS normalizer strips the leading "Added by " for the shared CC parser.
+# The 1950 LRS codification used bare "Acts YYYY, ..." (single enactment)
+# and "Amended by Acts YYYY, ..." (accumulated history). Sections inserted
+# *after* 1950 use "Added by Acts YYYY, ..." for the enactment marker —
+# 81 of Title 14's 655 active sections (12%) follow this pattern. Before
+# the fix, the parser classified "Added by Acts ..." paragraphs as body
+# text, so the whole acts citation line bled into ``text`` and
+# ``acts_citations_raw`` was ``None``.
 #
-# Tested with synthetic HTML so we don't grow the fixture set during
-# Wave 2 — a pinned ``rs-14-30-1.html`` fixture remains deferred per the
-# user's "Title 14 only" scope decision.
+# Fix split into two LRS-side pieces:
+#   * ``_ACTS_LINE_RE`` in ``lrs/parse/legis_section_parser.py`` extended
+#     to recognize the third prefix, so body→acts classification works.
+#   * ``_normalize_lrs_acts_text`` in ``lrs/pipeline/orchestrate.py``
+#     strips the leading "Added by " so the shared CC parser doesn't
+#     drop the enactment piece.
+#
+# rs-14-30.1 is the canonical witness — added in 1973, currently 17
+# parsed acts spanning 1973 → 2025.
 
 
-_RS_14_30_1_SYNTHETIC_HTML = (
-    "<html><body>"
-    '<span id="ctl00_PageBody_LabelName">RS 14:30.1</span>'
-    '<span id="ctl00_PageBody_LabelDocument"><div id="WPMainDoc">'
-    "<p>&sect;30.1.  Second degree murder</p>"
-    "<p>A. Second degree murder is the killing of a human being.</p>"
-    "<p>B. Whoever commits the crime of second degree murder shall be punished.</p>"
-    "<p>Added by Acts 1973, No. 111, &sect;1. "
-    "Amended by Acts 1975, No. 380, &sect;1; "
-    "Acts 1976, No. 657, &sect;2.</p>"
-    "</div></span>"
-    "</body></html>"
-)
+@pytest.fixture(scope="module")
+def rs_14_30_1():
+    return parse_legis_section(_read("rs-14-30_1"))
 
 
-def test_added_by_acts_classified_as_acts_not_body():
-    parsed = parse_legis_section(_RS_14_30_1_SYNTHETIC_HTML)
-    assert parsed.status == "active"
-    assert parsed.heading == "Second degree murder"
-    # The 'Added by Acts ...' line must land in acts_citations_raw, not text.
-    assert parsed.acts_citations_raw is not None
-    assert parsed.acts_citations_raw.startswith("Added by Acts 1973")
-    assert "Added by Acts" not in (parsed.text or "")
-    assert "Amended by Acts" not in (parsed.text or "")
-    # Body has only the two §A/§B paragraphs.
-    assert parsed.text == (
-        "A. Second degree murder is the killing of a human being.\n\n"
-        "B. Whoever commits the crime of second degree murder shall be punished."
-    )
+def test_rs_14_30_1_citation_and_status(rs_14_30_1):
+    assert rs_14_30_1.title_number == "14"
+    assert rs_14_30_1.section_number == "30.1"
+    assert rs_14_30_1.citation == "R.S. 14:30.1"
+    assert rs_14_30_1.status == "active"
+    assert rs_14_30_1.heading == "Second degree murder"
 
 
-def test_added_by_acts_round_trip_through_normalizer():
-    parsed = parse_legis_section(_RS_14_30_1_SYNTHETIC_HTML)
+def test_rs_14_30_1_acts_classified_not_bled_into_body(rs_14_30_1):
+    # The "Added by Acts 1973, ..." paragraph must land in
+    # acts_citations_raw, not body text. Before the fix, the entire acts
+    # line was concatenated into ``text``.
+    assert rs_14_30_1.acts_citations_raw is not None
+    assert rs_14_30_1.acts_citations_raw.startswith("Added by Acts 1973, No. 111")
+    text = rs_14_30_1.text or ""
+    assert "Added by Acts" not in text
+    assert "Amended by Acts" not in text
+    assert "; Acts " not in text
+    # Body must end on the punishment-clause paragraph (the last real body
+    # paragraph), not on an acts entry.
+    assert text.rstrip().endswith("suspension of sentence.")
+
+
+def test_rs_14_30_1_acts_round_trip_through_normalizer(rs_14_30_1):
+    # End-to-end pin: fixture → parse_legis_section → LRS normalizer →
+    # shared CC parser. The 1973 enactment must come through as the first
+    # entry (not silently dropped because the shared parser's
+    # _LEADING_NOISE doesn't know about "Added by ").
     acts = parse_acts_citation_line(
-        _normalize_lrs_acts_text(parsed.acts_citations_raw)
+        _normalize_lrs_acts_text(rs_14_30_1.acts_citations_raw)
     )
-    assert [a.act_year for a in acts] == [1973, 1975, 1976]
-    assert acts[0].role == "enactment"
+    assert len(acts) == 17
+    assert acts[0].act_year == 1973
     assert acts[0].act_number == 111
-    assert acts[1].role == "amendment"
-    assert acts[2].role == "amendment"
+    assert acts[0].section == 1
+    assert acts[0].role == "enactment"
+    # Spot-check the tail — confirms full chain of amendments through 2025.
+    assert acts[-1].act_year == 2025
+    assert all(a.role == "amendment" for a in acts[1:])
+    # No duplicate parse from the legacy period→semicolon rewriter eating
+    # part of an amendment entry.
+    years = [a.act_year for a in acts]
+    assert years == sorted(years), "acts must come out in citation order"

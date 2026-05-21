@@ -1,13 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-21T18:56:24Z",
+  "generated_at": "2026-05-21T20:12:33Z",
   "corpus": "rs",
   "totals": {
     "containers": 5529,
-    "sections_emitted": 752,
+    "sections_emitted": 3077,
     "by_status": {
-      "active": 696,
-      "repealed": 56
+      "active": 2718,
+      "repealed": 354,
+      "blank": 5
     }
   },
   "sources": {
@@ -26,6 +27,14 @@
         "total": 41
       },
       {
+        "title": "9",
+        "active": 2022,
+        "repealed": 298,
+        "reserved": 0,
+        "blank": 5,
+        "total": 2325
+      },
+      {
         "title": "14",
         "active": 655,
         "repealed": 56,
@@ -35,8 +44,8 @@
       }
     ],
     "tree_max_depth": 7,
-    "total_citation_edges": 808,
-    "rag_chunks": 688,
-    "markdown_files": 752
+    "total_citation_edges": 2309,
+    "rag_chunks": 2659,
+    "markdown_files": 3077
   }
 }
