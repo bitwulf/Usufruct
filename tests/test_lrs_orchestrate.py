@@ -448,3 +448,95 @@ def test_phase3_uses_justia_chain_for_title9_marquee_section():
             f"  expected: {expected}\n"
             f"  actual:   {actual}"
         )
+
+
+def test_phase1_title9_part_i_in_general_containers_have_narrow_disjoint_ranges():
+    """Pre-fix bug signature: Title 9 has many ``Part I: IN GENERAL``
+    containers under different chapters. ``assign_ranges_from_sections``
+    was keyed on ``(title, level, number, name)``, so every Part I named
+    "IN GENERAL" hashed to one bucket and inherited a union range that
+    spanned the *whole* Title (observed: ``[51, 5504]`` covering
+    essentially all of Title 9's section space).
+
+    Post-fix: keying on the full root-to-container path of (level, number)
+    steps. Each Part I gets its own chapter-scoped narrow range.
+
+    Pin: in the Title 9 fixture, the ``IN GENERAL``-named Part I
+    containers all have distinct ranges, and none equal the pre-fix
+    union signature ``("51", "5504")``.
+    """
+    import tempfile
+
+    fake = _FakeClient(fixture_root=FIX)
+    with tempfile.TemporaryDirectory() as tmp:
+        paths = LRSPaths(root=Path(tmp) / "data")
+        containers, _justia = run_phase1(fake, paths, titles=["9"])
+
+    def _level(c):
+        return c.level if isinstance(c.level, str) else c.level.value
+
+    part_i_in_general = [
+        c for c in containers
+        if _level(c) == "part"
+        and c.number == "I"
+        and c.name == "IN GENERAL"
+        and ("title", "9") in [tuple(p) for p in c.parent_chain]
+    ]
+    # Title 9 fixture should expose multiple sibling ``Part I: IN GENERAL`` —
+    # that's the sibling-collision shape the fix targets.
+    assert len(part_i_in_general) >= 3, (
+        f"Title 9 fixture should expose multiple Part I 'IN GENERAL' "
+        f"containers (the sibling-collision shape) — found "
+        f"{len(part_i_in_general)}."
+    )
+    # No container should carry the pre-fix bug signature.
+    for c in part_i_in_general:
+        assert (c.section_range_start, c.section_range_end) != ("51", "5504"), (
+            f"Part I 'IN GENERAL' under parent_chain={c.parent_chain} "
+            f"has the pre-fix union range [51, 5504] — the bug signature."
+        )
+    # All Part I 'IN GENERAL' containers have distinct ranges — each one
+    # gets its own chapter-scoped bucket post-fix.
+    ranges = {
+        (c.section_range_start, c.section_range_end) for c in part_i_in_general
+    }
+    assert len(ranges) == len(part_i_in_general), (
+        f"Expected {len(part_i_in_general)} distinct narrow ranges for the "
+        f"Part I 'IN GENERAL' siblings; got {len(ranges)} distinct values: "
+        f"{sorted(ranges)}."
+    )
+
+
+def test_hierarchy_index_lookup_now_returns_coherent_chain_for_title9_marquee():
+    """Complement to ``test_phase3_uses_justia_chain_for_title9_marquee_section``:
+    that test pins the Phase 3 *bypass* path (using ``_hierarchy_path_from_justia_chain``).
+    This test pins that the underlying ``LRSHierarchyIndex.lookup`` is now
+    *itself* correct for Title 9 — the bypass remains as belt-and-suspenders,
+    but ``.lookup`` is no longer relied upon to be wrong.
+    """
+    from usufruct.lrs.pipeline.hierarchy import build_lrs_hierarchy_index
+    import tempfile
+
+    fake = _FakeClient(fixture_root=FIX)
+    with tempfile.TemporaryDirectory() as tmp:
+        paths = LRSPaths(root=Path(tmp) / "data")
+        containers, justia_sections = run_phase1(fake, paths, titles=["9"])
+
+    marquee = next(
+        s for s in justia_sections
+        if s.title_number == "9" and s.section_number == "2800"
+    )
+    expected = [(lvl, num, name) for (lvl, num, name) in marquee.container_chain]
+
+    index = build_lrs_hierarchy_index(
+        containers,
+        section_index=[(s.title_number, s.section_number) for s in justia_sections],
+    )
+    chain = index.lookup("9", "2800")
+    actual = [(n.level, n.number, n.name) for n in chain]
+    assert actual == expected, (
+        f"LRSHierarchyIndex.lookup returned an incoherent chain for "
+        f"R.S. 9:2800 — the path-keying fix did not take.\n"
+        f"  expected (Phase 1 ground truth): {expected}\n"
+        f"  actual (index.lookup):            {actual}"
+    )

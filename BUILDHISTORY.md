@@ -1087,3 +1087,234 @@ full parent path) is independent of Wave 4 and could land at any
 point. Useful to do before any other consumer of `LRSHierarchyIndex`
 ships (currently none in the codebase).
 
+## 2026-05-21 — Snapshot of Waves 1–3 (`lrs-2026-05-21`)
+
+User called for a snapshot of the Wave 1+2+3 deliverable before kicking
+off Wave 4. Per the [LRS plan §6](lars-test/LRS_IMPLEMENTATION_PLAN.md),
+`usufruct rs snapshot` archives `data/rs/` into
+`snapshots/lrs-YYYY-MM-DD/`. No code changes; pure copy operation.
+
+```
+.venv/bin/usufruct rs snapshot
+# → snapshots/lrs-2026-05-21/
+```
+
+### What landed in the snapshot
+
+`snapshots/lrs-2026-05-21/` (73M, ~14 entries):
+
+| Artifact | Size |
+| --- | ---: |
+| `hierarchy.json` | 1.9M |
+| `justia_section_index.json` | 22M (largest — Phase 1 ground truth) |
+| `section_index.json` | 5.5M (Phase 2 join output) |
+| `sections/` | 3,077 per-section JSON files |
+| `sections.jsonl` | 7.8M, 3,077 lines |
+| `notes.jsonl` | 86K (Justia NOTE: paragraphs) |
+| `tree.json` | 2.2M |
+| `citation_edges.csv` | 184K, 2,309 edges |
+| `chunks.jsonl` | 4.7M, 2,659 chunks |
+| `markdown/title-{1,9,14}/*.md` | 3,077 files |
+| `manifest.json` | as-emitted by Phase 4 |
+| `validation_report.json` | 632K, 0 hierarchy gaps |
+
+Two Phase-2 intermediates are intentionally excluded from the whitelist
+in `lrs.pipeline.orchestrate.snapshot()`: `folder_map.json` (the legis
+folder ID → Title mapping, regenerable from the cached root TOC) and
+`phase2_gaps.json` (Justia/legis join diagnostics). Matches the CC
+snapshot convention — only the deliverable corpus ships, not phase-side
+intermediates.
+
+### Verification
+
+- 143 tests pass (66 CC + 77 LRS), zero regressions. (Snapshot is a copy
+  op — no source change — but confirmed baseline per `CLAUDE.md`.)
+- `sections.jsonl` line count: 3,077 live = 3,077 snapshot.
+- `sections/` file count: 3,077 live = 3,077 snapshot.
+- `markdown/**.md` count: 3,077 live = 3,077 snapshot.
+- Manifest totals in the snapshot match the Wave 3 final tallies
+  (active=2,718, repealed=354, blank=5; total_citation_edges=2,309).
+
+### What's deferred
+
+- **No zip / no SHA sidecar.** The CC release pattern is
+  `snapshots/YYYY-MM-DD/` directory + `usufruct-YYYY-MM-DD.zip` +
+  `.sha256` sidecar. Only the directory exists for LRS so far; zipping
+  is a manual release-prep step, not part of `rs snapshot`.
+- **No GitHub Release tag.** Per per-wave Definition of Done §14, a
+  Release is "drafted at user's discretion." Three waves bundled into
+  one tag (`lrs-pilot-waves-1-3` or `lrs-2026-05-21`?) is a release-naming
+  question for the user.
+- **`scripts/verify_release.sh` is CC-only.** Per LRS plan §16 open
+  question 5, the verify script expects `articles.jsonl`,
+  `article_index.json`, etc.; it would fail against the LRS snapshot
+  contents. Adding an LRS variant or a corpus flag is deferred to
+  release prep, not gating this snapshot.
+
+### What's next
+
+Wave 4 candidate selection is the next decision: Title 22 (Insurance,
+~1,500 sections) or Title 47 (Taxation, ~2,500 sections + Subtitles).
+The proper `LRSHierarchyIndex.lookup` fix in `hierarchy.py` and the
+CC `acts_parser.py` extension to clear the ~26 Title 9 misses are both
+independent follow-ups that can land in any order relative to Wave 4.
+
+## 2026-05-21 — Proper `LRSHierarchyIndex` fix (re-key on full parent path)
+
+Wave 3's [hierarchy-lookup section](#2026-05-21--wave-3-title-9-end-to-end--hierarchy-lookup-fix)
+shipped a *surgical* fix: Phase 3 bypassed `LRSHierarchyIndex.lookup`
+via `_hierarchy_path_from_justia_chain`, which uses Phase 1's coherent
+`JustiaSectionEntry.container_chain` directly. The index itself remained
+buggy — Wave 3 just stopped calling its broken path. This session lands
+the *proper* fix: `LRSHierarchyIndex` is now itself correct, and
+`assign_ranges_from_sections` no longer collapses sibling containers
+that share `(level, number, name)` into one union range.
+
+### 1. Root cause recap
+
+`src/usufruct/lrs/pipeline/hierarchy.py` had two symptoms of the same
+bug — keys that didn't disambiguate the parent path:
+
+| Function | Old key | What collapsed |
+| --- | --- | --- |
+| `build_lrs_hierarchy_index.by_key` | `(title, level, number)` | Same `(level, number)` under different parents (e.g., `code_title V` under code_books I, II, III, IV). |
+| `assign_ranges_from_sections.sections_under` | `(title, level, number, name)` | Same `(level, number, name)` under different parents (e.g., `Part I: IN GENERAL` under 14 different chapters in Title 9). |
+
+The `by_key` collapse fed `resolve_chain` and produced incoherent
+ancestor chains (Wave 3 fixed the *Phase 3 consumer* of this). The
+`sections_under` collapse merged section buckets and gave every
+`Part I: IN GENERAL` a union `section_range = [51, 5504]` covering
+essentially the entire Title — wrong by an order of magnitude per
+container.
+
+### 2. The fix — full-path keying
+
+Both dicts re-keyed on the ordered tuple of `(level, number)` steps from
+root to (and including) the container itself.
+
+```python
+PathKey = Tuple[Tuple[str, str], ...]   # ((level, number), ...) root-first
+by_path:        Dict[Tuple[str, PathKey], Container]
+sections_under: Dict[Tuple[str, PathKey], List[(SectionKey, str)]]
+```
+
+- `build_lrs_hierarchy_index`: each container indexed by
+  `(title, parent_chain + ((own_level, own_number),))`. `resolve_chain`
+  walks `parent_chain` with a growing prefix and looks up each prefix
+  in `by_path` — every ancestor is uniquely identified by its full
+  path from root.
+- `assign_ranges_from_sections`: each section walks its
+  `container_chain` with a growing prefix and stamps the section onto
+  every prefix bucket; each container then reads its own
+  `(title, full_path)` bucket. Names are no longer part of the key (the
+  path already disambiguates) but agree by construction.
+
+No edits to `orchestrate.py`, `paths.py`, or any other LRS module. The
+defensive `_hierarchy_path_from_justia_chain` bypass in `run_phase3`
+**stays** as belt-and-suspenders — it's a hair faster than the interval
+walk and the Phase 1 chain is the authoritative ground truth anyway.
+Trivial to remove later if preferred; the index is now correct on its
+own.
+
+### 3. Tests — three new pure-unit + two real-fixture pins
+
+`tests/test_lrs_hierarchy.py` (new file, three unit tests built from
+synthetic Containers — no fixtures, no `_FakeClient`, no I/O):
+
+- `test_assign_ranges_disambiguates_same_name_siblings_under_different_parents`
+  — two `Part I: IN GENERAL` under different chapters get disjoint
+  ranges, not the union.
+- `test_index_lookup_returns_coherent_chain_for_same_name_siblings`
+  — lookup picks the correct sibling by chapter, not whichever happened
+  to be inserted last.
+- `test_resolve_chain_walks_full_path_not_collapsed_level_number_pairs`
+  — the Title-9 shape: two `code_title V` containers under different
+  code_books resolve their own chains coherently. Pins the deeper
+  invariant the Phase 3 bypass test (`_hierarchy_path_from_justia_chain`)
+  couldn't reach.
+
+`tests/test_lrs_orchestrate.py` (two new real-fixture tests):
+
+- `test_phase1_title9_part_i_in_general_containers_have_narrow_disjoint_ranges`
+  — runs Phase 1 on the real Title 9 fixture; asserts at least 3 Part I
+  `IN GENERAL` siblings exist, that *none* carry the pre-fix bug
+  signature `("51", "5504")`, and that all have distinct ranges. The
+  handoff brief's specific pin.
+- `test_hierarchy_index_lookup_now_returns_coherent_chain_for_title9_marquee`
+  — the complement to the existing Phase-3 bypass test: builds the
+  index from the real Phase 1 walk and asserts `index.lookup("9", "2800")`
+  matches the Phase 1 ground-truth chain. Confirms `.lookup` is itself
+  correct, not just bypassed.
+
+### 4. Live-data verification — strict improvement, no per-section drift
+
+Regenerated `data/rs/` end-to-end from the cached HTML
+(`phase1` → `phase3 --titles 1,9,14` → `phase4`, ~17s + ~5s) and
+SHA-diffed every artifact against `snapshots/lrs-2026-05-21/`:
+
+| Artifact | Result |
+| --- | --- |
+| `hierarchy.json` | **CHANGED** — sole purpose of the fix; ranges fixed. |
+| `tree.json` | **CHANGED** — consumes container ranges. |
+| `manifest.json` | bit-identical excluding `generated_at`. |
+| `sections.jsonl` (3,077 records) | bit-identical excluding per-record `scrape_timestamp`. |
+| `sections/*.json` (3,077 files) | bit-identical excluding per-record `scrape_timestamp`. |
+| `markdown/*.md` (3,077 files) | bit-identical (markdown has no timestamp field). |
+| `citation_edges.csv` | bit-identical. |
+| `chunks.jsonl` | bit-identical. |
+| `validation_report.json` | bit-identical. |
+| `justia_section_index.json` | bit-identical. |
+| `section_index.json` | bit-identical. |
+| `notes.jsonl` | bit-identical. |
+
+Per-section content is unchanged because Phase 3 already bypassed the
+broken lookup via `_hierarchy_path_from_justia_chain` — every section's
+`hierarchy_path` continues to flow from the Phase 1 ground truth, not
+the index. The fix's user-visible effect is confined to
+`hierarchy.json` and `tree.json`, both of which now report each
+container's *actual* section range instead of the collapsed union.
+
+### 5. Title 9 Part I — before and after
+
+| | Pre-fix | Post-fix |
+| --- | ---: | ---: |
+| `Part I` containers in Title 9 | 37 | 37 |
+| of which named `IN GENERAL` | 14 | 14 |
+| with bug signature `[51, 5504]` | 13 | **0** |
+| distinct ranges among the 14 IN GENERAL siblings | 1 | **14** |
+
+Sample of the post-fix distinct narrow ranges for the IN GENERAL siblings:
+`(51, 51)`, `(291, 292)`, `(301, 314)`, `(901, 901)`, `(1101, 1114)`,
+`(1451, 1521)`, `(1701, 1702)`, `(3001, 3003)`, `(3051, 3051)`,
+`(3301, 3308)`, `(3501, 3509.4)`, `(3590, 3590)`, `(3901, 3904)`,
+`(5501, 5504)`. Each Part I now covers only its actual chapter's
+sections — `(51, 5504)` was simply `min(starts)..max(ends)` of all 14.
+
+### Tests
+
+`.venv/bin/pytest` → **148 passed** (66 CC + 82 LRS), zero regressions.
+
+- New file `tests/test_lrs_hierarchy.py`: 3 unit tests.
+- `tests/test_lrs_orchestrate.py`: 14 → 16 (+2 real-fixture pins).
+- All other test files unchanged.
+
+### Snapshot status
+
+The snapshot at `snapshots/lrs-2026-05-21/` predates this fix and
+therefore captures pre-fix `hierarchy.json` + `tree.json` (with the
+[51, 5504] union ranges) alongside post-fix per-section data (which
+was already correct via the Wave 3 bypass). If you want the snapshot
+to reflect post-fix `hierarchy.json` + `tree.json` too, re-snapshot
+with `.venv/bin/usufruct rs snapshot` — that overwrites the same
+`lrs-2026-05-21/` directory (today is 2026-05-21). Otherwise the
+snapshot remains a faithful capture of the bypass-only Wave 3 state.
+
+### What's next
+
+The CC `acts_parser.py` extension (multi-section `§§N, M`, embedded
+`{{NOTE: ...}}`, footnote-marker tails — ~20 of 26 Title 9 misses) and
+Wave 4 (Title 22 or 47) are the two open options. The hierarchy work
+is now complete: `LRSHierarchyIndex` is structurally correct on its
+own, the Phase 3 bypass remains as belt-and-suspenders, and no
+follow-up `hierarchy.py` work is needed before any subsequent wave.
+

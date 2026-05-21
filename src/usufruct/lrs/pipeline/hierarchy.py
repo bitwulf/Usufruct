@@ -18,6 +18,12 @@ from ..model import Container, ContainerLevel, HierarchyNode, section_sort_key
 
 
 SectionKey = Tuple[int, int, int]
+# Container coordinate from root: an ordered tuple of (level_value, number)
+# steps, root-first, *including* the container itself at the end. Used as
+# the disambiguating key so sibling containers that share (level, number)
+# under different parents (common in Title 9's code_book × code_title
+# structure) stay distinct.
+PathKey = Tuple[Tuple[str, str], ...]
 
 
 def _level_value(c: Container) -> str:
@@ -100,9 +106,12 @@ def build_lrs_hierarchy_index(
     ``section_range`` by min/max over the sections that fall under it.
 
     Algorithm:
-    1. Index containers by (title, level, number) so we can resolve parent
-       chains stated as (level_value, number) tuples back to actual
-       Container objects.
+    1. Index containers by (title, full_path) where full_path is the
+       ordered tuple of (level_value, number) steps from root to (and
+       including) the container itself. Title 9 has many sibling
+       containers that share (level, number) under different parents
+       (e.g., ``code_title V`` under code_books I, II, III, IV); keying
+       on the full path keeps each one distinct.
     2. Compute each container's section range from the sections that
        reference it in their container chain (the Justia walk stamped these
        references onto each section entry separately; here we get the same
@@ -110,39 +119,38 @@ def build_lrs_hierarchy_index(
     3. Build the interval list.
     """
 
-    # Index by (title, level, number) within the same title.
-    by_key: Dict[Tuple[str, str, str], Container] = {}
+    by_path: Dict[Tuple[str, PathKey], Container] = {}
     # For LRS the title number itself anchors each container chain — Title 1's
-    # CHAPTER 1 is distinct from Title 14's CHAPTER 1. Containers are stored
-    # as their level + number; the title is implicit through the chain.
-    # We rely on the fact that the only Container with level=TITLE will be
-    # the root of its sub-tree, and all others list its (TITLE, T) at index 0
-    # of parent_chain.
+    # CHAPTER 1 is distinct from Title 14's CHAPTER 1. The TITLE container is
+    # the root of its sub-tree; every other container lists (TITLE, T) at
+    # index 0 of its parent_chain.
     title_for_container: Dict[int, str] = {}
     for c in containers:
         if _level_value(c) == ContainerLevel.TITLE.value:
             title_for_container[id(c)] = c.number
         else:
-            # First entry of parent_chain is (TITLE, number)
             t = ""
             for lvl, num in c.parent_chain:
                 if lvl == ContainerLevel.TITLE.value:
                     t = num
                     break
             title_for_container[id(c)] = t
-        by_key[(title_for_container[id(c)], _level_value(c), c.number)] = c
+        own_path: PathKey = tuple(c.parent_chain) + ((_level_value(c), c.number),)
+        by_path[(title_for_container[id(c)], own_path)] = c
 
     def resolve_chain(c: Container) -> Tuple[Container, ...]:
         title = title_for_container[id(c)]
         chain: List[Container] = []
+        prefix: List[Tuple[str, str]] = []
         for lvl, num in c.parent_chain:
-            parent = by_key.get((title, lvl, num))
+            prefix.append((lvl, num))
+            parent = by_path.get((title, tuple(prefix)))
             if parent is not None:
                 chain.append(parent)
         chain.append(c)
         return tuple(chain)
 
-    return _build_intervals_from(containers, section_index, title_for_container, by_key, resolve_chain)
+    return _build_intervals_from(containers, section_index, title_for_container, by_path, resolve_chain)
 
 
 def _build_intervals_from(
@@ -202,10 +210,14 @@ def assign_ranges_from_sections(
     ``JustiaSectionEntry``.
 
     For each container we collect the section numbers whose chain
-    contains it (by (title, level, number, name)) and set the range to
-    [min, max] of those keys.
+    contains it — keyed on the full root-to-container path of
+    (level, number) steps — and set the range to [min, max] of those
+    keys. Path-based keying disambiguates sibling containers that share
+    (level, number, name) under different parents: Title 9 has dozens of
+    ``Part I: IN GENERAL`` under different chapters, and the prior
+    ``(title, level, number, name)`` key collapsed them into one bucket
+    whose union range swallowed most of the Title.
     """
-    # Build a key -> container map.
     title_for_container: Dict[int, str] = {}
     for c in containers:
         if _level_value(c) == ContainerLevel.TITLE.value:
@@ -218,15 +230,18 @@ def assign_ranges_from_sections(
                     break
             title_for_container[id(c)] = t
 
-    sections_under: Dict[Tuple[str, str, str, str], List[Tuple[SectionKey, str]]] = {}
+    sections_under: Dict[Tuple[str, PathKey], List[Tuple[SectionKey, str]]] = {}
     for title, section, chain in sections_with_chain:
         key = section_sort_key(section)
-        for (lvl, num, name) in chain:
-            sections_under.setdefault((title, lvl, num, name), []).append((key, section))
+        prefix: List[Tuple[str, str]] = []
+        for (lvl, num, _name) in chain:
+            prefix.append((lvl, num))
+            sections_under.setdefault((title, tuple(prefix)), []).append((key, section))
 
     for c in containers:
         title = title_for_container[id(c)]
-        bucket = sections_under.get((title, _level_value(c), c.number, c.name))
+        own_path: PathKey = tuple(c.parent_chain) + ((_level_value(c), c.number),)
+        bucket = sections_under.get((title, own_path))
         if not bucket:
             continue
         bucket.sort(key=lambda kv: kv[0])

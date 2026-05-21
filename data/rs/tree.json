@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-21T20:12:31Z",
+  "generated_at": "2026-05-21T21:07:52Z",
   "roots": [
     {
       "level": "title",
@@ -89,7 +89,10 @@
       "level": "title",
       "number": "2",
       "name": "AERONAUTICS",
-      "section_range": null,
+      "section_range": [
+        "1",
+        "1004"
+      ],
       "is_repealed": false,
       "is_reserved": false,
       "children": [
@@ -803,7 +806,7 @@
               "name": "LOUISIANA ALLIGATOR MARKET DEVELOPMENT AUTHORITY",
               "section_range": [
                 "559",
-                "559"
+                "559.14"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -815,7 +818,7 @@
               "number": "XVI",
               "name": "LOUISIANA AQUACULTURAL DEVELOPMENT ACT",
               "section_range": [
-                "559.1",
+                "559",
                 "559.14"
               ],
               "is_repealed": false,
@@ -1145,7 +1148,7 @@
               "name": "IN GENERAL",
               "section_range": [
                 "1021",
-                "2366"
+                "1026"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -1304,7 +1307,7 @@
               "name": "COMMERCIAL FEEDS",
               "section_range": [
                 "1391",
-                "1407"
+                "1552"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -1408,7 +1411,7 @@
               "number": "II",
               "name": "FRAUD OF NURSERYMEN",
               "section_range": [
-                "1551",
+                "1391",
                 "1552"
               ],
               "is_repealed": false,
@@ -1789,7 +1792,7 @@
               "number": "I",
               "name": "IN GENERAL",
               "section_range": [
-                "1021",
+                "2361",
                 "2366"
               ],
               "is_repealed": false,
@@ -2173,7 +2176,7 @@
               "name": "GENERAL",
               "section_range": [
                 "3201",
-                "4624"
+                "3210"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -2734,7 +2737,7 @@
               "number": "I",
               "name": "GENERAL",
               "section_range": [
-                "3201",
+                "4601",
                 "4624"
               ],
               "is_repealed": false,
@@ -3208,7 +3211,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "101",
-                "1142"
+                "103"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -3261,7 +3264,7 @@
               "name": "DEFINITIONS",
               "section_range": [
                 "201",
-                "201"
+                "387"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -3274,7 +3277,7 @@
               "name": "ORGANIZATION OF STATE BANKS",
               "section_range": [
                 "211",
-                "220"
+                "401"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -3300,7 +3303,7 @@
               "name": "POWERS AND FUNCTIONS OF STATE BANKS",
               "section_range": [
                 "241",
-                "246"
+                "372"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -3313,7 +3316,7 @@
               "name": "SHARES",
               "section_range": [
                 "251",
-                "257"
+                "376"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -3442,8 +3445,8 @@
               "number": "I",
               "name": "MERGERS, CONSOLIDATIONS, AND SHARE EXCHANGES",
               "section_range": [
-                "351",
-                "355"
+                "201",
+                "387"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -3455,8 +3458,8 @@
               "number": "II",
               "name": "CONVERSIONS",
               "section_range": [
-                "361",
-                "365.1"
+                "211",
+                "401"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -3468,8 +3471,8 @@
               "number": "III",
               "name": "TRANSFER OF ASSETS",
               "section_range": [
-                "366",
-                "367"
+                "231",
+                "722"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -3481,7 +3484,7 @@
               "number": "IV",
               "name": "VOLUNTARY DISSOLUTIONS",
               "section_range": [
-                "371",
+                "241",
                 "372"
               ],
               "is_repealed": false,
@@ -3494,7 +3497,7 @@
               "number": "V",
               "name": "RIGHTS OF DISSENTING STOCKHOLDERS",
               "section_range": [
-                "376",
+                "251",
                 "376"
               ],
               "is_repealed": false,
@@ -3507,7 +3510,7 @@
               "number": "I",
               "name": "CONSERVATORSHIPS OF STATE BANKS",
               "section_range": [
-                "381",
+                "201",
                 "387"
               ],
               "is_repealed": false,
@@ -3520,7 +3523,7 @@
               "number": "II",
               "name": "INVOLUNTARY LIQUIDATION PROCEDURE",
               "section_range": [
-                "391",
+                "211",
                 "401"
               ],
               "is_repealed": false,
@@ -3679,8 +3682,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "101",
-                "1142"
+                "571",
+                "581"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -4215,8 +4218,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "101",
-                "1142"
+                "1081",
+                "1085.1"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -4307,7 +4310,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "101",
+                "1131",
                 "1142"
               ],
               "is_repealed": false,
@@ -4890,7 +4893,7 @@
                           "name": "IN GENERAL",
                           "section_range": [
                             "51",
-                            "5504"
+                            "51"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -5179,7 +5182,7 @@
                               "name": "IN GENERAL",
                               "section_range": [
                                 "221",
-                                "5105"
+                                "225"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -5383,8 +5386,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "291",
+                            "292"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -5447,8 +5450,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "301",
+                            "314"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -6245,8 +6248,8 @@
                               "number": "A",
                               "name": "IN GENERAL",
                               "section_range": [
-                                "221",
-                                "5105"
+                                "601",
+                                "603"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -6427,7 +6430,7 @@
                           "name": "MISCELLANEOUS PROVISIONS",
                           "section_range": [
                             "841",
-                            "5396"
+                            "842"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -6456,8 +6459,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "901",
+                            "901"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -6633,8 +6636,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "1101",
+                            "1114"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -6692,7 +6695,7 @@
                               "name": "GENERAL PROVISIONS",
                               "section_range": [
                                 "1121.101",
-                                "3576.7"
+                                "1121.108"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -7316,8 +7319,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "1451",
+                            "1521"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -7472,8 +7475,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "1701",
+                            "1702"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -7530,7 +7533,7 @@
                       "name": "LOUISIANA TRUST CODE",
                       "section_range": [
                         "1721",
-                        "2252"
+                        "2621"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -7570,8 +7573,8 @@
                               "number": "A",
                               "name": "GENERAL PROVISIONS",
                               "section_range": [
-                                "1121.101",
-                                "3576.7"
+                                "1731",
+                                "1737"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -8413,7 +8416,7 @@
                       "name": "UNIFORM CUSTODIAL TRUST ACT",
                       "section_range": [
                         "2260.1",
-                        "2260.21"
+                        "2701"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -8426,7 +8429,7 @@
                       "name": "FOREIGN TRUSTS",
                       "section_range": [
                         "2262.1",
-                        "2262.4"
+                        "2717.4"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -8439,7 +8442,7 @@
                       "name": "TRUST FOR THE CARE AND BENEFIT OF AN ANIMAL",
                       "section_range": [
                         "2263",
-                        "2263"
+                        "2720.15"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -8452,7 +8455,7 @@
                       "name": "DONATIONS FOR CHARITABLE PURPOSES",
                       "section_range": [
                         "2271",
-                        "2337.10"
+                        "2733"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -8463,7 +8466,7 @@
                           "name": "TRUSTS FOR CHARITABLE PURPOSES",
                           "section_range": [
                             "2271",
-                            "2283"
+                            "2733"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -8560,7 +8563,7 @@
                       "name": "PUBLIC TRUSTS",
                       "section_range": [
                         "2341",
-                        "2347"
+                        "2737"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -8573,7 +8576,7 @@
                       "name": "SPECIAL CHARITABLE TRUSTS",
                       "section_range": [
                         "2348",
-                        "2350.2"
+                        "2762"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -8586,7 +8589,7 @@
                       "name": "DONATIONS INTER VIVOS",
                       "section_range": [
                         "2351",
-                        "2373"
+                        "2784.1"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -8664,7 +8667,7 @@
                       "name": "DONATIONS MORTIS CAUSA",
                       "section_range": [
                         "2401",
-                        "2450"
+                        "2787"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -8761,7 +8764,7 @@
                       "name": "OF FORCED HEIRS",
                       "section_range": [
                         "2501",
-                        "2503"
+                        "2788"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -8773,7 +8776,7 @@
                       "number": "1",
                       "name": "LOUISIANA UNIFORM ELECTRONIC TRANSACTIONS ACT",
                       "section_range": [
-                        "2601",
+                        "1721",
                         "2621"
                       ],
                       "is_repealed": false,
@@ -8809,7 +8812,7 @@
                       "number": "1-A",
                       "name": "OF PRESUMPTIONS",
                       "section_range": [
-                        "2701",
+                        "2260.1",
                         "2701"
                       ],
                       "is_repealed": false,
@@ -8845,7 +8848,7 @@
                       "number": "1-B",
                       "name": "REQUISITES FOR A VALID AGREEMENT",
                       "section_range": [
-                        "2711",
+                        "2262.1",
                         "2717.4"
                       ],
                       "is_repealed": false,
@@ -8884,7 +8887,7 @@
                       "number": "1-C",
                       "name": "GESTATIONAL CARRIER CONTRACTS",
                       "section_range": [
-                        "2718",
+                        "2263",
                         "2720.15"
                       ],
                       "is_repealed": false,
@@ -8961,7 +8964,7 @@
                       "number": "2",
                       "name": "REGISTRY OF INSTRUMENTS AFFECTING IMMOVABLES",
                       "section_range": [
-                        "2721",
+                        "2271",
                         "2733"
                       ],
                       "is_repealed": false,
@@ -8972,7 +8975,7 @@
                           "number": "I",
                           "name": "GENERAL PROVISIONS",
                           "section_range": [
-                            "2721",
+                            "2271",
                             "2733"
                           ],
                           "is_repealed": false,
@@ -9014,7 +9017,7 @@
                       "number": "2-A",
                       "name": "REGISTRY UNDER COMMERCIAL LAWS",
                       "section_range": [
-                        "2736",
+                        "2341",
                         "2737"
                       ],
                       "is_repealed": false,
@@ -9037,7 +9040,7 @@
                       "number": "2-B",
                       "name": "REGISTRY",
                       "section_range": [
-                        "2741",
+                        "2348",
                         "2762"
                       ],
                       "is_repealed": false,
@@ -9079,7 +9082,7 @@
                       "number": "3",
                       "name": "PERFORMANCE OF OBLIGATIONS",
                       "section_range": [
-                        "2771",
+                        "2351",
                         "2784.1"
                       ],
                       "is_repealed": false,
@@ -9112,7 +9115,7 @@
                       "number": "4",
                       "name": "DEATH OF A PARTY",
                       "section_range": [
-                        "2785",
+                        "2401",
                         "2787"
                       ],
                       "is_repealed": false,
@@ -9129,7 +9132,7 @@
                       "number": "5",
                       "name": "INTEREST UPON ACCRUED INTEREST; EXCEPTIONS",
                       "section_range": [
-                        "2788",
+                        "2501",
                         "2788"
                       ],
                       "is_repealed": false,
@@ -9206,7 +9209,10 @@
                       "level": "chapter",
                       "number": "1",
                       "name": "OF QUASI CONTRACTS (BLANK)",
-                      "section_range": null,
+                      "section_range": [
+                        "2790.5",
+                        "2790.12"
+                      ],
                       "is_repealed": false,
                       "is_reserved": false,
                       "children": [],
@@ -9658,8 +9664,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "3001",
+                            "3003"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -9689,8 +9695,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "3051",
+                            "3051"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -9867,8 +9873,8 @@
                               "number": "A",
                               "name": "IN GENERAL",
                               "section_range": [
-                                "221",
-                                "5105"
+                                "3166",
+                                "3167"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -10145,8 +10151,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "3301",
+                            "3308"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -10445,8 +10451,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "3501",
+                            "3509.4"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -10882,7 +10888,7 @@
                               "number": "A",
                               "name": "GENERAL PROVISIONS",
                               "section_range": [
-                                "1121.101",
+                                "3576.1",
                                 "3576.7"
                               ],
                               "is_repealed": false,
@@ -11067,8 +11073,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "3590",
+                            "3590"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -11337,8 +11343,8 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
-                            "5504"
+                            "3901",
+                            "3904"
                           ],
                           "is_repealed": false,
                           "is_reserved": false,
@@ -11570,7 +11576,7 @@
                       "name": "PLEDGES",
                       "section_range": [
                         "4301",
-                        "4422"
+                        "4391"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -11662,8 +11668,8 @@
                               "number": "A",
                               "name": "IN GENERAL",
                               "section_range": [
-                                "221",
-                                "5105"
+                                "4341",
+                                "4343"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -11734,7 +11740,10 @@
                   "level": "code_title",
                   "number": "XX",
                   "name": "SECURITY * * *",
-                  "section_range": null,
+                  "section_range": [
+                    "4301",
+                    "4391"
+                  ],
                   "is_repealed": false,
                   "is_reserved": false,
                   "children": [],
@@ -11756,7 +11765,7 @@
                       "number": "1",
                       "name": "PLEDGES",
                       "section_range": [
-                        "4301",
+                        "4401",
                         "4422"
                       ],
                       "is_repealed": false,
@@ -11891,8 +11900,8 @@
                               "number": "A",
                               "name": "IN GENERAL",
                               "section_range": [
-                                "221",
-                                "5105"
+                                "4541",
+                                "4544"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -12376,8 +12385,8 @@
                               "number": "A",
                               "name": "IN GENERAL",
                               "section_range": [
-                                "221",
-                                "5105"
+                                "4861",
+                                "4873"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -12442,8 +12451,8 @@
                               "number": "A",
                               "name": "IN GENERAL",
                               "section_range": [
-                                "221",
-                                "5105"
+                                "4901",
+                                "4903"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -12473,8 +12482,8 @@
                               "number": "A",
                               "name": "IN GENERAL",
                               "section_range": [
-                                "221",
-                                "5105"
+                                "4921",
+                                "4923"
                               ],
                               "is_repealed": false,
                               "is_reserved": false,
@@ -12642,7 +12651,7 @@
                               "number": "A",
                               "name": "IN GENERAL",
                               "section_range": [
-                                "221",
+                                "5101",
                                 "5105"
                               ],
                               "is_repealed": false,
@@ -12981,7 +12990,7 @@
                           "number": "V",
                           "name": "MISCELLANEOUS PROVISIONS",
                           "section_range": [
-                            "841",
+                            "5381",
                             "5396"
                           ],
                           "is_repealed": false,
@@ -13025,7 +13034,7 @@
                           "number": "I",
                           "name": "IN GENERAL",
                           "section_range": [
-                            "51",
+                            "5501",
                             "5504"
                           ],
                           "is_repealed": false,
@@ -13972,7 +13981,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "401",
-                    "2035"
+                    "407"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -13998,7 +14007,7 @@
                   "name": "MEMBERSHIP",
                   "section_range": [
                     "411",
-                    "2055"
+                    "417"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -14048,7 +14057,7 @@
                       "name": "DISABILITY RETIREMENT",
                       "section_range": [
                         "461",
-                        "1432"
+                        "463"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -14247,8 +14256,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "401",
-                    "2035"
+                    "701",
+                    "711"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -14260,7 +14269,7 @@
                   "number": "II",
                   "name": "MEMBERSHIP",
                   "section_range": [
-                    "411",
+                    "721",
                     "2055"
                   ],
                   "is_repealed": false,
@@ -14287,7 +14296,7 @@
                   "name": "BENEFITS",
                   "section_range": [
                     "761",
-                    "2078"
+                    "815"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -14298,7 +14307,7 @@
                       "name": "GENERAL PROVISIONS",
                       "section_range": [
                         "761",
-                        "952.4"
+                        "794"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -14340,7 +14349,7 @@
                   "name": "ADMINISTRATION",
                   "section_range": [
                     "821",
-                    "2096"
+                    "1173"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -14547,8 +14556,8 @@
                       "number": "A",
                       "name": "GENERAL PROVISIONS",
                       "section_range": [
-                        "761",
-                        "952.4"
+                        "951.1",
+                        "951.7"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -14652,7 +14661,7 @@
                       "number": "A",
                       "name": "GENERAL PROVISIONS",
                       "section_range": [
-                        "761",
+                        "952.1",
                         "952.4"
                       ],
                       "is_repealed": false,
@@ -14760,8 +14769,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "401",
-                    "2035"
+                    "1001",
+                    "1007"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -14773,7 +14782,7 @@
                   "number": "IV",
                   "name": "BENEFITS",
                   "section_range": [
-                    "761",
+                    "1141",
                     "2078"
                   ],
                   "is_repealed": false,
@@ -14800,8 +14809,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "401",
-                    "2035"
+                    "1301",
+                    "1338"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -14970,7 +14979,7 @@
                       "number": "B",
                       "name": "DISABILITY RETIREMENT",
                       "section_range": [
-                        "461",
+                        "1431",
                         "1432"
                       ],
                       "is_repealed": false,
@@ -15065,8 +15074,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "401",
-                    "2035"
+                    "1501",
+                    "1504"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15144,8 +15153,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "401",
-                    "2035"
+                    "1581",
+                    "1589"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15157,8 +15166,8 @@
                   "number": "III",
                   "name": "CREDITABLE SERVICE",
                   "section_range": [
-                    "751",
-                    "2063"
+                    "1611",
+                    "1617"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15170,8 +15179,8 @@
                   "number": "IV",
                   "name": "BENEFITS",
                   "section_range": [
-                    "761",
-                    "2078"
+                    "1631",
+                    "1646"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15183,7 +15192,7 @@
                   "number": "V",
                   "name": "ADMINISTRATION",
                   "section_range": [
-                    "821",
+                    "1651",
                     "2096"
                   ],
                   "is_repealed": false,
@@ -15196,8 +15205,8 @@
                   "number": "VI",
                   "name": "MANAGEMENT AND EXPENDITURE OF FUNDS",
                   "section_range": [
-                    "851",
-                    "2115"
+                    "1671",
+                    "1675"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15209,8 +15218,8 @@
                   "number": "VII",
                   "name": "METHOD OF FINANCING",
                   "section_range": [
-                    "871",
-                    "2144"
+                    "1691",
+                    "1702"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15236,8 +15245,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "401",
-                    "2035"
+                    "1731",
+                    "1738"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15263,7 +15272,7 @@
                   "name": "PLAN A. RETIREMENT ELIGIBILITY; RETIREMENT COMPUTATION; SURVIVOR BENEFITS; CONTRIBUTIONS",
                   "section_range": [
                     "1781",
-                    "1947"
+                    "1789.6"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15276,7 +15285,7 @@
                   "name": "PLAN B. RETIREMENT ELIGIBILITY; RETIREMENT COMPUTATION; SURVIVOR BENEFITS; CONTRIBUTIONS",
                   "section_range": [
                     "1801",
-                    "1967"
+                    "1808.6"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15315,8 +15324,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "401",
-                    "2035"
+                    "1901",
+                    "1908"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -15341,7 +15350,7 @@
                   "number": "III",
                   "name": "PLAN A. RETIREMENT ELIGIBILITY; RETIREMENT COMPUTATION; SURVIVOR BENEFITS; CONTRIBUTIONS",
                   "section_range": [
-                    "1781",
+                    "1941",
                     "1947"
                   ],
                   "is_repealed": false,
@@ -15354,7 +15363,7 @@
                   "number": "IV",
                   "name": "PLAN B. RETIREMENT ELIGIBILITY; RETIREMENT COMPUTATION; SURVIVOR BENEFITS; CONTRIBUTIONS",
                   "section_range": [
-                    "1801",
+                    "1961",
                     "1967"
                   ],
                   "is_repealed": false,
@@ -15394,7 +15403,7 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "401",
+                    "2031",
                     "2035"
                   ],
                   "is_repealed": false,
@@ -15906,7 +15915,7 @@
                       "name": "POLICE PENSION AND RELIEF FUND OF NATCHITOCHES",
                       "section_range": [
                         "3621",
-                        "3621"
+                        "3623"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -15918,7 +15927,7 @@
                       "number": "E",
                       "name": "-A. POLICEMEN'S PENSION AND RETIREMENT FUND FOR THE CITY OF NEW IBERIA",
                       "section_range": [
-                        "3623",
+                        "3621",
                         "3623"
                       ],
                       "is_repealed": false,
@@ -16124,7 +16133,7 @@
               "name": "SHORT TITLE AND RESERVATION OF POWER",
               "section_range": [
                 "1.101",
-                "1.102"
+                "1.1606"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16137,7 +16146,7 @@
               "name": "FILING DOCUMENTS",
               "section_range": [
                 "1.120",
-                "1.129"
+                "2.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16150,7 +16159,7 @@
               "name": "SECRETARY OF STATE",
               "section_range": [
                 "1.130",
-                "1.130"
+                "1.1438"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16163,7 +16172,7 @@
               "name": "DEFINITIONS",
               "section_range": [
                 "1.140",
-                "1.504"
+                "1.1446"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16175,8 +16184,8 @@
               "number": "A",
               "name": "SHARES",
               "section_range": [
-                "1.601",
-                "1.604"
+                "1.101",
+                "1.1606"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16188,8 +16197,8 @@
               "number": "B",
               "name": "ISSUANCE OF SHARES",
               "section_range": [
-                "1.620",
-                "1.628"
+                "1.120",
+                "2.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16201,8 +16210,8 @@
               "number": "C",
               "name": "SUBSEQUENT ACQUISITION OF SHARES BY SHAREHOLDERS AND CORPORATION",
               "section_range": [
-                "1.630",
-                "1.631"
+                "1.130",
+                "1.1438"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16214,8 +16223,8 @@
               "number": "D",
               "name": "DISTRIBUTIONS",
               "section_range": [
-                "1.640",
-                "1.640"
+                "1.140",
+                "1.1446"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16227,8 +16236,8 @@
               "number": "A",
               "name": "MEETINGS",
               "section_range": [
-                "1.701",
-                "1.709"
+                "1.101",
+                "1.1606"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16240,8 +16249,8 @@
               "number": "B",
               "name": "VOTING",
               "section_range": [
-                "1.720",
-                "1.729"
+                "1.120",
+                "2.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16253,8 +16262,8 @@
               "number": "C",
               "name": "VOTING TRUSTS AND AGREEMENTS",
               "section_range": [
-                "1.730",
-                "1.732"
+                "1.130",
+                "1.1438"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16266,8 +16275,8 @@
               "number": "D",
               "name": "DERIVATIVE PROCEEDINGS",
               "section_range": [
-                "1.740",
-                "1.747"
+                "1.140",
+                "1.1446"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16280,7 +16289,7 @@
               "name": "PROCEEDING TO APPOINT RECEIVER",
               "section_range": [
                 "1.748",
-                "1.748"
+                "1.956"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16292,8 +16301,8 @@
               "number": "A",
               "name": "BOARD OF DIRECTORS",
               "section_range": [
-                "1.801",
-                "1.812"
+                "1.101",
+                "1.1606"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16305,8 +16314,8 @@
               "number": "B",
               "name": "MEETINGS AND ACTION OF THE BOARD",
               "section_range": [
-                "1.820",
-                "1.826"
+                "1.120",
+                "2.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16318,8 +16327,8 @@
               "number": "C",
               "name": "DIRECTORS",
               "section_range": [
-                "1.830",
-                "1.833"
+                "1.130",
+                "1.1438"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16331,8 +16340,8 @@
               "number": "D",
               "name": "OFFICERS",
               "section_range": [
-                "1.840",
-                "1.844"
+                "1.140",
+                "1.1446"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16344,8 +16353,8 @@
               "number": "E",
               "name": "INDEMNIFICATION AND ADVANCE FOR EXPENSES",
               "section_range": [
-                "1.850",
-                "1.859"
+                "1.748",
+                "1.956"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16383,8 +16392,8 @@
               "number": "A",
               "name": "PRELIMINARY PROVISIONS",
               "section_range": [
-                "1.901",
-                "1.902"
+                "1.101",
+                "1.1606"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16396,8 +16405,8 @@
               "number": "B",
               "name": "DOMESTICATION",
               "section_range": [
-                "1.920",
-                "1.925"
+                "1.120",
+                "2.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16409,8 +16418,8 @@
               "number": "C",
               "name": "NONPROFIT CONVERSION",
               "section_range": [
-                "1.930",
-                "1.935"
+                "1.130",
+                "1.1438"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16422,8 +16431,8 @@
               "number": "D",
               "name": "FOREIGN NONPROFIT DOMESTICATION AND CONVERSION",
               "section_range": [
-                "1.940",
-                "1.943"
+                "1.140",
+                "1.1446"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16435,7 +16444,7 @@
               "number": "E",
               "name": "ENTITY CONVERSION",
               "section_range": [
-                "1.950",
+                "1.748",
                 "1.956"
               ],
               "is_repealed": false,
@@ -16448,8 +16457,8 @@
               "number": "A",
               "name": "AMENDMENT OF ARTICLES OF INCORPORATION",
               "section_range": [
-                "1.1001",
-                "1.1009"
+                "1.101",
+                "1.1606"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16461,8 +16470,8 @@
               "number": "B",
               "name": "AMENDMENT OF BYLAWS",
               "section_range": [
-                "1.1020",
-                "1.1202"
+                "1.120",
+                "2.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16474,8 +16483,8 @@
               "number": "A",
               "name": "RIGHT TO APPRAISAL AND PAYMENT FOR SHARES",
               "section_range": [
-                "1.1301",
-                "1.1303"
+                "1.101",
+                "1.1606"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16487,8 +16496,8 @@
               "number": "B",
               "name": "PROCEDURE FOR EXERCISE OF APPRAISAL RIGHTS",
               "section_range": [
-                "1.1320",
-                "1.1326"
+                "1.120",
+                "2.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16500,8 +16509,8 @@
               "number": "C",
               "name": "JUDICIAL APPRAISAL OF SHARES",
               "section_range": [
-                "1.1330",
-                "1.1331"
+                "1.130",
+                "1.1438"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16513,8 +16522,8 @@
               "number": "D",
               "name": "OTHER REMEDIES",
               "section_range": [
-                "1.1340",
-                "1.1340"
+                "1.140",
+                "1.1446"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16526,8 +16535,8 @@
               "number": "A",
               "name": "VOLUNTARY DISSOLUTION",
               "section_range": [
-                "1.1401",
-                "1.1429"
+                "1.101",
+                "1.1606"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -16539,7 +16548,7 @@
               "number": "C",
               "name": "JUDICIAL DISSOLUTION",
               "section_range": [
-                "1.1430",
+                "1.130",
                 "1.1438"
               ],
               "is_repealed": false,
@@ -16552,7 +16561,7 @@
               "number": "D",
               "name": "TERMINATION AND REINSTATEMENT",
               "section_range": [
-                "1.1440",
+                "1.140",
                 "1.1446"
               ],
               "is_repealed": false,
@@ -16565,7 +16574,7 @@
               "number": "A",
               "name": "RECORDS",
               "section_range": [
-                "1.1601",
+                "1.101",
                 "1.1606"
               ],
               "is_repealed": false,
@@ -16578,7 +16587,7 @@
               "number": "B",
               "name": "REPORTS",
               "section_range": [
-                "1.1620",
+                "1.120",
                 "2.2"
               ],
               "is_repealed": false,
@@ -17495,7 +17504,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "1",
-                "5814"
+                "36"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -17547,8 +17556,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "71",
+                "76"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -17679,8 +17688,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "471",
+                "477"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -17717,7 +17726,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "581",
-                    "1921"
+                    "589"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -17782,8 +17791,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "581",
-                    "1921"
+                    "750",
+                    "762"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -17890,8 +17899,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "1001",
+                "1033"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -17902,7 +17911,7 @@
                   "name": "JUDGES",
                   "section_range": [
                     "1001",
-                    "1347"
+                    "1001"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -17941,8 +17950,8 @@
                   "number": "A",
                   "name": "JUDGES",
                   "section_range": [
-                    "1001",
-                    "1347"
+                    "1136",
+                    "1148"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -18020,7 +18029,7 @@
                   "number": "A",
                   "name": "JUDGES",
                   "section_range": [
-                    "1001",
+                    "1335",
                     "1347"
                   ],
                   "is_repealed": false,
@@ -18115,8 +18124,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "1561",
+                "1607"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -18152,8 +18161,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "581",
-                    "1921"
+                    "1641",
+                    "1644"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -18231,8 +18240,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "581",
-                    "1921"
+                    "1801",
+                    "1812"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -18297,8 +18306,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "581",
-                    "1921"
+                    "1851",
+                    "1854"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -18364,7 +18373,7 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "581",
+                    "1870",
                     "1921"
                   ],
                   "is_repealed": false,
@@ -18708,8 +18717,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "3041",
+                "3057"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -18827,8 +18836,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "3415",
+                "3419"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -18985,8 +18994,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "3911",
+                "3914"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -19025,8 +19034,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "3941",
+                "3941"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -19117,8 +19126,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "4201",
+                "4209"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -19170,8 +19179,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "4251.101",
+                "4251.106"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -19249,8 +19258,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "4261.101",
+                "4261.103"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -19302,8 +19311,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "4281",
+                "4291"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -19342,8 +19351,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "4341",
+                "4369"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -19826,8 +19835,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "5521",
+                "5565"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -19892,8 +19901,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "5814"
+                "5701",
+                "5727"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -19971,7 +19980,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
+                "5801",
                 "5814"
               ],
               "is_repealed": false,
@@ -22066,7 +22075,10 @@
               "level": "code_title",
               "number": "XXIV",
               "name": "PROCEDURES PRIOR TO TRIAL (BLANK)",
-              "section_range": null,
+              "section_range": [
+                "241",
+                "244"
+              ],
               "is_repealed": false,
               "is_reserved": false,
               "children": [],
@@ -23670,7 +23682,7 @@
           "name": "INTERAGENCY AGREEMENTS FOR INFORMATION SHARING CONCERNING JUVENILES",
           "section_range": [
             "1461",
-            "1464"
+            "1511"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -23682,7 +23694,7 @@
           "number": "14",
           "name": "ADULT PROTECTIVE SERVICES ACT",
           "section_range": [
-            "1501",
+            "1461",
             "1511"
           ],
           "is_repealed": false,
@@ -24608,7 +24620,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "151",
-                    "3886"
+                    "183"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -24894,8 +24906,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "151",
-                    "3886"
+                    "371",
+                    "372"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -24989,7 +25001,7 @@
               "name": "DYSLEXIA",
               "section_range": [
                 "392.11",
-                "392.14"
+                "393"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -25001,7 +25013,7 @@
               "number": "VI-B",
               "name": "OPPORTUNITY CLASSES",
               "section_range": [
-                "393",
+                "392.11",
                 "393"
               ],
               "is_repealed": false,
@@ -25238,7 +25250,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "411",
-                "3974"
+                "440.4"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -25392,8 +25404,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "151",
-                    "3886"
+                    "1011",
+                    "1011"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -25603,8 +25615,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "151",
-                    "3886"
+                    "1421",
+                    "1421"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -25669,8 +25681,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "151",
-                    "3886"
+                    "1491",
+                    "1492"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -25879,8 +25891,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "151",
-                    "3886"
+                    "1601.1",
+                    "1601.8"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -26560,8 +26572,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "151",
-                    "3886"
+                    "2050",
+                    "2054"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -26855,8 +26867,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "411",
-                "3974"
+                "2751",
+                "2752"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -26934,8 +26946,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "411",
-                "3974"
+                "2901",
+                "2902"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -27029,7 +27041,7 @@
           "name": "GUARANTEE OF MEDICAL AND DENTAL SCHOOL LOANS FOR RURAL PRACTITIONERS",
           "section_range": [
             "3041",
-            "3041.7"
+            "3041.26"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -27041,8 +27053,8 @@
           "number": "20-A",
           "name": "-1. TUITION PAYMENT PROGRAM FOR MEDICAL SCHOOL STUDENTS",
           "section_range": [
-            "3041.10",
-            "3041.15"
+            "3041",
+            "3041.26"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -27054,7 +27066,7 @@
           "number": "20-A",
           "name": "-2. TUITION PAYMENT PROGRAM FOR MEDICAL SCHOOL STUDENTS-TULANE UNIVERSITY SCHOOL OF MEDICINE",
           "section_range": [
-            "3041.21",
+            "3041",
             "3041.26"
           ],
           "is_repealed": false,
@@ -27068,7 +27080,7 @@
           "name": "TAYLOR OPPORTUNITY PROGRAM FOR STUDENTS-TEACHERS",
           "section_range": [
             "3042",
-            "3042.8"
+            "3042.66"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -27080,8 +27092,8 @@
           "number": "20-B",
           "name": "-1. TEACHERS EDUCATION TRUST FUND INCENTIVE PROGRAM",
           "section_range": [
-            "3042.11",
-            "3042.27"
+            "3042",
+            "3042.66"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -27093,8 +27105,8 @@
           "number": "20-B",
           "name": "-3. LOUISIANA HONORS SCHOLARSHIP PROGRAM",
           "section_range": [
-            "3042.31",
-            "3042.36"
+            "3042",
+            "3042.66"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -27106,8 +27118,8 @@
           "number": "20-B",
           "name": "-4. BIENVILLE PARISH SCHOOL BOARD LOAN PROGRAM FOR TEACHER PREPARATION",
           "section_range": [
-            "3042.41",
-            "3042.47"
+            "3042",
+            "3042.66"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -27119,8 +27131,8 @@
           "number": "20-B",
           "name": "-5. GUARANTEE OF NURSING SCHOOL LOANS FOR CERTAIN NURSING STUDENTS",
           "section_range": [
-            "3042.51",
-            "3042.56"
+            "3042",
+            "3042.66"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -27132,7 +27144,7 @@
           "number": "20-B",
           "name": "-6. VETERINARY SCHOOL LOANS FOR CERTAIN VETERINARY STUDENTS",
           "section_range": [
-            "3042.61",
+            "3042",
             "3042.66"
           ],
           "is_repealed": false,
@@ -27312,8 +27324,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "411",
-                "3974"
+                "3121",
+                "3138.13"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -27745,8 +27757,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "411",
-                "3974"
+                "3601",
+                "3603"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -27996,8 +28008,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "411",
-                "3974"
+                "3821",
+                "3822"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -28062,8 +28074,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "411",
-                "3974"
+                "3871",
+                "3873"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -28086,7 +28098,7 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "151",
+                    "3881",
                     "3886"
                   ],
                   "is_repealed": false,
@@ -28221,7 +28233,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "411",
+                "3971",
                 "3974"
               ],
               "is_repealed": false,
@@ -28617,7 +28629,7 @@
               "name": "COMMISSIONER OF ELECTIONS",
               "section_range": [
                 "16",
-                "17"
+                "22"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -28629,7 +28641,7 @@
               "number": "I",
               "name": "SECRETARY OF STATE; REGISTRATION; VOTING MACHINES",
               "section_range": [
-                "18",
+                "16",
                 "22"
               ],
               "is_repealed": false,
@@ -28801,7 +28813,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "401",
-                "1487"
+                "404"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -28814,7 +28826,7 @@
               "name": "SPECIAL PROVISIONS FOR PARTY PRIMARY OFFICES",
               "section_range": [
                 "410.1",
-                "410.10"
+                "417"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -28826,7 +28838,7 @@
               "number": "I-A",
               "name": "SPECIAL PROVISIONS FOR CERTAIN ELECTIONS HELD IN 1992",
               "section_range": [
-                "411",
+                "410.1",
                 "417"
               ],
               "is_repealed": false,
@@ -28840,7 +28852,7 @@
               "name": "SPECIAL PROVISIONS FOR CERTAIN ELECTIONS HELD IN 2014",
               "section_range": [
                 "418.1",
-                "418.2"
+                "419.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -28852,7 +28864,7 @@
               "number": "I-B",
               "name": "SPECIAL PROVISIONS FOR CERTAIN ELECTIONS HELD IN 2026",
               "section_range": [
-                "419.1",
+                "418.1",
                 "419.2"
               ],
               "is_repealed": false,
@@ -28877,7 +28889,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "421",
-                    "586"
+                    "429"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -28929,8 +28941,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "421",
-                    "586"
+                    "451",
+                    "454"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -29021,8 +29033,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "421",
-                    "586"
+                    "521",
+                    "524"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -29139,7 +29151,7 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "421",
+                    "581",
                     "586"
                   ],
                   "is_repealed": false,
@@ -29391,8 +29403,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "401",
-                "1487"
+                "1351",
+                "1356"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -29616,7 +29628,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "401",
+                "1481",
                 "1487"
               ],
               "is_repealed": false,
@@ -32038,7 +32050,10 @@
                   "level": "subpart",
                   "number": "B-1",
                   "name": "MEDICAL CLAIMS FOR SERVICES PROVIDED THROUGH TELEHEALTH AND TELEMEDICINE",
-                  "section_range": null,
+                  "section_range": [
+                    "1841",
+                    "1844"
+                  ],
                   "is_repealed": false,
                   "is_reserved": false,
                   "children": [],
@@ -32778,7 +32793,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "151",
-                    "1212"
+                    "153"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -32899,7 +32914,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "301",
-                "2056"
+                "303"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -33162,8 +33177,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "301",
-                "2056"
+                "821",
+                "824"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -33254,8 +33269,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "301",
-                "2056"
+                "891",
+                "905"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -33618,7 +33633,7 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "151",
+                    "1201",
                     "1212"
                   ],
                   "is_repealed": false,
@@ -33831,8 +33846,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "301",
-                "2056"
+                "1471",
+                "1474"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -34172,7 +34187,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "301",
+                "2041",
                 "2056"
               ],
               "is_repealed": false,
@@ -34359,7 +34374,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "1",
-                "153"
+                "15"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -34477,7 +34492,7 @@
               "name": "DAIRY STABILIZATION STUDY COMMISSION",
               "section_range": [
                 "121",
-                "125"
+                "131"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -34489,7 +34504,7 @@
               "number": "IV",
               "name": "REAPPORTIONMENT STUDY COMMISSION",
               "section_range": [
-                "131",
+                "121",
                 "131"
               ],
               "is_repealed": false,
@@ -34529,7 +34544,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
+                "151",
                 "153"
               ],
               "is_repealed": false,
@@ -34729,7 +34744,7 @@
           "name": "CAPITOL SECURITY DIRECTOR; CAPITOL SECURITY COUNCIL",
           "section_range": [
             "681",
-            "711"
+            "756"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -34781,7 +34796,7 @@
           "number": "12",
           "name": "CENTER FOR LEGAL STUDIES ON INTERGOVERNMENTAL RELATIONS",
           "section_range": [
-            "751",
+            "681",
             "756"
           ],
           "is_repealed": false,
@@ -36208,7 +36223,7 @@
               "name": "DEFINITIONS",
               "section_range": [
                 "241",
-                "641"
+                "243"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -36338,7 +36353,7 @@
               "number": "I",
               "name": "DEFINITIONS",
               "section_range": [
-                "241",
+                "641",
                 "641"
               ],
               "is_repealed": false,
@@ -36523,7 +36538,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "41",
-                "603"
+                "48"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -36849,8 +36864,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "41",
-                "603"
+                "351",
+                "355"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -36942,8 +36957,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "41",
-                "603"
+                "401",
+                "404"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -37073,7 +37088,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "41",
+                "601",
                 "603"
               ],
               "is_repealed": false,
@@ -37363,7 +37378,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "380",
-                "806"
+                "386"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -37467,8 +37482,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "380",
-                "806"
+                "451.1",
+                "451.6"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -37637,7 +37652,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "380",
+                "801",
                 "806"
               ],
               "is_repealed": false,
@@ -37782,7 +37797,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "1",
-                    "403"
+                    "42"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -38008,7 +38023,7 @@
               "name": "AGENT ORANGE DIRECTORY",
               "section_range": [
                 "301",
-                "305"
+                "335"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -38033,7 +38048,7 @@
               "number": "III",
               "name": "- B MILITARY AIRBORNE HAZARDS AND OPEN BURN PIT REGISTRY",
               "section_range": [
-                "331",
+                "301",
                 "335"
               ],
               "is_repealed": false,
@@ -38096,7 +38111,7 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "1",
+                    "401",
                     "403"
                   ],
                   "is_repealed": false,
@@ -38794,7 +38809,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "501",
-                    "2454"
+                    "504"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -39006,7 +39021,7 @@
               "name": "ENVIRONMENTAL QUALITY",
               "section_range": [
                 "1051",
-                "1051"
+                "1115"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -39018,7 +39033,7 @@
               "number": "11",
               "name": "LOUISIANA GEOLOGIC SEQUESTRATION OF CARBON DIOXIDE ACT",
               "section_range": [
-                "1101",
+                "1051",
                 "1115"
               ],
               "is_repealed": false,
@@ -39330,8 +39345,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "501",
-                    "2454"
+                    "2271",
+                    "2283"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -39409,8 +39424,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "501",
-                    "2454"
+                    "2351",
+                    "2351.12"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -39527,7 +39542,7 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "501",
+                    "2451",
                     "2454"
                   ],
                   "is_repealed": false,
@@ -41409,7 +41424,10 @@
               "level": "part",
               "number": "II",
               "name": "(BLANK)",
-              "section_range": null,
+              "section_range": [
+                "21",
+                "42"
+              ],
               "is_repealed": false,
               "is_reserved": false,
               "children": [],
@@ -41523,7 +41541,7 @@
                   "name": "WARD ONE ECONOMIC DEVELOPMENT BOARD OF CALCASIEU PARISH",
                   "section_range": [
                     "130.71",
-                    "130.73"
+                    "130.83"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -41535,7 +41553,7 @@
                   "number": "B-4",
                   "name": "-A. WARDS 4 AND 6 ECONOMIC DEVELOPMENT BOARD OF BEAUREGARD PARISH",
                   "section_range": [
-                    "130.81",
+                    "130.71",
                     "130.83"
                   ],
                   "is_repealed": false,
@@ -41562,7 +41580,7 @@
                   "name": "GRANT ECONOMIC DEVELOPMENT DISTRICT",
                   "section_range": [
                     "130.151",
-                    "130.159"
+                    "130.169"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -41574,7 +41592,7 @@
                   "number": "B-6",
                   "name": "-A. GRANT PARISH ECONOMIC AND INDUSTRIAL DEVELOPMENT DISTRICT",
                   "section_range": [
-                    "130.161",
+                    "130.151",
                     "130.169"
                   ],
                   "is_repealed": false,
@@ -41874,7 +41892,7 @@
                   "name": "LOUISIANA DELTA AUTHORITY",
                   "section_range": [
                     "130.591",
-                    "130.591"
+                    "130.599"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -41886,7 +41904,7 @@
                   "number": "B-31",
                   "name": "ST. BERNARD PARISH ECONOMIC DEVELOPMENT COMMISSION",
                   "section_range": [
-                    "130.591.1",
+                    "130.591",
                     "130.599"
                   ],
                   "is_repealed": false,
@@ -42212,7 +42230,7 @@
                   "name": "RAILROAD DEVELOPMENT DISTRICT",
                   "section_range": [
                     "140.71",
-                    "140.79"
+                    "140.109"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -42224,7 +42242,7 @@
                   "number": "G",
                   "name": "ACADIANA RAILROAD DEVELOPMENT DISTRICT",
                   "section_range": [
-                    "140.101",
+                    "140.71",
                     "140.109"
                   ],
                   "is_repealed": false,
@@ -42986,7 +43004,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "1321",
-                    "2758"
+                    "1337"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -43249,8 +43267,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "1321",
-                    "2758"
+                    "1551",
+                    "1573.1"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -43328,8 +43346,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "1321",
-                    "2758"
+                    "1701",
+                    "1706"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -43488,7 +43506,7 @@
                   "name": "ORGANIZATION",
                   "section_range": [
                     "1961",
-                    "2201"
+                    "1981.1"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -43501,7 +43519,7 @@
                   "name": "MINIMUM WAGES AND MAXIMUM HOURS",
                   "section_range": [
                     "1991",
-                    "2218.10"
+                    "2010"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -43579,7 +43597,7 @@
                   "number": "A",
                   "name": "ORGANIZATION",
                   "section_range": [
-                    "1961",
+                    "2191",
                     "2201"
                   ],
                   "is_repealed": false,
@@ -43592,7 +43610,7 @@
                   "number": "B",
                   "name": "MINIMUM WAGES AND MAXIMUM HOURS",
                   "section_range": [
-                    "1991",
+                    "2211",
                     "2218.10"
                   ],
                   "is_repealed": false,
@@ -43882,7 +43900,7 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "1321",
+                    "2741",
                     "2758"
                   ],
                   "is_repealed": false,
@@ -44449,7 +44467,7 @@
               "name": "MISCELLANEOUS PROVISIONS",
               "section_range": [
                 "3741",
-                "9099.4"
+                "3748"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -45565,7 +45583,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "4720.161",
-                "9038.1"
+                "4720.161"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -45973,7 +45991,7 @@
           "name": "POST-EMPLOYMENT BENEFITS FUNDS; POLITICAL SUBDIVISIONS",
           "section_range": [
             "5161",
-            "5162"
+            "6101"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -45985,7 +46003,7 @@
           "number": "17",
           "name": "PAROCHIAL EMPLOYEES' RETIREMENT SYSTEM OF LOUISIANA",
           "section_range": [
-            "6101",
+            "5161",
             "6101"
           ],
           "is_repealed": false,
@@ -46269,7 +46287,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "4720.161",
+                "9020",
                 "9038.1"
               ],
               "is_repealed": false,
@@ -46544,7 +46562,7 @@
               "number": "V",
               "name": "MISCELLANEOUS PROVISIONS",
               "section_range": [
-                "3741",
+                "9099.1",
                 "9099.4"
               ],
               "is_repealed": false,
@@ -48091,7 +48109,7 @@
               "name": "IN GENERAL",
               "section_range": [
                 "3301",
-                "3406"
+                "3305"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -48119,8 +48137,8 @@
           "number": "45",
           "name": "WASHINGTON PARISH PORT COMMISSION",
           "section_range": [
-            "3351",
-            "3356"
+            "3301",
+            "3418"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -48143,7 +48161,7 @@
               "number": "I",
               "name": "IN GENERAL",
               "section_range": [
-                "3301",
+                "3401",
                 "3406"
               ],
               "is_repealed": false,
@@ -49181,7 +49199,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "561",
-                "1164"
+                "563"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -49298,8 +49316,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "561",
-                "1164"
+                "831",
+                "855"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -49589,7 +49607,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "561",
+                "1161",
                 "1164"
               ],
               "is_repealed": false,
@@ -49695,7 +49713,7 @@
               "name": "MEDICINE, SURGERY, MIDWIFERY",
               "section_range": [
                 "1261",
-                "1292"
+                "1310.1"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -49733,7 +49751,7 @@
               "number": "I",
               "name": "- C. INTERSTATE MEDICAL LICENSURE COMPACT",
               "section_range": [
-                "1310.1",
+                "1261",
                 "1310.1"
               ],
               "is_repealed": false,
@@ -49982,7 +50000,7 @@
               "name": "PHYSICIANS, PHARMACISTS AND DENTISTS",
               "section_range": [
                 "1661",
-                "1662"
+                "1809"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -49995,7 +50013,7 @@
               "name": "PERSONS IN ARMED FORCES",
               "section_range": [
                 "1681",
-                "1683"
+                "1870"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -50008,7 +50026,7 @@
               "name": "MEDICAL PRESCRIPTIONS AND LABELS",
               "section_range": [
                 "1701",
-                "1703"
+                "1910"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -50021,7 +50039,7 @@
               "name": "THE RIGHT TO ADVERTISE",
               "section_range": [
                 "1721",
-                "1721"
+                "1924"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -50163,7 +50181,7 @@
               "number": "I",
               "name": "PAWNBROKERS",
               "section_range": [
-                "1781",
+                "1661",
                 "1809"
               ],
               "is_repealed": false,
@@ -50176,7 +50194,7 @@
               "number": "II",
               "name": "SECONDHAND DEALERS",
               "section_range": [
-                "1861",
+                "1681",
                 "1870"
               ],
               "is_repealed": false,
@@ -50215,7 +50233,7 @@
               "number": "III",
               "name": "TRANSIENT MERCHANTS",
               "section_range": [
-                "1901",
+                "1701",
                 "1910"
               ],
               "is_repealed": false,
@@ -50228,7 +50246,7 @@
               "number": "IV",
               "name": "ITINERANT VENDORS",
               "section_range": [
-                "1920",
+                "1721",
                 "1924"
               ],
               "is_repealed": false,
@@ -50282,7 +50300,7 @@
               "name": "GENERAL",
               "section_range": [
                 "2150",
-                "3052"
+                "2192"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -50559,8 +50577,8 @@
               "number": "I",
               "name": "GENERAL",
               "section_range": [
-                "2150",
-                "3052"
+                "2801",
+                "2830.7"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -50665,7 +50683,7 @@
               "number": "I",
               "name": "GENERAL",
               "section_range": [
-                "2150",
+                "3051",
                 "3052"
               ],
               "is_repealed": false,
@@ -51202,7 +51220,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "111",
-                "2196.1"
+                "115"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -51517,8 +51535,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "111",
-                "2196.1"
+                "1481",
+                "1482"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -51635,8 +51653,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "111",
-                "2196.1"
+                "1601",
+                "1681"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -51675,8 +51693,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "111",
-                "2196.1"
+                "1751",
+                "1810"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -51807,7 +51825,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "111",
+                "2181",
                 "2196.1"
               ],
               "is_repealed": false,
@@ -52527,7 +52545,7 @@
           "name": "UTILIZATION OF GROUND WATER RESOURCES",
           "section_range": [
             "3091",
-            "3097"
+            "3097.9"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -52539,7 +52557,7 @@
           "number": "13-A",
           "name": "-1. WATER RESOURCES MANAGEMENT",
           "section_range": [
-            "3097.1",
+            "3091",
             "3097.9"
           ],
           "is_repealed": false,
@@ -53735,7 +53753,7 @@
                       "name": "GENERAL PROVISIONS",
                       "section_range": [
                         "366.1",
-                        "517"
+                        "366.6"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -53832,7 +53850,7 @@
               "name": "INVESTMENT IN TIME CERTIFICATES BY STATE TREASURER",
               "section_range": [
                 "462",
-                "462"
+                "462.8"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -53844,7 +53862,7 @@
               "number": "3-C",
               "name": "LOUISIANA RURAL INFRASTRUCTURE REVOLVING LOAN PROGRAM",
               "section_range": [
-                "462.1",
+                "462",
                 "462.8"
               ],
               "is_repealed": false,
@@ -53935,7 +53953,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "471",
-                    "1993"
+                    "473"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -53958,7 +53976,7 @@
                       "number": "A",
                       "name": "GENERAL PROVISIONS",
                       "section_range": [
-                        "366.1",
+                        "501",
                         "517"
                       ],
                       "is_repealed": false,
@@ -54327,8 +54345,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "471",
-                    "1993"
+                    "1211",
+                    "1235"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -54446,8 +54464,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "471",
-                    "1993"
+                    "1401",
+                    "1410"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -54681,7 +54699,7 @@
                       "name": "METHODS OF SOURCE SELECTION",
                       "section_range": [
                         "1494",
-                        "1604.7"
+                        "1502.1"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -54880,8 +54898,8 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "471",
-                    "1993"
+                    "1551",
+                    "1558"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -55036,7 +55054,7 @@
                       "number": "A",
                       "name": "METHODS OF SOURCE SELECTION",
                       "section_range": [
-                        "1494",
+                        "1593",
                         "1604.7"
                       ],
                       "is_repealed": false,
@@ -55484,7 +55502,7 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "471",
+                    "1951",
                     "1993"
                   ],
                   "is_repealed": false,
@@ -55777,7 +55795,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "32",
-                "1133"
+                "61.1"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57179,7 +57197,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "1121.1",
-                    "2255.1"
+                    "1121.11"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -57326,7 +57344,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "32",
+                "1131",
                 "1133"
               ],
               "is_repealed": false,
@@ -57432,7 +57450,7 @@
               "name": "ADVANCE DIRECTIVES AND LIFE- SUSTAINING PROCEDURES",
               "section_range": [
                 "1151",
-                "1156.1"
+                "1235"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57498,7 +57516,7 @@
               "name": "CONSENT",
               "section_range": [
                 "1157.1",
-                "1161.1"
+                "1215.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57564,7 +57582,7 @@
               "name": "TUBERCULOSIS",
               "section_range": [
                 "1162",
-                "1162"
+                "1219.6"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57577,7 +57595,7 @@
               "name": "INFORMATION AND RECORDS",
               "section_range": [
                 "1163.1",
-                "1168.6"
+                "1237"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57643,7 +57661,7 @@
               "name": "RIGHTS",
               "section_range": [
                 "1169.1",
-                "1181"
+                "1239"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57721,8 +57739,8 @@
               "number": "I",
               "name": "COOPERATIVE ENDEAVOR AGREEMENTS FOR NONSTATE GOVERNMENTAL HOSPITALS",
               "section_range": [
-                "1181.1",
-                "1181.1"
+                "1151",
+                "1235"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57734,8 +57752,8 @@
               "number": "II",
               "name": "FEDERALLY QUALIFIED HEALTH CENTER PRESERVATION ACT",
               "section_range": [
-                "1183.1",
-                "1185.6"
+                "1157.1",
+                "1215.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57747,8 +57765,8 @@
               "number": "IV",
               "name": "NOTIFICATION TO LAW ENFORCEMENT AGENCY",
               "section_range": [
-                "1187.1",
-                "1187.1"
+                "1169.1",
+                "1239"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57760,8 +57778,8 @@
               "number": "V",
               "name": "RURAL HOSPITAL PRESERVATION ACT",
               "section_range": [
-                "1189.1",
-                "1189.7"
+                "1162",
+                "1219.6"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57774,7 +57792,7 @@
               "name": "BEDDING AND UPHOLSTERED FURNITURE LAW",
               "section_range": [
                 "1191",
-                "1191"
+                "1221.11"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57786,8 +57804,8 @@
               "number": "VI",
               "name": "DISPOSITION OF FETAL REMAINS",
               "section_range": [
-                "1191.1",
-                "1191.4"
+                "1191",
+                "1221.11"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57800,7 +57818,7 @@
               "name": "MONITORING OF NURSING HOME CARE",
               "section_range": [
                 "1193.1",
-                "1193.11"
+                "1223.5"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57812,8 +57830,8 @@
               "number": "I",
               "name": "CLINICAL PRECEPTOR NURSE AIDE TRAINING PROGRAM",
               "section_range": [
-                "1201.1",
-                "1201.2"
+                "1151",
+                "1235"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57825,8 +57843,8 @@
               "number": "II",
               "name": "CRIMINAL HISTORY CHECKS ON NONLICENSED PERSONS AND LICENSED AMBULANCE PERSONNEL",
               "section_range": [
-                "1203.1",
-                "1203.7"
+                "1157.1",
+                "1215.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57838,8 +57856,8 @@
               "number": "III",
               "name": "HEALTH PROFESSIONAL DEVELOPMENT PROGRAM",
               "section_range": [
-                "1205.1",
-                "1205.7"
+                "1163.1",
+                "1237"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57851,8 +57869,8 @@
               "number": "IV",
               "name": "MEDICAL AND ALLIED HEALTH PROFESSIONAL EDUCATION SCHOLARSHIP AND LOAN PROGRAM",
               "section_range": [
-                "1207.1",
-                "1207.2"
+                "1169.1",
+                "1239"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57864,8 +57882,8 @@
               "number": "I",
               "name": "ACCESS TO MAMMOGRAMS ACT",
               "section_range": [
-                "1211.1",
-                "1211.5"
+                "1151",
+                "1235"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57877,7 +57895,7 @@
               "number": "II",
               "name": "CHOLESTEROL SCREENING BY MOBILE CHOLESTEROL SCREENING UNITS",
               "section_range": [
-                "1213.1",
+                "1157.1",
                 "1215.2"
               ],
               "is_repealed": false,
@@ -57903,8 +57921,8 @@
               "number": "IV",
               "name": "LOUISIANA KIDNEY HEALTH CARE LAW",
               "section_range": [
-                "1217.1",
-                "1217.17"
+                "1169.1",
+                "1239"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -57916,7 +57934,7 @@
               "number": "V",
               "name": "LOUISIANA SENIOR RX AND AGING AND DISABILITY INFORMATION STATION PROGRAMS",
               "section_range": [
-                "1219.1",
+                "1162",
                 "1219.6"
               ],
               "is_repealed": false,
@@ -57929,7 +57947,7 @@
               "number": "VI",
               "name": "TELEMEDICINE AND TELEHEALTH SERVICE REIMBURSEMENT",
               "section_range": [
-                "1221.1",
+                "1191",
                 "1221.11"
               ],
               "is_repealed": false,
@@ -57942,7 +57960,7 @@
               "number": "VII",
               "name": "LOUISIANA TELEHEALTH ACCESS ACT",
               "section_range": [
-                "1223.1",
+                "1193.1",
                 "1223.5"
               ],
               "is_repealed": false,
@@ -57994,7 +58012,7 @@
               "number": "I",
               "name": "MEDICAL MALPRACTICE",
               "section_range": [
-                "1231.1",
+                "1151",
                 "1235"
               ],
               "is_repealed": false,
@@ -58007,7 +58025,7 @@
               "number": "III",
               "name": "MALPRACTICE COVERAGE; STATE-EMPLOYED PHYSICIANS, DENTISTS AND PROFESSIONAL NURSES",
               "section_range": [
-                "1235.1",
+                "1163.1",
                 "1237"
               ],
               "is_repealed": false,
@@ -58034,7 +58052,7 @@
               "number": "IV",
               "name": "MALPRACTICE LIABILITY FOR STATE SERVICES",
               "section_range": [
-                "1237.1",
+                "1169.1",
                 "1239"
               ],
               "is_repealed": false,
@@ -58203,8 +58221,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "1121.1",
-                    "2255.1"
+                    "1250.1",
+                    "1250.3"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -58351,7 +58369,7 @@
               "name": "HEALTH REPORT CARD-CERTAIN HEALTH AND HEALTH-RELATED ISSUES",
               "section_range": [
                 "1261",
-                "1263"
+                "1291.24"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -58364,7 +58382,7 @@
               "name": "LOUISIANA ORGAN TRANSPLANT ASSISTANCE PROGRAM AND BONE MARROW DONATIONS",
               "section_range": [
                 "1263.1",
-                "1263.5"
+                "1293.3"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -58377,7 +58395,7 @@
               "name": "MARKET PLACES",
               "section_range": [
                 "1265.1",
-                "1265.2"
+                "1299.13"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -58390,7 +58408,7 @@
               "name": "POISON CONTROL CENTER",
               "section_range": [
                 "1267.1",
-                "1267.1"
+                "1290.4"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -58494,8 +58512,8 @@
               "number": "I",
               "name": "ENVIRONMENTAL HEALTH SURVEILLANCE SYSTEM",
               "section_range": [
-                "1283.1",
-                "1283.2"
+                "1261",
+                "1291.24"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -58507,8 +58525,8 @@
               "number": "II",
               "name": "LEAD POISONING PREVENTION AND CONTROL",
               "section_range": [
-                "1285.1",
-                "1285.10"
+                "1263.1",
+                "1293.3"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -58520,8 +58538,8 @@
               "number": "III",
               "name": "SMOKE CONSUMERS",
               "section_range": [
-                "1287.1",
-                "1287.1"
+                "1265.1",
+                "1299.13"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -58533,7 +58551,7 @@
               "number": "IV",
               "name": "TOXIC SUBSTANCES",
               "section_range": [
-                "1289.1",
+                "1267.1",
                 "1290.4"
               ],
               "is_repealed": false,
@@ -58573,7 +58591,7 @@
               "number": "I",
               "name": "LOUISIANA SMOKEFREE AIR ACT",
               "section_range": [
-                "1291.1",
+                "1261",
                 "1291.24"
               ],
               "is_repealed": false,
@@ -58584,8 +58602,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "1121.1",
-                    "2255.1"
+                    "1291.1",
+                    "1291.3"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -58626,7 +58644,7 @@
               "number": "II",
               "name": "SMOKING REGULATION",
               "section_range": [
-                "1293.1",
+                "1263.1",
                 "1293.3"
               ],
               "is_repealed": false,
@@ -58652,7 +58670,7 @@
               "number": "III",
               "name": "PUBLIC INFORMATION CONCERNING SMOKING CESSATION",
               "section_range": [
-                "1295.1",
+                "1265.1",
                 "1299.13"
               ],
               "is_repealed": false,
@@ -58926,7 +58944,7 @@
                   "name": "INSURANCE FRAUD INVESTIGATION UNIT",
                   "section_range": [
                     "1421",
-                    "1429"
+                    "1430"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -58938,7 +58956,7 @@
                   "number": "B",
                   "name": "STATE POLICE RETIREMENT FUND",
                   "section_range": [
-                    "1430",
+                    "1421",
                     "1430"
                   ],
                   "is_repealed": false,
@@ -59073,7 +59091,7 @@
               "name": "[BLANK]",
               "section_range": [
                 "1486",
-                "1486"
+                "1486.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -59085,7 +59103,7 @@
               "number": "VIII",
               "name": "MONITORING OF TRANSPORTATION OF OFFSHORE OIL PLATFORM WORKERS",
               "section_range": [
-                "1486.1",
+                "1486",
                 "1486.2"
               ],
               "is_repealed": false,
@@ -59201,8 +59219,8 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "1121.1",
-                    "2255.1"
+                    "1561",
+                    "1593.1"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -59704,7 +59722,7 @@
               "name": "MALODORANTS",
               "section_range": [
                 "1891",
-                "1896"
+                "1917"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -59716,7 +59734,7 @@
               "number": "II",
               "name": "ANHYDROUS AMMONIA",
               "section_range": [
-                "1911",
+                "1891",
                 "1917"
               ],
               "is_repealed": false,
@@ -60395,7 +60413,7 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "1121.1",
+                    "2255.1",
                     "2255.1"
                   ],
                   "is_repealed": false,
@@ -60895,7 +60913,7 @@
               "name": "IN GENERAL",
               "section_range": [
                 "131",
-                "643"
+                "140"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -60908,7 +60926,7 @@
               "name": "RECEIPT OF DONATION OF IMMOVABLE PROPERTY",
               "section_range": [
                 "151",
-                "151"
+                "171"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -60920,7 +60938,7 @@
               "number": "II",
               "name": "PRE-EMPTION AND PRE-ENTRY RIGHTS",
               "section_range": [
-                "171",
+                "151",
                 "171"
               ],
               "is_repealed": false,
@@ -61077,7 +61095,7 @@
                   "name": "IN GENERAL",
                   "section_range": [
                     "541",
-                    "729"
+                    "552"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -61119,7 +61137,7 @@
               "number": "I",
               "name": "IN GENERAL",
               "section_range": [
-                "131",
+                "631",
                 "643"
               ],
               "is_repealed": false,
@@ -61156,7 +61174,7 @@
                   "number": "A",
                   "name": "IN GENERAL",
                   "section_range": [
-                    "541",
+                    "711",
                     "729"
                   ],
                   "is_repealed": false,
@@ -61555,7 +61573,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "31",
-                "1102"
+                "39.2"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -62093,7 +62111,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "31",
+                "1101",
                 "1102"
               ],
               "is_repealed": false,
@@ -62291,7 +62309,7 @@
               "name": "EMPLOYEE MEMBER",
               "section_range": [
                 "1351",
-                "1410"
+                "1360"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -62304,7 +62322,7 @@
               "name": "MISCELLANEOUS PROVISIONS",
               "section_range": [
                 "1381",
-                "1410.1"
+                "1383"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -62330,7 +62348,7 @@
               "number": "I",
               "name": "EMPLOYEE MEMBER",
               "section_range": [
-                "1351",
+                "1401",
                 "1410"
               ],
               "is_repealed": false,
@@ -62343,7 +62361,7 @@
               "number": "II",
               "name": "MISCELLANEOUS PROVISIONS",
               "section_range": [
-                "1381",
+                "1410.1",
                 "1410.1"
               ],
               "is_repealed": false,
@@ -63137,7 +63155,7 @@
               "name": "IN GENERAL",
               "section_range": [
                 "321",
-                "859"
+                "324"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -63428,7 +63446,7 @@
           "name": "WIRELESS TELEPHONE CONTRACTS",
           "section_range": [
             "844.5",
-            "844.8"
+            "844.10"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -63440,7 +63458,7 @@
           "number": "8-G",
           "name": "-1. KELSEY SMITH ACT",
           "section_range": [
-            "844.9",
+            "844.5",
             "844.10"
           ],
           "is_repealed": false,
@@ -63529,7 +63547,7 @@
               "number": "I",
               "name": "IN GENERAL",
               "section_range": [
-                "321",
+                "845",
                 "859"
               ],
               "is_repealed": false,
@@ -63634,7 +63652,7 @@
               "name": "LOUISIANA ELECTRIC INVESTMENT RECOVERY SECURITIZATION ACT",
               "section_range": [
                 "1251",
-                "1261"
+                "1301"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -63659,7 +63677,7 @@
               "number": "VII",
               "name": "WAITING ROOM FACILITIES [REPEALED]",
               "section_range": [
-                "1301",
+                "1251",
                 "1301"
               ],
               "is_repealed": false,
@@ -64028,7 +64046,7 @@
                   "name": "CHILDREN IN FOSTER HOMES",
                   "section_range": [
                     "281",
-                    "286.2"
+                    "286.16"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -64053,7 +64071,7 @@
                   "number": "D",
                   "name": "-1A. FOSTER YOUTH'S BILL OF RIGHTS",
                   "section_range": [
-                    "286.16",
+                    "281",
                     "286.16"
                   ],
                   "is_repealed": false,
@@ -64109,7 +64127,7 @@
               "name": "BLIND PERSONS",
               "section_range": [
                 "291",
-                "335"
+                "373"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -64187,7 +64205,7 @@
               "number": "III",
               "name": "WORKFORCE TRAINING INITIATIVE",
               "section_range": [
-                "351",
+                "291",
                 "373"
               ],
               "is_repealed": false,
@@ -64265,7 +64283,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "437.1",
-                    "460.54"
+                    "437.14"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -64421,7 +64439,7 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "437.1",
+                    "460.51",
                     "460.54"
                   ],
                   "is_repealed": false,
@@ -64727,7 +64745,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "971",
-                "1069.1"
+                "977"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -64857,7 +64875,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "971",
+                "1051",
                 "1069.1"
               ],
               "is_repealed": false,
@@ -65109,7 +65127,7 @@
           "name": "CHILD CARE WORKERS",
           "section_range": [
             "1445",
-            "1445"
+            "1448"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -65121,7 +65139,7 @@
           "number": "14-E",
           "name": "ADOPTION AWARENESS ACT",
           "section_range": [
-            "1445.1",
+            "1445",
             "1448"
           ],
           "is_repealed": false,
@@ -65894,7 +65912,7 @@
           "name": "LOUISIANA COUNCIL ON OBESITY PREVENTION AND MANAGEMENT",
           "section_range": [
             "2611",
-            "2615"
+            "2618"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -65906,7 +65924,7 @@
           "number": "46",
           "name": "HEALTH ACTION PLANS",
           "section_range": [
-            "2616",
+            "2611",
             "2618"
           ],
           "is_repealed": false,
@@ -66192,7 +66210,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "1",
-                "9002"
+                "13"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -66243,7 +66261,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "21",
-                    "1418"
+                    "120.391"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -67337,7 +67355,7 @@
                       "name": "GENERAL PROVISIONS",
                       "section_range": [
                         "337.5.1",
-                        "2245"
+                        "337.5.1"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -67730,8 +67748,8 @@
                       "number": "A",
                       "name": "GENERAL PROVISIONS",
                       "section_range": [
-                        "337.5.1",
-                        "2245"
+                        "818.1",
+                        "818.6"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -68006,7 +68024,7 @@
                   "number": "I",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "21",
+                    "1401",
                     "1418"
                   ],
                   "is_repealed": false,
@@ -68479,8 +68497,8 @@
                       "number": "A",
                       "name": "GENERAL PROVISIONS",
                       "section_range": [
-                        "337.5.1",
-                        "2245"
+                        "2196",
+                        "2197"
                       ],
                       "is_repealed": false,
                       "is_reserved": false,
@@ -68545,7 +68563,7 @@
                       "number": "A",
                       "name": "GENERAL PROVISIONS",
                       "section_range": [
-                        "337.5.1",
+                        "2241",
                         "2245"
                       ],
                       "is_repealed": false,
@@ -68762,7 +68780,7 @@
                   "name": "MARIJUANA AND CONTROLLED DANGEROUS SUBSTANCES TAX",
                   "section_range": [
                     "2601",
-                    "2610"
+                    "2611"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -68774,7 +68792,7 @@
                   "number": "I",
                   "name": "FOREIGN CORPORATIONS CAPITAL STOCK TAX (REPEALED)",
                   "section_range": [
-                    "2611",
+                    "2601",
                     "2611"
                   ],
                   "is_repealed": false,
@@ -68948,8 +68966,8 @@
               "number": "1",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
-                "9002"
+                "5001",
+                "5010"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -69121,7 +69139,7 @@
               "number": "1",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "1",
+                "9000",
                 "9002"
               ],
               "is_repealed": false,
@@ -70411,7 +70429,7 @@
           "name": "US HIGHWAY NO. 65 DISTRICT",
           "section_range": [
             "1811",
-            "1811"
+            "1814"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -70423,7 +70441,7 @@
           "number": "21",
           "name": "INTERSTATE 10-12 CORRIDOR DISTRICT",
           "section_range": [
-            "1811.1",
+            "1811",
             "1814"
           ],
           "is_repealed": false,
@@ -71036,7 +71054,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "201",
-                "1002"
+                "213"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -71271,8 +71289,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "201",
-                "1002"
+                "301",
+                "331"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -71442,8 +71460,8 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "201",
-                "1002"
+                "950",
+                "960"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -71521,7 +71539,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "201",
+                "1001",
                 "1002"
               ],
               "is_repealed": false,
@@ -71929,7 +71947,7 @@
               "name": "SUNDAY LAWS",
               "section_range": [
                 "191",
-                "195"
+                "196"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -71941,7 +71959,7 @@
               "number": "V",
               "name": "- A. FILING METHODS",
               "section_range": [
-                "196",
+                "191",
                 "196"
               ],
               "is_repealed": false,
@@ -72491,7 +72509,7 @@
               "name": "SALE OF COSMETICS TESTED ON ANIMALS",
               "section_range": [
                 "771",
-                "776"
+                "831"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -72503,7 +72521,7 @@
               "number": "XII",
               "name": "PETROLEUM AND PETROLEUM PRODUCTS",
               "section_range": [
-                "781",
+                "771",
                 "831"
               ],
               "is_repealed": false,
@@ -72662,7 +72680,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "921",
-                "1032"
+                "940.1"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -72819,7 +72837,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "921",
+                "1031",
                 "1032"
               ],
               "is_repealed": false,
@@ -73280,7 +73298,7 @@
           "name": "SECURE ONLINE CHILD INTERACTION AND AGE LIMITATION ACT",
           "section_range": [
             "1751",
-            "1753"
+            "1760"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -73292,7 +73310,7 @@
           "number": "20",
           "name": "LOUISIANA SMALL AND EMERGING BUSINESS ACT",
           "section_range": [
-            "1753.1",
+            "1751",
             "1760"
           ],
           "is_repealed": false,
@@ -73304,7 +73322,10 @@
           "level": "chapter",
           "number": "20-A",
           "name": "PROTECTION OF CHILDREN'S INTERNET DATA",
-          "section_range": null,
+          "section_range": [
+            "1761",
+            "1775"
+          ],
           "is_repealed": false,
           "is_reserved": false,
           "children": [],
@@ -73473,7 +73494,7 @@
           "name": "LOUISIANA PROMOTION COORDINATING COUNCIL",
           "section_range": [
             "1950",
-            "1950"
+            "1955"
           ],
           "is_repealed": false,
           "is_reserved": false,
@@ -73485,7 +73506,7 @@
           "number": "28",
           "name": "PERSONAL ONLINE ACCOUNT PRIVACY PROTECTION ACT",
           "section_range": [
-            "1951",
+            "1950",
             "1955"
           ],
           "is_repealed": false,
@@ -74791,7 +74812,7 @@
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
                     "251",
-                    "301.10"
+                    "280"
                   ],
                   "is_repealed": false,
                   "is_reserved": false,
@@ -74843,7 +74864,7 @@
                   "number": "A",
                   "name": "GENERAL PROVISIONS",
                   "section_range": [
-                    "251",
+                    "301",
                     "301.10"
                   ],
                   "is_repealed": false,
@@ -75369,7 +75390,7 @@
               "name": "GENERAL PROVISIONS",
               "section_range": [
                 "701",
-                "1833"
+                "800"
               ],
               "is_repealed": false,
               "is_reserved": false,
@@ -75683,7 +75704,7 @@
               "number": "I",
               "name": "GENERAL PROVISIONS",
               "section_range": [
-                "701",
+                "1830",
                 "1833"
               ],
               "is_repealed": false,
