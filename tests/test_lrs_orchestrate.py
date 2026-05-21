@@ -62,6 +62,36 @@ def test_normalize_lrs_acts_text_handles_none_and_empty():
     assert _normalize_lrs_acts_text("") == ""
 
 
+def test_normalize_lrs_acts_text_strips_leading_added_by():
+    """Sections added after the 1950 codification open with 'Added by Acts
+    YYYY, ...' (e.g., R.S. 14:30.1 'Second degree murder', added 1973).
+    The shared CC parser's ``_LEADING_NOISE`` only knows 'Amended by ' and
+    'Acquired from ' — without LRS stripping, the first piece becomes
+    "Added by Acts 1973, ..." which fails the act regex and gets dropped.
+    Pin the post-fix behavior: leading 'Added by' is stripped before
+    delegating to the shared parser."""
+    from usufruct.lrs.pipeline.orchestrate import _normalize_lrs_acts_text
+    from usufruct.parse import parse_acts_citation_line
+
+    raw = (
+        "Added by Acts 1973, No. 111, §1. "
+        "Amended by Acts 1975, No. 380, §1; "
+        "Acts 1976, No. 657, §2."
+    )
+    normalized = _normalize_lrs_acts_text(raw)
+    # Period + Amended-by → semicolon (existing rule), then leading
+    # 'Added by ' stripped (new rule).
+    assert normalized == (
+        "Acts 1973, No. 111, §1; Acts 1975, No. 380, §1; Acts 1976, No. 657, §2."
+    )
+
+    parsed = parse_acts_citation_line(normalized)
+    assert [a.act_year for a in parsed] == [1973, 1975, 1976]
+    assert parsed[0].role == "enactment"
+    assert parsed[1].role == "amendment"
+    assert parsed[2].role == "amendment"
+
+
 # A representative section_index for Title 14 — only the section we have
 # legis HTML for. Real values for d= are arbitrary in tests; the fixture
 # resolver below maps them to the saved HTML.

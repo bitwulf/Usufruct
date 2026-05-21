@@ -646,3 +646,167 @@ Wave 2 (Title 14) is the next planned step: ~711 sections × 1 req/s ≈
 12 minutes Phase 3 wall time, plus pinned fixtures for the four-source-
 of-truth checks listed in the plan.
 
+## 2026-05-21 — Wave 2 (Title 14) end-to-end + two parser fixes
+
+Three things landed in this session, in order: pinned Title 1 legis-page
+fixtures, fixed the CC acts parser to recognize Louisiana extraordinary
+sessions, then ran Wave 2 — which surfaced and fixed a third legis-side
+template variant.
+
+### 1. Pinned Title 1 legis-section fixtures
+
+Two cached HTML files copied into `tests/fixtures/lrs/legis_sections/`:
+
+- `rs-1-1.html` — baseline parse; "Revised Statutes; how cited" rule.
+- `rs-1-11_1.html` — exercises both new Title-1-era structural facts:
+  the no-`WPMainDoc` body template (paragraphs hang directly under the
+  outer `<span id="ctl00_PageBody_LabelDocument">`), and the legacy
+  period-separated acts form (`"Acts 1958, No. 498, §1. Amended by
+  Acts 1970, No. 465, §1."`).
+
+8 new tests in `test_lrs_legis_section.py` pin: outer-span fallback,
+citation/heading/status round-trip, raw period-separated text shape, and
+the end-to-end normalize→shared-CC-parser round trip yielding the
+1958/1970 enactment+amendment pair. The no-`WPMainDoc` invariant is
+asserted directly against the saved HTML — if legis ever rewraps these
+pages, the fixture needs regeneration and the assertion catches it.
+
+### 2. CC acts parser: extraordinary-session form (CC-side touch)
+
+The shared `parse_acts_citation_line` in `src/usufruct/parse/acts_parser.py`
+required `No.` to follow `\d{4},` directly, so 50+ unique
+`Acts YYYY, Nth Ex. Sess., No. N` entries in the legis cache (Title 14, 22,
+47 etc. — all absent from the Civil Code) were silently dropped.
+
+Surgical fix: inserted an optional non-capturing group between year and
+`No.`. The regex now accepts `1st`/`2nd`/`3rd` ordinals plus the 1960-era
+no-space `Ex.Sess.` variant. The session designation itself is *not*
+stored as a structured field on `ActsCitation` — preserving it would have
+required a schema change (and `extra="forbid"` makes that load-bearing
+for CC consumers). Verbatim text in `acts_citations_raw` carries the
+session info. Documented in a comment.
+
+| Test count | Before | After |
+| --- | ---: | ---: |
+| `test_acts_parser.py` | 10 | 16 (+6 new: special-session + ordinal variants) |
+| RS 14:30 parsed acts | 28 | 29 (the 2002 1st Ex. Sess., No. 128 entry) |
+
+CC test suite: 60 → 60, zero regressions. The CC corpus has zero
+"`Ex. Sess.`" strings, verified via grep — the regex change is a no-op
+for CC and a behavioral fix for LRS.
+
+### 3. Wave 2 — Title 14 Phase 3 + Phase 4 end-to-end
+
+```
+.venv/bin/usufruct rs phase3 --titles 1,14
+   # 711 fresh fetches at 1 req/s → ~12 min wall clock
+.venv/bin/usufruct rs phase4
+```
+
+Used `--titles 1,14` (not just `--titles 14`) because `run_phase3`
+unconditionally wipes `data/rs/sections/*.json` before re-emitting; a
+`--titles 14`-only run would have deleted the Wave 1 Title 1 outputs.
+Filed as a follow-up: the cleanup pass should be scoped to the requested
+Titles.
+
+### 4. Discovery during Wave 2: "Added by Acts" enactment form
+
+Spot-checking Title 14 outputs surfaced **136 of 655 active sections
+(21%) with `acts_citations` empty**. 81 of those had an acts line bleeding
+into the body text — legis serves a *third* enactment template the LRS
+parser didn't recognize:
+
+```
+Added by Acts 1973, No. 111, §1. Amended by Acts 1975, No. 380, §1; …
+```
+
+Used for sections inserted after the 1950 codification (e.g., R.S. 14:30.1
+"Second degree murder", added 1973). Two fixes, both **LRS-side only** —
+no further CC touch needed:
+
+- `src/usufruct/lrs/parse/legis_section_parser.py` — `_ACTS_LINE_RE`
+  extended to recognize `(?:Amended|Added)\s+by\s+` as the optional
+  prefix, so the body/acts split classifies "Added by Acts …" paragraphs
+  as acts.
+- `src/usufruct/lrs/pipeline/orchestrate.py` — `_normalize_lrs_acts_text`
+  gained a third pass that strips leading `Added by ` before delegating
+  to the shared CC parser (the CC parser's `_LEADING_NOISE` only knows
+  `Amended by ` / `Acquired from `, so the first piece would otherwise
+  fail the act regex and the enactment entry would be silently dropped).
+
+3 new tests: a focused normalizer assertion and two synthetic-HTML
+integration tests against the rs-14-30-1 shape. Pinned an `rs-14-30-1`
+fixture file was *not* added to `tests/fixtures/lrs/legis_sections/` —
+the synthetic HTML covers the structural facts without growing the
+fixture set, respecting the user's "Title 14 only" Wave 2 scope.
+
+After re-running Phase 3 (cached HTML, ~3 sec) and Phase 4:
+
+| Bucket | Before fix | After fix |
+| --- | ---: | ---: |
+| Title 14 active sections with `acts_citations = []` | 136 | 47 |
+| Title 14 sections with acts bleeding into body | 81 | 0 |
+| RS 14:30.1 parsed acts | 0 | 17 |
+
+The remaining 47 acts-less active sections split:
+- **46 genuinely have no acts line** on legis — usually rule-statement
+  sections (e.g., R.S. 14:1 is the citation-form rule; R.S. 14:10 is the
+  general-intent definition). These are data, not bugs.
+- **1 section (R.S. 14:102.29) uses singular `Act 2021, No. 100`** instead
+  of plural `Acts`. Flagged as a follow-up — 0.14% of Title 14, not worth
+  a parser touch on its own.
+
+### Wave 2 final tallies
+
+`data/rs/` after Wave 2:
+
+| Artifact | Count |
+| --- | ---: |
+| `sections/rs_{1,14}_*.json` | 752 (41 Title 1 + 711 Title 14) |
+| `sections.jsonl` | 752, all round-trip Pydantic |
+| `manifest.json` totals | active=696, repealed=56, blank=0, reserved=0 |
+| `tree.json` | full corpus hierarchy preserved; max depth 7 |
+| `citation_edges.csv` | 808 edges (766 intra-LRS + 39 → CrP + 3 → CCP) |
+| `chunks.jsonl` | 688 RAG-ready chunks (excludes repealed) |
+| `markdown/title-{1,14}/*.md` | 752 markdown files |
+| `validation_report.json` | 0 hierarchy gaps, 0 synthetic blanks, 0 synthetic repealed |
+
+Title 14 repealed count is **56** (Justia-flagged), not "~25" as the plan
+estimated. This is the corpus truth and matches the Phase 1 walk from
+the prior session.
+
+39 LRS→CrP edges (e.g., R.S. 14:30 → Code of Criminal Procedure
+Article 782) is the first cross-corpus evidence that the citation
+extractor functions on a real Title. No LRS→CC edges yet because Title 14
+is criminal law; that's a Wave 3 (Title 9) target.
+
+### Tests
+
+`.venv/bin/pytest` → **139 passed** (66 CC + 73 LRS), zero regressions.
+
+- `test_acts_parser.py`: 10 → 16 (+6: special-session + variants).
+- `test_lrs_legis_section.py`: 9 → 19 (+10: Title 1 pins + Added-by-Acts).
+- `test_lrs_orchestrate.py`: 10 → 11 (+1: Added-by normalizer).
+
+### Known gaps / follow-ups (none release-blocking)
+
+- The `run_phase3` cleanup pass deletes `data/rs/sections/*.json` for all
+  Titles even when `--titles` scopes the run. Workaround used here: pass
+  all built Titles to `--titles`. Cheap fix is to scope the cleanup glob
+  to the requested Title set.
+- R.S. 14:102.29 — singular "Act YYYY," parses to acts=0. Single instance
+  in Title 14; defer to a later parser pass.
+- The "single Act with multiple effective dates" form
+  (`"Acts 2010, No. 845, §2, eff. June 30, 2010, and §3, eff. Jan. 1, 2012."`)
+  in Title 1 RS 1:60 still parses to a partial acts entry. Known
+  shared-parser limitation; flagged in Wave 1 notes, still pending.
+
+### What's next
+
+Wave 2 deliverable is in `data/rs/`. Snapshot remains deferred per the
+user's earlier decision (no tagging until go-ahead). Wave 3 (Title 9 —
+Civil Code Ancillaries, 2,325 sections) is the next planned wave; it's
+also the wave that tests the cross-corpus citation flow for real (R.S.
+9:2800 is the marquee section and the existing CODE BOOK/CODE TITLE
+machinery from the Title 9/15 fix is the structural backbone).
+

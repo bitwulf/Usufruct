@@ -6,6 +6,7 @@ Examples handled:
     "Acts 1986, No. 211, §2; Acts 1987, No. 675, §1."
     "Amended by Acts 1884, No. 71; Acts 1908, No. 120, §1; ..."
     "Acts 1990, No. 989, §1, eff. January 1, 1991."
+    "Acts 2002, 1st Ex. Sess., No. 128, §2." (extraordinary session)
 """
 from __future__ import annotations
 
@@ -29,8 +30,17 @@ _MONTHS = {
     "dec": 12, "december": 12,
 }
 
+# The optional session marker matches "1st Ex. Sess.,", "2nd Ex. Sess.,",
+# "3rd Ex. Sess.," and the 1960-era no-space variant "1st Ex.Sess.,". The
+# session designation is *not* stored as a structured field on
+# ``ActsCitation`` (the original raw text in ``acts_citations_raw``
+# preserves it verbatim). Two same-numbered acts from the same year's
+# regular and extraordinary sessions would parse to identical
+# ``ActsCitation`` records — a rare collision noted but accepted.
 _ACT_RE = re.compile(
-    r"Acts\s+(\d{4})\s*,\s*No\.\s*(\d+)"
+    r"Acts\s+(\d{4})\s*,"
+    r"(?:\s*\d+(?:st|nd|rd|th)\s+Ex\.\s*Sess\.\s*,)?"
+    r"\s*No\.\s*(\d+)"
     r"(?:\s*,\s*§\s*(\d+))?"
     r"(?:\s*,\s*eff\.\s*([^;]+?))?"
     r"\s*$",

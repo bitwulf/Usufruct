@@ -93,17 +93,27 @@ def _section_slug(title_number: str, section_number: str) -> str:
     return f"rs_{title_number}_{safe_section}"
 
 
-# legis.la.gov serves two acts-line templates: the "modern" CC-style with
-# ``;`` between citations (used by R.S. 14:30 etc.) and the "legacy" period-
-# separated form used by many older sections (R.S. 1:11.1 →
-# ``"Acts 1958, No. 498, §1. Amended by Acts 1970, No. 465, §1."``). The
-# shared ``parse_acts_citation_line`` only handles the ``;`` form. We
-# normalize period-separated forms here before parsing — this keeps the
-# shared CC parser untouched per the LRS plan's strict-isolation rule.
+# legis.la.gov serves several acts-line templates that the shared CC parser
+# (``parse_acts_citation_line``) was never designed for. We bridge here
+# without touching CC code per the LRS plan's strict-isolation rule.
+#
+# Variants observed in the corpus:
+#   1. CC-style with ``;`` between citations (R.S. 14:30) — handled natively.
+#   2. Period-separated form (R.S. 1:11.1 →
+#      ``"Acts 1958, No. 498, §1. Amended by Acts 1970, No. 465, §1."``) —
+#      we rewrite ``". Amended by Acts"`` and ``". Acts YYYY"`` to ``"; Acts"``.
+#   3. Leading ``"Added by Acts YYYY, …"`` (R.S. 14:30.1 "Second degree
+#      murder", added in 1973 after the 1950 codification) — the CC parser's
+#      ``_LEADING_NOISE`` only strips "Amended by " and "Acquired from ",
+#      so the leading "Added by " would otherwise wedge the first piece
+#      and drop the enactment entry. We strip it here.
 _LRS_ACTS_AMENDED_RE = re.compile(
     r"\.\s+Amended\s+by\s+Acts\b", re.IGNORECASE
 )
 _LRS_ACTS_PERIOD_NEXT_RE = re.compile(r"\.\s+(Acts\s+\d{4})")
+_LRS_ACTS_LEADING_ADDED_BY_RE = re.compile(
+    r"^\s*Added\s+by\s+(?=Acts\b)", re.IGNORECASE
+)
 
 
 def _normalize_lrs_acts_text(raw: Optional[str]) -> Optional[str]:
@@ -111,6 +121,7 @@ def _normalize_lrs_acts_text(raw: Optional[str]) -> Optional[str]:
         return raw
     out = _LRS_ACTS_AMENDED_RE.sub("; Acts", raw)
     out = _LRS_ACTS_PERIOD_NEXT_RE.sub(r"; \1", out)
+    out = _LRS_ACTS_LEADING_ADDED_BY_RE.sub("", out)
     return out
 
 

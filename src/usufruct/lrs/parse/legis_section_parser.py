@@ -25,7 +25,16 @@ from bs4.element import Tag
 
 _LABELNAME_RE = re.compile(r"^RS\s+(\d+(?:-[A-Z])?)\s*:\s*([0-9.]+)$", re.IGNORECASE)
 _SECTION_LINE_RE = re.compile(r"^§\s*([0-9.]+)\.\s*(.*)$", re.DOTALL)
-_ACTS_LINE_RE = re.compile(r"^(?:Amended\s+by\s+)?Acts\s+\d{4}\s*,", re.IGNORECASE)
+# Three legis-side prefixes mark a paragraph as the acts-citation block:
+#   * bare ``Acts YYYY, ...`` (single enactment, common in the Civil Code).
+#   * ``Amended by Acts YYYY, ...`` (enacted before 1950, accumulated amendments).
+#   * ``Added by Acts YYYY, ...`` (section first appeared after the 1950
+#     codification — e.g., R.S. 14:30.1 "Second degree murder", added 1973).
+# The body→acts split classifies the *whole* paragraph as acts; downstream
+# parsing (LRS normalizer + shared CC parser) handles the "Added by" prefix.
+_ACTS_LINE_RE = re.compile(
+    r"^(?:(?:Amended|Added)\s+by\s+)?Acts\s+\d{4}\s*,", re.IGNORECASE
+)
 _REPEALED_INLINE_RE = re.compile(r"^Repealed\b", re.IGNORECASE)
 _RESERVED_RE = re.compile(r"^\[?Reserved\]?\.?$", re.IGNORECASE)
 

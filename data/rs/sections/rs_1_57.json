@@ -4,7 +4,7 @@
   "section_number": "57",
   "citation": "R.S. 1:57",
   "heading": "Arbor Day",
-  "text": "The third Friday in January is hereby designated as Arbor Day throughout the state of Louisiana.\n\nAdded by Acts 1968, No. 217, §1.",
+  "text": "The third Friday in January is hereby designated as Arbor Day throughout the state of Louisiana.",
   "status": "active",
   "hierarchy_path": [
     {
@@ -19,11 +19,20 @@
     }
   ],
   "breadcrumb": "Title 1 › Chapter 2",
-  "acts_citations": [],
-  "acts_citations_raw": null,
+  "acts_citations": [
+    {
+      "act_year": 1968,
+      "act_number": 217,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "enactment"
+    }
+  ],
+  "acts_citations_raw": "Added by Acts 1968, No. 217, §1.",
   "source_url": "https://legis.la.gov/legis/Law.aspx?d=74099",
   "website_law_id": 74099,
-  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "scrape_timestamp": "2026-05-21T18:56:19Z",
   "source_html_hash": "sha256:d46e6b64547a59f97e7748260bddb7ff72244b7434beb896f35e829c1786e57c",
   "schema_version": "1.0.0"
 }

@@ -44,6 +44,8 @@ data/chunks.jsonl
 data/citation_edges.csv
 data/tree.json
 snapshots/
+data/rs/
+data/rs 
 
 # AI-assist files used during development — kept local, not shipped publicly.
 CLAUDE.md
