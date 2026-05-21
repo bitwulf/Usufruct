@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:3",
+  "title_number": "1",
+  "section_number": "3",
+  "citation": "R.S. 1:3",
+  "heading": "Words and phrases; how construed",
+  "text": "Words and phrases shall be read with their context and shall be construed according to the common and approved usage of the language. Technical words and phrases, and such others as may have acquired a peculiar and appropriate meaning in the law, shall be construed and understood according to such peculiar and appropriate meaning.\n\nThe word \"shall\" is mandatory and the word \"may\" is permissive.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74090",
+  "website_law_id": 74090,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:7b0b8fe14ed70f313c87291c66abb5dde46ca74574f2d9da730e88fd24f8ed44",
+  "schema_version": "1.0.0"
+}

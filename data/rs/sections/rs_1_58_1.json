@@ -1,0 +1,38 @@
+{
+  "urn": "urn:us-la:rs:1:58.1",
+  "title_number": "1",
+  "section_number": "58.1",
+  "citation": "R.S. 1:58.1",
+  "heading": "National Airborne Day",
+  "text": "August sixteenth is hereby designated as National Airborne Day throughout the state of Louisiana to recognize and honor those who have served in an airborne unit since the first official army parachute jump on August 16, 1940.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [
+    {
+      "act_year": 2001,
+      "act_number": 337,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "enactment"
+    }
+  ],
+  "acts_citations_raw": "Acts 2001, No. 337, §1.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74101",
+  "website_law_id": 74101,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:a77ae4a923aadc85b4f7f0fc27f5848b4399109a72cc771a1fd2fc1bb845c079",
+  "schema_version": "1.0.0"
+}

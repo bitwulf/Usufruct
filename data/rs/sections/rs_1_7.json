@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:7",
+  "title_number": "1",
+  "section_number": "7",
+  "citation": "R.S. 1:7",
+  "heading": "Singular may denote plural",
+  "text": "Words used in the singular number include the plural and the plural includes the singular.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74105",
+  "website_law_id": 74105,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:bf434c0bcbfd70e5e857002eaf42a9550b5ad559f1ab877ea833e9f9546b5b12",
+  "schema_version": "1.0.0"
+}

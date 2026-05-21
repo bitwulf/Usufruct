@@ -449,3 +449,200 @@ Sections: 46,232 (unchanged). The +1 chapter and +10 parts came from
 Title 15 Chapter 2+'s previously-mangled PART headers now classifying
 correctly once CODE TITLE no longer ate their context.
 
+## 2026-05-21 — Phase 2 wired against legis.la.gov + Wave 1 (Title 1) end-to-end
+
+The Phase 2 fetcher landed and ran corpus-wide; the Title 1 pilot (Wave 1)
+completed Phase 3 + Phase 4 end-to-end against real legis.la.gov data.
+
+### legis URL pattern discoveries (the plan was wrong)
+
+The plan said Phase 2 used `Laws_Toc.aspx?folder=75` (root) and
+`Laws_Toc.aspx?folder=N&title=T` (per-Title). Both URLs are incomplete.
+Empirical findings against the live site:
+
+- **Root TOC actually lives at `Laws_Toc.aspx?folder=75&level=Parent`.**
+  Without `&level=Parent`, legis routes to a different page (the all-codes
+  navigation listing CC/CCP/CrP/RS/etc). The same `&level=Parent` suffix
+  is what the existing CC pipeline already uses at `folder=67`.
+- **Per-Title TOC needs `Laws_Toc.aspx?folder=F&title=T&level=Parent`.**
+- **The root TOC does *not* expose folder IDs in HTML.** Title rows are
+  ASP.NET postback anchors (`href="javascript:__doPostBack(...)"`); the
+  folder ID lives in server-side ViewState. So the plan's "parse folder
+  map from root TOC" strategy can't work on the real page.
+
+### Folder IDs are deterministic — sequential by sorted Title
+
+Empirical lookups (verified by per-Title fetch + parse round-trip):
+
+| Title | Folder | Title | Folder |
+| ---: | ---: | ---: | ---: |
+| 1 | 77 | 14 | 88 |
+| 2 | 78 | 15 | 89 |
+| 3 | 79 | ... | ... |
+| 4 | 80 | 47 | 121 |
+| 6 | 81 | 56 | 130 |
+
+The pattern is `folder = 77 + sorted_index(title_number)` over the sorted
+active-Title set (1, 2, 3, 4, 6, 8, 9, 10, …, 56). Gaps at Title 5 and 7
+are real. Title 47 lands at 88 + 33 = 121 because there are 33 active
+Titles between 14 and 47 inclusive. The base offset `_LEGIS_LRS_BASE_FOLDER
+= 77` is the only constant we hardcode.
+
+Robustness: the fetcher verifies each per-Title TOC by checking every
+`(title, section)` key returned by the parser; any foreign-Title anchor
+raises `RuntimeError("Phase 2 folder mismatch …")` so a future legis
+renumber fails loudly instead of silently mis-mapping.
+
+### New module surface
+
+- `src/usufruct/lrs/corpus.py` — added `LEGIS_LRS_ROOT_TOC_URL` and
+  `LEGIS_LRS_TITLE_TOC_URL_TEMPLATE` constants.
+- `src/usufruct/lrs/fetch/legis_toc.py` — new module with
+  `fetch_legis_root_toc` / `fetch_legis_title_toc` thin wrappers.
+- `src/usufruct/lrs/parse/legis_lrs_toc_parser.py` — gained
+  `parse_legis_root_toc_titles(html) -> List[str]` (reads anchor text
+  matching `^TITLE N$`); existing `parse_legis_root_toc` retained for
+  back-compat with synthetic fixtures.
+- `src/usufruct/lrs/pipeline/orchestrate.py` — added `run_phase2_fetch`
+  with deterministic folder derivation + per-Title verification +
+  Justia↔legis join + side-channel gap report.
+- `cli.py` — `rs phase2` subcommand and `rs phase3 --titles` filter for
+  pilot-mode scoping.
+
+### Phase 2 corpus-wide results
+
+Single `usufruct rs phase2` run, 55 HTTP fetches at 1 req/s:
+
+```
+54/54 Titles fetched, 45,494 section IDs joined against Justia
+```
+
+| Bucket | Count |
+| --- | ---: |
+| Justia sections | 46,232 |
+| Legis sections found | 45,536 |
+| Joined (both sides agree) | 45,494 |
+| In Justia, missing on legis | 738 |
+| In legis, not in Justia | 43 |
+
+`data/rs/section_index.json`, `data/rs/folder_map.json`, and
+`data/rs/phase2_gaps.json` are the outputs.
+
+### Gap-analysis findings
+
+The 738 "in Justia but not on legis" sections — none of which Justia
+flagged repealed — are heavily concentrated in two Titles:
+
+| Title | Missing on legis | Cause |
+| --- | ---: | --- |
+| 10 (Commercial Laws) | 458 | UCC sub-decimal style (`10:1.101`, `10:1.102`, …). legis exposes ~9 "umbrella" sections, Justia enumerates every UCC subsection. |
+| 12 (Corporations) | 248 | Same pattern. legis collapses what Justia enumerates. |
+| 29 (Military Affairs) | 24 | Mostly title-9-style structural placeholders. |
+| 17, 40, 47, 32, 33 | ≤2 each | Single-section drift. |
+
+Phase 3's existing "Justia-known but no legis ID" backfill emits these as
+`status: blank` records, so the corpus carries them with empty `text` and
+`source_url=None`. **Wave 1 (Title 1) hits none of these gaps**, so the
+question of how to represent UCC sub-decimals canonically is deferred to
+the wave that scrapes Title 10.
+
+The 43 "in legis but not in Justia" sections cluster in Title 30 (24).
+They're flagged in `phase2_gaps.json` but deliberately not emitted — we
+trust Justia as the corpus-membership source of truth per the plan.
+
+### Acts-parser format divergence between CC and LRS
+
+R.S. 14:30 (the pinned fixture) uses semicolon-separated citations —
+`Amended by Acts 1973, No. 109, §1; Acts 1975, No. 327, §1; …` — which
+the shared `parse_acts_citation_line` handles correctly. But older
+sections like R.S. 1:11.1 serve a different template:
+
+```
+Acts 1958, No. 498, §1. Amended by Acts 1970, No. 465, §1.
+```
+
+Period-separated, no semicolons. The shared parser splits only on `;` and
+requires its regex to anchor at end-of-line, so it returned **zero
+parsed citations** for the period form.
+
+Per the plan's strict-isolation rule we can't touch
+`src/usufruct/parse/acts_parser.py`. Solution: a LRS-side normalizer
+(`_normalize_lrs_acts_text` in `lrs/pipeline/orchestrate.py`) that
+rewrites `. Amended by Acts` → `; Acts` and `. Acts YYYY` → `; Acts YYYY`
+before invoking the shared parser. 3 unit tests pin the behavior.
+Re-run of Title 1 Phase 3 jumped from 18 → 19 parsed-with-citations out
+of 20 with raw acts; the remaining unparsed line is `Acts 2010, No. 845,
+§2, eff. June 30, 2010, and §3, eff. Jan. 1, 2012.` — single Act with two
+sections / two effective dates, a known shared-parser limitation.
+
+The 14:30 special-session quirk (`Acts 2002, 1st Ex. Sess., No. 128`) is
+unrelated and still flagged for a future CC-side touch.
+
+### Wave 1 — Title 1 end-to-end
+
+```
+.venv/bin/usufruct rs phase2                    # 54 TOCs, 45,494 IDs
+.venv/bin/usufruct rs phase3 --titles 1         # 41 sections fetched
+.venv/bin/usufruct rs phase4
+```
+
+Output (snapshot-ready in `data/rs/`):
+
+| Artifact | Count / Detail |
+| --- | --- |
+| `sections/rs_1_*.json` | 41 active |
+| `sections.jsonl` | 41 records, all round-trip Pydantic |
+| `tree.json` | 65 roots (full corpus hierarchy), Title 1 has 2 chapters / 41 sections |
+| `citation_edges.csv` | 8 edges from Title 1 (`R.S. 1:1 → R.S. 20:1`, `1:55 → CCP Art. 5059`, etc.) |
+| `chunks.jsonl` | 41 RAG-ready chunks |
+| `markdown/title-1/*.md` | 41 markdown files with YAML frontmatter |
+| `manifest.json` | per-Title totals: 41 active / 0 repealed / 0 reserved / 0 blank |
+| `validation_report.json` | 0 hierarchy gaps; 45,453 sections in `section_index.json` not emitted (all other Titles — expected for pilot run) |
+
+### Plan-vs-truth quirks discovered in Title 1's data
+
+- RS 1:11.1 ("Special census") and other ~1958-era sections use the
+  period-separated acts form, NOT the semicolon form the plan implied.
+  Normalizer handles it.
+- legis serves multiple body templates: 14:30 uses `<div id="WPMainDoc">`
+  inside the Document label, but RS 1:11.1 has paragraphs directly under
+  `<span id="ctl00_PageBody_LabelDocument">` (no inner `<div>`). The
+  parser already falls back to the outer `<span>` when `WPMainDoc` is
+  absent, so no code change needed — flagging this so future debugging
+  doesn't repeat the chase.
+- Section numbering on Title 1 jumps from §1:18 → §1:50 (chapter
+  boundary). Hierarchy placement is correct: §1:50 → Chapter 2.
+
+### Tests
+
+12 new tests across two files; full pytest is **122 passed (60 CC +
+62 LRS), zero regressions**:
+
+- `tests/test_lrs_legis_toc.py` (9 new) — synthetic-HTML coverage of the
+  two TOC parsers + 4 fetcher scenarios (default walk, titles filter,
+  Justia/legis gap detection, foreign-Title rejection).
+- `tests/test_lrs_orchestrate.py` (+3) — normalizer behavior, with a
+  before/after parse round-trip pinning the 1:11.1 case.
+
+### Performance
+
+- Phase 2: ~54 sec wall clock (54 fetches @ 1 req/s with one fetch
+  pre-cached from earlier debugging).
+- Phase 3 (Title 1, 41 sections): completed in seconds from cache after
+  the initial scrape (also ~40 sec at 1 req/s when fresh).
+- Phase 4: instant (pure transforms).
+
+### What's next
+
+The Wave 1 deliverable is in `data/rs/`. To pin it as a release:
+
+```
+.venv/bin/usufruct rs snapshot   # → snapshots/lrs-2026-05-21/
+```
+
+(Deliberately not run yet — wait for a user go-ahead before tagging.)
+
+Wave 2 (Title 14) is the next planned step: ~711 sections × 1 req/s ≈
+12 minutes Phase 3 wall time, plus pinned fixtures for the four-source-
+of-truth checks listed in the plan.
+

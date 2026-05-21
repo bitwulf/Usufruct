@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:12",
+  "title_number": "1",
+  "section_number": "12",
+  "citation": "R.S. 1:12",
+  "heading": "Classification and arrangement of statutes; effect on construction",
+  "text": "The classification and organization of the sections of the Revised Statutes is made for the purpose of convenience, reference, and orderly arrangement, and no implication or presumption of a legislative construction shall be drawn therefrom.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74083",
+  "website_law_id": 74083,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:99eb3dfddcd3357a6ff318e478a7992379b4ec6ac9fcb4e3e9f8552e01fea0fc",
+  "schema_version": "1.0.0"
+}

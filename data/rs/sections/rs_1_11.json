@@ -1,0 +1,38 @@
+{
+  "urn": "urn:us-la:rs:1:11",
+  "title_number": "1",
+  "section_number": "11",
+  "citation": "R.S. 1:11",
+  "heading": "Population, how determined; new census",
+  "text": "A. Except as otherwise provided, the number of inhabitants of a political subdivision is that shown by the latest regular or special federal census.\n\nB. To provide for orderly transition in the implementation of any law applicable to a class of political subdivisions identified by a population category, a particular federal census shall become the \"latest\" and the \"most recent\" federal census on August first of the year following the year in which the census is taken and shall remain the \"latest\" and \"most recent\" federal census until August first of the year following the year in which the subsequent census is taken; however, the provisions of this Subsection shall not apply to any law providing for reapportionment or redistricting.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [
+    {
+      "act_year": 2010,
+      "act_number": 845,
+      "section": 2,
+      "effective_date": "2010-06-30",
+      "effective_date_raw": "June 30, 2010, and §3, eff. Jan. 1, 2012",
+      "role": "enactment"
+    }
+  ],
+  "acts_citations_raw": "Acts 2010, No. 845, §2, eff. June 30, 2010, and §3, eff. Jan. 1, 2012.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74081",
+  "website_law_id": 74081,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:b0e47a0a6a0ccae7d017f03cda99e2dda012df958181b35232cf9068fb870571",
+  "schema_version": "1.0.0"
+}

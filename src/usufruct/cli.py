@@ -35,6 +35,7 @@ from .model import Article, Container
 from .lrs.pipeline import LRSPaths as _LRSPaths
 from .lrs.pipeline import run_all as _lrs_run_all
 from .lrs.pipeline import run_phase1 as _lrs_run_phase1
+from .lrs.pipeline import run_phase2_fetch as _lrs_run_phase2_fetch
 from .lrs.pipeline import run_phase3 as _lrs_run_phase3
 from .lrs.pipeline import run_phase4 as _lrs_run_phase4
 from .lrs.pipeline import snapshot as _lrs_snapshot
@@ -77,12 +78,35 @@ def build_parser() -> argparse.ArgumentParser:
     rs_sub = rs.add_subparsers(dest="rs_command", required=True)
     p1 = rs_sub.add_parser("phase1", help="Justia hierarchy + section index")
     p1.add_argument("--titles", default=None, help="Comma-separated Title numbers (e.g. 1,14)")
+    p2 = rs_sub.add_parser(
+        "phase2", help="Fetch legis root + per-Title TOCs → section_index.json"
+    )
+    p2.add_argument(
+        "--titles",
+        default=None,
+        help="Comma-separated Title numbers; default walks all 54",
+    )
+    p2.add_argument("--force-refetch", action="store_true")
     p3 = rs_sub.add_parser("phase3", help="Fetch + parse each legis section")
+    p3.add_argument(
+        "--titles",
+        default=None,
+        help="Comma-separated Title numbers; scopes which sections to fetch",
+    )
     p3.add_argument("--limit", type=int, default=None, help="Stop after N sections")
     p3.add_argument("--force-refetch", action="store_true")
     rs_sub.add_parser("phase4", help="Tree, citation edges, chunks, markdown")
-    pall = rs_sub.add_parser("all", help="phase1 + phase3 + phase4 + snapshot")
-    pall.add_argument("--titles", default=None, help="Comma-separated Title numbers")
+    pall = rs_sub.add_parser("all", help="phase1 + phase2 + phase3 + phase4 + snapshot")
+    pall.add_argument(
+        "--titles",
+        default=None,
+        help="Comma-separated Title numbers; scopes Phase 1 + Phase 3",
+    )
+    pall.add_argument(
+        "--phase2-titles",
+        default=None,
+        help="Comma-separated Title numbers for Phase 2 TOC walk (default: same as --titles)",
+    )
     rs_sub.add_parser("snapshot", help="Archive data/rs/ → snapshots/lrs-YYYY-MM-DD/")
     return parser
 
@@ -154,9 +178,25 @@ def _run_rs(args, client) -> int:
             f"-> {paths.hierarchy}",
             file=sys.stderr,
         )
+    elif args.rs_command == "phase2":
+        titles = _parse_titles_arg(args.titles)
+        _containers, justia_sections = _load_lrs_phase1(paths)
+        section_index = _lrs_run_phase2_fetch(
+            client,
+            paths,
+            justia_sections=justia_sections,
+            titles=titles,
+            force_refetch=args.force_refetch,
+            progress=True,
+        )
+        print(
+            f"Phase 2: emitted {len(section_index)} section IDs -> {paths.section_index}",
+            file=sys.stderr,
+        )
     elif args.rs_command == "phase3":
         containers, justia_sections = _load_lrs_phase1(paths)
         section_index = _load_lrs_section_index(paths)
+        titles = _parse_titles_arg(args.titles)
         records = _lrs_run_phase3(
             client,
             paths,
@@ -165,6 +205,7 @@ def _run_rs(args, client) -> int:
             section_index=section_index,
             force_refetch=args.force_refetch,
             limit=args.limit,
+            titles=titles,
         )
         print(
             f"Phase 3: emitted {len(records)} sections -> {paths.sections_jsonl}",
@@ -183,13 +224,16 @@ def _run_rs(args, client) -> int:
             file=sys.stderr,
         )
     elif args.rs_command == "all":
-        # The legis-TOC fetcher for Phase 2 is not yet wired; pass empty IDs
-        # so Phase 3 surfaces the gap rather than guessing.
         titles = _parse_titles_arg(args.titles)
-        _lrs_run_all(client, paths, titles=titles, legis_section_ids={})
+        phase2_titles = _parse_titles_arg(args.phase2_titles)
+        _lrs_run_all(
+            client,
+            paths,
+            titles=titles,
+            phase2_titles=phase2_titles,
+        )
         print(
-            "LRS pipeline complete (Phase 2 needs legis IDs; pre-populate "
-            "data/rs/section_index.json to drive a full scrape)",
+            f"LRS pipeline complete; snapshot in {paths.snapshots}",
             file=sys.stderr,
         )
     elif args.rs_command == "snapshot":

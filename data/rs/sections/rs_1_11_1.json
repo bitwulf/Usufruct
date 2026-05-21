@@ -1,0 +1,46 @@
+{
+  "urn": "urn:us-la:rs:1:11.1",
+  "title_number": "1",
+  "section_number": "11.1",
+  "citation": "R.S. 1:11.1",
+  "heading": "Special census",
+  "text": "All incorporated municipalities in the State of Louisiana are hereby authorized and empowered to take a special census when ordered by the governing authority of the municipality, all costs to be paid for by the municipality; provided, however, that upon the taking of one special census, another special census shall not be taken for at least a three year period. Upon completion of said census, a copy thereof shall be sent to the governor, who after investigation and verification of said census, shall certify the results, and the special census shall thereupon become the official census of the municipality until the next official census of the Bureau of the Census of the United States Department of Commerce or a subsequent special census as provided for herein.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [
+    {
+      "act_year": 1958,
+      "act_number": 498,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "enactment"
+    },
+    {
+      "act_year": 1970,
+      "act_number": 465,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "amendment"
+    }
+  ],
+  "acts_citations_raw": "Acts 1958, No. 498, §1. Amended by Acts 1970, No. 465, §1.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74082",
+  "website_law_id": 74082,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:48652d3760c2ec71394b9c83da11356436147ed078abe89a59a76bbd8bfa37ec",
+  "schema_version": "1.0.0"
+}

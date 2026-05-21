@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:1",
+  "title_number": "1",
+  "section_number": "1",
+  "citation": "R.S. 1:1",
+  "heading": "Revised Statutes; how cited",
+  "text": "This Act shall be known as the Louisiana Revised Statutes of 1950 and shall be cited as R.S. followed by the number of the Title and the number of the Section in the Title, separated by a colon. Example: Section 1 of Title 20 shall be cited as R.S. 20:1.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74079",
+  "website_law_id": 74079,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:50930745c3a1cff185a6e9c25a2f13a6e83462dc92b65b2dfc9d273a892fdb22",
+  "schema_version": "1.0.0"
+}

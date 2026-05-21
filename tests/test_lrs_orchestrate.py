@@ -28,6 +28,40 @@ from usufruct.lrs.pipeline.orchestrate import (
 FIX = Path(__file__).parent / "fixtures" / "lrs"
 
 
+def test_normalize_lrs_acts_text_converts_amended_by_period_to_semicolon():
+    """legis serves two acts-line templates; LRS normalizes the period-
+    separated form so the shared CC parser can split on ``;``."""
+    from usufruct.lrs.pipeline.orchestrate import _normalize_lrs_acts_text
+    from usufruct.parse import parse_acts_citation_line
+
+    raw = "Acts 1958, No. 498, §1. Amended by Acts 1970, No. 465, §1."
+    normalized = _normalize_lrs_acts_text(raw)
+    assert normalized == "Acts 1958, No. 498, §1; Acts 1970, No. 465, §1."
+
+    parsed = parse_acts_citation_line(normalized)
+    assert len(parsed) == 2
+    assert parsed[0].act_year == 1958 and parsed[0].role == "enactment"
+    assert parsed[1].act_year == 1970 and parsed[1].role == "amendment"
+
+
+def test_normalize_lrs_acts_text_passes_through_semicolon_form():
+    """The 'modern' R.S. 14:30 form must round-trip unchanged."""
+    from usufruct.lrs.pipeline.orchestrate import _normalize_lrs_acts_text
+
+    raw = (
+        "Amended by Acts 1973, No. 109, §1; Acts 1975, No. 327, §1; "
+        "Acts 2025, No. 343, §1."
+    )
+    assert _normalize_lrs_acts_text(raw) == raw
+
+
+def test_normalize_lrs_acts_text_handles_none_and_empty():
+    from usufruct.lrs.pipeline.orchestrate import _normalize_lrs_acts_text
+
+    assert _normalize_lrs_acts_text(None) is None
+    assert _normalize_lrs_acts_text("") == ""
+
+
 # A representative section_index for Title 14 — only the section we have
 # legis HTML for. Real values for d= are arbitrary in tests; the fixture
 # resolver below maps them to the saved HTML.

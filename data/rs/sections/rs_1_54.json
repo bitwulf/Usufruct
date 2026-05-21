@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:54",
+  "title_number": "1",
+  "section_number": "54",
+  "citation": "R.S. 1:54",
+  "heading": "Residence; forfeiture",
+  "text": "Residence once acquired shall not be forfeited by absence on business of the state or of the United States. Voluntary absence from the state of two years, or the acquisition of residence elsewhere, shall forfeit a residence within this state.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74096",
+  "website_law_id": 74096,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:fa560a70e1107548beb78d93207565763749e047e898bfbcc580ebb08ee4ea80",
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,38 @@
+{
+  "urn": "urn:us-la:rs:1:58.4",
+  "title_number": "1",
+  "section_number": "58.4",
+  "citation": "R.S. 1:58.4",
+  "heading": "A day of remembrance; Hurricane Katrina and Hurricane Rita",
+  "text": "The first Sunday after the commencement of hurricane season of every year shall be recognized as a day of remembrance for the victims of Hurricane Katrina and Hurricane Rita. Hurricane Katrina and Hurricane Rita Day shall be observed as a memorial of one of the greatest tragedies in the state of Louisiana.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [
+    {
+      "act_year": 2008,
+      "act_number": 800,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "enactment"
+    }
+  ],
+  "acts_citations_raw": "Acts 2008, No. 800, §1.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=557645",
+  "website_law_id": 557645,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:07bbd19540fb9a26de6050f4bf9ab56f9530c9589be505ac5d2a916cc6d6b2d2",
+  "schema_version": "1.0.0"
+}

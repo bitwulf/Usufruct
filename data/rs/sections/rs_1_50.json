@@ -1,0 +1,38 @@
+{
+  "urn": "urn:us-la:rs:1:50",
+  "title_number": "1",
+  "section_number": "50",
+  "citation": "R.S. 1:50",
+  "heading": "Daylight saving time; conditions; adoption",
+  "text": "If the United States Congress amends 15 U.S.C. 260(a) to authorize states to observe daylight saving time year-round, the state shall adopt daylight saving time as the year-round standard time of the entire state and all of its political subdivisions.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [
+    {
+      "act_year": 2020,
+      "act_number": 133,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "enactment"
+    }
+  ],
+  "acts_citations_raw": "Acts 2020, No. 133, §1.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=1187421",
+  "website_law_id": 1187421,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:9a10c9b5a4287a112cce177933169d39e2d922f9cfef56db4cbf404152111934",
+  "schema_version": "1.0.0"
+}

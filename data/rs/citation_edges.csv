@@ -1,0 +1,9 @@
+src_urn,src_corpus,src_id,dst_corpus,dst_id,dst_urn,raw_match,char_offset
+urn:us-la:rs:1:1,rs,1:1,rs,20:1,urn:us-la:rs:20:1,R.S. 20:1,244
+urn:us-la:rs:1:18,rs,1:18,rs,40:1061.1,urn:us-la:rs:40:1061.1,R.S. 40:1061.1,396
+urn:us-la:rs:1:55,rs,1:55,rs,7:85,urn:us-la:rs:7:85,R.S. 7:85,2473
+urn:us-la:rs:1:55,rs,1:55,rs,6:65,urn:us-la:rs:6:65,R.S. 6:65,10136
+urn:us-la:rs:1:55,rs,1:55,rs,7:85,urn:us-la:rs:7:85,R.S. 7:85,11491
+urn:us-la:rs:1:55,rs,1:55,rs,29:251.2,urn:us-la:rs:29:251.2,R.S. 29:251.2,20052
+urn:us-la:rs:1:55,rs,1:55,ccp,5059,,Code of Civil Procedure Article 5059,19236
+urn:us-la:rs:1:59,rs,1:59,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,247

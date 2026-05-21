@@ -1,0 +1,46 @@
+{
+  "urn": "urn:us-la:rs:1:60",
+  "title_number": "1",
+  "section_number": "60",
+  "citation": "R.S. 1:60",
+  "heading": "Timely filing of papers due; presumption",
+  "text": "A. Notwithstanding any other provision of law to the contrary, the filing of papers, including but not limited to applications, forms, reports, returns, statements, and filings of any kind with the state, its agencies, boards, and commissions shall be deemed timely in either of the following cases:\n\n(1) The papers are delivered on or before the due date.\n\n(2) The papers are mailed on or before the due date. If the papers are received by mail on the first working day following the due date, there shall be a rebuttable presumption that they were timely filed. In all cases where the presumption does not apply, the timeliness of the mailing shall be shown only by an official United States postmark or by official receipt or certificate from the United States Postal Service made at the time of mailing which indicates the date thereof. For purposes of this Section, \"by mail\" applies only to the United States Postal Service.\n\nB. The provisions of this Section shall not apply to the legislative or judicial branches of government, the Department of State, the Department of Revenue, or to adjudications conducted pursuant to Chapter 13-B of Title 49 of the Louisiana Revised Statutes of 1950.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [
+    {
+      "act_year": 1999,
+      "act_number": 175,
+      "section": 1,
+      "effective_date": "1999-06-09",
+      "effective_date_raw": "June 9, 1999",
+      "role": "enactment"
+    },
+    {
+      "act_year": 2001,
+      "act_number": 451,
+      "section": 6,
+      "effective_date": "2004-01-12",
+      "effective_date_raw": "Jan. 12, 2004",
+      "role": "amendment"
+    }
+  ],
+  "acts_citations_raw": "Acts 1999, No. 175, §1, eff. June 9, 1999; Acts 2001, No. 451, §6, eff. Jan. 12, 2004.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74104",
+  "website_law_id": 74104,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:9051dbf3917ee19dc591d2259e75197abe05cbc64a490ef5efb2deeafaee411a",
+  "schema_version": "1.0.0"
+}

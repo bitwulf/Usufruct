@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:10",
+  "title_number": "1",
+  "section_number": "10",
+  "citation": "R.S. 1:10",
+  "heading": "Person, defined",
+  "text": "Unless it is otherwise clearly indicated, the word \"person\" includes a body of persons, whether incorporated or not.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74080",
+  "website_law_id": 74080,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:83ce03d5c3f8798c13d8516bcc55fb3b214a04cde953252bde0bdd5453198cad",
+  "schema_version": "1.0.0"
+}

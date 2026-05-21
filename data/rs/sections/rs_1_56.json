@@ -1,0 +1,38 @@
+{
+  "urn": "urn:us-la:rs:1:56",
+  "title_number": "1",
+  "section_number": "56",
+  "citation": "R.S. 1:56",
+  "heading": "Doctors' Day",
+  "text": "March 30 is designated as Doctors' Day throughout the state of Louisiana, in honor of the medical profession in this state.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [
+    {
+      "act_year": 1952,
+      "act_number": 49,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "enactment"
+    }
+  ],
+  "acts_citations_raw": "Acts 1952, No. 49, §1.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74098",
+  "website_law_id": 74098,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:06570c89210899a36e103c7ff9d452a2bb696cae74c99b645ade8c25c84fea07",
+  "schema_version": "1.0.0"
+}

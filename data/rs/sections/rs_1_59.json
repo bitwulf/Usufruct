@@ -1,0 +1,46 @@
+{
+  "urn": "urn:us-la:rs:1:59",
+  "title_number": "1",
+  "section_number": "59",
+  "citation": "R.S. 1:59",
+  "heading": "Definitions of mortgage, chattel mortgage and pledge to include security interests",
+  "text": "Whenever the context so requires, the terms \"mortgage\", \"chattel mortgage\", and \"pledge\" as used in the Louisiana Revised Statutes additionally mean and include the granting of a security interest under Chapter 9 of the Louisiana Commercial Laws (R.S. 10:9-101, et seq.) or under the corresponding provisions of Article 9 of the Uniform Commercial Code as adopted in any other state, to the extent applicable. Whenever the context so requires, the terms \"mortgage\", \"chattel mortgage\" or \"pledge\" agreement further mean and include a security agreement subject to Chapter 9 of the Louisiana Commercial Laws or to the corresponding provisions of Article 9 of the Uniform Commercial Code as adopted in any other state, to the extent applicable.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [
+    {
+      "act_year": 1989,
+      "act_number": 137,
+      "section": 1,
+      "effective_date": "1989-09-01",
+      "effective_date_raw": "Sept. 1, 1989",
+      "role": "enactment"
+    },
+    {
+      "act_year": 1990,
+      "act_number": 1079,
+      "section": 1,
+      "effective_date": "1990-09-01",
+      "effective_date_raw": "Sept. 1, 1990",
+      "role": "amendment"
+    }
+  ],
+  "acts_citations_raw": "Acts 1989, No. 137, §1, eff. Sept. 1, 1989; Acts 1990, No. 1079, §1, eff. Sept. 1, 1990.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74102",
+  "website_law_id": 74102,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:2207d68961d91cb690289e7ad48e229e3cbfee2a4b55b0f52921b7cace169b61",
+  "schema_version": "1.0.0"
+}

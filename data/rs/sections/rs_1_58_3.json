@@ -1,0 +1,38 @@
+{
+  "urn": "urn:us-la:rs:1:58.3",
+  "title_number": "1",
+  "section_number": "58.3",
+  "citation": "R.S. 1:58.3",
+  "heading": "Ronald Reagan Day",
+  "text": "To honor one of America's greatest presidents, February sixth shall annually be recognized and designated as Ronald Reagan Day throughout the state of Louisiana.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [
+    {
+      "act_year": 2004,
+      "act_number": 680,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "enactment"
+    }
+  ],
+  "acts_citations_raw": "Acts 2004, No. 680, §1.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=285074",
+  "website_law_id": 285074,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:5d736329446e7515090f6732f24aa38a81057e095d2d342b0f129308b65e9546",
+  "schema_version": "1.0.0"
+}

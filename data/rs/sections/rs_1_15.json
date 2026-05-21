@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:15",
+  "title_number": "1",
+  "section_number": "15",
+  "citation": "R.S. 1:15",
+  "heading": "Repeal of law; effect",
+  "text": "The repeal of a repealing law shall not revive the first law.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74086",
+  "website_law_id": 74086,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:5d7f69c84eb419a2688765a3f90af5d0db8950488947a2f78884fc0eeaeef11c",
+  "schema_version": "1.0.0"
+}

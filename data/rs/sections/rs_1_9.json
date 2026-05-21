@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:9",
+  "title_number": "1",
+  "section_number": "9",
+  "citation": "R.S. 1:9",
+  "heading": "Use of disjunctive",
+  "text": "Unless it is otherwise clearly indicated by the context, whenever the term \"or\" is used in the Revised Statutes, it is used in the disjunctive and does not mean \"and/or\".",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74107",
+  "website_law_id": 74107,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:dbc729f5e61aa8b62c097b186cfa65dd61ccdb67f8a833ace33da942780ab2dd",
+  "schema_version": "1.0.0"
+}

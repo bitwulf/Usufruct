@@ -4,7 +4,11 @@ from .justia_title_parser import (
     JustiaTitleParseResult,
     parse_justia_title,
 )
-from .legis_lrs_toc_parser import parse_legis_root_toc, parse_legis_title_toc
+from .legis_lrs_toc_parser import (
+    parse_legis_root_toc,
+    parse_legis_root_toc_titles,
+    parse_legis_title_toc,
+)
 from .legis_section_parser import ParsedRSSection, parse_legis_section
 
 __all__ = [
@@ -16,5 +20,6 @@ __all__ = [
     "ParsedRSSection",
     "parse_legis_section",
     "parse_legis_root_toc",
+    "parse_legis_root_toc_titles",
     "parse_legis_title_toc",
 ]

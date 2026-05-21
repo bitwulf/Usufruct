@@ -1,0 +1,38 @@
+{
+  "urn": "urn:us-la:rs:1:18",
+  "title_number": "1",
+  "section_number": "18",
+  "citation": "R.S. 1:18",
+  "heading": "Construction of laws relative to abortion",
+  "text": "A. It is the intention of the Legislature of Louisiana to prohibit and restrict abortion and to thereby preserve the life of each unborn child to the fullest extent permitted by law.\n\nB.(1) All laws or parts of laws prohibiting or restricting abortion shall not be negated or superseded by the laws regulating outpatient abortion facilities or regulating the practice of abortion, as provided in R.S. 40:1061.1.\n\n(2) Laws regulating or prohibiting an abortion at a certain gestational age of the unborn child shall not be considered to be in conflict with other laws that regulate or prohibit abortion at a different gestational age of the unborn child.\n\nC. No governing authority of a political subdivision shall enact any ordinance or regulation that authorizes or regulates abortion.\n\nD. Unless otherwise specifically provided therein, the provisions of each act of the legislature prohibiting or regulating abortion are severable, whether or not a provision to that effect is included in the act. If any provision or item of an act prohibiting or regulating abortion, or the application thereof, is held invalid, such invalidity shall not affect other provisions, items, or applications of the act which can be given effect without the invalid provision, item, or application.\n\nE. This Section shall apply to acts of the legislature affecting general laws, and local and special laws, and statutes of the state, including the Louisiana Revised Statutes of 1950, the Civil Code, the Code of Civil Procedure, the Code of Criminal Procedure, the Code of Evidence, and the Children's Code.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [
+    {
+      "act_year": 2022,
+      "act_number": 545,
+      "section": 1,
+      "effective_date": "2022-06-17",
+      "effective_date_raw": "June 17, 2022",
+      "role": "enactment"
+    }
+  ],
+  "acts_citations_raw": "Acts 2022, No. 545, §1, eff. June 17, 2022.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=1294852",
+  "website_law_id": 1294852,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:dee3e1e9a8629c42aa0f4f8aa691adc504f4a6648928ba5148e9327c6fc6a3c8",
+  "schema_version": "1.0.0"
+}

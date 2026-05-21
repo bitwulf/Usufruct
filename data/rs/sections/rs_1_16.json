@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:16",
+  "title_number": "1",
+  "section_number": "16",
+  "citation": "R.S. 1:16",
+  "heading": "Construction of Revised Statutes; continuation of existing institutions; effect on rights acquired, penalties imposed, etc.",
+  "text": "The Louisiana Revised Statutes of 1950 shall be construed as continuations of and as substitutes for the laws or parts of laws which are revised and consolidated herein. The adoption of these Revised Statutes shall not affect the continued existence and operation, subject to the provisions hereof, of any department, agency, or office heretofore legally established or held, nor any acts done, any funds established, any rights acquired or accruing, any taxes or other charges incurred or imposed, any penalties incurred or imposed, or any judicial proceedings had or commenced prior to the effective date of these Revised Statutes.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74087",
+  "website_law_id": 74087,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:b8b320dd47f403647d4b5686f83c01b1b5de5cf2e55b54017c7a0850da642cf7",
+  "schema_version": "1.0.0"
+}

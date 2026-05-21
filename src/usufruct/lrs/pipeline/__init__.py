@@ -1,6 +1,7 @@
 from .paths import LRSPaths
 from .orchestrate import (
     run_phase1,
+    run_phase2_fetch,
     run_phase2_with_index,
     run_phase3,
     run_phase4,
@@ -11,6 +12,7 @@ from .orchestrate import (
 __all__ = [
     "LRSPaths",
     "run_phase1",
+    "run_phase2_fetch",
     "run_phase2_with_index",
     "run_phase3",
     "run_phase4",

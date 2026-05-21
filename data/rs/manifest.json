@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-05-21T18:19:43Z",
+  "corpus": "rs",
+  "totals": {
+    "containers": 5529,
+    "sections_emitted": 41,
+    "by_status": {
+      "active": 41
+    }
+  },
+  "sources": {
+    "justia_root": "https://law.justia.com/codes/louisiana/revised-statutes/",
+    "justia_title_template": "https://law.justia.com/codes/louisiana/revised-statutes/title-{title}/",
+    "legis_section_template": "https://legis.la.gov/legis/Law.aspx?d={d}"
+  },
+  "completeness": {
+    "by_title": [
+      {
+        "title": "1",
+        "active": 41,
+        "repealed": 0,
+        "reserved": 0,
+        "blank": 0,
+        "total": 41
+      }
+    ],
+    "tree_max_depth": 7,
+    "total_citation_edges": 8,
+    "rag_chunks": 41,
+    "markdown_files": 41
+  }
+}

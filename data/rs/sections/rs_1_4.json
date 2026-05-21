@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:4",
+  "title_number": "1",
+  "section_number": "4",
+  "citation": "R.S. 1:4",
+  "heading": "Unambiguous wording not to be disregarded",
+  "text": "When the wording of a Section is clear and free of ambiguity, the letter of it shall not be disregarded under the pretext of pursuing its spirit.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74091",
+  "website_law_id": 74091,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:afe4fde37b507742acdae942dd4410b26469b872f8039270efa9fd2ff90dde24",
+  "schema_version": "1.0.0"
+}

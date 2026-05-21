@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:58",
+  "title_number": "1",
+  "section_number": "58",
+  "citation": "R.S. 1:58",
+  "heading": "My Nationality American Day",
+  "text": "December 7 is designated as My Nationality American Day throughout the state of Louisiana to reaffirm our dedication to the principles that inspired the creation of this great nation and secured for all of us the blessings of freedom and peace.\n\nAdded by Acts 1983, No. 35, §1.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74100",
+  "website_law_id": 74100,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:c620a1c7b49ea616268798042f5ef189a41f58728d5acfc228bfb685956e5992",
+  "schema_version": "1.0.0"
+}

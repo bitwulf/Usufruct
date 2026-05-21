@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:14",
+  "title_number": "1",
+  "section_number": "14",
+  "citation": "R.S. 1:14",
+  "heading": "References in Revised Statutes",
+  "text": "Unless otherwise indicated in the context, references in the Revised Statutes to Titles, Sub-titles, Chapters, Parts, Subparts, or Sections shall mean Titles, Subtitles, Chapters, Parts, Sub-parts, or Sections of the Revised Statutes.\n\nWhenever any reference is made to any portion of the Revised Statutes or to any other law, the reference applies to all amendments thereto hereafter made.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74085",
+  "website_law_id": 74085,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:f931c7742bceafb1ea20cd8497dacfa7d4b51d7a384e9c98c2be62a653a43b58",
+  "schema_version": "1.0.0"
+}

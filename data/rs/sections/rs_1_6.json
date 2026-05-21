@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:6",
+  "title_number": "1",
+  "section_number": "6",
+  "citation": "R.S. 1:6",
+  "heading": "Conflict in expression of figures and words",
+  "text": "Whenever there is a conflict between a number expressed both by figures and written words, the latter shall prevail unless such words obviously are contrary to the legislative intent.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74103",
+  "website_law_id": 74103,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:d577f3e925bd9de2b8cd5c663e44bae3a2cdb33e86a61901b0d2353c6d0ef83b",
+  "schema_version": "1.0.0"
+}

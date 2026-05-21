@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:52",
+  "title_number": "1",
+  "section_number": "52",
+  "citation": "R.S. 1:52",
+  "heading": "Publication of advertisements, notices, etc., in English language",
+  "text": "It is sufficient in all the parishes of the state to publish advertisements, judicial or otherwise, notices, and publications required by law, in the English language only.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "2",
+      "name": "MISCELLANEOUS"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 2",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74094",
+  "website_law_id": 74094,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:01bee43434e9d7b210bde865ea4e9fe93220552ec990ebb55393cd839d82b6be",
+  "schema_version": "1.0.0"
+}

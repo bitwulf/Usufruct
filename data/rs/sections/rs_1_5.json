@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:5",
+  "title_number": "1",
+  "section_number": "5",
+  "citation": "R.S. 1:5",
+  "heading": "Clerical and typographical errors",
+  "text": "Clerical and typographical errors in the Revised Statutes shall be disregarded when the meaning of the legislature is clear.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74092",
+  "website_law_id": 74092,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:619ad0356e9e3fca1cfed002315f7416701cfc9886d05943c007f2c47f0b548c",
+  "schema_version": "1.0.0"
+}

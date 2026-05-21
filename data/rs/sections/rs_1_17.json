@@ -1,0 +1,29 @@
+{
+  "urn": "urn:us-la:rs:1:17",
+  "title_number": "1",
+  "section_number": "17",
+  "citation": "R.S. 1:17",
+  "heading": "Transfer of functions; application of Revised Statutes",
+  "text": "Wherever in the Revised Statutes a reference is made to any department, agency or office, or officer thereof, the functions of which department, agency, office or officer have been legally transferred to another department, agency, office or officer, the provision of law wherein the reference is made shall be applicable to the department, agency, office or officer, to which such functions have been transferred.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [],
+  "acts_citations_raw": null,
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74088",
+  "website_law_id": 74088,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:2eda5918464feaa45c384d417b6f6a1f1a6f5d1254f0c6eead9846ddc29aed2a",
+  "schema_version": "1.0.0"
+}

@@ -1,18 +1,31 @@
-"""Parse a legis.la.gov LRS Title TOC page into ``(title, section) -> d=NNNNNN``.
+"""Parse legis.la.gov LRS TOC pages.
 
-The per-Title TOC at ``Laws_Toc.aspx?folder=N&title=T`` is a flat table of
-anchors of the form ``<a href="Law.aspx?d=NNNNNN">RS T:S</a>``. We harvest
-each unique pair into a mapping. The root TOC at ``folder=75`` carries
-``<a href="Laws_Toc.aspx?folder=N&title=T">RS T</a>`` per Title; we extract
-``(title -> folder)`` so the per-Title TOC URLs can be generated.
+The site has two TOC layers:
 
-Both parsers are tolerant of HTML drift: they key off the ``href`` rather
-than text classes.
+* **Root TOC** (``Laws_Toc.aspx?folder=75&level=Parent``). On the real site
+  the Title rows are ASP.NET postback anchors with text like ``TITLE 14``
+  but no folder ID in the HTML — folder IDs are server-side state, exposed
+  only via ``__doPostBack``. We expose two parsers:
+
+  * :func:`parse_legis_root_toc_titles` — read Title numbers off the row
+    labels. This is what runs against the real page.
+  * :func:`parse_legis_root_toc` — looks for ``Laws_Toc.aspx?folder=N&title=T``
+    anchors and returns a ``{title: folder}`` map. Used by synthetic
+    fixtures and as a forward-compat hook if legis later exposes the folder
+    in the HTML.
+
+* **Per-Title TOC** (``Laws_Toc.aspx?folder=N&title=T&level=Parent``). Flat
+  list of ``<a href="Law.aspx?d=N">RS T:S</a>`` anchors plus one
+  Title-level anchor ``RS T`` (no section). :func:`parse_legis_title_toc`
+  returns ``{(title, section): website_law_id}``.
+
+All parsers are tolerant of HTML drift — they key off ``href`` patterns and
+anchor text, not class names.
 """
 from __future__ import annotations
 
 import re
-from typing import Dict, Tuple
+from typing import Dict, List, Tuple
 
 from bs4 import BeautifulSoup
 
@@ -22,10 +35,17 @@ _TOC_HREF_RE = re.compile(
 )
 _RS_TEXT_RE = re.compile(r"RS\s+(\d+(?:-[A-Z])?)\s*:\s*([0-9.]+)", re.IGNORECASE)
 _RS_TITLE_TEXT_RE = re.compile(r"RS\s+(\d+(?:-[A-Z])?)\b", re.IGNORECASE)
+_TITLE_LABEL_RE = re.compile(r"^TITLE\s+(\d+(?:-[A-Z])?)\s*$", re.IGNORECASE)
 
 
 def parse_legis_root_toc(html: str) -> Dict[str, int]:
-    """Map each Title number to its legis folder ID (used in per-Title TOC URLs)."""
+    """Map each Title number to its legis folder ID (used by synthetic tests).
+
+    On the real legis page, returns ``{}`` because folder IDs live behind
+    ASP.NET postback handlers, not in anchor hrefs. Use
+    :func:`parse_legis_root_toc_titles` plus a deterministic folder
+    derivation for production runs.
+    """
     soup = BeautifulSoup(html, "lxml")
     out: Dict[str, int] = {}
     for a in soup.find_all("a", href=True):
@@ -38,8 +58,34 @@ def parse_legis_root_toc(html: str) -> Dict[str, int]:
     return out
 
 
+def parse_legis_root_toc_titles(html: str) -> List[str]:
+    """Return Title numbers in the order they appear on the root TOC.
+
+    Reads anchor text matching ``^TITLE \\d+(-[A-Z])?$`` — that's the
+    canonical row-label form used in legis's ListViewTOC1 control.
+    """
+    soup = BeautifulSoup(html, "lxml")
+    out: List[str] = []
+    seen: set[str] = set()
+    for a in soup.find_all("a"):
+        text = " ".join(a.get_text(strip=True).split())
+        m = _TITLE_LABEL_RE.match(text)
+        if not m:
+            continue
+        number = m.group(1)
+        if number in seen:
+            continue
+        seen.add(number)
+        out.append(number)
+    return out
+
+
 def parse_legis_title_toc(html: str) -> Dict[Tuple[str, str], int]:
-    """Map ``(title, section) -> website_law_id`` for one per-Title TOC page."""
+    """Map ``(title, section) -> website_law_id`` for one per-Title TOC page.
+
+    Filters out Title-level anchors (text ``RS T`` with no colon) — only
+    section anchors of the form ``RS T:S`` are returned.
+    """
     soup = BeautifulSoup(html, "lxml")
     out: Dict[Tuple[str, str], int] = {}
     for a in soup.find_all("a", href=True):

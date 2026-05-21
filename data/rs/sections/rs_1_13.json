@@ -1,0 +1,38 @@
+{
+  "urn": "urn:us-la:rs:1:13",
+  "title_number": "1",
+  "section_number": "13",
+  "citation": "R.S. 1:13",
+  "heading": "Headings and ancillary information, not part of law",
+  "text": "A. Headings to sections, source notes, and cross references are given for the purpose of convenient reference and do not constitute part of the law.\n\nB. The keyword, one-liner, summary and adjoining information, abstract, digest, and other words and phrases not contained in the section or sections of the bill following the enacting clause do not constitute part of the law.",
+  "status": "active",
+  "hierarchy_path": [
+    {
+      "level": "title",
+      "number": "1",
+      "name": "GENERAL PROVISIONS"
+    },
+    {
+      "level": "chapter",
+      "number": "1",
+      "name": "INTERPRETATION OF REVISED STATUTES"
+    }
+  ],
+  "breadcrumb": "Title 1 › Chapter 1",
+  "acts_citations": [
+    {
+      "act_year": 2006,
+      "act_number": 826,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "enactment"
+    }
+  ],
+  "acts_citations_raw": "Acts 2006, No. 826, §1.",
+  "source_url": "https://legis.la.gov/legis/Law.aspx?d=74084",
+  "website_law_id": 74084,
+  "scrape_timestamp": "2026-05-21T18:19:13Z",
+  "source_html_hash": "sha256:9654053b80166d5474562f8a9728c8dde55c192d5cfad2665a7589f7c8748457",
+  "schema_version": "1.0.0"
+}

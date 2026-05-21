@@ -39,13 +39,17 @@ from ..corpus import (
 from ..fetch.justia_root import fetch_justia_root
 from ..fetch.justia_title import fetch_justia_title, justia_title_url
 from ..fetch.legis_section import fetch_legis_section, legis_section_url
+from ..fetch.legis_toc import fetch_legis_root_toc, fetch_legis_title_toc
 from ..model import Container, ContainerLevel, RSSection, section_sort_key
 
 from ..parse import (
     JustiaSectionEntry,
     parse_justia_root,
     parse_justia_title,
+    parse_legis_root_toc,
+    parse_legis_root_toc_titles,
     parse_legis_section,
+    parse_legis_title_toc,
 )
 from .hierarchy import (
     LRSHierarchyIndex,
@@ -87,6 +91,27 @@ def _breadcrumb(path: List[HierarchyNode]) -> str:
 def _section_slug(title_number: str, section_number: str) -> str:
     safe_section = section_number.replace(".", "_")
     return f"rs_{title_number}_{safe_section}"
+
+
+# legis.la.gov serves two acts-line templates: the "modern" CC-style with
+# ``;`` between citations (used by R.S. 14:30 etc.) and the "legacy" period-
+# separated form used by many older sections (R.S. 1:11.1 →
+# ``"Acts 1958, No. 498, §1. Amended by Acts 1970, No. 465, §1."``). The
+# shared ``parse_acts_citation_line`` only handles the ``;`` form. We
+# normalize period-separated forms here before parsing — this keeps the
+# shared CC parser untouched per the LRS plan's strict-isolation rule.
+_LRS_ACTS_AMENDED_RE = re.compile(
+    r"\.\s+Amended\s+by\s+Acts\b", re.IGNORECASE
+)
+_LRS_ACTS_PERIOD_NEXT_RE = re.compile(r"\.\s+(Acts\s+\d{4})")
+
+
+def _normalize_lrs_acts_text(raw: Optional[str]) -> Optional[str]:
+    if not raw:
+        return raw
+    out = _LRS_ACTS_AMENDED_RE.sub("; Acts", raw)
+    out = _LRS_ACTS_PERIOD_NEXT_RE.sub(r"; \1", out)
+    return out
 
 
 # ---------- Phase 1: Justia hierarchy ----------
@@ -179,6 +204,139 @@ def _dump_section_entry(s: JustiaSectionEntry) -> Dict:
 
 # ---------- Phase 2: legis section IDs ----------
 
+def _title_sort_key(t: str) -> Tuple[int, str]:
+    head = t.split("-")[0]
+    return (int(head) if head.isdigit() else 999, t)
+
+
+# Legis assigns each LRS Title a folder ID. The IDs are sequential in the
+# sorted-active-Title order: Title 1 → 77, Title 2 → 78, …, Title 14 → 88,
+# Title 47 → 121. We discover this empirically and verify per Title (the
+# parser only accepts ``RS T:S`` anchors whose title matches the request).
+# If legis ever renumbers, the verification fails loudly.
+_LEGIS_LRS_BASE_FOLDER = 77
+
+
+def _derive_folder_map(title_numbers: Iterable[str]) -> Dict[str, int]:
+    ordered = sorted({str(t) for t in title_numbers}, key=_title_sort_key)
+    return {t: _LEGIS_LRS_BASE_FOLDER + i for i, t in enumerate(ordered)}
+
+
+def run_phase2_fetch(
+    client,
+    paths: LRSPaths,
+    *,
+    justia_sections: List[JustiaSectionEntry],
+    titles: Optional[Iterable[str]] = None,
+    force_refetch: bool = False,
+    progress: bool = False,
+) -> Dict[Tuple[str, str], int]:
+    """Walk legis root TOC + per-Title TOCs, then join against Justia.
+
+    1. Fetch the legis root TOC (sanity check: every Justia Title appears).
+       The root page does not expose folder IDs in HTML — they live behind
+       ASP.NET postback handlers — so folder discovery is deterministic
+       (see ``_derive_folder_map``).
+    2. For each requested Title, fetch
+       ``Laws_Toc.aspx?folder=F&title=T&level=Parent`` where ``F = 77 +
+       sorted_index(T)``. Verify the returned anchors all belong to the
+       requested Title; raise on mismatch.
+    3. Merge every parsed ``(title, section) -> website_law_id`` map.
+    4. Delegate to ``run_phase2_with_index`` for the Justia↔legis join + emit.
+
+    The derived folder map is persisted to ``data/rs/folder_map.json`` for
+    inspection and as the canonical record of the mapping at scrape time.
+    """
+    import sys as _sys
+
+    # All Justia-known Titles drive the folder math, regardless of whether
+    # ``titles`` filters which ones we fetch. This keeps folder IDs stable
+    # under pilot-mode runs.
+    all_titles = sorted(
+        {s.title_number for s in justia_sections}, key=_title_sort_key
+    )
+    folder_map = _derive_folder_map(all_titles)
+
+    root = fetch_legis_root_toc(client, force_refetch=force_refetch)
+    advertised = parse_legis_root_toc_titles(root.text)
+    advertised_set = set(advertised)
+    missing_on_legis = [t for t in all_titles if t not in advertised_set]
+    extra_on_legis = [t for t in advertised if t not in set(all_titles)]
+    if progress:
+        print(
+            f"[phase2] legis root TOC: {len(advertised)} Titles advertised "
+            f"(Justia knows {len(all_titles)})",
+            file=_sys.stderr,
+        )
+        if missing_on_legis:
+            print(
+                f"[phase2] WARNING: in Justia but missing from legis root: "
+                f"{missing_on_legis}",
+                file=_sys.stderr,
+            )
+        if extra_on_legis:
+            print(
+                f"[phase2] note: legis root advertises Titles not in Justia: "
+                f"{extra_on_legis}",
+                file=_sys.stderr,
+            )
+
+    paths.rs_root.mkdir(parents=True, exist_ok=True)
+    (paths.rs_root / "folder_map.json").write_text(
+        json.dumps(folder_map, indent=2, sort_keys=True)
+    )
+
+    wanted: List[str]
+    if titles is None:
+        wanted = list(all_titles)
+    else:
+        wanted = sorted({str(t) for t in titles}, key=_title_sort_key)
+
+    merged: Dict[Tuple[str, str], int] = {}
+    for i, title_number in enumerate(wanted, start=1):
+        folder = folder_map.get(title_number)
+        if folder is None:
+            if progress:
+                print(
+                    f"[phase2] Title {title_number}: skipped "
+                    f"(not in folder map)",
+                    file=_sys.stderr,
+                )
+            continue
+        fetched = fetch_legis_title_toc(
+            client, folder, title_number, force_refetch=force_refetch
+        )
+        title_ids = parse_legis_title_toc(fetched.text)
+        # Verify every returned key belongs to the requested Title — if the
+        # base folder shifts, this will catch it loudly instead of silently
+        # mis-mapping sections.
+        wrong = {
+            (t, s) for (t, s) in title_ids.keys() if t != title_number
+        }
+        if wrong:
+            raise RuntimeError(
+                f"Phase 2 folder mismatch: Title {title_number} at folder "
+                f"{folder} returned anchors for foreign Titles: "
+                f"{sorted(t for t, _ in wrong)[:5]} (expected only "
+                f"'{title_number}'). The base folder may have shifted on "
+                f"legis.la.gov; update _LEGIS_LRS_BASE_FOLDER."
+            )
+        merged.update(title_ids)
+        if progress:
+            tag = " (cached)" if fetched.from_cache else ""
+            print(
+                f"[phase2] Title {title_number} (folder {folder}): "
+                f"{len(title_ids)} sections{tag} [{i}/{len(wanted)}]",
+                file=_sys.stderr,
+            )
+
+    return run_phase2_with_index(
+        paths,
+        justia_sections=justia_sections,
+        legis_section_ids=merged,
+    )
+
+
 def run_phase2_with_index(
     paths: LRSPaths,
     *,
@@ -248,8 +406,19 @@ def run_phase3(
     section_index: Dict[Tuple[str, str], int],
     force_refetch: bool = False,
     limit: Optional[int] = None,
+    titles: Optional[Iterable[str]] = None,
 ) -> Dict[str, RSSection]:
-    """For every section in the index, fetch + parse + emit one RSSection."""
+    """For every section in the index, fetch + parse + emit one RSSection.
+
+    ``titles`` filters scope without touching ``section_index.json`` on disk —
+    only sections whose Title appears in the set are fetched, and the
+    blank/repealed backfill is restricted to the same set. Useful for pilot
+    waves (e.g., ``titles=["1"]`` for Wave 1).
+    """
+    titles_set: Optional[set[str]] = (
+        {str(t) for t in titles} if titles is not None else None
+    )
+
     # Build a hierarchy index keyed on per-container section ranges. The
     # ranges were set during Phase 1 by ``assign_ranges_from_sections``.
     hierarchy_index = build_lrs_hierarchy_index(
@@ -269,6 +438,8 @@ def run_phase3(
         section_index.items(),
         key=lambda kv: (kv[0][0], section_sort_key(kv[0][1])),
     )
+    if titles_set is not None:
+        items = [kv for kv in items if kv[0][0] in titles_set]
     if limit is not None:
         items = items[:limit]
 
@@ -297,7 +468,9 @@ def run_phase3(
 
         acts_parsed: List[ActsCitation] = []
         if parsed.status == "active" and parsed.acts_citations_raw:
-            acts_parsed = parse_acts_citation_line(parsed.acts_citations_raw)
+            acts_parsed = parse_acts_citation_line(
+                _normalize_lrs_acts_text(parsed.acts_citations_raw)
+            )
 
         record = RSSection(
             urn=urn_for(title_number, section_number),
@@ -320,8 +493,12 @@ def run_phase3(
         out[record.urn] = record
 
     # Backfill repealed sections that Justia knows about but legis didn't
-    # surface (no website_law_id available).
+    # surface (no website_law_id available). When titles_set is given, only
+    # backfill within the requested Titles — otherwise we'd emit 46k blanks
+    # for a pilot run.
     for s in justia_sections:
+        if titles_set is not None and s.title_number not in titles_set:
+            continue
         urn = urn_for(s.title_number, s.section_number)
         if urn in out:
             continue
@@ -769,30 +946,42 @@ def run_all(
     *,
     titles: Optional[Iterable[str]] = None,
     legis_section_ids: Optional[Dict[Tuple[str, str], int]] = None,
+    phase2_titles: Optional[Iterable[str]] = None,
     take_snapshot: bool = True,
 ) -> Dict[str, int]:
     """End-to-end pipeline.
 
-    The full legis-TOC discovery for Phase 2 is not yet implemented; pass a
-    precomputed ``legis_section_ids`` mapping to drive Phase 3. When Phase 2
-    fetcher lands, ``legis_section_ids`` becomes optional.
+    * ``titles``: which Justia Titles to walk in Phase 1 *and* which sections
+      to fetch in Phase 3. ``None`` = every Title Justia advertises.
+    * ``phase2_titles``: which Titles' legis TOCs to fetch in Phase 2.
+      ``None`` defaults to ``titles``. Pass an explicit broader set (e.g.,
+      every Title) when you want Phase 2 to populate the corpus-wide
+      ``section_index.json`` even though Phase 3 is scoped to a pilot subset.
+    * ``legis_section_ids``: pre-built ``(title, section) -> d`` mapping. When
+      provided, skips the Phase 2 fetch entirely. ``None`` (the common case)
+      runs ``run_phase2_fetch`` against legis.la.gov.
     """
     containers, justia_sections = run_phase1(client, paths, titles=titles)
     if legis_section_ids is None:
-        # Phase 2 fetcher not yet implemented end-to-end; emit an empty index
-        # so callers can at least observe the gap.
-        legis_section_ids = {}
-    section_index = run_phase2_with_index(
-        paths,
-        justia_sections=justia_sections,
-        legis_section_ids=legis_section_ids,
-    )
+        section_index = run_phase2_fetch(
+            client,
+            paths,
+            justia_sections=justia_sections,
+            titles=phase2_titles if phase2_titles is not None else titles,
+        )
+    else:
+        section_index = run_phase2_with_index(
+            paths,
+            justia_sections=justia_sections,
+            legis_section_ids=legis_section_ids,
+        )
     sections = run_phase3(
         client,
         paths,
         containers=containers,
         justia_sections=justia_sections,
         section_index=section_index,
+        titles=titles,
     )
     stats = run_phase4(paths, containers, sections)
     if take_snapshot:
