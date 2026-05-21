@@ -183,3 +183,142 @@ def test_title47_subpart_letter_gap_O_to_Q(title47):
     assert "O" in subpart_letters
     assert "Q" in subpart_letters
     assert "P" not in subpart_letters
+
+
+# ---------- Title 9 (CODE_TITLE above CHAPTER) ----------
+
+@pytest.fixture(scope="module")
+def title9():
+    return parse_justia_title(_read("title-9"), expected_title_number="9")
+
+
+def test_title9_name_is_clean_not_concatenated(title9):
+    # Before the CODE_TITLE fix the Title 9 name was a mash of all the
+    # CC-shaped structural markers. Now it should just be the actual title.
+    title_containers = [
+        c for c in title9.containers if c.level == ContainerLevel.TITLE.value
+    ]
+    assert len(title_containers) == 1
+    name = title_containers[0].name
+    # The mangled-name regression: any of these substrings would indicate
+    # the old bug came back.
+    assert "CODE BOOK" not in name
+    assert "CODE TITLE" not in name
+    assert "PRELIMINARY" not in name
+    assert name == "CIVIL CODE--ANCILLARIES"
+
+
+def test_title9_has_code_book_and_code_title_levels(title9):
+    code_books = [c for c in title9.containers if c.level == ContainerLevel.CODE_BOOK.value]
+    code_titles = [c for c in title9.containers if c.level == ContainerLevel.CODE_TITLE.value]
+    assert code_books, "Title 9 should produce at least one code_book container"
+    assert code_titles, "Title 9 should produce code_title containers"
+    # The first CODE BOOK is I "OF PERSONS"
+    assert code_books[0].number == "I"
+    assert "OF PERSONS" in code_books[0].name
+
+
+def test_title9_code_title_sits_above_chapter(title9):
+    # §9:151 ("Public Records") lives under CODE TITLE III (ABSENT PERSONS)
+    # in CODE BOOK I, separate from §9:1's CODE TITLE I (NATURAL AND
+    # JURIDICAL PERSONS).
+    by_section = {s.section_number: s for s in title9.sections}
+    s151 = by_section.get("151")
+    assert s151 is not None
+    chain_levels = [c[0] for c in s151.container_chain]
+    # The chain should include code_book and code_title strictly BEFORE
+    # any chapter level (Title 9 mode).
+    assert ContainerLevel.CODE_BOOK.value in chain_levels
+    assert ContainerLevel.CODE_TITLE.value in chain_levels
+    if ContainerLevel.CHAPTER.value in chain_levels:
+        ct_idx = chain_levels.index(ContainerLevel.CODE_TITLE.value)
+        ch_idx = chain_levels.index(ContainerLevel.CHAPTER.value)
+        assert ct_idx < ch_idx, "code_title should come BEFORE chapter in Title 9"
+
+
+def test_title9_multiple_chapter_1s_disambiguated_by_code_title(title9):
+    # Title 9 contains many Chapter 1s — under CODE TITLE I (WOMEN), CODE
+    # TITLE III (UNIFORM UNCLAIMED PROPERTY ACT), CODE TITLE IV (MARRIAGE),
+    # CODE TITLE V (DIVORCE), etc. The parent_chain should disambiguate
+    # the vast majority of them. (A handful of code_titles legitimately
+    # contain two unrelated "Chapter 1"s in the Justia source — e.g., CODE
+    # TITLE II groups both LOUISIANA TRUST CODE and LOUISIANA UNIFORM
+    # ELECTRONIC TRANSACTIONS ACT as "Chapter 1" — those aren't a parser
+    # bug, they're source ambiguity.)
+    chapter_1s = [
+        c
+        for c in title9.containers
+        if c.level == ContainerLevel.CHAPTER.value and c.number == "1"
+    ]
+    assert len(chapter_1s) >= 10, (
+        f"expected ≥10 Chapter 1s in Title 9, got {len(chapter_1s)}"
+    )
+    parent_chains = {tuple(tuple(p) for p in c.parent_chain) for c in chapter_1s}
+    # Pre-fix would have given 1 parent chain (all under Title 9 directly).
+    # Post-fix we expect at least ~10 distinct code_title parents.
+    assert len(parent_chains) >= 10, (
+        f"code_title disambiguation should yield ≥10 distinct parent chains; "
+        f"got {len(parent_chains)}"
+    )
+
+
+# ---------- Title 15 (CODE_TITLE below CHAPTER) ----------
+
+@pytest.fixture(scope="module")
+def title15():
+    return parse_justia_title(_read("title-15"), expected_title_number="15")
+
+
+def test_title15_chapter1_name_is_clean(title15):
+    # Pre-fix: Chapter 1's name was concatenated with CODE TITLE I + II text.
+    chap1 = next(
+        c
+        for c in title15.containers
+        if c.level == ContainerLevel.CHAPTER.value and c.number == "1"
+    )
+    assert chap1.name == "CODE OF CRIMINAL PROCEDURE ANCILLARIES"
+
+
+def test_title15_has_code_title_under_chapter1(title15):
+    code_titles = [c for c in title15.containers if c.level == ContainerLevel.CODE_TITLE.value]
+    assert code_titles, "Title 15 should produce code_title containers"
+    # Every code_title in Title 15 must be a child of Chapter 1.
+    for ct in code_titles:
+        parent_levels = [p[0] for p in ct.parent_chain]
+        assert ContainerLevel.CHAPTER.value in parent_levels
+        chapter_parent = next(p for p in ct.parent_chain if p[0] == ContainerLevel.CHAPTER.value)
+        assert chapter_parent[1] == "1"
+
+
+def test_title15_code_title_sits_below_chapter(title15):
+    # §15:41 should chain as title 15 / chapter 1 / code_title IV.
+    by_section = {s.section_number: s for s in title15.sections}
+    s41 = by_section.get("41")
+    assert s41 is not None
+    levels = [c[0] for c in s41.container_chain]
+    assert ContainerLevel.CHAPTER.value in levels
+    assert ContainerLevel.CODE_TITLE.value in levels
+    ch_idx = levels.index(ContainerLevel.CHAPTER.value)
+    ct_idx = levels.index(ContainerLevel.CODE_TITLE.value)
+    assert ch_idx < ct_idx, "code_title should come AFTER chapter in Title 15"
+
+
+def test_title15_chapter2_part_does_not_carry_code_title(title15):
+    # Chapter 2 (EVIDENCE) uses regular PARTs, not CODE TITLEs. Sections
+    # under it should not have code_title in their chain.
+    by_section = {s.section_number: s for s in title15.sections}
+    # §15:421 lives in Chapter 2, Part II (according to the fixture).
+    # Pick any section whose chain shows chapter 2.
+    sample = next(
+        (
+            s
+            for s in title15.sections
+            if any(c[0] == ContainerLevel.CHAPTER.value and c[1] == "2" for c in s.container_chain)
+        ),
+        None,
+    )
+    assert sample is not None, "expected at least one section under Chapter 2 in Title 15"
+    levels = [c[0] for c in sample.container_chain]
+    assert ContainerLevel.CODE_TITLE.value not in levels, (
+        f"section §15:{sample.section_number} unexpectedly inherited a code_title slot"
+    )

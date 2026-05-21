@@ -28,6 +28,9 @@ def _level_label(c: Container) -> str:
     label_map = {
         ContainerLevel.TITLE.value: f"Title {c.number}",
         ContainerLevel.SUBTITLE.value: f"Subtitle {c.number}",
+        ContainerLevel.CODE_PRELIMINARY_TITLE.value: "Code Preliminary Title",
+        ContainerLevel.CODE_BOOK.value: f"Code Book {c.number}",
+        ContainerLevel.CODE_TITLE.value: f"Code Title {c.number}",
         ContainerLevel.CHAPTER.value: f"Chapter {c.number}",
         ContainerLevel.PART.value: f"Part {c.number}",
         ContainerLevel.SUBPART.value: f"Subpart {c.number}",

@@ -69,6 +69,9 @@ def _level_label_for_node(node: HierarchyNode) -> str:
     level_map = {
         "title": f"Title {node.number}",
         "subtitle": f"Subtitle {node.number}",
+        "code_preliminary_title": "Code Preliminary Title",
+        "code_book": f"Code Book {node.number}",
+        "code_title": f"Code Title {node.number}",
         "chapter": f"Chapter {node.number}",
         "part": f"Part {node.number}",
         "subpart": f"Subpart {node.number}",

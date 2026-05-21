@@ -50,6 +50,14 @@ def section_sort_key(num: str) -> Tuple[int, int, int]:
 class ContainerLevel(str, Enum):
     TITLE = "title"
     SUBTITLE = "subtitle"
+    # Civil-Code-shaped structural markers used in Titles 9 ("Civil Code—
+    # Ancillaries") and 15 ("Criminal Procedure"). Their position in the
+    # hierarchy is per-Title: in Title 9 they sit between TITLE and CHAPTER;
+    # in Title 15 the CODE_TITLE rung sits between CHAPTER and PART. The
+    # parser decides placement dynamically on first encounter per Title.
+    CODE_PRELIMINARY_TITLE = "code_preliminary_title"
+    CODE_BOOK = "code_book"
+    CODE_TITLE = "code_title"
     CHAPTER = "chapter"
     PART = "part"
     SUBPART = "subpart"

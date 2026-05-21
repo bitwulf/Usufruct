@@ -347,3 +347,105 @@ join-the-rest-with-`.`.
 - The cross-corpus integration test (one CC article + one Title 9 LRS
   section coexisting in one run) — defer to Wave 3 (Title 9) work.
 
+## 2026-05-21 — Justia cache bootstrap + Phase 1 full corpus run
+
+Justia is Cloudflare-protected. The 55 Justia HTML files (LRS root +
+54 per-Title pages) were captured manually into `lars-test/html/` exactly
+so we don't have to scrape Justia. Wrote `scripts/seed_justia_cache.py`
+to copy each fixture into the `CachedClient` cache at `data/raw/{sha[:2]}/`
+and register its source URL in `data/raw/index.json`. After one run of
+the seed script, `usufruct rs phase1` completes against the **full
+54-Title corpus offline** with zero network calls.
+
+### Phase 1 corpus-wide validation
+
+| Metric | Plan baseline | Actual |
+| --- | --- | --- |
+| Titles | 54 | 54 |
+| Section anchors | 46,232 | 46,232 (exact) |
+| Sub-decimal sections (e.g. 43.1.1) | 494 | 494 |
+| NOTE: annotations | ~296 | 297 |
+| Subtitle distribution T11/T30/T39/T47 | 4/2/3/11 | 4/2/3/11 |
+| Top Titles (33/40/47/22/9/17/13/37) | matches | matches |
+
+Top-loaded distribution is identical to the plan's table to the digit.
+
+## 2026-05-21 — Discovered + fixed Title 9/15 CC-structure parsing
+
+The Phase 1 corpus walk surfaced two Titles whose Justia hierarchy embeds
+Civil-Code-shaped structural markers that the plan didn't anticipate:
+
+- **Title 9** ("Civil Code—Ancillaries") has `CODE PRELIMINARY TITLE [BLANK]`,
+  `CODE BOOK I-IV`, and `CODE TITLE I-XXII` markers between the LRS Title
+  and its Chapters. Title 9 mirrors the Civil Code's own structure because
+  it's the ancillary statutes for CC.
+- **Title 15** ("Criminal Procedure") has `CODE TITLE I-XXX` markers
+  *under* `CHAPTER 1` only — Chapters 1-A, 2, 3, etc. use regular PART /
+  SUBPART hierarchy.
+
+Before the fix, our parser didn't recognize the `CODE *` regexes and
+treated every CODE marker as continuation text — concatenating them onto
+the prior container's name. Title 9's name became `"CIVIL CODE--
+ANCILLARIES CODE PRELIMINARY TITLE [BLANK] CODE BOOK I--OF PERSONS CODE
+TITLE I--NATURAL AND JURIDICAL PERSONS"`, and Title 15's Chapter 1 name
+included all 30 CODE TITLE labels.
+
+### The fix
+
+Three new `ContainerLevel` enum values, namespaced with `code_` to keep
+them distinct from CC's own `book`/`title`/`preliminary_title`:
+
+- `code_preliminary_title`
+- `code_book`
+- `code_title`
+
+`code_book` and `code_preliminary_title` always sit between TITLE and
+CHAPTER (their only observed home, in Title 9). `code_title` has
+**dynamic placement per-Title**: the walker tracks
+`_code_title_below_chapter: bool`, defaulting to False (above CHAPTER).
+On the first `CODE TITLE` encountered in a Title, if `CHAPTER` is already
+in scope, the flag flips to True for the rest of that Title — this is
+Title 15's case. Otherwise it stays False — Title 9's case.
+
+Two `LEVEL_ORDER` lists in `justia_title_parser.py` express the two
+placements; the walker switches between them via `_level_order()`.
+
+### Result
+
+- **R.S. 9:2800** now chains: `title 9 → code_preliminary_title → code_book III
+  → code_title V → chapter 2` (a 5-level chain that mirrors the Civil
+  Code's own Book III / Title V / Chapter 3 home for the parallel
+  liability article CC 2315). This is the structure Wave 3's cross-corpus
+  citation work depends on.
+- **Title 9 hierarchy** has 31 Chapter 1 containers across 4 CODE BOOKs;
+  29 of them have distinct `parent_chain`s (the other 2 collisions are
+  source ambiguity — CODE TITLE II in Title 9 genuinely contains two
+  unrelated "Chapter 1"s: LOUISIANA TRUST CODE and LOUISIANA UNIFORM
+  ELECTRONIC TRANSACTIONS ACT — no parser can invent a disambiguator).
+- **Title 15** ends up with a clean `title 15 / chapter 1 / code_title IV`
+  chain for sections in Chapter 1's CODE TITLE structure, and a clean
+  `title 15 / chapter 2 / part II / subpart I` chain for Chapter 2's
+  normal PART hierarchy.
+
+8 new tests pin Title 9 (`title9_*`) and Title 15 (`title15_*`) parsing.
+Full pytest: 110 passed (60 CC + 50 LRS), zero regressions.
+
+### Container count change
+
+| Level | Before | After | Δ |
+| --- | ---: | ---: | ---: |
+| title | 54 | 54 | 0 |
+| subtitle | 20 | 20 | 0 |
+| code_preliminary_title | — | 1 | +1 |
+| code_book | — | 4 | +4 |
+| code_title | — | 66 | +66 |
+| chapter | 1,594 | 1,595 | +1 |
+| part | 2,351 | 2,361 | +10 |
+| subpart | 1,406 | 1,410 | +4 |
+| subgroup | 18 | 18 | 0 |
+| **Total** | **5,443** | **5,529** | **+86** |
+
+Sections: 46,232 (unchanged). The +1 chapter and +10 parts came from
+Title 15 Chapter 2+'s previously-mangled PART headers now classifying
+correctly once CODE TITLE no longer ate their context.
+

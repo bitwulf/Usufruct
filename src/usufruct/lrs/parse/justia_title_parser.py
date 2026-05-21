@@ -43,6 +43,17 @@ from ..model import Container, ContainerLevel
 # ---------- regexes for classifying header lines ----------
 
 _BANNER_RE = re.compile(r"^LOUISIANA REVISED STATUTES$", re.IGNORECASE)
+# Civil-Code-shaped structural markers; matched BEFORE the bare TITLE regex
+# so e.g. "CODE TITLE I" doesn't get partially-eaten by a more permissive rule.
+_CODE_PRELIMINARY_TITLE_RE = re.compile(
+    r"^CODE\s+PRELIMINARY\s+TITLE\b\s*[\.\-]*\s*(.*)$", re.IGNORECASE
+)
+_CODE_BOOK_RE = re.compile(
+    r"^CODE\s+BOOK\s+([IVXLCDM]+(?:-[A-Z])?)\s*[\.\-]*\s*(.*)$", re.IGNORECASE
+)
+_CODE_TITLE_RE = re.compile(
+    r"^CODE\s+TITLE\s+([IVXLCDM]+(?:-[A-Z])?)\s*[\.\-]*\s*(.*)$", re.IGNORECASE
+)
 _TITLE_RE = re.compile(r"^TITLE\s+(\d+(?:-[A-Z])?)\b\.?\s*(.*)$", re.IGNORECASE)
 _SUBTITLE_RE = re.compile(r"^SUBTITLE\s+([IVXLCDM]+(?:-[A-Z])?)\b\.?\s*(.*)$", re.IGNORECASE)
 _CHAPTER_RE = re.compile(r"^CHAPTER\s+(\d+(?:-[A-Z])?)\b\.?\s*(.*)$", re.IGNORECASE)
@@ -67,12 +78,31 @@ _SECTION_TEXT_RE = re.compile(
 
 # ---------- header classification ----------
 
-#: Ordering of container levels from shallow to deep. Deeper container levels
-#: are reset when a shallower level changes.
+#: Default level ordering — used when CODE_TITLE sits ABOVE CHAPTER
+#: (e.g. Title 9, where CODE BOOK / CODE TITLE come between TITLE and CHAPTER).
 LEVEL_ORDER = [
     ContainerLevel.TITLE,
     ContainerLevel.SUBTITLE,
+    ContainerLevel.CODE_PRELIMINARY_TITLE,
+    ContainerLevel.CODE_BOOK,
+    ContainerLevel.CODE_TITLE,
     ContainerLevel.CHAPTER,
+    ContainerLevel.PART,
+    ContainerLevel.SUBPART,
+    ContainerLevel.SUBGROUP,
+]
+
+#: Alternate level ordering — CODE_TITLE sits BELOW CHAPTER (e.g. Title 15,
+#: where CHAPTER 1 contains CODE TITLE I … XXX rather than the other way
+#: around). The walker switches to this ordering on the first CODE_TITLE
+#: encountered after a CHAPTER has already been established in a Title.
+LEVEL_ORDER_CODE_TITLE_BELOW_CHAPTER = [
+    ContainerLevel.TITLE,
+    ContainerLevel.SUBTITLE,
+    ContainerLevel.CODE_PRELIMINARY_TITLE,
+    ContainerLevel.CODE_BOOK,
+    ContainerLevel.CHAPTER,
+    ContainerLevel.CODE_TITLE,
     ContainerLevel.PART,
     ContainerLevel.SUBPART,
     ContainerLevel.SUBGROUP,
@@ -121,7 +151,9 @@ def _classify_header_line(line: str) -> Optional[Tuple[ContainerLevel, str, str]
     """Return (level, number, name) for a hierarchy header line, or None.
 
     NOTE: paragraphs and the LOUISIANA REVISED STATUTES banner return None
-    (caller filters them out).
+    (caller filters them out). CODE_* regexes are checked before the regular
+    levels because their prefixes ("CODE PRELIMINARY TITLE", "CODE BOOK",
+    "CODE TITLE") would otherwise be misread as continuation text.
     """
     s = line.strip()
     if not s:
@@ -130,6 +162,16 @@ def _classify_header_line(line: str) -> Optional[Tuple[ContainerLevel, str, str]
         return None
     if _NOTE_RE.match(s):
         return None
+    m = _CODE_PRELIMINARY_TITLE_RE.match(s)
+    if m:
+        # Single slot; use "1" to satisfy the schema's min_length on number.
+        return ContainerLevel.CODE_PRELIMINARY_TITLE, "1", m.group(1).strip()
+    m = _CODE_BOOK_RE.match(s)
+    if m:
+        return ContainerLevel.CODE_BOOK, m.group(1), m.group(2).strip()
+    m = _CODE_TITLE_RE.match(s)
+    if m:
+        return ContainerLevel.CODE_TITLE, m.group(1), m.group(2).strip()
     m = _TITLE_RE.match(s)
     if m:
         return ContainerLevel.TITLE, m.group(1), m.group(2).strip()
@@ -209,7 +251,8 @@ def parse_justia_title(html: str, expected_title_number: Optional[str] = None) -
 class _Walker:
     title_number: str = ""
     # Stack of (level, container). At any point: at most one container per
-    # level. Order matches LEVEL_ORDER.
+    # level. Order matches the current LEVEL_ORDER (which may flip per-Title
+    # via _code_title_below_chapter).
     context: Dict[ContainerLevel, Optional[Container]] = field(default_factory=dict)
     containers: List[Container] = field(default_factory=list)
     sections: List[JustiaSectionEntry] = field(default_factory=list)
@@ -217,10 +260,22 @@ class _Walker:
     # Dedup by (level, number, name, parent_chain) so duplicate-header
     # idempotence holds: re-emitting the same header is a no-op.
     _seen_keys: set = field(default_factory=set)
+    # Per-Title dynamic placement of CODE_TITLE. False = above CHAPTER
+    # (the default, used by Title 9); True = below CHAPTER (Title 15). Set
+    # on first CODE_TITLE encounter based on whether CHAPTER is already in
+    # scope.
+    _code_title_below_chapter: bool = False
+
+    def _level_order(self) -> List[ContainerLevel]:
+        return (
+            LEVEL_ORDER_CODE_TITLE_BELOW_CHAPTER
+            if self._code_title_below_chapter
+            else LEVEL_ORDER
+        )
 
     def _current_chain_triples(self) -> List[Tuple[str, str, str]]:
         out: List[Tuple[str, str, str]] = []
-        for lvl in LEVEL_ORDER:
+        for lvl in self._level_order():
             c = self.context.get(lvl)
             if c is not None:
                 out.append((c.level if isinstance(c.level, str) else c.level.value, c.number, c.name))
@@ -228,7 +283,7 @@ class _Walker:
 
     def _parent_chain_for(self, level: ContainerLevel) -> List[Tuple[str, str]]:
         out: List[Tuple[str, str]] = []
-        for lvl in LEVEL_ORDER:
+        for lvl in self._level_order():
             if lvl == level:
                 break
             c = self.context.get(lvl)
@@ -238,8 +293,9 @@ class _Walker:
 
     def _reset_deeper(self, level: ContainerLevel) -> None:
         """Clear container slots strictly deeper than ``level``."""
-        idx = LEVEL_ORDER.index(level)
-        for deeper in LEVEL_ORDER[idx + 1 :]:
+        order = self._level_order()
+        idx = order.index(level)
+        for deeper in order[idx + 1 :]:
             self.context[deeper] = None
 
     def apply_header_line(self, level: ContainerLevel, number: str, name: str) -> Optional[Container]:
@@ -248,6 +304,18 @@ class _Walker:
         Returns the container (existing one if a true duplicate, freshly
         created otherwise). Idempotent on exact duplicates.
         """
+        # CODE_TITLE placement decision (one-shot per Title): if this is the
+        # first CODE_TITLE we see AND a CHAPTER is already in scope, flip to
+        # the "code_title below chapter" ordering so the existing Chapter
+        # stays in context as the section's true parent.
+        if (
+            level == ContainerLevel.CODE_TITLE
+            and not self._code_title_below_chapter
+            and self.context.get(ContainerLevel.CODE_TITLE) is None
+            and self.context.get(ContainerLevel.CHAPTER) is not None
+        ):
+            self._code_title_below_chapter = True
+
         current = self.context.get(level)
         if (
             current is not None
