@@ -1801,3 +1801,194 @@ aggregates (`data/rs/*.json{l,csv}` + Title 1 per-section JSONs).
   (~2,500, municipalities — second Subtitle wave), Title 17
   (~3,500, education — largest remaining mid-tier title).
 
+## 2026-05-22 — Wave 6 (Title 23 Labor and Worker's Compensation) end-to-end
+
+Sixth wave. Title 23 lands clean with **zero source-code edits**
+(third consecutive pure data-pipeline wave). The actual section
+count was 872, ~25% over the handoff estimate of ~700, which made
+the wall-clock cost a touch higher than projected but well inside
+the small-blast-radius envelope. Cross-corpus citation behavior
+mostly matched the W5 briefing: T22 (insurance) cross-refs were
+modest but real (19 edges); T33 (municipalities) cross-refs turned
+out small (2 edges), so the "stresses LRS→LRS resolver against
+T33" prediction in the briefing was overstated. T22→T23 traffic was
+the more interesting cross-corpus signal.
+
+### Scope
+
+- **872 sections** in `data/rs/sections/rs_23_*.json` (handoff
+  estimated ~700; actual `section_index.json` count was 872).
+  Status: **726 active + 143 repealed + 3 blank**.
+- **128 containers** for Title 23: 1 title + 0 subtitles + 23
+  chapters + 70 parts + 34 subparts. Same structural shape as
+  Title 14 (no Subtitle level). `hierarchy.json` total unchanged
+  at 5,529 (T23 containers were already present from corpus-wide
+  Phase 1).
+- Tree `max_depth = 7` (unchanged from W5; T23 has no Subtitle so
+  T23's deepest chain is depth-4 title/chapter/part/subpart).
+  Depth distribution for T23: 83 at depth 2 (title/chapter), 486
+  at depth 3 (title/chapter/part), 303 at depth 4
+  (title/chapter/part/subpart).
+
+### Process
+
+1. `.venv/bin/usufruct rs phase3 --titles 1,9,14,22,47,23` —
+   symmetric form, 5 cached titles short-circuited, T23 fetched
+   fresh. Wall time ~7.5 min for the 872 fresh fetches at 2 req/s.
+2. `.venv/bin/usufruct rs phase4` — ~10s; rebuilt
+   tree/edges/chunks/markdown across the 9,265-section union.
+3. Verification via `lars-test/wave6_verify.py` (new, adapted from
+   wave5_verify.py with title filter and T22/T33 cross-ref
+   spotlights): depth distribution, acts-parse rate, citation edge
+   breakdown, validation report.
+4. `.venv/bin/pytest -q` → **169 passed, zero regressions.**
+
+### Output deltas
+
+| Metric | Pre-Wave 6 (W1–5) | Post-Wave 6 | Δ |
+| --- | --- | --- | --- |
+| Sections emitted | 8,393 | 9,265 | +872 |
+| Containers (hierarchy) | 5,529 | 5,529 | 0 (T23 was already in hierarchy.json) |
+| Tree max depth | 7 | 7 | 0 (T23 has no Subtitle) |
+| ActsCitation records | 15,745 | 17,827 | +2,082 |
+| Citation edges | 7,706 | 8,386 | +680 |
+| RAG chunks | 6,625 | 7,346 | +721 |
+| Markdown files | 8,393 | 9,265 | +872 |
+| Pytest passing | 169 | 169 | 0 |
+
+`validation_report.sections_without_hierarchy = []` (clean).
+`in_section_index_but_unemitted = 36,231` (down from 37,103 by
+exactly 872 — the T23 delta).
+
+### Title 23 citation-edge breakdown
+
+680 edges from Title 23 sources (~0.78/section — lowest density of
+any wave so far, slightly below T22's 0.82; consistent with the
+labor-statute style of self-contained Chapter-internal references).
+By destination corpus:
+
+| Dst corpus | Count |
+| --- | --- |
+| `rs` (intra-LRS) | 671 |
+| `ccp` | 5 |
+| `civcode` | 4 |
+| `crp` | 0 |
+| `evidence` | 0 |
+
+Top intra-LRS destinations: T23 self=561 (82.5% of T23-source rs
+edges — the densest self-ref ratio yet), **T22=19** (insurance,
+matches briefing prediction), T49=15 (state administration), T42=10,
+T13=7 (courts), T40=5, T36=5, T9=5 (CC family), T51=4, T17=4
+(education), T29=4 (military), T46=4 (public welfare), **T33=2**
+(municipalities — far smaller than the briefing predicted "heavy
+cross-references"). The T22 link is concentrated in the
+worker-comp Chapters; the T49 link reflects the LWC (Louisiana
+Workforce Commission) administrative structure.
+
+### Acts parsing: 1 active raw-unparsed (new pattern family)
+
+**Active parse rate 640 / 726 = 88.15%**, between T14 (94.20%) and
+T22 (69.22%). The gap breaks down as:
+
+- **85 sections with no acts-line at all** (`acts_citations_raw is
+  null`) — legitimate; the legis page carries body only. In-family
+  with T9 (363/2022), T22 (774/2518), T47 (205/2239). Not a parse
+  failure.
+- **1 section with raw text that didn't parse** — new pattern
+  family:
+
+| Family | Count | Example |
+| --- | --- | --- |
+| Trailing federal-code footnote (`1 42 U.S.C.A. §1103.`) | 1 | R.S. 23:1491: `Amended by Acts 1959, No. 4, §1. 1 42 U.S.C.A. §1103.` |
+
+This is a single instance, very narrow. The first token (the
+single digit `1`) is the footnote anchor; `42 U.S.C.A. §1103.` is
+the federal-code reference. The parser stops at the first
+non-Acts-line token, which here is the literal `1`. Adding this to
+the consolidated CC-touch backlog rather than fixing standalone.
+
+**Corpus active parse rate**: 81.03% → **81.66%** (+0.63 points).
+**Per-title active parse rates**: T1 53.66%, T9 82.05%, T14
+94.20%, T22 69.22%, T23 88.15%, T47 90.04%.
+
+**No CC-touch budget consumed this wave.** Per the standing rule,
+the 1 T23 raw-unparsed is deferred and folded into the existing
+consolidated escalation backlog (18 T47 in 5 families + the
+`eff. See Act` family).
+
+### Marquee spot-checks
+
+| Citation | Heading | Depth | Body | Acts records | Breadcrumb |
+| --- | --- | --- | --- | --- | --- |
+| R.S. 23:1 | Louisiana Works established; purpose; definitions | 3 | 2,349 b | 8 | Title 23 › Chapter 1 › Part I |
+| R.S. 23:301 | Short title | 3 | 94 b | 1 | Title 23 › Chapter 3-A › Part I |
+| R.S. 23:631 | Discharge or resignation of employees; payment after termination | 2 | 4,206 b | 8 | Title 23 › Chapter 6 |
+| R.S. 23:1031 | Employee's right of action; joint employers, extent of liability | 4 | 2,941 b | 2 | Title 23 › Chapter 10 › Part I › Subpart B |
+| R.S. 23:1491 | Establishment and control | 4 | 950 b | 0 | Title 23 › Chapter 11 › Part II › Subpart A (RAW-UNPARSED — federal-code footnote tail) |
+
+R.S. 23:631 lands at depth 2 (chapter-direct), the most common
+shallow shape in Title 23 — Chapter 6 has its sections attached
+directly under Chapter without any intervening Part. R.S.
+23:1031 (the worker's-comp action statute) lands at the deepest
+T23 depth, depth 4.
+
+### Tests
+
+Test count unchanged at **169 passed** (87 CC + 82 LRS). No new
+acts-parser tests, no new fixtures promoted. `lars-test/html/
+title-23.html` (Justia index, ~4.6 k lines) is a candidate for
+promotion to `tests/fixtures/lrs/justia/title-23.html` to match
+the W4 precedent for T22, but Title 23's Justia parse is
+unremarkable — no new structural features to exercise — so it's
+fine to defer until a wave needs the fixture.
+
+### Source changes
+
+**None.** Third consecutive wave with zero edits to any file
+under `src/usufruct/`. Wave 6 is a pure data-pipeline rerun +
+new verification helper.
+
+Filesystem changes outside `data/rs/`:
+
+| Path | Change |
+| --- | --- |
+| `lars-test/wave6_verify.py` | NEW (read-only verification harness, retained for reuse — gitignored under lars-test/) |
+| `BUILDHISTORY.md` | This entry. |
+
+### Snapshot
+
+Cut to `snapshots/lrs-2026-05-22-w6/`. Per the W5 collision
+note, the CLI emits to `snapshots/lrs-<date>/` and same-day
+snapshots collide, so the snapshot was renamed post-write to
+disambiguate (W4 → lrs-2026-05-22/ was already overwritten by
+W5; W5 = lrs-2026-05-22-w5/; W6 = lrs-2026-05-22-w6/). W4
+state remains recoverable from commit `61923fd`.
+
+### Standing items (carry forward)
+
+- **Drop Phase 3 bypass** (`_hierarchy_path_from_justia_chain`
+  in orchestrate.py): still deferred. Prior session broke
+  something attempting this cleanup; root cause was never
+  captured in the standing-items notes, so don't touch without
+  reconstructing the breakage first.
+- **Consolidated CC-touch backlog** (third escalation will fix
+  all of these together once sized):
+  - 18 Title 47 active raw-unparsed in 5 pattern families.
+  - 1 Title 23 active raw-unparsed (federal-code footnote tail
+    in R.S. 23:1491).
+  - `eff. See Act` family (R.S. 22:1059.7 / R.S. 1:60).
+  - Should-parse-but-don't trio (R.S. 47:813 / 47:1542.1 /
+    47:641) — needs diagnostic-before-fix (trace why
+    `parse_acts_citation_line` returns 0 records on
+    `Acts 1964, Ex.Sess., No. 3, §2.` in solo-citation
+    context, when Ex.Sess. parses 76/87 times corpus-wide).
+- **Wave 7 candidates** (smallest first): Title 13 (~1,500,
+  courts & judicial procedure — no Subtitles), Title 39
+  (~1,500, state finance), Title 49 (~1,200, state
+  administration), Title 33 (~2,500, municipalities — second
+  Subtitle wave), Title 17 (~3,500, education — largest
+  remaining mid-tier title). Title 49 has appeal as a small
+  cross-ref hub (already a T47/T23 destination); Title 13 is
+  the natural next "small" wave for a 5th consecutive no-edit
+  rerun.
+
