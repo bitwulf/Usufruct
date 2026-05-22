@@ -1801,6 +1801,245 @@ aggregates (`data/rs/*.json{l,csv}` + Title 1 per-section JSONs).
   (~2,500, municipalities — second Subtitle wave), Title 17
   (~3,500, education — largest remaining mid-tier title).
 
+## 2026-05-22 — Wave 10 (Title 13 Courts and Judicial Procedure) end-to-end
+
+Tenth wave. Title 13 lands clean with **zero source-code edits**
+(seventh consecutive pure data-pipeline wave). Four notable
+features distinguish W10:
+
+- **Fourth consecutive exact inbound-closure wave — now across
+  eight sources simultaneously.** Pre-W10 the corpus carried 145
+  unresolved-but-recorded edges into T13 from the prior nine
+  titles. Post-W10: all eight source-title totals match exactly
+  (T9=33, T47=31, T14=23, T39=23, T22=14, T49=9, T23=7, T42=5;
+  sum 145=145, every source perfectly matched). The cross-corpus
+  citation resolver has now landed exact predictions across
+  W7/W8/W9/W10 (15 + 22 + 16 + 24 + 22 + 145-from-8-sources = 244
+  cross-wave edges all correctly predicted).
+- **Heaviest non-`rs` outbound of any wave.** T13 source edges
+  break down `rs` 1,094 / `ccp` 94 / `crp` 22 / `civcode` 14 /
+  `evidence` 11 — **141 cross-corpus edges**, by far the most of
+  any single Title. This validates the briefing's prediction
+  that T13 (judicial procedure) would be a civcode/ccp cross-ref
+  exercise. For scale: T42 (W9) had 9 civcode + 0 ccp; T13 has
+  14 civcode + 94 ccp + 22 crp + 11 evidence — judicial procedure
+  references the procedural and evidentiary codes much more
+  heavily than substantive titles do.
+- **Largest single section landed in any wave.** R.S. 13:5554
+  (Group insurance; kinds; amounts; subrogation) = **72,326 b
+  with 81 acts records** — surpassing the prior champion R.S.
+  42:1123 (Code of Ethics Exceptions, 44,268 b). T13 carries
+  several big sections in the public-retirement / state-liability
+  / specialty-court chapters.
+- **First wave to nudge corpus parse rate UP.** Corpus active
+  parse rate edged **82.88%** (up from W9's 82.86%, +0.02 pts).
+  T13's own rate of 82.96% sits slightly above the pre-W10 corpus
+  rate, so the addition is mildly accretive — the opposite of
+  W9's structural drag.
+
+### Scope
+
+- **2,033 sections** in `data/rs/sections/rs_13_*.json` — **the
+  largest wave so far**, 4.4× W9's T42 (458). Status: **1,807
+  active + 221 repealed + 5 blank**.
+- T13 has no Subtitles (depth-4 max profile, same shape as
+  T14/T22/T23/T42/T49). The `hierarchy.json` containers built by
+  phase4 produce 321 sections at depth 2 (chapter-direct), 1,191
+  at depth 3 (chapter/part — the modal shape), 521 at depth 4
+  (chapter/part/subpart).
+- Tree `max_depth = 7` (unchanged corpus-wide). T13's deepest
+  example: R.S. 13:581 → Title 13 › Chapter 4 › Part III ›
+  Subpart A.
+
+### Process
+
+1. `.venv/bin/usufruct rs phase3 --titles 1,9,14,22,47,23,49,39,42,13` —
+   symmetric form, 9 cached titles short-circuited, T13 fetched
+   fresh. Wall time ~17 min for the 2,033 fresh fetches at 2 req/s
+   (the longest single wave fetch yet).
+2. `.venv/bin/usufruct rs phase4` — rebuilt
+   tree/edges/chunks/markdown across the 13,709-section union.
+3. Verification via `lars-test/wave10_verify.py` (new, adapted
+   from wave9_verify.py): per-source inbound prediction check
+   across all 8 prior-processed titles vs the captured baseline.
+4. `.venv/bin/pytest -q` → **169 passed, zero regressions.**
+
+### Output deltas
+
+| Metric | Pre-Wave 10 (W1–9) | Post-Wave 10 | Δ |
+| --- | --- | --- | --- |
+| Sections emitted | 11,676 | 13,709 | +2,033 |
+| Active / Repealed / Blank | 10,189 / 1,464 / 23 | 11,996 / 1,685 / 28 | +1,807 / +221 / +5 |
+| Containers (hierarchy) | 5,529 | 5,529 | 0 (T13 already in hierarchy.json) |
+| Tree max depth | 7 | 7 | 0 |
+| ActsCitation records | 22,530 | 26,427 | +3,897 |
+| Citation edges | 10,033 | 11,268 | +1,235 |
+| RAG chunks | 9,287 | 11,034 | +1,747 |
+| Markdown files | 11,676 | 13,709 | +2,033 |
+| Pytest passing | 169 | 169 | 0 |
+
+`validation_report.sections_without_hierarchy = 0` (clean).
+`in_section_index_but_unemitted = 31,787` (down from 33,820 by
+exactly 2,033 — the T13 delta).
+
+### Cross-corpus inbound validation — eight exact matches in one wave
+
+| Source | Briefing prediction | Observed |
+| --- | --- | --- |
+| T9 → T13 | 33 | **33** ✓ |
+| T47 → T13 | 31 | **31** ✓ |
+| T14 → T13 | 23 | **23** ✓ |
+| T39 → T13 | 23 | **23** ✓ |
+| T22 → T13 | 14 | **14** ✓ |
+| T49 → T13 | 9 | **9** ✓ |
+| T23 → T13 | 7 | **7** ✓ |
+| T42 → T13 | 5 | **5** ✓ |
+| **Sum** | **145** | **145** ✓ |
+
+The prior wave-by-wave closures (W7 T23/T47→T49 = 37, W8 T49→T39 =
+16, W9 T49+T39→T42 = 46) targeted at most two source titles per
+test. W10's single-shot eight-way exact match is the strongest
+evidence yet that the resolver doesn't lose accuracy as more
+sources are folded in.
+
+### Title 13 citation-edge breakdown
+
+1,235 edges from Title 13 sources (~0.61/section — same range
+as T39 0.63 and T49 0.71). By destination corpus:
+
+| Dst corpus | Count |
+| --- | --- |
+| `rs` (intra-LRS) | 1,094 |
+| `ccp` | 94 |
+| `crp` | 22 |
+| `civcode` | 14 |
+| `evidence` | 11 |
+
+**141 non-rs edges** — judicial procedure rightly anchors itself
+to the procedural/evidentiary codes much more than substantive
+titles. Top intra-LRS destinations: T13 self=666 (54% self-ref),
+T14=90 (criminal law — heavy proc cross-refs), T40=49 (public
+health), T33=46 (municipalities), T15=30 (crim proc — paired
+with the 22 to `crp`), T46=22 (welfare), T9=22 (civil-code
+ancillaries), T47=22, T44=18 (clerks of court), T32=15, T22=14,
+T17=13.
+
+### Acts parsing: 12 active raw-unparsed (six families, four new)
+
+**Active parse rate 1,499 / 1,807 = 82.96%**. T13 sits in the
+middle of the per-title distribution (above T9 82.05%, below
+T23 88.15%). 296 active sections legitimately have no acts-line
+(`acts_citations_raw is null` — 16.4% of T13 active).
+
+Of the 12 active raw-unparsed, **6 fold into existing
+backlog families** and **6 surface NEW families**:
+
+| Family | Count this wave | Cumulative cross-Title | Example |
+| --- | --- | --- | --- |
+| **`Ex.Sess.` (no-space)** — existing top-backlog family | 5 | 21 | R.S. 13:621.6 / 621.8 / 621.20 / 621.28 / 1597 |
+| **`eff. See Act`** — existing (was T22:1059.7 only) | 1 | 2 | R.S. 13:2623 (`Acts 2025, No. 155, §1, eff. See Act.`) |
+| **`emerg. eff.` + trailing time-of-day** — promoted from one-off | 1 | 2 | R.S. 13:2488.2 (`emerg. eff. July 4, 1968, at 10:05 A.M.`) |
+| **`operative` (vs `eff.`)** — NEW family | 1 | 1 | R.S. 13:312.2 (`§1, operative Aug. 1, 1975.`) |
+| **`§N(A)` parenthesized subsection** — NEW family | 1 | 1 | R.S. 13:621.12 (`§2(A), eff. June 8, 1984.`) |
+| **`Act No.` (instead of `No.`)** — NEW family | 1 | 1 | R.S. 13:2087 (`Acts 1983, Act No. 442, §1, ...`) |
+| **Typo `No,` (comma where period belongs)** — NEW data quality | 1 | 1 | R.S. 13:2562.3 (`Acts 1966, No, 5, §3, ...`) |
+| **Trailing comma (truncated acts-line)** — NEW data quality | 1 | 1 | R.S. 13:5727 (`Acts 2022, No. 403, §1,`) |
+
+Two of the new families look like data-quality issues at the
+legis source (the typo `No,` and the trailing-comma truncation),
+not parser gaps — those would survive a corpus-wide CC-touch
+unchanged but might be patched by an LRS-side reparse layer
+(see [[feedback_cc_touch_budget_strategy]] for the architectural
+clarification).
+
+**Corpus active parse rate**: 82.86% → **82.88%** (+0.02 pts —
+**first wave to lift corpus parse rate** rather than depress it).
+**Per-title active parse rates**: T1 53.66%, T9 82.05%, T13
+82.96%, T14 94.20%, T22 69.22%, T23 88.15%, T39 90.58%, T42
+77.07%, T47 90.04%, T49 90.70%.
+
+**No CC-touch budget consumed this wave.** The 12 T13 raw-
+unparsed are deferred and fold into the (now reframed) LRS-
+side parser-extension backlog.
+
+### Marquee spot-checks
+
+| Citation | Heading | Depth | Text | Acts records | Breadcrumb |
+| --- | --- | --- | --- | --- | --- |
+| R.S. 13:1 | Duties of the minute clerks of courts of Orleans Parish | 3 | 530 b | 2 | Title 13 › Chapter 1 › Part I |
+| R.S. 13:42 | Judicial Compensation Commission; creation; membership | 2 | 924 b | 2 | Title 13 › Chapter 1-B |
+| R.S. 13:581 | Judge's powers at chambers | 4 | 97 b | 0 | Title 13 › Chapter 4 › Part III › Subpart A |
+| R.S. 13:961 | Court reporters; generally | 3 | 16,959 b | 23 | Title 13 › Chapter 4 › Part V (heaviest single-source inbound: 33 from T9) |
+| R.S. 13:4202 | Rates of judicial interest | 3 | 3,263 b | 4 | Title 13 › Chapter 23 › Part I (heavily cross-cited — 28 inbound) |
+| **R.S. 13:5554** | **Group insurance; kinds; amounts; subrogation** | 3 | **72,326 b** | **81** | Title 13 › Chapter 35 › Part I (heaviest single section corpus-wide) |
+| R.S. 13:5366 | The Veterans Court program | 2 | 21,393 b | 2 | Title 13 › Chapter 33-B (specialty-court program) |
+| R.S. 13:2623 | Territorial jurisdiction; Iberville Parish justice of the peace courts | 3 | 1,134 b | 0 | Title 13 › Chapter 9 › Part II (RAW-UNPARSED — `eff. See Act`) |
+| R.S. 13:621.6 | Sixth judicial district | 4 | 56 b | 0 | Title 13 › Chapter 4 › Part III › Subpart B (RAW-UNPARSED — `Ex.Sess.` no-space, 5 of T13's 12 are this family) |
+
+R.S. 13:5554 is the new heaviest single section corpus-wide (72KB
+body, 81 acts records — a state-employee group insurance statute
+with decades of amendment history; the prior heavyweight R.S.
+42:1123 was 44KB). R.S. 13:961 (Court reporters; generally) is
+the most-inbound T13 section at 33 inbound edges — heavily
+referenced from sibling clerks-of-court statutes.
+
+### Tests
+
+Test count unchanged at **169 passed** (87 CC + 82 LRS). No new
+acts-parser tests, no new fixtures promoted.
+
+### Source changes
+
+**None.** Seventh consecutive wave with zero edits to any file
+under `src/usufruct/`. Wave 10 is a pure data-pipeline rerun +
+new verification helper.
+
+Filesystem changes outside `data/rs/`:
+
+| Path | Change |
+| --- | --- |
+| `lars-test/wave10_verify.py` | NEW (read-only verification harness with per-source inbound assertions, retained for reuse — gitignored under lars-test/) |
+| `BUILDHISTORY.md` | This entry. |
+
+### Snapshot
+
+Cut to `snapshots/lrs-2026-05-22-w10/` (223 MB). Per the standing
+collision pattern, the CLI emits to `snapshots/lrs-<date>/` and
+same-day snapshots collide, so the snapshot was renamed post-
+write (W5–W10 all renamed). W4 state remains recoverable from
+commit `61923fd`.
+
+### Standing items (carry forward)
+
+- **Drop Phase 3 bypass** (`_hierarchy_path_from_justia_chain`):
+  still deferred. Prior breakage uncaptured ([[project_hierarchy_bypass_prior_breakage]]).
+- **LRS-side parser-extension backlog** — now **45 active raw-
+  unparsed** (was 33 post-W9):
+  - T13 (12 in 8 families — 5 to existing Ex.Sess. no-space + 1
+    to eff. See Act + 1 to emerg.eff. + 6 NEW families)
+  - T47 (18 in 5 sub-families)
+  - T39 (8 in 4 sub-families)
+  - T49 (3 in 3 sub-families)
+  - T42 (2 in 1 family — `Ex. Sess.` space form)
+  - T23 (1 federal-code footnote)
+  - T22 (1 `eff. See Act` — now 2 cross-Title with T13:2623)
+  - Highest-fix-leverage family: `Ex.Sess.` (no-space) at 21
+    cross-Title instances. Six NEW T13 families surfaced this
+    wave (`operative`, `§N(A)` parenthesized, `Act No.`, typo
+    `No,`, trailing-comma truncation, plus two data-quality
+    issues that won't yield to regex alone).
+- **Wave 11 candidates** (smallest first):
+  - Title 38 (T39 emits 26 outbound into T38 + T47 emits some;
+    inbound-closure candidate — would be **fifth consecutive**
+    exact-match test).
+  - Title 33 (~2,500, municipalities — third Subtitle wave;
+    T39 emits 7, T13 emits 46 into T33).
+  - Title 17 (~3,500, education — T42 emits 15, T39 emits 29,
+    T13 emits 13 into T17; combined ~57-edge inbound-closure).
+  - Title 40 (T13 emits 49 into T40 — heaviest T13 outbound
+    after self; would be the largest single-source inbound-
+    closure prediction yet).
+
 ## 2026-05-22 — Wave 9 (Title 42 Public Officers and Employees) end-to-end
 
 Ninth wave. Title 42 lands clean with **zero source-code edits**

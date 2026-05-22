@@ -7,6 +7,1241 @@ urn:us-la:rs:1:55,rs,1:55,rs,7:85,urn:us-la:rs:7:85,R.S. 7:85,11491
 urn:us-la:rs:1:55,rs,1:55,rs,29:251.2,urn:us-la:rs:29:251.2,R.S. 29:251.2,20052
 urn:us-la:rs:1:55,rs,1:55,ccp,5059,,Code of Civil Procedure Article 5059,19236
 urn:us-la:rs:1:59,rs,1:59,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,247
+urn:us-la:rs:13:10.4,rs,13:10.4,rs,15:262,urn:us-la:rs:15:262,R.S. 15:262,804
+urn:us-la:rs:13:50,rs,13:50,rs,13:5521,urn:us-la:rs:13:5521,R.S. 13:5521,1202
+urn:us-la:rs:13:82.1,rs,13:82.1,rs,13:83,urn:us-la:rs:13:83,R.S. 13:83,716
+urn:us-la:rs:13:82.1,rs,13:82.1,rs,39:51,urn:us-la:rs:39:51,R.S. 39:51,938
+urn:us-la:rs:13:83,rs,13:83,rs,39:51,urn:us-la:rs:39:51,R.S. 39:51,685
+urn:us-la:rs:13:101.3,rs,13:101.3,rs,13:101.2,urn:us-la:rs:13:101.2,R.S. 13:101.2,121
+urn:us-la:rs:13:101.3,rs,13:101.3,rs,13:101.2,urn:us-la:rs:13:101.2,R.S. 13:101.2,507
+urn:us-la:rs:13:103,rs,13:103,rs,13:124,urn:us-la:rs:13:124,R.S. 13:124,217
+urn:us-la:rs:13:128,rs,13:128,rs,13:931,urn:us-la:rs:13:931,R.S. 13:931,97
+urn:us-la:rs:13:128,rs,13:128,rs,13:391,urn:us-la:rs:13:391,R.S. 13:391,476
+urn:us-la:rs:13:128,rs,13:128,rs,13:931,urn:us-la:rs:13:931,R.S. 13:931,699
+urn:us-la:rs:13:312.1,rs,13:312.1,rs,13:312,urn:us-la:rs:13:312,R.S. 13:312,2140
+urn:us-la:rs:13:312.1,rs,13:312.1,rs,13:312,urn:us-la:rs:13:312,R.S. 13:312,2289
+urn:us-la:rs:13:321,rs,13:321,rs,13:312,urn:us-la:rs:13:312,R.S. 13:312,263
+urn:us-la:rs:13:352,rs,13:352,rs,13:351,urn:us-la:rs:13:351,R.S. 13:351,2570
+urn:us-la:rs:13:392,rs,13:392,rs,13:352,urn:us-la:rs:13:352,R.S. 13:352,1323
+urn:us-la:rs:13:471,rs,13:471,rs,13:472,urn:us-la:rs:13:472,R.S. 13:472,18
+urn:us-la:rs:13:476,rs,13:476,rs,13:474,urn:us-la:rs:13:474,R.S. 13:474,129
+urn:us-la:rs:13:501,rs,13:501,crp,762,,Code of Criminal Procedure Article 762,782
+urn:us-la:rs:13:501,rs,13:501,crp,230.1,,Code of Criminal Procedure Article 230.1,1732
+urn:us-la:rs:13:501,rs,13:501,crp,762,,Code of Criminal Procedure Article 762,2266
+urn:us-la:rs:13:583,rs,13:583,rs,13:582,urn:us-la:rs:13:582,R.S. 13:582,26
+urn:us-la:rs:13:585,rs,13:585,rs,13:582,urn:us-la:rs:13:582,R.S. 13:582,321
+urn:us-la:rs:13:587.4,rs,13:587.4,rs,14:46.2,urn:us-la:rs:14:46.2,R.S. 14:46.2,1872
+urn:us-la:rs:13:621.14,rs,13:621.14,rs,13:477,urn:us-la:rs:13:477,R.S. 13:477,151
+urn:us-la:rs:13:621.14,rs,13:621.14,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,1225
+urn:us-la:rs:13:621.14,rs,13:621.14,rs,46:236.5,urn:us-la:rs:46:236.5,R.S. 46:236.5,1321
+urn:us-la:rs:13:621.14,rs,13:621.14,rs,13:587,urn:us-la:rs:13:587,R.S. 13:587,2029
+urn:us-la:rs:13:621.21,rs,13:621.21,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,892
+urn:us-la:rs:13:621.21,rs,13:621.21,rs,46:236.5,urn:us-la:rs:46:236.5,R.S. 46:236.5,992
+urn:us-la:rs:13:621.21,rs,13:621.21,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,2094
+urn:us-la:rs:13:621.21,rs,13:621.21,rs,46:236.5,urn:us-la:rs:46:236.5,R.S. 46:236.5,2194
+urn:us-la:rs:13:621.21,rs,13:621.21,rs,46:236.1.1,urn:us-la:rs:46:236.1.1,R.S. 46:236.1.1,3040
+urn:us-la:rs:13:621.22,rs,13:621.22,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,1477
+urn:us-la:rs:13:621.22,rs,13:621.22,rs,46:236.1.1,urn:us-la:rs:46:236.1.1,R.S. 46:236.1.1,1577
+urn:us-la:rs:13:691,rs,13:691,rs,13:42,urn:us-la:rs:13:42,R.S. 13:42,536
+urn:us-la:rs:13:691,rs,13:691,rs,13:694,urn:us-la:rs:13:694,R.S. 13:694,1041
+urn:us-la:rs:13:695,rs,13:695,rs,13:694,urn:us-la:rs:13:694,R.S. 13:694,95
+urn:us-la:rs:13:698.1,rs,13:698.1,rs,13:694,urn:us-la:rs:13:694,R.S. 13:694,98
+urn:us-la:rs:13:698.1,rs,13:698.1,rs,13:698,urn:us-la:rs:13:698,R.S. 13:698,201
+urn:us-la:rs:13:698.1,rs,13:698.1,rs,13:1341.2,urn:us-la:rs:13:1341.2,R.S. 13:1341.2,216
+urn:us-la:rs:13:698.1,rs,13:698.1,rs,13:698,urn:us-la:rs:13:698,R.S. 13:698,319
+urn:us-la:rs:13:698.1,rs,13:698.1,rs,13:1341.2,urn:us-la:rs:13:1341.2,R.S. 13:1341.2,334
+urn:us-la:rs:13:698.1,rs,13:698.1,rs,13:694,urn:us-la:rs:13:694,R.S. 13:694,440
+urn:us-la:rs:13:699,rs,13:699,rs,13:698,urn:us-la:rs:13:698,R.S. 13:698,115
+urn:us-la:rs:13:699,rs,13:699,rs,13:1341.2,urn:us-la:rs:13:1341.2,R.S. 13:1341.2,130
+urn:us-la:rs:13:699,rs,13:699,rs,13:698,urn:us-la:rs:13:698,R.S. 13:698,512
+urn:us-la:rs:13:699,rs,13:699,rs,13:1341.2,urn:us-la:rs:13:1341.2,R.S. 13:1341.2,528
+urn:us-la:rs:13:713,rs,13:713,ccp,283,,Code of Civil Procedure Article 283,3214
+urn:us-la:rs:13:715,rs,13:715,rs,13:694,urn:us-la:rs:13:694,R.S. 13:694,1500
+urn:us-la:rs:13:718,rs,13:718,rs,22:822,urn:us-la:rs:22:822,R.S. 22:822,3202
+urn:us-la:rs:13:721,rs,13:721,rs,46:236.5,urn:us-la:rs:46:236.5,R.S. 46:236.5,3685
+urn:us-la:rs:13:721,rs,13:721,ccp,3945,,Code of Civil Procedure Article 3945,3374
+urn:us-la:rs:13:722,rs,13:722,rs,13:721,urn:us-la:rs:13:721,R.S. 13:721,2124
+urn:us-la:rs:13:722,rs,13:722,rs,13:721,urn:us-la:rs:13:721,R.S. 13:721,3673
+urn:us-la:rs:13:722,rs,13:722,rs,13:721,urn:us-la:rs:13:721,R.S. 13:721,4016
+urn:us-la:rs:13:752,rs,13:752,rs,13:753,urn:us-la:rs:13:753,R.S. 13:753,1668
+urn:us-la:rs:13:753,rs,13:753,rs,14:95.1,urn:us-la:rs:14:95.1,R.S. 14:95.1,475
+urn:us-la:rs:13:753,rs,13:753,rs,28:54,urn:us-la:rs:28:54,R.S. 28:54,960
+urn:us-la:rs:13:753,rs,13:753,rs,14:35.3,urn:us-la:rs:14:35.3,R.S. 14:35.3,1148
+urn:us-la:rs:13:753,rs,13:753,rs,14:35.3,urn:us-la:rs:14:35.3,R.S. 14:35.3,1683
+urn:us-la:rs:13:753,rs,13:753,rs,28:57,urn:us-la:rs:28:57,R.S. 28:57,3370
+urn:us-la:rs:13:754,rs,13:754,rs,1:55,urn:us-la:rs:1:55,R.S. 1:55,6808
+urn:us-la:rs:13:754,rs,13:754,rs,9:2792,urn:us-la:rs:9:2792,R.S. 9:2792,9528
+urn:us-la:rs:13:754,rs,13:754,rs,9:2792.1,urn:us-la:rs:9:2792.1,R.S. 9:2792.1,9559
+urn:us-la:rs:13:761,rs,13:761,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,494
+urn:us-la:rs:13:781,rs,13:781,rs,13:783,urn:us-la:rs:13:783,R.S. 13:783,25
+urn:us-la:rs:13:781,rs,13:781,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,665
+urn:us-la:rs:13:782,rs,13:782,rs,42:1301,urn:us-la:rs:42:1301,R.S. 42:1301,1991
+urn:us-la:rs:13:782,rs,13:782,rs,13:783,urn:us-la:rs:13:783,R.S. 13:783,3875
+urn:us-la:rs:13:785,rs,13:785,rs,13:784,urn:us-la:rs:13:784,R.S. 13:784,296
+urn:us-la:rs:13:787,rs,13:787,rs,13:786,urn:us-la:rs:13:786,R.S. 13:786,650
+urn:us-la:rs:13:787,rs,13:787,rs,13:786,urn:us-la:rs:13:786,R.S. 13:786,930
+urn:us-la:rs:13:841,rs,13:841,rs,13:841,urn:us-la:rs:13:841,R.S. 13:841,1809
+urn:us-la:rs:13:842,rs,13:842,rs,13:841,urn:us-la:rs:13:841,R.S. 13:841,589
+urn:us-la:rs:13:842,rs,13:842,rs,13:1213,urn:us-la:rs:13:1213,R.S. 13:1213,627
+urn:us-la:rs:13:842.3,rs,13:842.3,rs,13:842.1,urn:us-la:rs:13:842.1,R.S. 13:842.1,37
+urn:us-la:rs:13:842.3,rs,13:842.3,rs,13:842.1,urn:us-la:rs:13:842.1,R.S. 13:842.1,560
+urn:us-la:rs:13:842.3,rs,13:842.3,ccp,5181,,Code of Civil Procedure Article 5181,361
+urn:us-la:rs:13:842.4,rs,13:842.4,ccp,591,,Code of Civil Procedure Article 591,1344
+urn:us-la:rs:13:843,rs,13:843,rs,13:842,urn:us-la:rs:13:842,R.S. 13:842,129
+urn:us-la:rs:13:846,rs,13:846,rs,13:846,urn:us-la:rs:13:846,R.S. 13:846,2235
+urn:us-la:rs:13:846,rs,13:846,crp,349.3,,Code of Criminal Procedure Article 349.3,1308
+urn:us-la:rs:13:847,rs,13:847,crp,893,,Code of Criminal Procedure Article 893,3068
+urn:us-la:rs:13:847,rs,13:847,crp,894,,Code of Criminal Procedure Article 894,3449
+urn:us-la:rs:13:849,rs,13:849,rs,13:841,urn:us-la:rs:13:841,R.S. 13:841,381
+urn:us-la:rs:13:849,rs,13:849,rs,13:844,urn:us-la:rs:13:844,R.S. 13:844,396
+urn:us-la:rs:13:849,rs,13:849,rs,13:1213,urn:us-la:rs:13:1213,R.S. 13:1213,435
+urn:us-la:rs:13:849,rs,13:849,rs,13:1381,urn:us-la:rs:13:1381,R.S. 13:1381,451
+urn:us-la:rs:13:850,rs,13:850,ccp,2591,,Code of Civil Procedure Article 2591,2517
+urn:us-la:rs:13:917,rs,13:917,rs,44:411,urn:us-la:rs:44:411,R.S. 44:411,720
+urn:us-la:rs:13:917,rs,13:917,rs,44:411,urn:us-la:rs:44:411,R.S. 44:411,1160
+urn:us-la:rs:13:961.2,rs,13:961.2,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,25
+urn:us-la:rs:13:962,rs,13:962,ccp,5181,,Code of Civil Procedure Article 5181,4386
+urn:us-la:rs:13:963,rs,13:963,rs,13:4525,urn:us-la:rs:13:4525,R.S. 13:4525,5763
+urn:us-la:rs:13:963,rs,13:963,rs,13:4525,urn:us-la:rs:13:4525,R.S. 13:4525,5918
+urn:us-la:rs:13:963,rs,13:963,rs,13:4525,urn:us-la:rs:13:4525,R.S. 13:4525,6642
+urn:us-la:rs:13:964,rs,13:964,rs,13:964,urn:us-la:rs:13:964,R.S. 13:964,1515
+urn:us-la:rs:13:964,rs,13:964,rs,13:964,urn:us-la:rs:13:964,R.S. 13:964,1685
+urn:us-la:rs:13:964.1,rs,13:964.1,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,2796
+urn:us-la:rs:13:964.3,rs,13:964.3,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1452
+urn:us-la:rs:13:964.3,rs,13:964.3,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,2810
+urn:us-la:rs:13:965,rs,13:965,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,1382
+urn:us-la:rs:13:966,rs,13:966,rs,13:4525,urn:us-la:rs:13:4525,R.S. 13:4525,233
+urn:us-la:rs:13:966,rs,13:966,rs,13:4525,urn:us-la:rs:13:4525,R.S. 13:4525,1335
+urn:us-la:rs:13:966.1,rs,13:966.1,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,71
+urn:us-la:rs:13:966.1,rs,13:966.1,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,371
+urn:us-la:rs:13:970,rs,13:970,rs,13:4529,urn:us-la:rs:13:4529,R.S. 13:4529,4512
+urn:us-la:rs:13:970,rs,13:970,ccp,5181,,Code of Civil Procedure Article 5181,4049
+urn:us-la:rs:13:971,rs,13:971,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,72
+urn:us-la:rs:13:971,rs,13:971,rs,13:4529,urn:us-la:rs:13:4529,R.S. 13:4529,1957
+urn:us-la:rs:13:971,rs,13:971,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,4323
+urn:us-la:rs:13:971,rs,13:971,rs,13:4529,urn:us-la:rs:13:4529,R.S. 13:4529,5986
+urn:us-la:rs:13:973,rs,13:973,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1402
+urn:us-la:rs:13:976,rs,13:976,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,72
+urn:us-la:rs:13:976,rs,13:976,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1724
+urn:us-la:rs:13:976,rs,13:976,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,3086
+urn:us-la:rs:13:979,rs,13:979,rs,13:979,urn:us-la:rs:13:979,R.S. 13:979,1518
+urn:us-la:rs:13:979,rs,13:979,rs,13:979,urn:us-la:rs:13:979,R.S. 13:979,1688
+urn:us-la:rs:13:981,rs,13:981,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,616
+urn:us-la:rs:13:981,rs,13:981,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,709
+urn:us-la:rs:13:981,rs,13:981,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1172
+urn:us-la:rs:13:981.1,rs,13:981.1,rs,37:2556,urn:us-la:rs:37:2556,R.S. 37:2556,22
+urn:us-la:rs:13:981.1,rs,13:981.1,rs,37:2554,urn:us-la:rs:37:2554,R.S. 37:2554,704
+urn:us-la:rs:13:981.1,rs,13:981.1,rs,37:2554,urn:us-la:rs:37:2554,R.S. 37:2554,1947
+urn:us-la:rs:13:985.1,rs,13:985.1,rs,13:985,urn:us-la:rs:13:985,R.S. 13:985,1026
+urn:us-la:rs:13:985.1,rs,13:985.1,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,2203
+urn:us-la:rs:13:985.2,rs,13:985.2,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,2741
+urn:us-la:rs:13:991,rs,13:991,ccp,5181,,Code of Civil Procedure Article 5181,343
+urn:us-la:rs:13:992,rs,13:992,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,186
+urn:us-la:rs:13:995.1,rs,13:995.1,ccp,5181,,Code of Civil Procedure Article 5181,187
+urn:us-la:rs:13:996.3,rs,13:996.3,ccp,5181,,Code of Civil Procedure Article 5181,511
+urn:us-la:rs:13:996.4,rs,13:996.4,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,195
+urn:us-la:rs:13:996.7,rs,13:996.7,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,185
+urn:us-la:rs:13:996.10,rs,13:996.10,rs,13:964,urn:us-la:rs:13:964,R.S. 13:964,186
+urn:us-la:rs:13:996.25,rs,13:996.25,ccp,5181,,Code of Civil Procedure Article 5181,438
+urn:us-la:rs:13:996.26,rs,13:996.26,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,182
+urn:us-la:rs:13:996.28,rs,13:996.28,ccp,5181,,Code of Civil Procedure Article 5181,438
+urn:us-la:rs:13:996.29,rs,13:996.29,ccp,5181,,Code of Civil Procedure Article 5181,465
+urn:us-la:rs:13:996.34,rs,13:996.34,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1724
+urn:us-la:rs:13:996.34,rs,13:996.34,ccp,5181,,Code of Civil Procedure Article 5181,429
+urn:us-la:rs:13:996.36.1,rs,13:996.36.1,rs,13:996.36,urn:us-la:rs:13:996.36,R.S. 13:996.36,58
+urn:us-la:rs:13:996.36.1,rs,13:996.36.1,rs,13:996.36,urn:us-la:rs:13:996.36,R.S. 13:996.36,570
+urn:us-la:rs:13:996.36.1,rs,13:996.36.1,ccp,5181,,Code of Civil Procedure Article 5181,466
+urn:us-la:rs:13:996.37,rs,13:996.37,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1704
+urn:us-la:rs:13:996.37,rs,13:996.37,ccp,5181,,Code of Civil Procedure Article 5181,448
+urn:us-la:rs:13:996.38,rs,13:996.38,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1687
+urn:us-la:rs:13:996.39,rs,13:996.39,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,2172
+urn:us-la:rs:13:996.42,rs,13:996.42,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1695
+urn:us-la:rs:13:996.43,rs,13:996.43,ccp,5181,,Code of Civil Procedure Article 5181,432
+urn:us-la:rs:13:996.44,rs,13:996.44,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1601
+urn:us-la:rs:13:996.45,rs,13:996.45,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1639
+urn:us-la:rs:13:996.45,rs,13:996.45,ccp,5181,,Code of Civil Procedure Article 5181,414
+urn:us-la:rs:13:996.46,rs,13:996.46,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1661
+urn:us-la:rs:13:996.47,rs,13:996.47,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1659
+urn:us-la:rs:13:996.51,rs,13:996.51,ccp,5181,,Code of Civil Procedure Article 5181,429
+urn:us-la:rs:13:996.54,rs,13:996.54,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1613
+urn:us-la:rs:13:996.55,rs,13:996.55,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1576
+urn:us-la:rs:13:996.55,rs,13:996.55,ccp,5181,,Code of Civil Procedure Article 5181,438
+urn:us-la:rs:13:996.56,rs,13:996.56,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1606
+urn:us-la:rs:13:996.56,rs,13:996.56,ccp,5181,,Code of Civil Procedure Article 5181,420
+urn:us-la:rs:13:996.57,rs,13:996.57,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1583
+urn:us-la:rs:13:996.58,rs,13:996.58,ccp,5181,,Code of Civil Procedure Article 5181,424
+urn:us-la:rs:13:996.59,rs,13:996.59,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1717
+urn:us-la:rs:13:996.59,rs,13:996.59,ccp,5181,,Code of Civil Procedure Article 5181,436
+urn:us-la:rs:13:996.60,rs,13:996.60,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1734
+urn:us-la:rs:13:996.60,rs,13:996.60,ccp,5181,,Code of Civil Procedure Article 5181,503
+urn:us-la:rs:13:996.65,rs,13:996.65,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,1398
+urn:us-la:rs:13:996.65,rs,13:996.65,ccp,5181,,Code of Civil Procedure Article 5181,428
+urn:us-la:rs:13:996.66,rs,13:996.66,ccp,5181,,Code of Civil Procedure Article 5181,415
+urn:us-la:rs:13:996.68,rs,13:996.68,ccp,5181,,Code of Civil Procedure Article 5181,39
+urn:us-la:rs:13:996.69,rs,13:996.69,ccp,5181,,Code of Civil Procedure Article 5181,39
+urn:us-la:rs:13:998,rs,13:998,ccp,5181,,Code of Civil Procedure Article 5181,403
+urn:us-la:rs:13:1000.2,rs,13:1000.2,rs,14:71,urn:us-la:rs:14:71,R.S. 14:71,453
+urn:us-la:rs:13:1000.2,rs,13:1000.2,rs,14:72,urn:us-la:rs:14:72,R.S. 14:72,495
+urn:us-la:rs:13:1000.2,rs,13:1000.2,rs,14:72,urn:us-la:rs:14:72,R.S. 14:72,1600
+urn:us-la:rs:13:1000.6,rs,13:1000.6,rs,13:5303,urn:us-la:rs:13:5303,R.S. 13:5303,410
+urn:us-la:rs:13:1000.11,rs,13:1000.11,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,380
+urn:us-la:rs:13:1000.11,rs,13:1000.11,rs,14:99,urn:us-la:rs:14:99,R.S. 14:99,536
+urn:us-la:rs:13:1000.11,rs,13:1000.11,rs,14:92,urn:us-la:rs:14:92,R.S. 14:92,681
+urn:us-la:rs:13:1000.11,rs,13:1000.11,rs,14:91.7,urn:us-la:rs:14:91.7,R.S. 14:91.7,921
+urn:us-la:rs:13:1000.11,rs,13:1000.11,rs,32:300,urn:us-la:rs:32:300,R.S. 32:300,1146
+urn:us-la:rs:13:1001,rs,13:1001,rs,13:10.2,urn:us-la:rs:13:10.2,R.S. 13:10.2,79
+urn:us-la:rs:13:1001,rs,13:1001,rs,13:581,urn:us-la:rs:13:581,R.S. 13:581,93
+urn:us-la:rs:13:1140.1,rs,13:1140.1,rs,33:1373,urn:us-la:rs:33:1373,R.S. 33:1373,181
+urn:us-la:rs:13:1140.1,rs,13:1140.1,rs,33:1373,urn:us-la:rs:33:1373,R.S. 33:1373,279
+urn:us-la:rs:13:1141,rs,13:1141,ccp,5181,,Code of Civil Procedure Article 5181,211
+urn:us-la:rs:13:1212,rs,13:1212,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,179
+urn:us-la:rs:13:1212,rs,13:1212,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,809
+urn:us-la:rs:13:1212,rs,13:1212,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,1095
+urn:us-la:rs:13:1212,rs,13:1212,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,1195
+urn:us-la:rs:13:1212,rs,13:1212,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,1896
+urn:us-la:rs:13:1212,rs,13:1212,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,2422
+urn:us-la:rs:13:1212,rs,13:1212,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,2585
+urn:us-la:rs:13:1213.1,rs,13:1213.1,rs,13:1213,urn:us-la:rs:13:1213,R.S. 13:1213,34
+urn:us-la:rs:13:1213.2,rs,13:1213.2,rs,13:1213.1,urn:us-la:rs:13:1213.1,R.S. 13:1213.1,84
+urn:us-la:rs:13:1221,rs,13:1221,rs,44:411,urn:us-la:rs:44:411,R.S. 44:411,132
+urn:us-la:rs:13:1278,rs,13:1278,rs,13:1272,urn:us-la:rs:13:1272,R.S. 13:1272,483
+urn:us-la:rs:13:1279,rs,13:1279,rs,13:1273,urn:us-la:rs:13:1273,R.S. 13:1273,11
+urn:us-la:rs:13:1307,rs,13:1307,rs,13:1306,urn:us-la:rs:13:1306,R.S. 13:1306,207
+urn:us-la:rs:13:1309,rs,13:1309,rs,13:1308,urn:us-la:rs:13:1308,R.S. 13:1308,92
+urn:us-la:rs:13:1341.2,rs,13:1341.2,rs,13:698,urn:us-la:rs:13:698,R.S. 13:698,18
+urn:us-la:rs:13:1343,rs,13:1343,rs,23:1,urn:us-la:rs:23:1,R.S. 23:1,1133
+urn:us-la:rs:13:1344,rs,13:1344,rs,14:28.1,urn:us-la:rs:14:28.1,R.S. 14:28.1,490
+urn:us-la:rs:13:1344,rs,13:1344,rs,14:30,urn:us-la:rs:14:30,R.S. 14:30,530
+urn:us-la:rs:13:1344,rs,13:1344,rs,14:30.1,urn:us-la:rs:14:30.1,R.S. 14:30.1,569
+urn:us-la:rs:13:1344,rs,13:1344,rs,14:31,urn:us-la:rs:14:31,R.S. 14:31,602
+urn:us-la:rs:13:1344,rs,13:1344,rs,14:32.6,urn:us-la:rs:14:32.6,R.S. 14:32.6,642
+urn:us-la:rs:13:1344,rs,13:1344,rs,14:37.1,urn:us-la:rs:14:37.1,R.S. 14:37.1,691
+urn:us-la:rs:13:1344,rs,13:1344,rs,14:32.7,urn:us-la:rs:14:32.7,R.S. 14:32.7,734
+urn:us-la:rs:13:1344,rs,13:1344,rs,14:37.2,urn:us-la:rs:14:37.2,R.S. 14:37.2,809
+urn:us-la:rs:13:1344,rs,13:1344,rs,14:37.4,urn:us-la:rs:14:37.4,R.S. 14:37.4,863
+urn:us-la:rs:13:1344,rs,13:1344,rs,13:587.4,urn:us-la:rs:13:587.4,R.S. 13:587.4,1956
+urn:us-la:rs:13:1346,rs,13:1346,rs,13:1335,urn:us-la:rs:13:1335,R.S. 13:1335,48
+urn:us-la:rs:13:1347,rs,13:1347,rs,13:1347,urn:us-la:rs:13:1347,R.S. 13:1347,202
+urn:us-la:rs:13:1347,rs,13:1347,rs,13:1347,urn:us-la:rs:13:1347,R.S. 13:1347,1767
+urn:us-la:rs:13:1371,rs,13:1371,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,90
+urn:us-la:rs:13:1371.1,rs,13:1371.1,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,294
+urn:us-la:rs:13:1371.1,rs,13:1371.1,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,456
+urn:us-la:rs:13:1371.1,rs,13:1371.1,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,743
+urn:us-la:rs:13:1371.1,rs,13:1371.1,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,843
+urn:us-la:rs:13:1371.1,rs,13:1371.1,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,1541
+urn:us-la:rs:13:1371.1,rs,13:1371.1,rs,13:1371,urn:us-la:rs:13:1371,R.S. 13:1371,1872
+urn:us-la:rs:13:1371.1,rs,13:1371.1,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,2047
+urn:us-la:rs:13:1371.1,rs,13:1371.1,rs,13:782,urn:us-la:rs:13:782,R.S. 13:782,2210
+urn:us-la:rs:13:1371.1,rs,13:1371.1,rs,13:1371,urn:us-la:rs:13:1371,R.S. 13:1371,2402
+urn:us-la:rs:13:1376,rs,13:1376,rs,13:1381,urn:us-la:rs:13:1381,R.S. 13:1381,69
+urn:us-la:rs:13:1381,rs,13:1381,rs,13:846,urn:us-la:rs:13:846,R.S. 13:846,3186
+urn:us-la:rs:13:1381.3,rs,13:1381.3,rs,39:1271,urn:us-la:rs:39:1271,R.S. 39:1271,243
+urn:us-la:rs:13:1381.5,rs,13:1381.5,rs,22:822,urn:us-la:rs:22:822,R.S. 22:822,282
+urn:us-la:rs:13:1381.5,rs,13:1381.5,rs,13:1381.4,urn:us-la:rs:13:1381.4,R.S. 13:1381.4,1069
+urn:us-la:rs:13:1381.6,rs,13:1381.6,crp,14.1,,Code of Criminal Procedure Article 14.1,152
+urn:us-la:rs:13:1411,rs,13:1411,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,25
+urn:us-la:rs:13:1414,rs,13:1414,ccp,5181,,Code of Civil Procedure Article 5181,198
+urn:us-la:rs:13:1442,rs,13:1442,rs,13:1443,urn:us-la:rs:13:1443,R.S. 13:1443,130
+urn:us-la:rs:13:1442,rs,13:1442,rs,13:1444,urn:us-la:rs:13:1444,R.S. 13:1444,147
+urn:us-la:rs:13:1443,rs,13:1443,ccp,4842,,Code of Civil Procedure Article 4842,248
+urn:us-la:rs:13:1443,rs,13:1443,ccp,4844,,Code of Civil Procedure Article 4844,498
+urn:us-la:rs:13:1444,rs,13:1444,rs,13:5104,urn:us-la:rs:13:5104,R.S. 13:5104,903
+urn:us-la:rs:13:1451,rs,13:1451,rs,13:1452,urn:us-la:rs:13:1452,R.S. 13:1452,22
+urn:us-la:rs:13:1565,rs,13:1565,rs,13:1565.1,urn:us-la:rs:13:1565.1,R.S. 13:1565.1,902
+urn:us-la:rs:13:1565.1,rs,13:1565.1,rs,13:783,urn:us-la:rs:13:783,R.S. 13:783,1005
+urn:us-la:rs:13:1565.1,rs,13:1565.1,rs,13:783,urn:us-la:rs:13:783,R.S. 13:783,1314
+urn:us-la:rs:13:1565.2,rs,13:1565.2,rs,13:996.16,urn:us-la:rs:13:996.16,R.S. 13:996.16,1433
+urn:us-la:rs:13:1566,rs,13:1566,rs,13:691,urn:us-la:rs:13:691,R.S. 13:691,233
+urn:us-la:rs:13:1566,rs,13:1566,rs,13:1585,urn:us-la:rs:13:1585,R.S. 13:1585,333
+urn:us-la:rs:13:1568.1,rs,13:1568.1,rs,14:74,urn:us-la:rs:14:74,R.S. 14:74,298
+urn:us-la:rs:13:1568.1,rs,13:1568.1,rs,14:74,urn:us-la:rs:14:74,R.S. 14:74,740
+urn:us-la:rs:13:1583.1,rs,13:1583.1,rs,13:1583,urn:us-la:rs:13:1583,R.S. 13:1583,482
+urn:us-la:rs:13:1583.1,rs,13:1583.1,rs,15:907,urn:us-la:rs:15:907,R.S. 15:907,620
+urn:us-la:rs:13:1587.1,rs,13:1587.1,rs,46:1251,urn:us-la:rs:46:1251,R.S. 46:1251,1261
+urn:us-la:rs:13:1587.4,rs,13:1587.4,rs,13:1587,urn:us-la:rs:13:1587,R.S. 13:1587,451
+urn:us-la:rs:13:1589,rs,13:1589,rs,13:1561,urn:us-la:rs:13:1561,R.S. 13:1561,223
+urn:us-la:rs:13:1593,rs,13:1593,rs,13:1741,urn:us-la:rs:13:1741,R.S. 13:1741,152
+urn:us-la:rs:13:1595.3,rs,13:1595.3,rs,15:910,urn:us-la:rs:15:910,R.S. 15:910,2853
+urn:us-la:rs:13:1595.3,rs,13:1595.3,rs,47:299.1,urn:us-la:rs:47:299.1,R.S. 47:299.1,2898
+urn:us-la:rs:13:1595.3,rs,13:1595.3,crp,887,,Code of Criminal Procedure Article 887,3054
+urn:us-la:rs:13:1597.1,rs,13:1597.1,rs,13:1596,urn:us-la:rs:13:1596,R.S. 13:1596,88
+urn:us-la:rs:13:1599,rs,13:1599,rs,14:92.1,urn:us-la:rs:14:92.1,R.S. 14:92.1,434
+urn:us-la:rs:13:1631,rs,13:1631,rs,13:961,urn:us-la:rs:13:961,R.S. 13:961,1755
+urn:us-la:rs:13:1631,rs,13:1631,ccp,5181,,Code of Civil Procedure Article 5181,488
+urn:us-la:rs:13:1802,rs,13:1802,rs,29:721,urn:us-la:rs:29:721,R.S. 29:721,1848
+urn:us-la:rs:13:1806,rs,13:1806,rs,13:1808,urn:us-la:rs:13:1808,R.S. 13:1808,209
+urn:us-la:rs:13:1813,rs,13:1813,rs,13:1816,urn:us-la:rs:13:1816,R.S. 13:1816,35
+urn:us-la:rs:13:1813,rs,13:1813,rs,29:721,urn:us-la:rs:29:721,R.S. 29:721,700
+urn:us-la:rs:13:1813,rs,13:1813,rs,13:1819,urn:us-la:rs:13:1819,R.S. 13:1819,1111
+urn:us-la:rs:13:1813,rs,13:1813,rs,13:1819,urn:us-la:rs:13:1819,R.S. 13:1819,1649
+urn:us-la:rs:13:1814,rs,13:1814,rs,13:1816,urn:us-la:rs:13:1816,R.S. 13:1816,35
+urn:us-la:rs:13:1814,rs,13:1814,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,132
+urn:us-la:rs:13:1814,rs,13:1814,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,971
+urn:us-la:rs:13:1815,rs,13:1815,rs,13:1816,urn:us-la:rs:13:1816,R.S. 13:1816,32
+urn:us-la:rs:13:1815,rs,13:1815,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,231
+urn:us-la:rs:13:1815,rs,13:1815,rs,13:1814,urn:us-la:rs:13:1814,R.S. 13:1814,365
+urn:us-la:rs:13:1815,rs,13:1815,rs,13:1819,urn:us-la:rs:13:1819,R.S. 13:1819,447
+urn:us-la:rs:13:1816,rs,13:1816,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,508
+urn:us-la:rs:13:1816,rs,13:1816,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,684
+urn:us-la:rs:13:1816,rs,13:1816,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,822
+urn:us-la:rs:13:1816,rs,13:1816,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,1204
+urn:us-la:rs:13:1816,rs,13:1816,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,1459
+urn:us-la:rs:13:1816,rs,13:1816,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,1909
+urn:us-la:rs:13:1816,rs,13:1816,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,2055
+urn:us-la:rs:13:1817,rs,13:1817,rs,13:1808,urn:us-la:rs:13:1808,R.S. 13:1808,138
+urn:us-la:rs:13:1818,rs,13:1818,rs,13:1816,urn:us-la:rs:13:1816,R.S. 13:1816,35
+urn:us-la:rs:13:1818,rs,13:1818,rs,13:1819,urn:us-la:rs:13:1819,R.S. 13:1819,488
+urn:us-la:rs:13:1818,rs,13:1818,rs,13:1816,urn:us-la:rs:13:1816,R.S. 13:1816,538
+urn:us-la:rs:13:1818,rs,13:1818,rs,13:1821,urn:us-la:rs:13:1821,R.S. 13:1821,710
+urn:us-la:rs:13:1820,rs,13:1820,rs,13:1816,urn:us-la:rs:13:1816,R.S. 13:1816,35
+urn:us-la:rs:13:1820,rs,13:1820,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,419
+urn:us-la:rs:13:1820,rs,13:1820,rs,13:1819,urn:us-la:rs:13:1819,R.S. 13:1819,506
+urn:us-la:rs:13:1820,rs,13:1820,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,612
+urn:us-la:rs:13:1820,rs,13:1820,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,990
+urn:us-la:rs:13:1822,rs,13:1822,rs,13:1808,urn:us-la:rs:13:1808,R.S. 13:1808,479
+urn:us-la:rs:13:1827,rs,13:1827,rs,13:1821,urn:us-la:rs:13:1821,R.S. 13:1821,549
+urn:us-la:rs:13:1827,rs,13:1827,rs,13:1808,urn:us-la:rs:13:1808,R.S. 13:1808,2428
+urn:us-la:rs:13:1830,rs,13:1830,rs,13:1827,urn:us-la:rs:13:1827,R.S. 13:1827,1396
+urn:us-la:rs:13:1830,rs,13:1830,rs,13:1834,urn:us-la:rs:13:1834,R.S. 13:1834,2238
+urn:us-la:rs:13:1830,rs,13:1830,rs,13:1827,urn:us-la:rs:13:1827,R.S. 13:1827,2464
+urn:us-la:rs:13:1830,rs,13:1830,rs,13:1808,urn:us-la:rs:13:1808,R.S. 13:1808,2825
+urn:us-la:rs:13:1830,rs,13:1830,rs,13:1827,urn:us-la:rs:13:1827,R.S. 13:1827,3037
+urn:us-la:rs:13:1831,rs,13:1831,rs,13:1833,urn:us-la:rs:13:1833,R.S. 13:1833,32
+urn:us-la:rs:13:1832,rs,13:1832,rs,13:1816,urn:us-la:rs:13:1816,R.S. 13:1816,67
+urn:us-la:rs:13:1832,rs,13:1832,rs,13:1827,urn:us-la:rs:13:1827,R.S. 13:1827,382
+urn:us-la:rs:13:1832,rs,13:1832,rs,13:1808,urn:us-la:rs:13:1808,R.S. 13:1808,754
+urn:us-la:rs:13:1832,rs,13:1832,rs,13:1827,urn:us-la:rs:13:1827,R.S. 13:1827,966
+urn:us-la:rs:13:1832,rs,13:1832,rs,13:1834,urn:us-la:rs:13:1834,R.S. 13:1834,1162
+urn:us-la:rs:13:1833,rs,13:1833,rs,13:1830,urn:us-la:rs:13:1830,R.S. 13:1830,812
+urn:us-la:rs:13:1836,rs,13:1836,rs,13:1816,urn:us-la:rs:13:1816,R.S. 13:1816,207
+urn:us-la:rs:13:1838,rs,13:1838,rs,13:1837,urn:us-la:rs:13:1837,R.S. 13:1837,81
+urn:us-la:rs:13:1838,rs,13:1838,rs,13:1837,urn:us-la:rs:13:1837,R.S. 13:1837,281
+urn:us-la:rs:13:1839,rs,13:1839,rs,13:1837,urn:us-la:rs:13:1837,R.S. 13:1837,220
+urn:us-la:rs:13:1853,rs,13:1853,rs,13:1810,urn:us-la:rs:13:1810,R.S. 13:1810,18
+urn:us-la:rs:13:1854,rs,13:1854,rs,13:1837,urn:us-la:rs:13:1837,R.S. 13:1837,532
+urn:us-la:rs:13:1854,rs,13:1854,rs,13:1859,urn:us-la:rs:13:1859,R.S. 13:1859,606
+urn:us-la:rs:13:1855,rs,13:1855,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,178
+urn:us-la:rs:13:1855,rs,13:1855,rs,13:1816,urn:us-la:rs:13:1816,R.S. 13:1816,292
+urn:us-la:rs:13:1856,rs,13:1856,rs,13:1857,urn:us-la:rs:13:1857,R.S. 13:1857,226
+urn:us-la:rs:13:1856,rs,13:1856,rs,13:1821,urn:us-la:rs:13:1821,R.S. 13:1821,269
+urn:us-la:rs:13:1856,rs,13:1856,rs,13:1821,urn:us-la:rs:13:1821,R.S. 13:1821,1090
+urn:us-la:rs:13:1858,rs,13:1858,rs,13:1859,urn:us-la:rs:13:1859,R.S. 13: 1859,5245
+urn:us-la:rs:13:1860,rs,13:1860,rs,13:1813,urn:us-la:rs:13:1813,R.S. 13:1813,314
+urn:us-la:rs:13:1862,rs,13:1862,rs,9:2601,urn:us-la:rs:9:2601,R.S. 9:2601,202
+urn:us-la:rs:13:1862,rs,13:1862,rs,9:2603,urn:us-la:rs:9:2603,R.S. 9:2603,455
+urn:us-la:rs:13:1874,rs,13:1874,rs,13:1875,urn:us-la:rs:13:1875,R.S. 13:1875,38
+urn:us-la:rs:13:1874,rs,13:1874,rs,13:1874.1,urn:us-la:rs:13:1874.1,R.S. 13:1874.1,2441
+urn:us-la:rs:13:1874,rs,13:1874,rs,13:1875,urn:us-la:rs:13:1875,R.S. 13:1875,3259
+urn:us-la:rs:13:1874,rs,13:1874,rs,13:1875,urn:us-la:rs:13:1875,R.S. 13:1875,3972
+urn:us-la:rs:13:1875,rs,13:1875,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,1847
+urn:us-la:rs:13:1875,rs,13:1875,rs,13:846,urn:us-la:rs:13:846,R.S. 13:846,2045
+urn:us-la:rs:13:1875,rs,13:1875,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,5061
+urn:us-la:rs:13:1875,rs,13:1875,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,5291
+urn:us-la:rs:13:1875,rs,13:1875,rs,40:1231.8,urn:us-la:rs:40:1231.8,R.S. 40:1231.8,6026
+urn:us-la:rs:13:1875,rs,13:1875,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,7337
+urn:us-la:rs:13:1875,rs,13:1875,rs,40:1231.8,urn:us-la:rs:40:1231.8,R.S. 40:1231.8,8697
+urn:us-la:rs:13:1875,rs,13:1875,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,9505
+urn:us-la:rs:13:1875,rs,13:1875,rs,40:1231.8,urn:us-la:rs:40:1231.8,R.S. 40:1231.8,12017
+urn:us-la:rs:13:1875,rs,13:1875,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,12133
+urn:us-la:rs:13:1875,rs,13:1875,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,12522
+urn:us-la:rs:13:1880,rs,13:1880,rs,13:1882,urn:us-la:rs:13:1882,R.S. 13:1882,734
+urn:us-la:rs:13:1881,rs,13:1881,rs,13:1899,urn:us-la:rs:13:1899,R.S. 13:1899,744
+urn:us-la:rs:13:1883,rs,13:1883,rs,33:5808,urn:us-la:rs:33:5808,R.S. 33:5808,2142
+urn:us-la:rs:13:1883,rs,13:1883,rs,13:2071,urn:us-la:rs:13:2071,R.S. 13:2071,2942
+urn:us-la:rs:13:1889.1,rs,13:1889.1,rs,13:1889,urn:us-la:rs:13:1889,R.S. 13:1889,42
+urn:us-la:rs:13:1894,rs,13:1894,rs,14:143,urn:us-la:rs:14:143,R.S. 14:143,389
+urn:us-la:rs:13:1894,rs,13:1894,rs,14:143,urn:us-la:rs:14:143,R.S. 14:143,572
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,254
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,440
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,658
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,771
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,1235
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,1328
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,1544
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,1679
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,1996
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,13:1898,urn:us-la:rs:13:1898,R.S. 13:1898,2170
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,2342
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,2593
+urn:us-la:rs:13:1894.1,rs,13:1894.1,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,3797
+urn:us-la:rs:13:1894.2,rs,13:1894.2,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,693
+urn:us-la:rs:13:1894.2,rs,13:1894.2,rs,14:99,urn:us-la:rs:14:99,R.S. 14:99,892
+urn:us-la:rs:13:1894.2,rs,13:1894.2,rs,14:92,urn:us-la:rs:14:92,R.S. 14:92,1040
+urn:us-la:rs:13:1894.2,rs,13:1894.2,rs,14:91.7,urn:us-la:rs:14:91.7,R.S. 14:91.7,1281
+urn:us-la:rs:13:1894.2,rs,13:1894.2,rs,32:300,urn:us-la:rs:32:300,R.S. 32:300,1506
+urn:us-la:rs:13:1899,rs,13:1899,rs,33:5713,urn:us-la:rs:33:5713,R.S. 33:5713,5131
+urn:us-la:rs:13:1899,rs,13:1899,rs,33:1563,urn:us-la:rs:33:1563,R.S. 33:1563,5760
+urn:us-la:rs:13:1899,rs,13:1899,crp,895.1,,Code of Criminal Procedure Article 895.1,9284
+urn:us-la:rs:13:1903,rs,13:1903,rs,44:411,urn:us-la:rs:44:411,R.S. 44:411,201
+urn:us-la:rs:13:1904,rs,13:1904,rs,44:411,urn:us-la:rs:44:411,R.S. 44:411,185
+urn:us-la:rs:13:1904,rs,13:1904,rs,44:411,urn:us-la:rs:44:411,R.S. 44:411,1099
+urn:us-la:rs:13:1904,rs,13:1904,rs,44:411,urn:us-la:rs:44:411,R.S. 44:411,1739
+urn:us-la:rs:13:1904,rs,13:1904,rs,44:39,urn:us-la:rs:44:39,R.S. 44:39,2633
+urn:us-la:rs:13:1906,rs,13:1906,rs,33:441,urn:us-la:rs:33:441,R.S. 33:441,534
+urn:us-la:rs:13:1906,rs,13:1906,ccp,5181,,Code of Civil Procedure Article 5181,269
+urn:us-la:rs:13:1907,rs,13:1907,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,837
+urn:us-la:rs:13:1910,rs,13:1910,ccp,5181,,Code of Civil Procedure Article 5181,272
+urn:us-la:rs:13:1910.1,rs,13:1910.1,ccp,5181,,Code of Civil Procedure Article 5181,286
+urn:us-la:rs:13:1910.2,rs,13:1910.2,ccp,5181,,Code of Civil Procedure Article 5181,288
+urn:us-la:rs:13:1952.1,rs,13:1952.1,rs,13:1952,urn:us-la:rs:13:1952,R.S. 13:1952,37
+urn:us-la:rs:13:1953,rs,13:1953,rs,13:1871,urn:us-la:rs:13:1871,R.S. 13:1871,338
+urn:us-la:rs:13:2001,rs,13:2001,rs,13:1899,urn:us-la:rs:13:1899,R.S. 13:1899,399
+urn:us-la:rs:13:2002.2,rs,13:2002.2,ccp,5181,,Code of Civil Procedure Article 5181,373
+urn:us-la:rs:13:2004,rs,13:2004,rs,14:71,urn:us-la:rs:14:71,R.S. 14:71,767
+urn:us-la:rs:13:2004,rs,13:2004,rs,14:71,urn:us-la:rs:14:71,R.S. 14:71,948
+urn:us-la:rs:13:2005,rs,13:2005,rs,15:168,urn:us-la:rs:15:168,R.S. 15:168,2619
+urn:us-la:rs:13:2005.1,rs,13:2005.1,rs,13:1899,urn:us-la:rs:13:1899,R.S. 13:1899,418
+urn:us-la:rs:13:2005.1,rs,13:2005.1,rs,15:168,urn:us-la:rs:15:168,R.S. 15:168,605
+urn:us-la:rs:13:2007,rs,13:2007,rs,13:1911,urn:us-la:rs:13:1911,R.S. 13:1911,283
+urn:us-la:rs:13:2009,rs,13:2009,rs,14:71,urn:us-la:rs:14:71,R.S. 14:71,779
+urn:us-la:rs:13:2009,rs,13:2009,rs,14:71,urn:us-la:rs:14:71,R.S. 14:71,960
+urn:us-la:rs:13:2013,rs,13:2013,rs,15:168,urn:us-la:rs:15:168,R.S. 15:168,103
+urn:us-la:rs:13:2071.1,rs,13:2071.1,rs,13:5539,urn:us-la:rs:13:5539,R.S. 13:5539,1019
+urn:us-la:rs:13:2074.5,rs,13:2074.5,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,643
+urn:us-la:rs:13:2075.1,rs,13:2075.1,rs,9:151,urn:us-la:rs:9:151,R.S. 9:151,672
+urn:us-la:rs:13:2075.1,rs,13:2075.1,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,1042
+urn:us-la:rs:13:2079.1,rs,13:2079.1,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,170
+urn:us-la:rs:13:2080.1,rs,13:2080.1,rs,9:151,urn:us-la:rs:9:151,R.S. 9:151,2018
+urn:us-la:rs:13:2089.4,rs,13:2089.4,ccp,5181,,Code of Civil Procedure Article 5181,54
+urn:us-la:rs:13:2089.5,rs,13:2089.5,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,416
+urn:us-la:rs:13:2104,rs,13:2104,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,401
+urn:us-la:rs:13:2105,rs,13:2105,ccp,5181,,Code of Civil Procedure Article 5181,54
+urn:us-la:rs:13:2105.1,rs,13:2105.1,rs,13:1880,urn:us-la:rs:13:1880,R.S. 13:1880,902
+urn:us-la:rs:13:2106,rs,13:2106,rs,46:2121.1,urn:us-la:rs:46:2121.1,R.S. 46:2121.1,561
+urn:us-la:rs:13:2106,rs,13:2106,ccp,5181,,Code of Civil Procedure Article 5181,283
+urn:us-la:rs:13:2109,rs,13:2109,ccp,5181,,Code of Civil Procedure Article 5181,54
+urn:us-la:rs:13:2110,rs,13:2110,ccp,5181,,Code of Civil Procedure Article 5181,76
+urn:us-la:rs:13:2110,rs,13:2110,ccp,5181,,Code of Civil Procedure Article 5181,1423
+urn:us-la:rs:13:2111,rs,13:2111,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,654
+urn:us-la:rs:13:2111,rs,13:2111,rs,9:151,urn:us-la:rs:9:151,R.S. 9:151,817
+urn:us-la:rs:13:2112,rs,13:2112,ccp,5181,,Code of Civil Procedure Article 5181,54
+urn:us-la:rs:13:2113,rs,13:2113,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,414
+urn:us-la:rs:13:2113,rs,13:2113,rs,9:151,urn:us-la:rs:9:151,R.S. 9:151,577
+urn:us-la:rs:13:2115,rs,13:2115,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,493
+urn:us-la:rs:13:2115,rs,13:2115,rs,9:151,urn:us-la:rs:9:151,R.S. 9:151,656
+urn:us-la:rs:13:2151,rs,13:2151,ccp,4841,,Code of Civil Procedure Article 4841,968
+urn:us-la:rs:13:2151.4,rs,13:2151.4,rs,40:39.1,urn:us-la:rs:40:39.1,R.S. 40:39.1,2149
+urn:us-la:rs:13:2151.4,rs,13:2151.4,ccp,4841,,Code of Civil Procedure Article 4841,1324
+urn:us-la:rs:13:2152,rs,13:2152,rs,40:1231.8,urn:us-la:rs:40:1231.8,R.S. 40:1231.8,1187
+urn:us-la:rs:13:2158,rs,13:2158,rs,13:5826,urn:us-la:rs:13:5826,R.S. 13:5826,9710
+urn:us-la:rs:13:2158,rs,13:2158,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,9957
+urn:us-la:rs:13:2159,rs,13:2159,rs,13:1214,urn:us-la:rs:13:1214,R.S. 13:1214,213
+urn:us-la:rs:13:2159,rs,13:2159,rs,13:1215,urn:us-la:rs:13:1215,R.S. 13:1215,294
+urn:us-la:rs:13:2160,rs,13:2160,rs,13:5558,urn:us-la:rs:13:5558,R.S. 13:5558,0
+urn:us-la:rs:13:2485.6,rs,13:2485.6,rs,13:1882,urn:us-la:rs:13:1882,R.S. 13:1882,360
+urn:us-la:rs:13:2487.6,rs,13:2487.6,rs,13:1882,urn:us-la:rs:13:1882,R.S. 13:1882,362
+urn:us-la:rs:13:2488.1,rs,13:2488.1,rs,13:1871,urn:us-la:rs:13:1871,R.S. 13:1871,1941
+urn:us-la:rs:13:2488.3,rs,13:2488.3,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,82
+urn:us-la:rs:13:2488.7,rs,13:2488.7,rs,15:168,urn:us-la:rs:15:168,R.S. 15:168,565
+urn:us-la:rs:13:2488.38,rs,13:2488.38,rs,13:1871,urn:us-la:rs:13:1871,R.S. 13:1871,170
+urn:us-la:rs:13:2488.51,rs,13:2488.51,rs,13:1871,urn:us-la:rs:13:1871,R.S. 13:1871,1953
+urn:us-la:rs:13:2488.61,rs,13:2488.61,rs,13:1872,urn:us-la:rs:13:1872,R.S. 13:1872,1299
+urn:us-la:rs:13:2488.61,rs,13:2488.61,rs,13:1879,urn:us-la:rs:13:1879,R.S. 13:1879,1316
+urn:us-la:rs:13:2488.62,rs,13:2488.62,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,77
+urn:us-la:rs:13:2488.62,rs,13:2488.62,rs,13:1883,urn:us-la:rs:13:1883,R.S. 13:1883,286
+urn:us-la:rs:13:2488.71,rs,13:2488.71,rs,13:1871,urn:us-la:rs:13:1871,R.S. 13:1871,1210
+urn:us-la:rs:13:2488.73,rs,13:2488.73,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,337
+urn:us-la:rs:13:2488.77,rs,13:2488.77,rs,15:168,urn:us-la:rs:15:168,R.S. 15:168,623
+urn:us-la:rs:13:2488.80,rs,13:2488.80,rs,13:1874,urn:us-la:rs:13:1874,R.S. 13:1874,944
+urn:us-la:rs:13:2492,rs,13:2492,rs,40:1231.8,urn:us-la:rs:40:1231.8,R.S. 40:1231.8,1478
+urn:us-la:rs:13:2492,rs,13:2492,rs,40:1231.8,urn:us-la:rs:40:1231.8,R.S. 40:1231.8,2309
+urn:us-la:rs:13:2492,rs,13:2492,rs,40:1231.8,urn:us-la:rs:40:1231.8,R.S. 40:1231.8,3094
+urn:us-la:rs:13:2492,rs,13:2492,rs,40:1231.8,urn:us-la:rs:40:1231.8,R.S. 40:1231.8,5254
+urn:us-la:rs:13:2493,rs,13:2493,rs,14:143,urn:us-la:rs:14:143,R.S. 14:143,1734
+urn:us-la:rs:13:2493,rs,13:2493,ccp,3604,,Code of Civil Procedure Article 3604,2826
+urn:us-la:rs:13:2493.1,rs,13:2493.1,rs,13:2492,urn:us-la:rs:13:2492,R.S. 13:2492,1475
+urn:us-la:rs:13:2493.1,rs,13:2493.1,rs,14:107.3,urn:us-la:rs:14:107.3,R.S. 14:107.3,1969
+urn:us-la:rs:13:2493.1,rs,13:2493.1,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,2169
+urn:us-la:rs:13:2493.1,rs,13:2493.1,rs,33:1374,urn:us-la:rs:33:1374,R.S. 33:1374,2402
+urn:us-la:rs:13:2493.1,rs,13:2493.1,rs,33:1374,urn:us-la:rs:33:1374,R.S. 33:1374,2965
+urn:us-la:rs:13:2493.1,rs,13:2493.1,rs,33:1374,urn:us-la:rs:33:1374,R.S. 33:1374,3058
+urn:us-la:rs:13:2496.3,rs,13:2496.3,rs,15:574.15,urn:us-la:rs:15:574.15,R.S. 15:574.15,2734
+urn:us-la:rs:13:2512,rs,13:2512,crp,382,,Code of Criminal Procedure Article 382,16
+urn:us-la:rs:13:2561.2,rs,13:2561.2,rs,13:2561.4,urn:us-la:rs:13:2561.4,R.S. 13:2561.4,42
+urn:us-la:rs:13:2561.2,rs,13:2561.2,ccp,4844,,Code of Civil Procedure Article 4844,460
+urn:us-la:rs:13:2561.4,rs,13:2561.4,rs,13:5101,urn:us-la:rs:13:5101,R.S. 13:5101,318
+urn:us-la:rs:13:2561.4,rs,13:2561.4,rs,13:5104,urn:us-la:rs:13:5104,R.S. 13:5104,889
+urn:us-la:rs:13:2562.2,rs,13:2562.2,rs,13:2562.4,urn:us-la:rs:13:2562.4,R.S. 13:2562.4,42
+urn:us-la:rs:13:2562.2,rs,13:2562.2,ccp,4844,,Code of Civil Procedure Article 4844,459
+urn:us-la:rs:13:2562.4,rs,13:2562.4,rs,13:5101,urn:us-la:rs:13:5101,R.S. 13:5101,318
+urn:us-la:rs:13:2562.4,rs,13:2562.4,rs,13:5104,urn:us-la:rs:13:5104,R.S. 13:5104,889
+urn:us-la:rs:13:2562.26,rs,13:2562.26,rs,44:411,urn:us-la:rs:44:411,R.S. 44:411,189
+urn:us-la:rs:13:2562.27,rs,13:2562.27,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,477
+urn:us-la:rs:13:2562.27,rs,13:2562.27,rs,14:99,urn:us-la:rs:14:99,R.S. 14:99,633
+urn:us-la:rs:13:2562.27,rs,13:2562.27,rs,14:92,urn:us-la:rs:14:92,R.S. 14:92,778
+urn:us-la:rs:13:2562.27,rs,13:2562.27,rs,14:91.7,urn:us-la:rs:14:91.7,R.S. 14:91.7,1018
+urn:us-la:rs:13:2562.27,rs,13:2562.27,rs,32:300,urn:us-la:rs:32:300,R.S. 32:300,1243
+urn:us-la:rs:13:2563.2,rs,13:2563.2,ccp,4842,,Code of Civil Procedure Article 4842,243
+urn:us-la:rs:13:2563.2,rs,13:2563.2,ccp,4844,,Code of Civil Procedure Article 4844,417
+urn:us-la:rs:13:2563.5,rs,13:2563.5,rs,13:50,urn:us-la:rs:13:50,R.S. 13:50,770
+urn:us-la:rs:13:2563.9,rs,13:2563.9,rs,13:2563.17,urn:us-la:rs:13:2563.17,R.S. 13:2563.17,419
+urn:us-la:rs:13:2563.17,rs,13:2563.17,rs,13:2563.9,urn:us-la:rs:13:2563.9,R.S. 13:2563.9,1856
+urn:us-la:rs:13:2563.17,rs,13:2563.17,rs,13:2563.5,urn:us-la:rs:13:2563.5,R.S. 13:2563.5,1890
+urn:us-la:rs:13:2563.17,rs,13:2563.17,crp,895.1,,Code of Criminal Procedure Article 895.1,2041
+urn:us-la:rs:13:2575,rs,13:2575,rs,33:1374,urn:us-la:rs:33:1374,R.S. 33:1374,1208
+urn:us-la:rs:13:2575,rs,13:2575,rs,33:4720.59,urn:us-la:rs:33:4720.59,R.S. 33:4720.59,1293
+urn:us-la:rs:13:2575,rs,13:2575,rs,9:4821,urn:us-la:rs:9:4821,R.S. 9:4821,4831
+urn:us-la:rs:13:2575,rs,13:2575,rs,13:2576,urn:us-la:rs:13:2576,R.S. 13:2576,6049
+urn:us-la:rs:13:2575,rs,13:2575,ccp,2253,,Code of Civil Procedure Article 2253,4406
+urn:us-la:rs:13:2576,rs,13:2576,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,165
+urn:us-la:rs:13:2576,rs,13:2576,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,375
+urn:us-la:rs:13:2576,rs,13:2576,rs,13:2575,urn:us-la:rs:13:2575,R.S. 13:2575,1210
+urn:us-la:rs:13:2576,rs,13:2576,rs,47:2196,urn:us-la:rs:47:2196,R.S. 47:2196,2946
+urn:us-la:rs:13:2576,rs,13:2576,ccp,2253,,Code of Civil Procedure Article 2253,681
+urn:us-la:rs:13:2582,rs,13:2582,rs,42:39.2,urn:us-la:rs:42:39.2,R.S. 42:39.2,1042
+urn:us-la:rs:13:2582,rs,13:2582,rs,18:402,urn:us-la:rs:18:402,R.S. 18:402,1704
+urn:us-la:rs:13:2582,rs,13:2582,rs,13:2614,urn:us-la:rs:13:2614,R.S. 13:2614,1910
+urn:us-la:rs:13:2583,rs,13:2583,rs,18:402,urn:us-la:rs:18:402,R.S. 18:402,1432
+urn:us-la:rs:13:2583,rs,13:2583,rs,13:2614,urn:us-la:rs:13:2614,R.S. 13:2614,1638
+urn:us-la:rs:13:2583.1,rs,13:2583.1,rs,40:2402,urn:us-la:rs:40:2402,R.S. 40:2402,355
+urn:us-la:rs:13:2583.1,rs,13:2583.1,rs,13:3477,urn:us-la:rs:13:3477,R.S. 13:3477,2037
+urn:us-la:rs:13:2583.2,rs,13:2583.2,rs,40:2402,urn:us-la:rs:40:2402,R.S. 40:2402,328
+urn:us-la:rs:13:2583.2,rs,13:2583.2,rs,13:3477,urn:us-la:rs:13:3477,R.S. 13:3477,1708
+urn:us-la:rs:13:2583.3,rs,13:2583.3,rs,40:2405,urn:us-la:rs:40:2405,R.S. 40:2405,331
+urn:us-la:rs:13:2583.3,rs,13:2583.3,rs,13:3477,urn:us-la:rs:13:3477,R.S. 13:3477,2063
+urn:us-la:rs:13:2583.4,rs,13:2583.4,rs,40:2402,urn:us-la:rs:40:2402,R.S. 40:2402,332
+urn:us-la:rs:13:2583.4,rs,13:2583.4,rs,13:3477,urn:us-la:rs:13:3477,R.S. 13:3477,1656
+urn:us-la:rs:13:2583.5,rs,13:2583.5,rs,40:2402,urn:us-la:rs:40:2402,R.S. 40:2402,332
+urn:us-la:rs:13:2583.5,rs,13:2583.5,rs,13:3477,urn:us-la:rs:13:3477,R.S. 13:3477,1656
+urn:us-la:rs:13:2583.6,rs,13:2583.6,rs,40:2402,urn:us-la:rs:40:2402,R.S. 40:2402,332
+urn:us-la:rs:13:2583.6,rs,13:2583.6,rs,13:3477,urn:us-la:rs:13:3477,R.S. 13:3477,1663
+urn:us-la:rs:13:2583.7,rs,13:2583.7,rs,40:2402,urn:us-la:rs:40:2402,R.S. 40:2402,330
+urn:us-la:rs:13:2583.7,rs,13:2583.7,rs,13:3477,urn:us-la:rs:13:3477,R.S. 13:3477,1660
+urn:us-la:rs:13:2584,rs,13:2584,rs,13:2585,urn:us-la:rs:13:2585,R.S. 13:2585,32
+urn:us-la:rs:13:2586,rs,13:2586,rs,30:2531,urn:us-la:rs:30:2531,R.S. 30:2531,836
+urn:us-la:rs:13:2586,rs,13:2586,rs,30:2531,urn:us-la:rs:30:2531,R.S. 30:2531,1314
+urn:us-la:rs:13:2586,rs,13:2586,rs,34:843,urn:us-la:rs:34:843,R.S. 34:843,2004
+urn:us-la:rs:13:2586,rs,13:2586,rs,34:843,urn:us-la:rs:34:843,R.S. 34:843,2451
+urn:us-la:rs:13:2586.1,rs,13:2586.1,rs,35:1,urn:us-la:rs:35:1,R.S. 35:1,1427
+urn:us-la:rs:13:2586.2,rs,13:2586.2,rs,13:2586.1,urn:us-la:rs:13:2586.1,R.S. 13:2586.1,76
+urn:us-la:rs:13:2586.2,rs,13:2586.2,rs,35:191,urn:us-la:rs:35:191,R.S. 35:191,161
+urn:us-la:rs:13:2586.2,rs,13:2586.2,rs,35:1,urn:us-la:rs:35:1,R.S. 35:1,255
+urn:us-la:rs:13:2587.1,rs,13:2587.1,rs,30:2531,urn:us-la:rs:30:2531,R.S. 30:2531,243
+urn:us-la:rs:13:2587.2,rs,13:2587.2,rs,34:843,urn:us-la:rs:34:843,R.S. 34:843,273
+urn:us-la:rs:13:2589,rs,13:2589,rs,13:5802,urn:us-la:rs:13:5802,R.S. 13:5802,484
+urn:us-la:rs:13:2589,rs,13:2589,rs,49:251.1,urn:us-la:rs:49:251.1,R.S. 49:251.1,659
+urn:us-la:rs:13:2589,rs,13:2589,rs,30:2531,urn:us-la:rs:30:2531,R.S. 30:2531,951
+urn:us-la:rs:13:2589,rs,13:2589,rs,30:2531,urn:us-la:rs:30:2531,R.S. 30:2531,1166
+urn:us-la:rs:13:2590,rs,13:2590,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,3850
+urn:us-la:rs:13:2590,rs,13:2590,rs,13:4521,urn:us-la:rs:13:4521,R.S. 13:4521,4206
+urn:us-la:rs:13:2590.1,rs,13:2590.1,rs,13:2590,urn:us-la:rs:13:2590,R.S. 13:2590,468
+urn:us-la:rs:13:2590.1,rs,13:2590.1,rs,13:4521,urn:us-la:rs:13:4521,R.S. 13:4521,1478
+urn:us-la:rs:13:2590.2,rs,13:2590.2,rs,42:63,urn:us-la:rs:42:63,R.S. 42:63,33
+urn:us-la:rs:13:2591,rs,13:2591,rs,49:251.1,urn:us-la:rs:49:251.1,R.S. 49:251.1,2056
+urn:us-la:rs:13:2593,rs,13:2593,rs,13:2583.1,urn:us-la:rs:13:2583.1,R.S. 13:2583.1,2597
+urn:us-la:rs:13:2604,rs,13:2604,rs,13:2581.1,urn:us-la:rs:13:2581.1,R.S. 13:2581.1,1122
+urn:us-la:rs:13:2604,rs,13:2604,rs,13:2581.2,urn:us-la:rs:13:2581.2,R.S. 13:2581.2,1401
+urn:us-la:rs:13:2604.1,rs,13:2604.1,rs,13:2582,urn:us-la:rs:13:2582,R.S. 13:2582,1191
+urn:us-la:rs:13:2604.1,rs,13:2604.1,rs,13:2583,urn:us-la:rs:13:2583,R.S. 13:2583,1468
+urn:us-la:rs:13:2607,rs,13:2607,rs,13:2582,urn:us-la:rs:13:2582,R.S. 13:2582,998
+urn:us-la:rs:13:2607,rs,13:2607,rs,13:2583,urn:us-la:rs:13:2583,R.S. 13:2583,1191
+urn:us-la:rs:13:2608,rs,13:2608,rs,13:2582,urn:us-la:rs:13:2582,R.S. 13:2582,1171
+urn:us-la:rs:13:2608,rs,13:2608,rs,13:2583,urn:us-la:rs:13:2583,R.S. 13:2583,1364
+urn:us-la:rs:13:2614,rs,13:2614,rs,13:2582,urn:us-la:rs:13:2582,R.S. 13:2582,103
+urn:us-la:rs:13:2614,rs,13:2614,rs,13:2582,urn:us-la:rs:13:2582,R.S. 13:2582,1383
+urn:us-la:rs:13:2707,rs,13:2707,rs,13:2706,urn:us-la:rs:13:2706,R.S. 13:2706,189
+urn:us-la:rs:13:3045,rs,13:3045,rs,13:3044,urn:us-la:rs:13:3044,R.S. 13:3044,111
+urn:us-la:rs:13:3049,rs,13:3049,ccp,1734,,Code of Civil Procedure Article 1734,9203
+urn:us-la:rs:13:3049,rs,13:3049,ccp,1734.1,,Code of Civil Procedure Article 1734.1,9295
+urn:us-la:rs:13:3049.1,rs,13:3049.1,rs,13:3049,urn:us-la:rs:13:3049,R.S. 13:3049,615
+urn:us-la:rs:13:3049.1,rs,13:3049.1,rs,13:3044,urn:us-la:rs:13:3044,R.S. 13:3044,3826
+urn:us-la:rs:13:3103,rs,13:3103,rs,13:3102,urn:us-la:rs:13:3102,R.S. 13:3102,26
+urn:us-la:rs:13:3105,rs,13:3105,rs,13:3049,urn:us-la:rs:13:3049,R.S. 13:3049,263
+urn:us-la:rs:13:3106,rs,13:3106,rs,13:3041,urn:us-la:rs:13:3041,R.S. 13:3041,18
+urn:us-la:rs:13:3106,rs,13:3106,rs,13:3043,urn:us-la:rs:13:3043,R.S. 13:3043,165
+urn:us-la:rs:13:3203,rs,13:3203,rs,13:3201,urn:us-la:rs:13:3201,R.S. 13:3201,41
+urn:us-la:rs:13:3204,rs,13:3204,rs,13:3201,urn:us-la:rs:13:3201,R.S. 13:3201,19
+urn:us-la:rs:13:3204,rs,13:3204,civcode,102,urn:us-la:civcode:art:102,Civil Code Article 102,99
+urn:us-la:rs:13:3204,rs,13:3204,ccp,2592,,Code of Civil Procedure Article 2592,280
+urn:us-la:rs:13:3204,rs,13:3204,ccp,5091,,Code of Civil Procedure Article 5091,1062
+urn:us-la:rs:13:3205,rs,13:3205,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,192
+urn:us-la:rs:13:3206,rs,13:3206,rs,13:3201,urn:us-la:rs:13:3201,R.S. 13:3201,11
+urn:us-la:rs:13:3207,rs,13:3207,rs,13:3201,urn:us-la:rs:13:3201,R.S. 13:3201,0
+urn:us-la:rs:13:3207,rs,13:3207,rs,13:3471,urn:us-la:rs:13:3471,R.S. 13:3471,276
+urn:us-la:rs:13:3207,rs,13:3207,rs,13:3472,urn:us-la:rs:13:3472,R.S. 13:3472,293
+urn:us-la:rs:13:3207,rs,13:3207,rs,13:3474,urn:us-la:rs:13:3474,R.S. 13:3474,307
+urn:us-la:rs:13:3207,rs,13:3207,rs,13:3479,urn:us-la:rs:13:3479,R.S. 13:3479,333
+urn:us-la:rs:13:3207,rs,13:3207,rs,13:3914,urn:us-la:rs:13:3914,R.S. 13:3914,363
+urn:us-la:rs:13:3207,rs,13:3207,rs,22:1269,urn:us-la:rs:22:1269,R.S. 22:1269,380
+urn:us-la:rs:13:3271,rs,13:3271,rs,13:3272,urn:us-la:rs:13:3272,R.S. 13:3272,169
+urn:us-la:rs:13:3274,rs,13:3274,rs,13:3272,urn:us-la:rs:13:3272,R.S. 13:3272,97
+urn:us-la:rs:13:3274,rs,13:3274,rs,13:3273,urn:us-la:rs:13:3273,R.S. 13:3273,114
+urn:us-la:rs:13:3381,rs,13:3381,rs,13:5241,urn:us-la:rs:13:5241,R.S. 13:5241,1499
+urn:us-la:rs:13:3382,rs,13:3382,rs,13:3381,urn:us-la:rs:13:3381,R.S. 13:3381,167
+urn:us-la:rs:13:3383,rs,13:3383,rs,13:3381,urn:us-la:rs:13:3381,R.S. 13:3381,162
+urn:us-la:rs:13:3421,rs,13:3421,civcode,47,urn:us-la:civcode:art:47,Civil Code Article 47,84
+urn:us-la:rs:13:3425,rs,13:3425,rs,13:3433,urn:us-la:rs:13:3433,R.S. 13:3433,203
+urn:us-la:rs:13:3425,rs,13:3425,rs,13:3426,urn:us-la:rs:13:3426,R.S. 13:3426,449
+urn:us-la:rs:13:3426,rs,13:3426,rs,13:342,urn:us-la:rs:13:342,R.S. 13:342,412
+urn:us-la:rs:13:3428,rs,13:3428,ccp,2593,,Code of Civil Procedure Article 2593,869
+urn:us-la:rs:13:3429,rs,13:3429,rs,13:3425,urn:us-la:rs:13:3425,R.S. 13:3425,121
+urn:us-la:rs:13:3429,rs,13:3429,rs,13:3431,urn:us-la:rs:13:3431,R.S. 13:3431,328
+urn:us-la:rs:13:3429,rs,13:3429,rs,13:3431,urn:us-la:rs:13:3431,R.S. 13:3431,675
+urn:us-la:rs:13:3430,rs,13:3430,ccp,2087,,Code of Civil Procedure Article 2087,168
+urn:us-la:rs:13:3436,rs,13:3436,rs,13:3440,urn:us-la:rs:13:3440,R.S. 13:3440,426
+urn:us-la:rs:13:3438,rs,13:3438,rs,13:3440,urn:us-la:rs:13:3440,R.S. 13:3440,261
+urn:us-la:rs:13:3439,rs,13:3439,rs,13:3440,urn:us-la:rs:13:3440,R.S. 13:3440,176
+urn:us-la:rs:13:3440,rs,13:3440,rs,13:3443,urn:us-la:rs:13:3443,R.S. 13:3443,1108
+urn:us-la:rs:13:3443,rs,13:3443,ccp,3333,,Code of Civil Procedure Article 3333,437
+urn:us-la:rs:13:3471,rs,13:3471,rs,13:3204,urn:us-la:rs:13:3204,R.S. 13:3204,1471
+urn:us-la:rs:13:3471,rs,13:3471,rs,13:3471,urn:us-la:rs:13:3471,R.S. 13:3471,3900
+urn:us-la:rs:13:3474,rs,13:3474,rs,13:3475,urn:us-la:rs:13:3475,R.S. 13:3475,1391
+urn:us-la:rs:13:3475,rs,13:3475,rs,13:3474,urn:us-la:rs:13:3474,R.S. 13:3474,44
+urn:us-la:rs:13:3480,rs,13:3480,rs,13:3479,urn:us-la:rs:13:3479,R.S. 13:3479,44
+urn:us-la:rs:13:3481,rs,13:3481,rs,13:3479,urn:us-la:rs:13:3479,R.S. 13:3479,67
+urn:us-la:rs:13:3482,rs,13:3482,rs,13:3479,urn:us-la:rs:13:3479,R.S. 13:3479,11
+urn:us-la:rs:13:3483,rs,13:3483,rs,13:3232,urn:us-la:rs:13:3232,R.S. 13:3232,25
+urn:us-la:rs:13:3491,rs,13:3491,civcode,102,urn:us-la:civcode:art:102,Civil Code Article 102,51
+urn:us-la:rs:13:3491,rs,13:3491,civcode,102,urn:us-la:civcode:art:102,Civil Code Article 102,654
+urn:us-la:rs:13:3491,rs,13:3491,civcode,103.1,urn:us-la:civcode:art:103.1,Civil Code Article 103.1,764
+urn:us-la:rs:13:3492,rs,13:3492,civcode,102,urn:us-la:civcode:art:102,Civil Code Article 102,55
+urn:us-la:rs:13:3492,rs,13:3492,civcode,103.1,urn:us-la:civcode:art:103.1,Civil Code Article 103.1,821
+urn:us-la:rs:13:3493,rs,13:3493,rs,13:3491,urn:us-la:rs:13:3491,R.S. 13:3491,27
+urn:us-la:rs:13:3493,rs,13:3493,rs,13:3491,urn:us-la:rs:13:3491,R.S. 13:3491,253
+urn:us-la:rs:13:3493,rs,13:3493,civcode,102,urn:us-la:civcode:art:102,Civil Code Article 102,132
+urn:us-la:rs:13:3494,rs,13:3494,rs,9:315.25,urn:us-la:rs:9:315.25,R.S. 9:315.25,921
+urn:us-la:rs:13:3495,rs,13:3495,rs,13:3494,urn:us-la:rs:13:3494,R.S. 13:3494,50
+urn:us-la:rs:13:3662,rs,13:3662,rs,32:668,urn:us-la:rs:32:668,R.S. 32:668,418
+urn:us-la:rs:13:3662,rs,13:3662,rs,40:1485.6,urn:us-la:rs:40:1485.6,R.S. 40:1485.6,441
+urn:us-la:rs:13:3662,rs,13:3662,rs,13:3662,urn:us-la:rs:13:3662,R.S. 13:3662,1090
+urn:us-la:rs:13:3662,rs,13:3662,rs,13:3662,urn:us-la:rs:13:3662,R.S. 13:3662,1275
+urn:us-la:rs:13:3662,rs,13:3662,rs,13:3662,urn:us-la:rs:13:3662,R.S. 13:3662,1823
+urn:us-la:rs:13:3662,rs,13:3662,rs,13:3662,urn:us-la:rs:13:3662,R.S. 13:3662,2051
+urn:us-la:rs:13:3662,rs,13:3662,rs,32:668,urn:us-la:rs:32:668,R.S. 32:668,5569
+urn:us-la:rs:13:3662,rs,13:3662,rs,32:1504,urn:us-la:rs:32:1504,R.S. 32:1504,5582
+urn:us-la:rs:13:3662,rs,13:3662,rs,40:1485.6,urn:us-la:rs:40:1485.6,R.S. 40:1485.6,5598
+urn:us-la:rs:13:3662,rs,13:3662,rs,32:667,urn:us-la:rs:32:667,R.S. 32:667,6342
+urn:us-la:rs:13:3662,rs,13:3662,rs,49:994,urn:us-la:rs:49:994,R.S. 49:994,7435
+urn:us-la:rs:13:3662,rs,13:3662,rs,32:668,urn:us-la:rs:32:668,R.S. 32:668,8204
+urn:us-la:rs:13:3662,rs,13:3662,rs,32:1504,urn:us-la:rs:32:1504,R.S. 32:1504,8217
+urn:us-la:rs:13:3662,rs,13:3662,rs,40:1485.6,urn:us-la:rs:40:1485.6,R.S. 40:1485.6,8235
+urn:us-la:rs:13:3662,rs,13:3662,rs,30:2024,urn:us-la:rs:30:2024,R.S. 30:2024,9059
+urn:us-la:rs:13:3662,rs,13:3662,rs,13:4521,urn:us-la:rs:13:4521,R.S. 13:4521,11210
+urn:us-la:rs:13:3662,rs,13:3662,rs,13:4533,urn:us-la:rs:13:4533,R.S. 13:4533,11227
+urn:us-la:rs:13:3666,rs,13:3666,rs,37:693,urn:us-la:rs:37:693,R.S. 37:693,1489
+urn:us-la:rs:13:3667.3,rs,13:3667.3,rs,13:3667.1,urn:us-la:rs:13:3667.1,R.S. 13:3667.1,6022
+urn:us-la:rs:13:3667.3,rs,13:3667.3,rs,13:3667.1,urn:us-la:rs:13:3667.1,R.S. 13:3667.1,11330
+urn:us-la:rs:13:3667.3,rs,13:3667.3,ccp,253.1,,Code of Civil Procedure Article 253.1,4458
+urn:us-la:rs:13:3712.1,rs,13:3712.1,rs,13:3712,urn:us-la:rs:13:3712,R.S. 13:3712,34
+urn:us-la:rs:13:3714,rs,13:3714,rs,40:1299.39,urn:us-la:rs:40:1299.39,R.S. 40:1299.39,293
+urn:us-la:rs:13:3714,rs,13:3714,rs,40:1299.41,urn:us-la:rs:40:1299.41,R.S. 40:1299.41,364
+urn:us-la:rs:13:3714,rs,13:3714,rs,32:661,urn:us-la:rs:32:661,R.S. 32:661,2307
+urn:us-la:rs:13:3714,rs,13:3714,rs,32:414,urn:us-la:rs:32:414,R.S. 32:414,2328
+urn:us-la:rs:13:3714,rs,13:3714,rs,32:414.2,urn:us-la:rs:32:414.2,R.S. 32:414.2,2344
+urn:us-la:rs:13:3715.1,rs,13:3715.1,rs,40:1231.1,urn:us-la:rs:40:1231.1,R.S. 40:1231.1,392
+urn:us-la:rs:13:3715.1,rs,13:3715.1,rs,40:1165.1,urn:us-la:rs:40:1165.1,R.S. 40:1165.1,663
+urn:us-la:rs:13:3715.1,rs,13:3715.1,rs,40:1165.1,urn:us-la:rs:40:1165.1,R.S. 40:1165.1,5203
+urn:us-la:rs:13:3715.1,rs,13:3715.1,rs,40:1165.1,urn:us-la:rs:40:1165.1,R.S. 40:1165.1,7247
+urn:us-la:rs:13:3715.1,rs,13:3715.1,rs,40:1165.1,urn:us-la:rs:40:1165.1,R.S. 40:1165.1,7366
+urn:us-la:rs:13:3715.1,rs,13:3715.1,civcode,2315.1,urn:us-la:civcode:art:2315.1,Civil Code Article 2315.1,2761
+urn:us-la:rs:13:3715.1,rs,13:3715.1,ccp,1313,,Code of Civil Procedure Article 1313,1424
+urn:us-la:rs:13:3715.1,rs,13:3715.1,evidence,510,,Code of Evidence Article 510,681
+urn:us-la:rs:13:3715.1,rs,13:3715.1,evidence,510,,Code of Evidence Article 510,5222
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,44:7,urn:us-la:rs:44:7,R.S. 44:7,37
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,40:2131,urn:us-la:rs:40:2131,R.S. 40:2131,903
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,40:2131,urn:us-la:rs:40:2131,R.S. 40:2131,1614
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,40:1299.41,urn:us-la:rs:40:1299.41,R.S. 40:1299.41,2007
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,40:2131,urn:us-la:rs:40:2131,R.S. 40:2131,2514
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,40:1299.41,urn:us-la:rs:40:1299.41,R.S. 40:1299.41,2633
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,40:2100,urn:us-la:rs:40:2100,R.S. 40:2100,2706
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,40:2144,urn:us-la:rs:40:2144,R.S. 40:2144,4949
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,13:3715.1,urn:us-la:rs:13:3715.1,R.S. 13:3715.1,6567
+urn:us-la:rs:13:3715.3,rs,13:3715.3,rs,49:975.1,urn:us-la:rs:49:975.1,R.S. 49:975.1,8013
+urn:us-la:rs:13:3715.3,rs,13:3715.3,evidence,510,,Code of Evidence Article 510,9993
+urn:us-la:rs:13:3715.4,rs,13:3715.4,rs,22:46,urn:us-la:rs:22:46,R.S. 22:46,169
+urn:us-la:rs:13:3715.4,rs,13:3715.4,rs,22:46,urn:us-la:rs:22:46,R.S. 22:46,609
+urn:us-la:rs:13:3715.4,rs,13:3715.4,rs,22:46,urn:us-la:rs:22:46,R.S. 22:46,1113
+urn:us-la:rs:13:3715.4,rs,13:3715.4,rs,44:1,urn:us-la:rs:44:1,R.S. 44:1,1665
+urn:us-la:rs:13:3715.4,rs,13:3715.4,rs,22:46,urn:us-la:rs:22:46,R.S. 22:46,2153
+urn:us-la:rs:13:3715.4,rs,13:3715.4,rs,22:46,urn:us-la:rs:22:46,R.S. 22:46,2792
+urn:us-la:rs:13:3715.4,rs,13:3715.4,ccp,2081,,Code of Civil Procedure Article 2081,3205
+urn:us-la:rs:13:3715.5,rs,13:3715.5,evidence,801,,Code of Evidence Article 801,395
+urn:us-la:rs:13:3715.5,rs,13:3715.5,evidence,804,,Code of Evidence Article 804,476
+urn:us-la:rs:13:3715.6,rs,13:3715.6,rs,12:201,urn:us-la:rs:12:201,R.S. 12:201,376
+urn:us-la:rs:13:3715.6,rs,13:3715.6,rs,13:3715.3,urn:us-la:rs:13:3715.3,R.S. 13:3715.3,1629
+urn:us-la:rs:13:3715.6,rs,13:3715.6,rs,40:1299.41,urn:us-la:rs:40:1299.41,R.S. 40:1299.41,2112
+urn:us-la:rs:13:3715.6,rs,13:3715.6,rs,40:1299.39,urn:us-la:rs:40:1299.39,R.S. 40:1299.39,2176
+urn:us-la:rs:13:3715.6,rs,13:3715.6,rs,13:3715.3,urn:us-la:rs:13:3715.3,R.S. 13:3715.3,5809
+urn:us-la:rs:13:3715.6,rs,13:3715.6,rs,13:3715.3,urn:us-la:rs:13:3715.3,R.S. 13:3715.3,5967
+urn:us-la:rs:13:3718,rs,13:3718,rs,13:3717,urn:us-la:rs:13:3717,R.S. 13:3717,0
+urn:us-la:rs:13:3722,rs,13:3722,rs,13:3721,urn:us-la:rs:13:3721,R.S. 13:3721,58
+urn:us-la:rs:13:3724,rs,13:3724,rs,13:3723,urn:us-la:rs:13:3723,R.S. 13:3723,61
+urn:us-la:rs:13:3728,rs,13:3728,rs,13:3729,urn:us-la:rs:13:3729,R.S. 13:3729,74
+urn:us-la:rs:13:3730,rs,13:3730,rs,13:3729,urn:us-la:rs:13:3729,R.S. 13:3729,64
+urn:us-la:rs:13:3731,rs,13:3731,rs,13:3729,urn:us-la:rs:13:3729,R.S. 13:3729,102
+urn:us-la:rs:13:3733,rs,13:3733,ccp,2636,,Code of Civil Procedure Article 2636,1742
+urn:us-la:rs:13:3733.1,rs,13:3733.1,rs,13:3733.2,urn:us-la:rs:13:3733.2,R.S. 13:3733.2,31
+urn:us-la:rs:13:3733.1,rs,13:3733.1,rs,13:3733.1,urn:us-la:rs:13:3733.1,R.S. 13:3733.1,5601
+urn:us-la:rs:13:3733.1,rs,13:3733.1,rs,10:3,urn:us-la:rs:10:3,R.S. 10:3,6934
+urn:us-la:rs:13:3733.1,rs,13:3733.1,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,8901
+urn:us-la:rs:13:3733.2,rs,13:3733.2,rs,13:3733.2,urn:us-la:rs:13:3733.2,R.S. 13:3733.2,1749
+urn:us-la:rs:13:3733.2,rs,13:3733.2,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,2887
+urn:us-la:rs:13:3734,rs,13:3734,rs,40:2102,urn:us-la:rs:40:2102,R.S. 40:2102,1096
+urn:us-la:rs:13:3734,rs,13:3734,rs,40:2009.2,urn:us-la:rs:40:2009.2,R.S. 40:2009.2,1153
+urn:us-la:rs:13:3734,rs,13:3734,rs,40:1299.40,urn:us-la:rs:40:1299.40,R.S. 40:1299.40,2609
+urn:us-la:rs:13:3734,rs,13:3734,rs,13:3715.1,urn:us-la:rs:13:3715.1,R.S. 13:3715.1,3696
+urn:us-la:rs:13:3734,rs,13:3734,rs,13:3715.1,urn:us-la:rs:13:3715.1,R.S. 13:3715.1,4076
+urn:us-la:rs:13:3734,rs,13:3734,evidence,510,,Code of Evidence Article 510,1784
+urn:us-la:rs:13:3734,rs,13:3734,evidence,510,,Code of Evidence Article 510,3498
+urn:us-la:rs:13:3734,rs,13:3734,evidence,510,,Code of Evidence Article 510,3990
+urn:us-la:rs:13:3822,rs,13:3822,rs,13:3821,urn:us-la:rs:13:3821,R.S. 13:3821,0
+urn:us-la:rs:13:3824,rs,13:3824,rs,13:3825,urn:us-la:rs:13:3825,R.S. 13:3825,267
+urn:us-la:rs:13:3851,rs,13:3851,rs,13:3851,urn:us-la:rs:13:3851,R.S. 13:3851,282
+urn:us-la:rs:13:3851,rs,13:3851,rs,13:3851,urn:us-la:rs:13:3851,R.S. 13:3851,624
+urn:us-la:rs:13:3851.1,rs,13:3851.1,rs,9:3516,urn:us-la:rs:9:3516,R.S. 9:3516,519
+urn:us-la:rs:13:3852,rs,13:3852,rs,13:3851,urn:us-la:rs:13:3851,R.S. 13:3851,335
+urn:us-la:rs:13:3852,rs,13:3852,rs,13:3851,urn:us-la:rs:13:3851,R.S. 13:3851,1318
+urn:us-la:rs:13:3852,rs,13:3852,rs,43:203,urn:us-la:rs:43:203,R.S. 43:203,2413
+urn:us-la:rs:13:3852,rs,13:3852,ccp,2293,,Code of Civil Procedure Article 2293,428
+urn:us-la:rs:13:3852,rs,13:3852,ccp,2642,,Code of Civil Procedure Article 2642,3687
+urn:us-la:rs:13:3853,rs,13:3853,rs,13:3852,urn:us-la:rs:13:3852,R.S. 13:3852,56
+urn:us-la:rs:13:3854,rs,13:3854,rs,13:3852,urn:us-la:rs:13:3852,R.S. 13:3852,43
+urn:us-la:rs:13:3854,rs,13:3854,rs,13:3852,urn:us-la:rs:13:3852,R.S. 13:3852,476
+urn:us-la:rs:13:3855,rs,13:3855,rs,13:3853,urn:us-la:rs:13:3853,R.S. 13:3853,202
+urn:us-la:rs:13:3855,rs,13:3855,rs,13:3853,urn:us-la:rs:13:3853,R.S. 13:3853,572
+urn:us-la:rs:13:3856,rs,13:3856,rs,13:3851,urn:us-la:rs:13:3851,R.S. 13:3851,297
+urn:us-la:rs:13:3857,rs,13:3857,rs,13:3852,urn:us-la:rs:13:3852,R.S. 13:3852,86
+urn:us-la:rs:13:3858,rs,13:3858,rs,13:3851,urn:us-la:rs:13:3851,R.S. 13:3851,74
+urn:us-la:rs:13:3859,rs,13:3859,rs,13:3852,urn:us-la:rs:13:3852,R.S. 13:3852,208
+urn:us-la:rs:13:3860,rs,13:3860,rs,13:3851,urn:us-la:rs:13:3851,R.S. 13:3851,18
+urn:us-la:rs:13:3861,rs,13:3861,rs,13:3851,urn:us-la:rs:13:3851,R.S. 13:3851,11
+urn:us-la:rs:13:3861,rs,13:3861,rs,13:3851,urn:us-la:rs:13:3851,R.S. 13:3851,274
+urn:us-la:rs:13:3864,rs,13:3864,rs,13:3863,urn:us-la:rs:13:3863,R.S. 13:3863,282
+urn:us-la:rs:13:3871,rs,13:3871,rs,13:3868,urn:us-la:rs:13:3868,R.S. 13:3868,67
+urn:us-la:rs:13:3872,rs,13:3872,rs,13:3868,urn:us-la:rs:13:3868,R.S. 13:3868,235
+urn:us-la:rs:13:3873,rs,13:3873,rs,13:3872,urn:us-la:rs:13:3872,R.S. 13:3872,81
+urn:us-la:rs:13:3877,rs,13:3877,rs,13:3876,urn:us-la:rs:13:3876,R.S. 13:3876,68
+urn:us-la:rs:13:3881,rs,13:3881,rs,11:292,urn:us-la:rs:11:292,R.S. 11:292,6347
+urn:us-la:rs:13:3881,rs,13:3881,rs,22:912,urn:us-la:rs:22:912,R.S. 22:912,8101
+urn:us-la:rs:13:3885,rs,13:3885,rs,9:5352,urn:us-la:rs:9:5352,R.S. 9:5352,91
+urn:us-la:rs:13:3885,rs,13:3885,rs,13:3881,urn:us-la:rs:13:3881,R.S. 13:3881,131
+urn:us-la:rs:13:3885,rs,13:3885,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,516
+urn:us-la:rs:13:3885,rs,13:3885,rs,13:3881,urn:us-la:rs:13:3881,R.S. 13:3881,563
+urn:us-la:rs:13:3913,rs,13:3913,rs,13:3921,urn:us-la:rs:13:3921,R.S. 13:3921,384
+urn:us-la:rs:13:3914,rs,13:3914,rs,13:3921,urn:us-la:rs:13:3921,R.S. 13:3921,701
+urn:us-la:rs:13:3921,rs,13:3921,rs,13:3923,urn:us-la:rs:13:3923,R.S. 13:3923,1086
+urn:us-la:rs:13:3923,rs,13:3923,ccp,2413,,Code of Civil Procedure Article 2413,1434
+urn:us-la:rs:13:3925,rs,13:3925,rs,13:3881,urn:us-la:rs:13:3881,R.S. 13:3881,172
+urn:us-la:rs:13:4102,rs,13:4102,ccp,2636,,Code of Civil Procedure Article 2636,797
+urn:us-la:rs:13:4102,rs,13:4102,ccp,2636,,Code of Civil Procedure Article 2636,1197
+urn:us-la:rs:13:4103,rs,13:4103,rs,12:76,urn:us-la:rs:12:76,R.S. 12:76,265
+urn:us-la:rs:13:4103.1,rs,13:4103.1,rs,12:1318,urn:us-la:rs:12:1318,R.S. 12:1318,781
+urn:us-la:rs:13:4103.1,rs,13:4103.1,rs,12:1305,urn:us-la:rs:12:1305,R.S. 12:1305,872
+urn:us-la:rs:13:4103.1,rs,13:4103.1,rs,12:1312,urn:us-la:rs:12:1312,R.S. 12:1312,1087
+urn:us-la:rs:13:4103.1,rs,13:4103.1,rs,12:1318,urn:us-la:rs:12:1318,R.S. 12:1318,1623
+urn:us-la:rs:13:4103.1,rs,13:4103.1,rs,12:1305,urn:us-la:rs:12:1305,R.S. 12:1305,1714
+urn:us-la:rs:13:4103.1,rs,13:4103.1,rs,12:1312,urn:us-la:rs:12:1312,R.S. 12:1312,1929
+urn:us-la:rs:13:4105,rs,13:4105,rs,13:4104,urn:us-la:rs:13:4104,R.S. 13:4104,103
+urn:us-la:rs:13:4107,rs,13:4107,rs,13:4106,urn:us-la:rs:13:4106,R.S. 13:4106,0
+urn:us-la:rs:13:4108,rs,13:4108,rs,13:4106,urn:us-la:rs:13:4106,R.S. 13:4106,76
+urn:us-la:rs:13:4108.1,rs,13:4108.1,rs,13:4106,urn:us-la:rs:13:4106,R.S. 13:4106,22
+urn:us-la:rs:13:4108.2,rs,13:4108.2,rs,13:4106,urn:us-la:rs:13:4106,R.S. 13:4106,79
+urn:us-la:rs:13:4108.3,rs,13:4108.3,rs,10:9,urn:us-la:rs:10:9,R.S. 10:9,219
+urn:us-la:rs:13:4163,rs,13:4163,rs,46:2131,urn:us-la:rs:46:2131,R.S. 46:2131,8449
+urn:us-la:rs:13:4163,rs,13:4163,rs,46:2151,urn:us-la:rs:46:2151,R.S. 46:2151,8471
+urn:us-la:rs:13:4163,rs,13:4163,rs,46:2171,urn:us-la:rs:46:2171,R.S. 46:2171,8493
+urn:us-la:rs:13:4163,rs,13:4163,rs,46:2181,urn:us-la:rs:46:2181,R.S. 46:2181,8515
+urn:us-la:rs:13:4163,rs,13:4163,rs,9:361,urn:us-la:rs:9:361,R.S. 9:361,8537
+urn:us-la:rs:13:4163,rs,13:4163,rs,9:372,urn:us-la:rs:9:372,R.S. 9:372,8557
+urn:us-la:rs:13:4163,rs,13:4163,rs,46:1846,urn:us-la:rs:46:1846,R.S. 46:1846,8850
+urn:us-la:rs:13:4163,rs,13:4163,rs,15:574.4.2,urn:us-la:rs:15:574.4.2,R.S. 15:574.4.2,8991
+urn:us-la:rs:13:4163,rs,13:4163,ccp,253,,Code of Civil Procedure Article 253,2200
+urn:us-la:rs:13:4163,rs,13:4163,ccp,2088,,Code of Civil Procedure Article 2088,5658
+urn:us-la:rs:13:4163,rs,13:4163,crp,30,,Code of Criminal Procedure Article 30,8684
+urn:us-la:rs:13:4163,rs,13:4163,crp,1001,,Code of Criminal Procedure Article 1001,9275
+urn:us-la:rs:13:4165,rs,13:4165,rs,22:2051,urn:us-la:rs:22:2051,R.S. 22:2051,6090
+urn:us-la:rs:13:4165,rs,13:4165,evidence,706,,Code of Evidence Article 706,2026
+urn:us-la:rs:13:4202,rs,13:4202,rs,49:950,urn:us-la:rs:49:950,R.S. 49:950,3213
+urn:us-la:rs:13:4202,rs,13:4202,rs,49:961,urn:us-la:rs:49:961,R.S. 49:961,3251
+urn:us-la:rs:13:4208,rs,13:4208,rs,13:4207,urn:us-la:rs:13:4207,R.S. 13:4207,40
+urn:us-la:rs:13:4210,rs,13:4210,rs,13:4207,urn:us-la:rs:13:4207,R.S. 13:4207,24
+urn:us-la:rs:13:4211,rs,13:4211,rs,13:4207,urn:us-la:rs:13:4207,R.S. 13:4207,18
+urn:us-la:rs:13:4232,rs,13:4232,rs,9:2801,urn:us-la:rs:9:2801,R.S. 9:2801,660
+urn:us-la:rs:13:4232,rs,13:4232,civcode,102,urn:us-la:civcode:art:102,Civil Code Article 102,349
+urn:us-la:rs:13:4232,rs,13:4232,civcode,105,urn:us-la:civcode:art:105,Civil Code Article 105,439
+urn:us-la:rs:13:4232,rs,13:4232,civcode,121,urn:us-la:civcode:art:121,Civil Code Article 121,536
+urn:us-la:rs:13:4242,rs,13:4242,ccp,891,,Code of Civil Procedure Article 891,182
+urn:us-la:rs:13:4248,rs,13:4248,rs,46:2136.2,urn:us-la:rs:46:2136.2,R.S. 46:2136.2,482
+urn:us-la:rs:13:4248,rs,13:4248,rs,46:2136.2,urn:us-la:rs:46:2136.2,R.S. 46:2136.2,702
+urn:us-la:rs:13:4251.105,rs,13:4251.105,rs,13:4251.104,urn:us-la:rs:13:4251.104,R.S. 13:4251.104,144
+urn:us-la:rs:13:4251.201,rs,13:4251.201,rs,13:4251.203,urn:us-la:rs:13:4251.203,R.S. 13:4251.203,1031
+urn:us-la:rs:13:4251.201,rs,13:4251.201,rs,13:4251.301,urn:us-la:rs:13:4251.301,R.S. 13:4251.301,1052
+urn:us-la:rs:13:4251.203,rs,13:4251.203,rs,13:4251.206,urn:us-la:rs:13:4251.206,R.S. 13:4251.206,985
+urn:us-la:rs:13:4251.203,rs,13:4251.203,rs,13:4251.204,urn:us-la:rs:13:4251.204,R.S. 13:4251.204,1410
+urn:us-la:rs:13:4251.204,rs,13:4251.204,rs,13:4251.203,urn:us-la:rs:13:4251.203,R.S. 13:4251.203,52
+urn:us-la:rs:13:4251.204,rs,13:4251.204,rs,13:4251.301,urn:us-la:rs:13:4251.301,R.S. 13:4251.301,580
+urn:us-la:rs:13:4251.205,rs,13:4251.205,rs,13:4251.204,urn:us-la:rs:13:4251.204,R.S. 13:4251.204,32
+urn:us-la:rs:13:4251.206,rs,13:4251.206,rs,13:4251.203,urn:us-la:rs:13:4251.203,R.S. 13:4251.203,51
+urn:us-la:rs:13:4251.207,rs,13:4251.207,rs,13:4251.206,urn:us-la:rs:13:4251.206,R.S. 13:4251.206,994
+urn:us-la:rs:13:4251.207,rs,13:4251.207,rs,13:4251.203,urn:us-la:rs:13:4251.203,R.S. 13:4251.203,1172
+urn:us-la:rs:13:4251.209,rs,13:4251.209,rs,13:4251.204,urn:us-la:rs:13:4251.204,R.S. 13:4251.204,154
+urn:us-la:rs:13:4251.209,rs,13:4251.209,rs,13:4251.203,urn:us-la:rs:13:4251.203,R.S. 13:4251.203,450
+urn:us-la:rs:13:4251.209,rs,13:4251.209,rs,13:4251.203,urn:us-la:rs:13:4251.203,R.S. 13:4251.203,579
+urn:us-la:rs:13:4251.209,rs,13:4251.209,rs,13:4251.203,urn:us-la:rs:13:4251.203,R.S. 13:4251.203,710
+urn:us-la:rs:13:4251.301,rs,13:4251.301,rs,13:4251.201,urn:us-la:rs:13:4251.201,R.S. 13:4251.201,1861
+urn:us-la:rs:13:4251.301,rs,13:4251.301,rs,13:4251.302,urn:us-la:rs:13:4251.302,R.S. 13:4251.302,2462
+urn:us-la:rs:13:4251.302,rs,13:4251.302,rs,13:4251.301,urn:us-la:rs:13:4251.301,R.S. 13:4251.301,114
+urn:us-la:rs:13:4251.302,rs,13:4251.302,rs,13:4251.301,urn:us-la:rs:13:4251.301,R.S. 13:4251.301,1614
+urn:us-la:rs:13:4251.302,rs,13:4251.302,ccp,4561,,Code of Civil Procedure Article 4561,2446
+urn:us-la:rs:13:4251.403,rs,13:4251.403,ccp,4556,,Code of Civil Procedure Article 4556,265
+urn:us-la:rs:13:4251.504,rs,13:4251.504,rs,13:4251.501,urn:us-la:rs:13:4251.501,R.S. 13:4251.501,150
+urn:us-la:rs:13:4261.102,rs,13:4261.102,rs,13:4251.102,urn:us-la:rs:13:4251.102,R.S. 13:4251.102,270
+urn:us-la:rs:13:4261.205,rs,13:4261.205,civcode,1918,urn:us-la:civcode:art:1918,Civil Code Article 1918,810
+urn:us-la:rs:13:4261.206,rs,13:4261.206,civcode,1918,urn:us-la:civcode:art:1918,Civil Code Article 1918,217
+urn:us-la:rs:13:4261.207,rs,13:4261.207,rs,13:4261.206,urn:us-la:rs:13:4261.206,R.S. 13:4261.206,257
+urn:us-la:rs:13:4291,rs,13:4291,rs,46:236.16,urn:us-la:rs:46:236.16,R.S. 46:236.16,3214
+urn:us-la:rs:13:4291,rs,13:4291,rs,14:125,urn:us-la:rs:14:125,R.S. 14:125,3872
+urn:us-la:rs:13:4341,rs,13:4341,ccp,2344,,Code of Civil Procedure Article 2344,2288
+urn:us-la:rs:13:4344,rs,13:4344,rs,47:501,urn:us-la:rs:47:501,R.S. 47:501,873
+urn:us-la:rs:13:4348,rs,13:4348,rs,13:4347,urn:us-la:rs:13:4347,R.S. 13:4347,64
+urn:us-la:rs:13:4354,rs,13:4354,rs,13:4353,urn:us-la:rs:13:4353,R.S. 13:4353,90
+urn:us-la:rs:13:4358,rs,13:4358,ccp,2344,,Code of Civil Procedure Article 2344,111
+urn:us-la:rs:13:4360,rs,13:4360,rs,1:55,urn:us-la:rs:1:55,R.S. 1:55,952
+urn:us-la:rs:13:4360,rs,13:4360,ccp,2344,,Code of Civil Procedure Article 2344,599
+urn:us-la:rs:13:4360,rs,13:4360,ccp,2344,,Code of Civil Procedure Article 2344,710
+urn:us-la:rs:13:4367,rs,13:4367,rs,9:4821,urn:us-la:rs:9:4821,R.S. 9:4821,126
+urn:us-la:rs:13:4367,rs,13:4367,rs,9:4821,urn:us-la:rs:9:4821,R.S. 9:4821,265
+urn:us-la:rs:13:4367,rs,13:4367,rs,47:1993,urn:us-la:rs:47:1993,R.S. 47:1993,403
+urn:us-la:rs:13:4368,rs,13:4368,rs,9:5174,urn:us-la:rs:9:5174,R.S. 9:5174,3079
+urn:us-la:rs:13:4368,rs,13:4368,ccp,2376,,Code of Civil Procedure Article 2376,162
+urn:us-la:rs:13:4369,rs,13:4369,rs,13:4358,urn:us-la:rs:13:4358,R.S. 13:4358,210
+urn:us-la:rs:13:4369,rs,13:4369,rs,13:4358,urn:us-la:rs:13:4358,R.S. 13:4358,596
+urn:us-la:rs:13:4369,rs,13:4369,ccp,2344,,Code of Civil Procedure Article 2344,170
+urn:us-la:rs:13:4369,rs,13:4369,ccp,2344,,Code of Civil Procedure Article 2344,556
+urn:us-la:rs:13:4406,rs,13:4406,rs,13:4405,urn:us-la:rs:13:4405,R.S. 13:4405,18
+urn:us-la:rs:13:4406,rs,13:4406,rs,13:4341,urn:us-la:rs:13:4341,R.S. 13:4341,79
+urn:us-la:rs:13:4406,rs,13:4406,rs,13:4343,urn:us-la:rs:13:4343,R.S. 13:4343,149
+urn:us-la:rs:13:4406,rs,13:4406,rs,13:4353,urn:us-la:rs:13:4353,R.S. 13:4353,179
+urn:us-la:rs:13:4406,rs,13:4406,rs,13:4359,urn:us-la:rs:13:4359,R.S. 13:4359,213
+urn:us-la:rs:13:4435,rs,13:4435,rs,13:4434,urn:us-la:rs:13:4434,R.S. 13:4434,40
+urn:us-la:rs:13:4436,rs,13:4436,rs,13:4434,urn:us-la:rs:13:4434,R.S. 13:4434,11
+urn:us-la:rs:13:4442,rs,13:4442,rs,13:4441,urn:us-la:rs:13:4441,R.S. 13:4441,89
+urn:us-la:rs:13:4521,rs,13:4521,rs,13:5112,urn:us-la:rs:13:5112,R.S. 13:5112,28
+urn:us-la:rs:13:4521,rs,13:4521,rs,19:15,urn:us-la:rs:19:15,R.S. 19:15,42
+urn:us-la:rs:13:4521,rs,13:4521,rs,48:451.3,urn:us-la:rs:48:451.3,R.S. 48:451.3,66
+urn:us-la:rs:13:4521,rs,13:4521,rs,22:2055,urn:us-la:rs:22:2055,R.S. 22:2055,2138
+urn:us-la:rs:13:4521,rs,13:4521,rs,13:754,urn:us-la:rs:13:754,R.S. 13:754,3949
+urn:us-la:rs:13:4521,rs,13:4521,rs,13:841,urn:us-la:rs:13:841,R.S. 13:841,4016
+urn:us-la:rs:13:4521,rs,13:4521,ccp,1920,,Code of Civil Procedure Article 1920,1754
+urn:us-la:rs:13:4521,rs,13:4521,ccp,253,,Code of Civil Procedure Article 253,4032
+urn:us-la:rs:13:4521,rs,13:4521,ccp,1920,,Code of Civil Procedure Article 1920,4610
+urn:us-la:rs:13:4523,rs,13:4523,rs,13:4522,urn:us-la:rs:13:4522,R.S. 13:4522,26
+urn:us-la:rs:13:4611,rs,13:4611,rs,9:311.1,urn:us-la:rs:9:311.1,R.S. 9:311.1,1654
+urn:us-la:rs:13:4611,rs,13:4611,crp,895,,Code of Criminal Procedure Article 895,3679
+urn:us-la:rs:13:4683,rs,13:4683,rs,13:4682,urn:us-la:rs:13:4682,R.S. 13:4682,137
+urn:us-la:rs:13:4685,rs,13:4685,rs,13:4682,urn:us-la:rs:13:4682,R.S. 13:4682,167
+urn:us-la:rs:13:4711,rs,13:4711,rs,14:2,urn:us-la:rs:14:2,R.S. 14:2,900
+urn:us-la:rs:13:4711,rs,13:4711,rs,14:94,urn:us-la:rs:14:94,R.S. 14:94,996
+urn:us-la:rs:13:4711,rs,13:4711,rs,40:961,urn:us-la:rs:40:961,R.S. 40:961,1325
+urn:us-la:rs:13:4711,rs,13:4711,rs,40:1021,urn:us-la:rs:40:1021,R.S. 40:1021,1376
+urn:us-la:rs:13:4711,rs,13:4711,rs,14:82,urn:us-la:rs:14:82,R.S. 14:82,1428
+urn:us-la:rs:13:4711,rs,13:4711,rs,14:106,urn:us-la:rs:14:106,R.S. 14:106,1475
+urn:us-la:rs:13:4711,rs,13:4711,rs,13:4715,urn:us-la:rs:13:4715,R.S. 13:4715,2257
+urn:us-la:rs:13:4713,rs,13:4713,rs,44:3,urn:us-la:rs:44:3,R.S. 44:3,1146
+urn:us-la:rs:13:4713,rs,13:4713,rs,13:4711,urn:us-la:rs:13:4711,R.S. 13:4711,1641
+urn:us-la:rs:13:4713,rs,13:4713,rs,13:4711,urn:us-la:rs:13:4711,R.S. 13:4711,2319
+urn:us-la:rs:13:4715,rs,13:4715,rs,13:4714,urn:us-la:rs:13:4714,R.S. 13:4714,689
+urn:us-la:rs:13:4722,rs,13:4722,rs,13:4721,urn:us-la:rs:13:4721,R.S. 13:4721,372
+urn:us-la:rs:13:4722,rs,13:4722,rs,13:4721,urn:us-la:rs:13:4721,R.S. 13:4721,660
+urn:us-la:rs:13:4723,rs,13:4723,rs,13:4721,urn:us-la:rs:13:4721,R.S. 13:4721,94
+urn:us-la:rs:13:4724,rs,13:4724,rs,13:4723,urn:us-la:rs:13:4723,R.S. 13:4723,766
+urn:us-la:rs:13:4724,rs,13:4724,rs,13:4725,urn:us-la:rs:13:4725,R.S. 13:4725,2279
+urn:us-la:rs:13:4725,rs,13:4725,rs,13:4721,urn:us-la:rs:13:4721,R.S. 13:4721,232
+urn:us-la:rs:13:4726,rs,13:4726,rs,13:4721,urn:us-la:rs:13:4721,R.S. 13:4721,83
+urn:us-la:rs:13:4727,rs,13:4727,rs,13:4721,urn:us-la:rs:13:4721,R.S. 13:4721,37
+urn:us-la:rs:13:4732,rs,13:4732,rs,13:4731,urn:us-la:rs:13:4731,R.S. 13:4731,45
+urn:us-la:rs:13:4733,rs,13:4733,rs,13:4731,urn:us-la:rs:13:4731,R.S. 13:4731,21
+urn:us-la:rs:13:4751,rs,13:4751,rs,40:34.2,urn:us-la:rs:40:34.2,R.S. 40:34.2,1953
+urn:us-la:rs:13:4751,rs,13:4751,rs,14:2,urn:us-la:rs:14:2,R.S. 14:2,2414
+urn:us-la:rs:13:4819,rs,13:4819,rs,13:4818,urn:us-la:rs:13:4818,R.S. 13:4818,58
+urn:us-la:rs:13:4820,rs,13:4820,rs,13:4818,urn:us-la:rs:13:4818,R.S. 13:4818,58
+urn:us-la:rs:13:4825,rs,13:4825,rs,13:4818,urn:us-la:rs:13:4818,R.S. 13:4818,56
+urn:us-la:rs:13:4861,rs,13:4861,rs,13:4861,urn:us-la:rs:13:4861,R.S. 13:4861,639
+urn:us-la:rs:13:4861,rs,13:4861,rs,13:4861,urn:us-la:rs:13:4861,R.S. 13:4861,731
+urn:us-la:rs:13:4864,rs,13:4864,rs,13:4861,urn:us-la:rs:13:4861,R.S. 13:4861,3104
+urn:us-la:rs:13:4864,rs,13:4864,rs,13:4861,urn:us-la:rs:13:4861,R.S. 13:4861,3879
+urn:us-la:rs:13:4865,rs,13:4865,rs,13:4864,urn:us-la:rs:13:4864,R.S. 13:4864,45
+urn:us-la:rs:13:4867,rs,13:4867,rs,13:4861,urn:us-la:rs:13:4861,R.S. 13:4861,986
+urn:us-la:rs:13:4872,rs,13:4872,rs,13:4869,urn:us-la:rs:13:4869,R.S. 13:4869,236
+urn:us-la:rs:13:4872,rs,13:4872,rs,13:4869,urn:us-la:rs:13:4869,R.S. 13:4869,477
+urn:us-la:rs:13:4874,rs,13:4874,rs,13:4869,urn:us-la:rs:13:4869,R.S. 13:4869,311
+urn:us-la:rs:13:4941,rs,13:4941,rs,13:4942,urn:us-la:rs:13:4942,R.S. 13:4942,430
+urn:us-la:rs:13:4946,rs,13:4946,rs,13:4945,urn:us-la:rs:13:4945,R.S. 13:4945,55
+urn:us-la:rs:13:4948,rs,13:4948,rs,13:4941,urn:us-la:rs:13:4941,R.S. 13:4941,21
+urn:us-la:rs:13:4950,rs,13:4950,rs,13:4941,urn:us-la:rs:13:4941,R.S. 13:4941,21
+urn:us-la:rs:13:4986,rs,13:4986,rs,13:4985,urn:us-la:rs:13:4985,R.S. 13:4985,0
+urn:us-la:rs:13:4986,rs,13:4986,rs,13:4990,urn:us-la:rs:13:4990,R.S. 13:4990,21
+urn:us-la:rs:13:4987,rs,13:4987,rs,13:4985,urn:us-la:rs:13:4985,R.S. 13:4985,31
+urn:us-la:rs:13:4987,rs,13:4987,rs,13:4990,urn:us-la:rs:13:4990,R.S. 13:4990,52
+urn:us-la:rs:13:4988,rs,13:4988,rs,13:4985,urn:us-la:rs:13:4985,R.S. 13:4985,18
+urn:us-la:rs:13:4988,rs,13:4988,rs,13:4990,urn:us-la:rs:13:4990,R.S. 13:4990,39
+urn:us-la:rs:13:4989,rs,13:4989,rs,13:4985,urn:us-la:rs:13:4985,R.S. 13:4985,11
+urn:us-la:rs:13:4989,rs,13:4989,rs,13:4990,urn:us-la:rs:13:4990,R.S. 13:4990,32
+urn:us-la:rs:13:5001,rs,13:5001,rs,13:5001,urn:us-la:rs:13:5001,R.S. 13:5001,546
+urn:us-la:rs:13:5062,rs,13:5062,rs,13:5063,urn:us-la:rs:13:5063,R.S. 13:5063,2729
+urn:us-la:rs:13:5071,rs,13:5071,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,54
+urn:us-la:rs:13:5071,rs,13:5071,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,317
+urn:us-la:rs:13:5072,rs,13:5072,rs,13:5062,urn:us-la:rs:13:5062,R.S. 13:5062,687
+urn:us-la:rs:13:5072,rs,13:5072,rs,47:842,urn:us-la:rs:47:842,R.S. 47:842,704
+urn:us-la:rs:13:5072,rs,13:5072,rs,47:842,urn:us-la:rs:47:842,R.S. 47:842,902
+urn:us-la:rs:13:5072,rs,13:5072,rs,47:842,urn:us-la:rs:47:842,R.S. 47:842,1337
+urn:us-la:rs:13:5072,rs,13:5072,rs,13:5062,urn:us-la:rs:13:5062,R.S. 13:5062,1421
+urn:us-la:rs:13:5072,rs,13:5072,rs,47:841,urn:us-la:rs:47:841,R.S. 47:841,1672
+urn:us-la:rs:13:5072,rs,13:5072,rs,13:5062,urn:us-la:rs:13:5062,R.S. 13:5062,2495
+urn:us-la:rs:13:5072,rs,13:5072,rs,26:901,urn:us-la:rs:26:901,R.S. 26:901,2563
+urn:us-la:rs:13:5072,rs,13:5072,rs,47:842,urn:us-la:rs:47:842,R.S. 47:842,2579
+urn:us-la:rs:13:5072,rs,13:5072,rs,47:843,urn:us-la:rs:47:843,R.S. 47:843,3890
+urn:us-la:rs:13:5072,rs,13:5072,rs,47:841,urn:us-la:rs:47:841,R.S. 47:841,3998
+urn:us-la:rs:13:5072,rs,13:5072,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,4131
+urn:us-la:rs:13:5072,rs,13:5072,rs,13:5062,urn:us-la:rs:13:5062,R.S. 13:5062,4343
+urn:us-la:rs:13:5072,rs,13:5072,rs,13:5062,urn:us-la:rs:13:5062,R.S. 13:5062,4411
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,541
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5075,urn:us-la:rs:13:5075,R.S. 13:5075,610
+urn:us-la:rs:13:5073,rs,13:5073,rs,39:98.7,urn:us-la:rs:39:98.7,R.S. 39:98.7,1009
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5075,urn:us-la:rs:13:5075,R.S. 13:5075,2101
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5074,urn:us-la:rs:13:5074,R.S. 13:5074,2900
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,3256
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,3523
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,4200
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5078,urn:us-la:rs:13:5078,R.S. 13:5078,4407
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,6314
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,6629
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5072,urn:us-la:rs:13:5072,R.S. 13:5072,7264
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,8427
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,8793
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5077,urn:us-la:rs:13:5077,R.S. 13:5077,9385
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5075,urn:us-la:rs:13:5075,R.S. 13:5075,9708
+urn:us-la:rs:13:5073,rs,13:5073,rs,13:5077,urn:us-la:rs:13:5077,R.S. 13:5077,9849
+urn:us-la:rs:13:5074,rs,13:5074,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,513
+urn:us-la:rs:13:5075,rs,13:5075,rs,47:841,urn:us-la:rs:47:841,R.S. 47:841,1069
+urn:us-la:rs:13:5075,rs,13:5075,rs,47:841,urn:us-la:rs:47:841,R.S. 47:841,2597
+urn:us-la:rs:13:5075,rs,13:5075,rs,26:901,urn:us-la:rs:26:901,R.S. 26:901,2620
+urn:us-la:rs:13:5075,rs,13:5075,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,3221
+urn:us-la:rs:13:5075,rs,13:5075,rs,47:1508,urn:us-la:rs:47:1508,R.S. 47:1508,3395
+urn:us-la:rs:13:5075,rs,13:5075,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,3637
+urn:us-la:rs:13:5075,rs,13:5075,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,3914
+urn:us-la:rs:13:5075,rs,13:5075,rs,47:843,urn:us-la:rs:47:843,R.S. 47:843,3938
+urn:us-la:rs:13:5075,rs,13:5075,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,4346
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,140
+urn:us-la:rs:13:5076,rs,13:5076,rs,47:846,urn:us-la:rs:47:846,R.S. 47:846,293
+urn:us-la:rs:13:5076,rs,13:5076,rs,26:916,urn:us-la:rs:26:916,R.S. 26:916,309
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,419
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,710
+urn:us-la:rs:13:5076,rs,13:5076,rs,47:843,urn:us-la:rs:47:843,R.S. 47:843,827
+urn:us-la:rs:13:5076,rs,13:5076,rs,26:901,urn:us-la:rs:26:901,R.S. 26:901,851
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,1035
+urn:us-la:rs:13:5076,rs,13:5076,rs,47:865,urn:us-la:rs:47:865,R.S. 47:865,1084
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,1100
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,1426
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,1975
+urn:us-la:rs:13:5076,rs,13:5076,rs,47:859,urn:us-la:rs:47:859,R.S. 47:859,2076
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,2115
+urn:us-la:rs:13:5076,rs,13:5076,rs,51:1401,urn:us-la:rs:51:1401,R.S. 51:1401,2197
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5075,urn:us-la:rs:13:5075,R.S. 13:5075,2335
+urn:us-la:rs:13:5076,rs,13:5076,rs,13:5063,urn:us-la:rs:13:5063,R.S. 13:5063,2463
+urn:us-la:rs:13:5077,rs,13:5077,rs,13:5075,urn:us-la:rs:13:5075,R.S. 13:5075,2033
+urn:us-la:rs:13:5077,rs,13:5077,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,2170
+urn:us-la:rs:13:5077,rs,13:5077,rs,13:5073,urn:us-la:rs:13:5073,R.S. 13:5073,2276
+urn:us-la:rs:13:5077,rs,13:5077,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,3901
+urn:us-la:rs:13:5077,rs,13:5077,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,3980
+urn:us-la:rs:13:5077,rs,13:5077,rs,13:5061,urn:us-la:rs:13:5061,R.S. 13:5061,4129
+urn:us-la:rs:13:5078,rs,13:5078,rs,13:5063,urn:us-la:rs:13:5063,R.S. 13:5063,1639
+urn:us-la:rs:13:5078,rs,13:5078,rs,13:5063,urn:us-la:rs:13:5063,R.S. 13:5063,2429
+urn:us-la:rs:13:5078,rs,13:5078,rs,13:5063,urn:us-la:rs:13:5063,R.S. 13:5063,2586
+urn:us-la:rs:13:5081,rs,13:5081,rs,13:5085,urn:us-la:rs:13:5085,R.S. 13:5085,809
+urn:us-la:rs:13:5082,rs,13:5082,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,75
+urn:us-la:rs:13:5082,rs,13:5082,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,315
+urn:us-la:rs:13:5083,rs,13:5083,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,394
+urn:us-la:rs:13:5083,rs,13:5083,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,2180
+urn:us-la:rs:13:5084,rs,13:5084,rs,13:5083,urn:us-la:rs:13:5083,R.S. 13:5083,53
+urn:us-la:rs:13:5084,rs,13:5084,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,131
+urn:us-la:rs:13:5085,rs,13:5085,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,81
+urn:us-la:rs:13:5085,rs,13:5085,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,593
+urn:us-la:rs:13:5086,rs,13:5086,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,56
+urn:us-la:rs:13:5088,rs,13:5088,rs,13:5087,urn:us-la:rs:13:5087,R.S. 13:5087,32
+urn:us-la:rs:13:5089,rs,13:5089,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,32
+urn:us-la:rs:13:5090,rs,13:5090,rs,13:5081,urn:us-la:rs:13:5081,R.S. 13:5081,70
+urn:us-la:rs:13:5101,rs,13:5101,rs,15:1171,urn:us-la:rs:15:1171,R.S. 15:1171,651
+urn:us-la:rs:13:5101,rs,13:5101,rs,15:1181,urn:us-la:rs:15:1181,R.S. 15:1181,675
+urn:us-la:rs:13:5102,rs,13:5102,rs,13:5106,urn:us-la:rs:13:5106,R.S. 13:5106,163
+urn:us-la:rs:13:5102,rs,13:5102,rs,13:5105,urn:us-la:rs:13:5105,R.S. 13:5105,1437
+urn:us-la:rs:13:5104,rs,13:5104,rs,17:1519,urn:us-la:rs:17:1519,R.S. 17:1519,1374
+urn:us-la:rs:13:5105,rs,13:5105,rs,13:5108.1,urn:us-la:rs:13:5108.1,R.S. 13:5108.1,1531
+urn:us-la:rs:13:5105,rs,13:5105,rs,13:5108.1,urn:us-la:rs:13:5108.1,R.S. 13:5108.1,1778
+urn:us-la:rs:13:5106,rs,13:5106,rs,39:1533.2,urn:us-la:rs:39:1533.2,R.S. 39:1533.2,3715
+urn:us-la:rs:13:5106,rs,13:5106,rs,40:1237.1,urn:us-la:rs:40:1237.1,R.S. 40:1237.1,7338
+urn:us-la:rs:13:5107,rs,13:5107,ccp,1201,,Code of Civil Procedure Article 1201,991
+urn:us-la:rs:13:5107,rs,13:5107,ccp,1672,,Code of Civil Procedure Article 1672,4187
+urn:us-la:rs:13:5108.3,rs,13:5108.3,rs,13:5108.4,urn:us-la:rs:13:5108.4,R.S. 13:5108.4,1622
+urn:us-la:rs:13:5108.4,rs,13:5108.4,rs,13:5108.3,urn:us-la:rs:13:5108.3,R.S. 13:5108.3,177
+urn:us-la:rs:13:5108.4,rs,13:5108.4,rs,13:5108.3,urn:us-la:rs:13:5108.3,R.S. 13:5108.3,1342
+urn:us-la:rs:13:5108.4,rs,13:5108.4,rs,13:5108.3,urn:us-la:rs:13:5108.3,R.S. 13:5108.3,2186
+urn:us-la:rs:13:5109.1,rs,13:5109.1,rs,15:541,urn:us-la:rs:15:541,R.S. 15:541,670
+urn:us-la:rs:13:5109.1,rs,13:5109.1,rs,14:106,urn:us-la:rs:14:106,R.S. 14:106,714
+urn:us-la:rs:13:5112,rs,13:5112,rs,13:4533,urn:us-la:rs:13:4533,R.S. 13:4533,512
+urn:us-la:rs:13:5112,rs,13:5112,rs,9:3500,urn:us-la:rs:9:3500,R.S. 9:3500,2093
+urn:us-la:rs:13:5112,rs,13:5112,rs,23:1634,urn:us-la:rs:23:1634,R.S. 23:1634,2295
+urn:us-la:rs:13:5112,rs,13:5112,ccp,1911,,Code of Civil Procedure Article 1911,1959
+urn:us-la:rs:13:5112.1,rs,13:5112.1,rs,44:32,urn:us-la:rs:44:32,R.S. 44:32,525
+urn:us-la:rs:13:5112.1,rs,13:5112.1,rs,44:1,urn:us-la:rs:44:1,R.S. 44:1,2505
+urn:us-la:rs:13:5112.1,rs,13:5112.1,rs,13:5102,urn:us-la:rs:13:5102,R.S. 13:5102,2813
+urn:us-la:rs:13:5112.1,rs,13:5112.1,rs,44:1,urn:us-la:rs:44:1,R.S. 44:1,3093
+urn:us-la:rs:13:5112.1,rs,13:5112.1,rs,44:32,urn:us-la:rs:44:32,R.S. 44:32,3172
+urn:us-la:rs:13:5112.1,rs,13:5112.1,rs,44:1,urn:us-la:rs:44:1,R.S. 44:1,3353
+urn:us-la:rs:13:5112.1,rs,13:5112.1,rs,13:4870,urn:us-la:rs:13:4870,R.S. 13:4870,4205
+urn:us-la:rs:13:5112.1,rs,13:5112.1,ccp,1354,,Code of Civil Procedure Article 1354,4124
+urn:us-la:rs:13:5112.1,rs,13:5112.1,crp,732,,Code of Criminal Procedure Article 732,4162
+urn:us-la:rs:13:5112.1,rs,13:5112.1,evidence,905,,Code of Evidence Article 905,2595
+urn:us-la:rs:13:5112.1,rs,13:5112.1,evidence,1002,,Code of Evidence Article 1002,2629
+urn:us-la:rs:13:5113,rs,13:5113,rs,13:5108.1,urn:us-la:rs:13:5108.1,R.S. 13:5108.1,293
+urn:us-la:rs:13:5113,rs,13:5113,rs,13:5108.2,urn:us-la:rs:13:5108.2,R.S. 13:5108.2,311
+urn:us-la:rs:13:5115,rs,13:5115,rs,13:5106,urn:us-la:rs:13:5106,R.S. 13:5106,1025
+urn:us-la:rs:13:5125,rs,13:5125,rs,13:5123,urn:us-la:rs:13:5123,R.S. 13:5123,283
+urn:us-la:rs:13:5201,rs,13:5201,rs,13:5202,urn:us-la:rs:13:5202,R.S. 13:5202,587
+urn:us-la:rs:13:5201,rs,13:5201,rs,13:5213,urn:us-la:rs:13:5213,R.S. 13:5213,1146
+urn:us-la:rs:13:5202,rs,13:5202,ccp,463,,Code of Civil Procedure Article 463,1676
+urn:us-la:rs:13:5205,rs,13:5205,rs,13:10.3,urn:us-la:rs:13:10.3,R.S. 13:10.3,177
+urn:us-la:rs:13:5205,rs,13:5205,rs,49:225,urn:us-la:rs:49:225,R.S. 49:225,593
+urn:us-la:rs:13:5206,rs,13:5206,rs,13:5202,urn:us-la:rs:13:5202,R.S. 13:5202,180
+urn:us-la:rs:13:5206,rs,13:5206,rs,13:5206,urn:us-la:rs:13:5206,R.S. 13:5206,707
+urn:us-la:rs:13:5207,rs,13:5207,rs,13:5208,urn:us-la:rs:13:5208,R.S. 13:5208,255
+urn:us-la:rs:13:5207.1,rs,13:5207.1,rs,13:5203,urn:us-la:rs:13:5203,R.S. 13:5203,59
+urn:us-la:rs:13:5207.1,rs,13:5207.1,rs,13:5204,urn:us-la:rs:13:5204,R.S. 13:5204,413
+urn:us-la:rs:13:5207.1,rs,13:5207.1,rs,13:5207,urn:us-la:rs:13:5207,R.S. 13:5207,1714
+urn:us-la:rs:13:5209,rs,13:5209,rs,13:5206,urn:us-la:rs:13:5206,R.S. 13:5206,214
+urn:us-la:rs:13:5213,rs,13:5213,rs,13:5200,urn:us-la:rs:13:5200,R.S. 13:5200,187
+urn:us-la:rs:13:5216,rs,13:5216,rs,13:5214,urn:us-la:rs:13:5214,R.S. 13:5214,333
+urn:us-la:rs:13:5218,rs,13:5218,rs,13:10.3,urn:us-la:rs:13:10.3,R.S. 13:10.3,191
+urn:us-la:rs:13:5218,rs,13:5218,rs,49:225,urn:us-la:rs:49:225,R.S. 49:225,595
+urn:us-la:rs:13:5220,rs,13:5220,rs,13:5202,urn:us-la:rs:13:5202,R.S. 13:5202,147
+urn:us-la:rs:13:5220,rs,13:5220,rs,13:5206,urn:us-la:rs:13:5206,R.S. 13:5206,623
+urn:us-la:rs:13:5220,rs,13:5220,ccp,1061,,Code of Civil Procedure Article 1061,243
+urn:us-la:rs:13:5221,rs,13:5221,rs,13:5200,urn:us-la:rs:13:5200,R.S. 13:5200,1899
+urn:us-la:rs:13:5222,rs,13:5222,rs,13:5220,urn:us-la:rs:13:5220,R.S. 13:5220,212
+urn:us-la:rs:13:5224,rs,13:5224,ccp,4902,,Code of Civil Procedure Article 4902,268
+urn:us-la:rs:13:5233.1,rs,13:5233.1,rs,17:236.1,urn:us-la:rs:17:236.1,R.S. 17:236.1,737
+urn:us-la:rs:13:5235,rs,13:5235,rs,13:5233,urn:us-la:rs:13:5233,R.S. 13:5233,180
+urn:us-la:rs:13:5237,rs,13:5237,rs,13:5240,urn:us-la:rs:13:5240,R.S. 13:5240,32
+urn:us-la:rs:13:5237,rs,13:5237,rs,13:5238,urn:us-la:rs:13:5238,R.S. 13:5238,785
+urn:us-la:rs:13:5239,rs,13:5239,rs,13:5238,urn:us-la:rs:13:5238,R.S. 13:5238,64
+urn:us-la:rs:13:5239,rs,13:5239,rs,13:5238,urn:us-la:rs:13:5238,R.S. 13:5238,129
+urn:us-la:rs:13:5240,rs,13:5240,rs,13:5101,urn:us-la:rs:13:5101,R.S. 13:5101,194
+urn:us-la:rs:13:5240,rs,13:5240,rs,13:5238,urn:us-la:rs:13:5238,R.S. 13:5238,788
+urn:us-la:rs:13:5240,rs,13:5240,rs,13:5238,urn:us-la:rs:13:5238,R.S. 13:5238,980
+urn:us-la:rs:13:5240,rs,13:5240,rs,15:1171,urn:us-la:rs:15:1171,R.S. 15:1171,1085
+urn:us-la:rs:13:5240,rs,13:5240,rs,15:1181,urn:us-la:rs:15:1181,R.S. 15:1181,1165
+urn:us-la:rs:13:5303,rs,13:5303,rs,13:5304,urn:us-la:rs:13:5304,R.S. 13:5304,1478
+urn:us-la:rs:13:5304,rs,13:5304,rs,14:29,urn:us-la:rs:14:29,R.S. 14:29,7285
+urn:us-la:rs:13:5304,rs,13:5304,rs,14:2,urn:us-la:rs:14:2,R.S. 14:2,7373
+urn:us-la:rs:13:5304,rs,13:5304,rs,14:35.3,urn:us-la:rs:14:35.3,R.S. 14:35.3,7560
+urn:us-la:rs:13:5304,rs,13:5304,rs,46:2151,urn:us-la:rs:46:2151,R.S. 46:2151,7616
+urn:us-la:rs:13:5304,rs,13:5304,rs,14:35.3,urn:us-la:rs:14:35.3,R.S. 14:35.3,7734
+urn:us-la:rs:13:5304,rs,13:5304,rs,14:2,urn:us-la:rs:14:2,R.S. 14:2,7837
+urn:us-la:rs:13:5304,rs,13:5304,rs,40:966,urn:us-la:rs:40:966,R.S. 40:966,20021
+urn:us-la:rs:13:5304,rs,13:5304,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,20222
+urn:us-la:rs:13:5304,rs,13:5304,crp,893,,Code of Criminal Procedure Article 893,4601
+urn:us-la:rs:13:5304,rs,13:5304,crp,893,,Code of Criminal Procedure Article 893,16577
+urn:us-la:rs:13:5304,rs,13:5304,crp,893,,Code of Criminal Procedure Article 893,19802
+urn:us-la:rs:13:5305,rs,13:5305,rs,40:982,urn:us-la:rs:40:982,R.S. 40:982,1507
+urn:us-la:rs:13:5366,rs,13:5366,rs,13:5364,urn:us-la:rs:13:5364,R.S. 13:5364,735
+urn:us-la:rs:13:5366,rs,13:5366,rs,15:574.4.4,urn:us-la:rs:15:574.4.4,R.S. 15:574.4.4,3062
+urn:us-la:rs:13:5366,rs,13:5366,rs,14:29,urn:us-la:rs:14:29,R.S. 14:29,6864
+urn:us-la:rs:13:5366,rs,13:5366,rs,15:541,urn:us-la:rs:15:541,R.S. 15:541,6898
+urn:us-la:rs:13:5366,rs,13:5366,rs,14:29,urn:us-la:rs:14:29,R.S. 14:29,7005
+urn:us-la:rs:13:5366,rs,13:5366,rs,15:541,urn:us-la:rs:15:541,R.S. 15:541,7039
+urn:us-la:rs:13:5366,rs,13:5366,rs,14:35.3,urn:us-la:rs:14:35.3,R.S. 14:35.3,7287
+urn:us-la:rs:13:5366,rs,13:5366,rs,14:37.7,urn:us-la:rs:14:37.7,R.S. 14:37.7,7351
+urn:us-la:rs:13:5366,rs,13:5366,rs,14:35.3,urn:us-la:rs:14:35.3,R.S. 14:35.3,7582
+urn:us-la:rs:13:5366,rs,13:5366,rs,40:966,urn:us-la:rs:40:966,R.S. 40:966,20956
+urn:us-la:rs:13:5366,rs,13:5366,rs,14:98,urn:us-la:rs:14:98,R.S. 14:98,21148
+urn:us-la:rs:13:5366,rs,13:5366,crp,900,,Code of Criminal Procedure Article 900,3196
+urn:us-la:rs:13:5366,rs,13:5366,crp,893,,Code of Criminal Procedure Article 893,20737
+urn:us-la:rs:13:5367,rs,13:5367,rs,13:5365,urn:us-la:rs:13:5365,R.S. 13:5365,74
+urn:us-la:rs:13:5368,rs,13:5368,rs,40:982,urn:us-la:rs:40:982,R.S. 40:982,1623
+urn:us-la:rs:13:5373,rs,13:5373,crp,893,,Code of Criminal Procedure Article 893,1769
+urn:us-la:rs:13:5401,rs,13:5401,rs,23:1,urn:us-la:rs:23:1,R.S. 23:1,790
+urn:us-la:rs:13:5401,rs,13:5401,rs,15:1199.7,urn:us-la:rs:15:1199.7,R.S. 15:1199.7,1278
+urn:us-la:rs:13:5401,rs,13:5401,rs,15:541,urn:us-la:rs:15:541,R.S. 15:541,1860
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:2,urn:us-la:rs:14:2,R.S. 14:2,1952
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:34,urn:us-la:rs:14:34,R.S. 14:34,2125
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:34.1,urn:us-la:rs:14:34.1,R.S. 14:34.1,2167
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:34.2,urn:us-la:rs:14:34.2,R.S. 14:34.2,2218
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:34.6,urn:us-la:rs:14:34.6,R.S. 14:34.6,2269
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:37,urn:us-la:rs:14:37,R.S. 14:37,2309
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:37.4,urn:us-la:rs:14:37.4,R.S. 14:37.4,2363
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:45,urn:us-la:rs:14:45,R.S. 14:45,2404
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:46.1,urn:us-la:rs:14:46.1,R.S. 14:46.1,2483
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:51,urn:us-la:rs:14:51,R.S. 14:51,2522
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:55,urn:us-la:rs:14:55,R.S. 14:55,2580
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:62.8,urn:us-la:rs:14:62.8,R.S. 14:62.8,2614
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:64.4,urn:us-la:rs:14:64.4,R.S. 14:64.4,2659
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:65,urn:us-la:rs:14:65,R.S. 14:65,2698
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:65.1,urn:us-la:rs:14:65.1,R.S. 14:65.1,2735
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:108.1,urn:us-la:rs:14:108.1,R.S. 14:108.1,2791
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:2,urn:us-la:rs:14:2,R.S. 14:2,2896
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:2,urn:us-la:rs:14:2,R.S. 14:2,3354
+urn:us-la:rs:13:5401,rs,13:5401,rs,15:574.4,urn:us-la:rs:15:574.4,R.S. 15:574.4,5268
+urn:us-la:rs:13:5401,rs,13:5401,rs,15:571.3,urn:us-la:rs:15:571.3,R.S. 15:571.3,5322
+urn:us-la:rs:13:5401,rs,13:5401,rs,15:828,urn:us-la:rs:15:828,R.S. 15:828,5452
+urn:us-la:rs:13:5401,rs,13:5401,rs,14:95,urn:us-la:rs:14:95,R.S. 14:95,8439
+urn:us-la:rs:13:5401,rs,13:5401,rs,15:574.4.4,urn:us-la:rs:15:574.4.4,R.S. 15:574.4.4,8933
+urn:us-la:rs:13:5401,rs,13:5401,crp,900,,Code of Criminal Procedure Article 900,9173
+urn:us-la:rs:13:5522,rs,13:5522,rs,33:4713,urn:us-la:rs:33:4713,R.S. 33:4713,1274
+urn:us-la:rs:13:5526,rs,13:5526,rs,13:5523,urn:us-la:rs:13:5523,R.S. 13:5523,156
+urn:us-la:rs:13:5530,rs,13:5530,ccp,1920,,Code of Civil Procedure Article 1920,7451
+urn:us-la:rs:13:5531,rs,13:5531,rs,33:1429,urn:us-la:rs:33:1429,R.S. 33:1429,285
+urn:us-la:rs:13:5533,rs,13:5533,rs,13:5539,urn:us-la:rs:13:5539,R.S. 13:5539,450
+urn:us-la:rs:13:5534,rs,13:5534,rs,33:1431,urn:us-la:rs:33:1431,R.S. 33:1431,385
+urn:us-la:rs:13:5537,rs,13:5537,rs,42:141,urn:us-la:rs:42:141,R.S. 42:141,4354
+urn:us-la:rs:13:5541,rs,13:5541,rs,33:1436,urn:us-la:rs:33:1436,R.S. 33:1436,423
+urn:us-la:rs:13:5542,rs,13:5542,rs,33:1437,urn:us-la:rs:33:1437,R.S. 33:1437,468
+urn:us-la:rs:13:5547,rs,13:5547,rs,33:1441,urn:us-la:rs:33:1441,R.S. 33:1441,139
+urn:us-la:rs:13:5549,rs,13:5549,rs,33:1443,urn:us-la:rs:33:1443,R.S. 33:1443,698
+urn:us-la:rs:13:5550,rs,13:5550,rs,47:2052,urn:us-la:rs:47:2052,R.S. 47:2052,485
+urn:us-la:rs:13:5551,rs,13:5551,rs,33:1445,urn:us-la:rs:33:1445,R.S. 33:1445,2522
+urn:us-la:rs:13:5553,rs,13:5553,rs,33:1447,urn:us-la:rs:33:1447,R.S. 33:1447,1161
+urn:us-la:rs:13:5554,rs,13:5554,rs,11:141,urn:us-la:rs:11:141,R.S. 11:141,26043
+urn:us-la:rs:13:5554.1,rs,13:5554.1,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,276
+urn:us-la:rs:13:5554.1,rs,13:5554.1,rs,27:391,urn:us-la:rs:27:391,R.S. 27:391,677
+urn:us-la:rs:13:5554.1,rs,13:5554.1,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,2000
+urn:us-la:rs:13:5554.1,rs,13:5554.1,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,2597
+urn:us-la:rs:13:5554.2,rs,13:5554.2,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,283
+urn:us-la:rs:13:5554.2,rs,13:5554.2,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,1140
+urn:us-la:rs:13:5554.2,rs,13:5554.2,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,1721
+urn:us-la:rs:13:5554.3,rs,13:5554.3,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,285
+urn:us-la:rs:13:5554.4,rs,13:5554.4,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,271
+urn:us-la:rs:13:5554.4,rs,13:5554.4,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,1680
+urn:us-la:rs:13:5554.4,rs,13:5554.4,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,2272
+urn:us-la:rs:13:5554.6,rs,13:5554.6,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,278
+urn:us-la:rs:13:5554.6,rs,13:5554.6,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,933
+urn:us-la:rs:13:5554.6,rs,13:5554.6,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,1573
+urn:us-la:rs:13:5554.7,rs,13:5554.7,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,281
+urn:us-la:rs:13:5554.8,rs,13:5554.8,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,293
+urn:us-la:rs:13:5554.8,rs,13:5554.8,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,949
+urn:us-la:rs:13:5554.8,rs,13:5554.8,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,1547
+urn:us-la:rs:13:5554.9,rs,13:5554.9,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,276
+urn:us-la:rs:13:5554.9,rs,13:5554.9,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,1019
+urn:us-la:rs:13:5554.10,rs,13:5554.10,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,278
+urn:us-la:rs:13:5554.10,rs,13:5554.10,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,933
+urn:us-la:rs:13:5554.10,rs,13:5554.10,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,1529
+urn:us-la:rs:13:5554.12,rs,13:5554.12,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,304
+urn:us-la:rs:13:5554.12,rs,13:5554.12,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,2575
+urn:us-la:rs:13:5554.12,rs,13:5554.12,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,3029
+urn:us-la:rs:13:5554.12,rs,13:5554.12,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,3642
+urn:us-la:rs:13:5554.13,rs,13:5554.13,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,308
+urn:us-la:rs:13:5554.13,rs,13:5554.13,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,796
+urn:us-la:rs:13:5554.13,rs,13:5554.13,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,1437
+urn:us-la:rs:13:5554.14,rs,13:5554.14,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,306
+urn:us-la:rs:13:5558,rs,13:5558,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,108
+urn:us-la:rs:13:5558,rs,13:5558,rs,9:2792.6,urn:us-la:rs:9:2792.6,R.S. 9:2792.6,761
+urn:us-la:rs:13:5559,rs,13:5559,rs,13:5554,urn:us-la:rs:13:5554,R.S. 13:5554,702
+urn:us-la:rs:13:5564,rs,13:5564,rs,32:661,urn:us-la:rs:32:661,R.S. 32:661,688
+urn:us-la:rs:13:5565,rs,13:5565,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,135
+urn:us-la:rs:13:5572,rs,13:5572,rs,13:5537,urn:us-la:rs:13:5537,R.S. 13:5537,1605
+urn:us-la:rs:13:5572,rs,13:5572,rs,13:5553,urn:us-la:rs:13:5553,R.S. 13:5553,1619
+urn:us-la:rs:13:5572,rs,13:5572,rs,35:391,urn:us-la:rs:35:391,R.S. 35:391,1637
+urn:us-la:rs:13:5573,rs,13:5573,rs,22:46,urn:us-la:rs:22:46,R.S. 22:46,683
+urn:us-la:rs:13:5575,rs,13:5575,rs,22:439,urn:us-la:rs:22:439,R.S. 22:439,304
+urn:us-la:rs:13:5584,rs,13:5584,rs,33:1503,urn:us-la:rs:33:1503,R.S. 33:1503,715
+urn:us-la:rs:13:5585,rs,13:5585,rs,33:1504,urn:us-la:rs:33:1504,R.S. 33:1504,239
+urn:us-la:rs:13:5585,rs,13:5585,rs,33:1505,urn:us-la:rs:33:1505,R.S. 33:1505,833
+urn:us-la:rs:13:5586,rs,13:5586,rs,13:5530,urn:us-la:rs:13:5530,R.S. 13:5530,52
+urn:us-la:rs:13:5587,rs,13:5587,rs,13:1215,urn:us-la:rs:13:1215,R.S. 13:1215,297
+urn:us-la:rs:13:5587,rs,13:5587,rs,33:1508,urn:us-la:rs:33:1508,R.S. 33:1508,330
+urn:us-la:rs:13:5588,rs,13:5588,rs,33:1509,urn:us-la:rs:33:1509,R.S. 33:1509,736
+urn:us-la:rs:13:5589,rs,13:5589,rs,33:1510,urn:us-la:rs:33:1510,R.S. 33:1510,130
+urn:us-la:rs:13:5590,rs,13:5590,rs,33:1506,urn:us-la:rs:33:1506,R.S. 33:1506,57
+urn:us-la:rs:13:5590,rs,13:5590,rs,33:1511,urn:us-la:rs:33:1511,R.S. 33:1511,386
+urn:us-la:rs:13:5591,rs,13:5591,rs,33:1512,urn:us-la:rs:33:1512,R.S. 33:1512,418
+urn:us-la:rs:13:5592,rs,13:5592,rs,33:1513,urn:us-la:rs:33:1513,R.S. 33:1513,142
+urn:us-la:rs:13:5593,rs,13:5593,rs,33:1514,urn:us-la:rs:33:1514,R.S. 33:1514,350
+urn:us-la:rs:13:5594,rs,13:5594,rs,33:1515,urn:us-la:rs:33:1515,R.S. 33:1515,338
+urn:us-la:rs:13:5595,rs,13:5595,rs,33:1516,urn:us-la:rs:33:1516,R.S. 33:1516,283
+urn:us-la:rs:13:5596,rs,13:5596,rs,33:1517,urn:us-la:rs:33:1517,R.S. 33:1517,237
+urn:us-la:rs:13:5597,rs,13:5597,rs,33:1518,urn:us-la:rs:33:1518,R.S. 33:1518,251
+urn:us-la:rs:13:5602,rs,13:5602,rs,15:566,urn:us-la:rs:15:566,R.S. 15:566,177
+urn:us-la:rs:13:5603,rs,13:5603,rs,33:1523,urn:us-la:rs:33:1523,R.S. 33:1523,1639
+urn:us-la:rs:13:5705,rs,13:5705,rs,33:1555,urn:us-la:rs:33:1555,R.S. 33:1555,1678
+urn:us-la:rs:13:5706,rs,13:5706,rs,29:704,urn:us-la:rs:29:704,R.S. 29:704,6255
+urn:us-la:rs:13:5706,rs,13:5706,rs,29:701,urn:us-la:rs:29:701,R.S. 29:701,6479
+urn:us-la:rs:13:5706,rs,13:5706,rs,39:461,urn:us-la:rs:39:461,R.S. 39:461,6595
+urn:us-la:rs:13:5713,rs,13:5713,rs,32:661,urn:us-la:rs:32:661,R.S. 32:661,2541
+urn:us-la:rs:13:5713,rs,13:5713,rs,32:661,urn:us-la:rs:32:661,R.S. 32:661,2807
+urn:us-la:rs:13:5713,rs,13:5713,rs,40:32,urn:us-la:rs:40:32,R.S. 40:32,4869
+urn:us-la:rs:13:5713,rs,13:5713,rs,40:1216.1,urn:us-la:rs:40:1216.1,R.S. 40:1216.1,5599
+urn:us-la:rs:13:5713,rs,13:5713,rs,40:1216.1,urn:us-la:rs:40:1216.1,R.S. 40:1216.1,5807
+urn:us-la:rs:13:5714,rs,13:5714,rs,13:5713,urn:us-la:rs:13:5713,R.S. 13:5713,195
+urn:us-la:rs:13:5714,rs,13:5714,rs,33:1564,urn:us-la:rs:33:1564,R.S. 33:1564,954
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2353,urn:us-la:rs:17:2353,R.S. 17:2353,1102
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2354,urn:us-la:rs:17:2354,R.S. 17:2354,1142
+urn:us-la:rs:13:5715,rs,13:5715,rs,13:5713,urn:us-la:rs:13:5713,R.S. 13:5713,1220
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2351,urn:us-la:rs:17:2351,R.S. 17:2351,1358
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2352,urn:us-la:rs:17:2352,R.S. 17:2352,1417
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2353,urn:us-la:rs:17:2353,R.S. 17:2353,1506
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2354,urn:us-la:rs:17:2354,R.S. 17:2354,1546
+urn:us-la:rs:13:5715,rs,13:5715,rs,13:5713,urn:us-la:rs:13:5713,R.S. 13:5713,1624
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2351,urn:us-la:rs:17:2351,R.S. 17:2351,1799
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2352,urn:us-la:rs:17:2352,R.S. 17:2352,2111
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2353,urn:us-la:rs:17:2353,R.S. 17:2353,2637
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2353,urn:us-la:rs:17:2353,R.S. 17:2353,3353
+urn:us-la:rs:13:5715,rs,13:5715,rs,17:2353,urn:us-la:rs:17:2353,R.S. 17:2353,4116
+urn:us-la:rs:13:5716,rs,13:5716,rs,13:5715,urn:us-la:rs:13:5715,R.S. 13:5715,798
+urn:us-la:rs:13:5716,rs,13:5716,rs,8:655,urn:us-la:rs:8:655,R.S. 8:655,1024
+urn:us-la:rs:13:5722,rs,13:5722,rs,13:996.9,urn:us-la:rs:13:996.9,R.S. 13:996.9,28
+urn:us-la:rs:13:5722,rs,13:5722,rs,13:996.34,urn:us-la:rs:13:996.34,R.S. 13:996.34,46
+urn:us-la:rs:13:5722,rs,13:5722,rs,13:62,urn:us-la:rs:13:62,R.S. 13:62,2004
+urn:us-la:rs:13:5722,rs,13:5722,rs,13:62,urn:us-la:rs:13:62,R.S. 13:62,2390
+urn:us-la:rs:13:5722,rs,13:5722,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,3850
+urn:us-la:rs:13:5723,rs,13:5723,rs,33:4713,urn:us-la:rs:33:4713,R.S. 33:4713,34
+urn:us-la:rs:13:5753,rs,13:5753,rs,22:46,urn:us-la:rs:22:46,R.S. 22:46,801
+urn:us-la:rs:13:5771,rs,13:5771,rs,13:5704,urn:us-la:rs:13:5704,R.S. 13:5704,53
+urn:us-la:rs:13:5771,rs,13:5771,rs,15:541,urn:us-la:rs:15:541,R.S. 15:541,540
+urn:us-la:rs:13:5771,rs,13:5771,rs,15:541,urn:us-la:rs:15:541,R.S. 15:541,616
+urn:us-la:rs:13:5771,rs,13:5771,rs,15:541,urn:us-la:rs:15:541,R.S. 15:541,655
+urn:us-la:rs:13:5771,rs,13:5771,rs,15:541,urn:us-la:rs:15:541,R.S. 15:541,732
+urn:us-la:rs:13:5772,rs,13:5772,rs,13:5713,urn:us-la:rs:13:5713,R.S. 13:5713,45
+urn:us-la:rs:13:5772,rs,13:5772,rs,13:5771,urn:us-la:rs:13:5771,R.S. 13:5771,411
+urn:us-la:rs:13:5772,rs,13:5772,rs,18:1300.1,urn:us-la:rs:18:1300.1,R.S. 18:1300.1,651
+urn:us-la:rs:13:5773,rs,13:5773,rs,13:5706,urn:us-la:rs:13:5706,R.S. 13:5706,1484
+urn:us-la:rs:13:5801,rs,13:5801,rs,33:1701,urn:us-la:rs:33:1701,R.S. 33:1701,500
+urn:us-la:rs:13:5806,rs,13:5806,rs,33:1703,urn:us-la:rs:33:1703,R.S. 33:1703,829
+urn:us-la:rs:13:5807,rs,13:5807,rs,13:5807.1,urn:us-la:rs:13:5807.1,R.S. 13:5807.1,72
+urn:us-la:rs:13:5807.1,rs,13:5807.1,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,37
+urn:us-la:rs:13:5807.1,rs,13:5807.1,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,3408
+urn:us-la:rs:13:5807.2,rs,13:5807.2,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,37
+urn:us-la:rs:13:5807.2,rs,13:5807.2,rs,13:1883,urn:us-la:rs:13:1883,R.S. 13:1883,2493
+urn:us-la:rs:13:5807.3,rs,13:5807.3,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,40
+urn:us-la:rs:13:5807.3,rs,13:5807.3,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,1391
+urn:us-la:rs:13:5807.4,rs,13:5807.4,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,34
+urn:us-la:rs:13:5807.4,rs,13:5807.4,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,2478
+urn:us-la:rs:13:5807.5,rs,13:5807.5,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,180
+urn:us-la:rs:13:5807.5,rs,13:5807.5,rs,13:5807,urn:us-la:rs:13:5807,R.S. 13:5807,538
+urn:us-la:rs:13:5813,rs,13:5813,rs,13:2642,urn:us-la:rs:13:2642,R.S. 13:2642,129
+urn:us-la:rs:13:5813,rs,13:5813,rs,33:1705,urn:us-la:rs:33:1705,R.S. 33:1705,164
+urn:us-la:rs:13:5814,rs,13:5814,rs,33:1706,urn:us-la:rs:33:1706,R.S. 33:1706,152
+urn:us-la:rs:13:5821,rs,13:5821,rs,33:1731,urn:us-la:rs:33:1731,R.S. 33:1731,539
+urn:us-la:rs:13:5822,rs,13:5822,rs,33:1732,urn:us-la:rs:33:1732,R.S. 33:1732,186
+urn:us-la:rs:13:5823,rs,13:5823,rs,33:1733,urn:us-la:rs:33:1733,R.S. 33:1733,144
+urn:us-la:rs:13:5826,rs,13:5826,rs,13:2158,urn:us-la:rs:13:2158,R.S. 13:2158,193
+urn:us-la:rs:13:5827,rs,13:5827,rs,13:2158,urn:us-la:rs:13:2158,R.S. 13:2158,52
+urn:us-la:rs:13:5828,rs,13:5828,rs,13:1215,urn:us-la:rs:13:1215,R.S. 13:1215,298
+urn:us-la:rs:13:5901,rs,13:5901,rs,13:5902,urn:us-la:rs:13:5902,R.S. 13:5902,357
+urn:us-la:rs:13:5902,rs,13:5902,rs,13:5901,urn:us-la:rs:13:5901,R.S. 13:5901,89
+urn:us-la:rs:13:5903,rs,13:5903,rs,47:1872,urn:us-la:rs:47:1872,R.S. 47:1872,569
+urn:us-la:rs:13:5903,rs,13:5903,rs,47:1872,urn:us-la:rs:47:1872,R.S. 47:1872,1236
+urn:us-la:rs:13:5903,rs,13:5903,rs,13:5911,urn:us-la:rs:13:5911,R.S. 13:5911,3277
+urn:us-la:rs:13:5906,rs,13:5906,rs,13:5905,urn:us-la:rs:13:5905,R.S. 13:5905,188
+urn:us-la:rs:13:5910,rs,13:5910,rs,13:5903,urn:us-la:rs:13:5903,R.S. 13:5903,375
+urn:us-la:rs:13:5911,rs,13:5911,rs,13:5523,urn:us-la:rs:13:5523,R.S. 13:5523,129
+urn:us-la:rs:13:5911,rs,13:5911,rs,39:561,urn:us-la:rs:39:561,R.S. 39:561,1539
+urn:us-la:rs:13:5911,rs,13:5911,rs,13:5908,urn:us-la:rs:13:5908,R.S. 13:5908,13909
+urn:us-la:rs:13:5933,rs,13:5933,rs,15:571.11,urn:us-la:rs:15:571.11,R.S. 15:571.11,768
+urn:us-la:rs:13:5951,rs,13:5951,rs,39:1301,urn:us-la:rs:39:1301,R.S. 39:1301,10419
+urn:us-la:rs:13:5951,rs,13:5951,rs,24:513,urn:us-la:rs:24:513,R.S. 24:513,10786
+urn:us-la:rs:13:5983,rs,13:5983,rs,44:1,urn:us-la:rs:44:1,R.S. 44:1,173
+urn:us-la:rs:13:5992,rs,13:5992,rs,13:754,urn:us-la:rs:13:754,R.S. 13:754,646
+urn:us-la:rs:13:5992,rs,13:5992,rs,13:1587.1,urn:us-la:rs:13:1587.1,R.S. 13:1587.1,1104
+urn:us-la:rs:13:5992,rs,13:5992,rs,14:2,urn:us-la:rs:14:2,R.S. 14:2,1405
 urn:us-la:rs:14:1,rs,14:1,rs,14:30,urn:us-la:rs:14:30,R.S. 14:30,272
 urn:us-la:rs:14:2,rs,14:2,rs,14:35.3,urn:us-la:rs:14:35.3,R.S. 14:35.3,4922
 urn:us-la:rs:14:2,rs,14:2,rs,14:34.9,urn:us-la:rs:14:34.9,R.S. 14:34.9,5016
