@@ -1801,6 +1801,226 @@ aggregates (`data/rs/*.json{l,csv}` + Title 1 per-section JSONs).
   (~2,500, municipalities — second Subtitle wave), Title 17
   (~3,500, education — largest remaining mid-tier title).
 
+## 2026-05-22 — Wave 7 (Title 49 State Administration) end-to-end
+
+Seventh wave. Title 49 lands clean with **zero source-code edits**
+(fourth consecutive pure data-pipeline wave). T49's actual section
+count was 598, ~50% **under** the handoff estimate of ~1,200, so
+the wall-clock cost was the smallest of any wave so far. The
+primary W7 validation goal — that cross-corpus inbound edges to
+T49 sections resolve cleanly — landed *exactly* on the briefing
+prediction: T23 → T49 = 15 edges, T47 → T49 = 22 edges, both
+exact matches.
+
+### Scope
+
+- **598 sections** in `data/rs/sections/rs_49_*.json` (handoff
+  estimated ~1,200; actual `section_index.json` count was 598).
+  Status: **527 active + 64 repealed + 7 blank**.
+- **80 containers** for Title 49: 1 title + 0 subtitles + 28
+  chapters + 39 parts + 12 subparts. Same structural shape as
+  Title 14 / 22 / 23 (no Subtitle level). `hierarchy.json` total
+  unchanged at 5,529 (T49 containers were already present from
+  corpus-wide Phase 1).
+- Tree `max_depth = 7` (unchanged from W5; T49 has no Subtitle so
+  T49's deepest chain is depth-4 title/chapter/part/subpart).
+  Depth distribution for T49: 156 at depth 2 (title/chapter), 319
+  at depth 3 (title/chapter/part), 123 at depth 4
+  (title/chapter/part/subpart).
+
+### Process
+
+1. `.venv/bin/usufruct rs phase3 --titles 1,9,14,22,47,23,49` —
+   symmetric form, 6 cached titles short-circuited, T49 fetched
+   fresh. Wall time ~5 min for the 598 fresh fetches at 2 req/s.
+2. `.venv/bin/usufruct rs phase4` — ~10s; rebuilt
+   tree/edges/chunks/markdown across the 9,863-section union.
+3. Verification via `lars-test/wave7_verify.py` (new, adapted from
+   wave6_verify.py with title filter and T23/T47 inbound-edge
+   spotlights; also trimmed the unemitted-list dump to a count to
+   avoid the 397KB output blob noted in the W6 handoff): depth
+   distribution, acts-parse rate, citation edge breakdown, inbound
+   edge validation, validation report.
+4. `.venv/bin/pytest -q` → **169 passed, zero regressions.**
+
+### Output deltas
+
+| Metric | Pre-Wave 7 (W1–6) | Post-Wave 7 | Δ |
+| --- | --- | --- | --- |
+| Sections emitted | 9,265 | 9,863 | +598 |
+| Containers (hierarchy) | 5,529 | 5,529 | 0 (T49 was already in hierarchy.json) |
+| Tree max depth | 7 | 7 | 0 (T49 has no Subtitle) |
+| ActsCitation records | 17,827 | 19,192 | +1,365 |
+| Citation edges | 8,386 | 8,812 | +426 |
+| RAG chunks | 7,346 | 7,848 | +502 |
+| Markdown files | 9,265 | 9,863 | +598 |
+| Pytest passing | 169 | 169 | 0 |
+
+`validation_report.sections_without_hierarchy = []` (clean).
+`in_section_index_but_unemitted = 35,633` (down from 36,231 by
+exactly 598 — the T49 delta).
+
+### Cross-corpus inbound validation — exact match
+
+The primary motivation for picking T49 next was that T23 (W6) and
+T47 (W5) already emitted 37 outbound edges into T49, and those
+edges had no resolved targets until T49 itself was emitted. Both
+counts come out **exactly** as predicted in the W5/W6 briefings:
+
+| Source | Target | Briefing prediction | Observed |
+| --- | --- | --- | --- |
+| T23 → T49 | 49:950 / 49:978.1 etc. | 15 | **15** ✓ |
+| T47 → T49 | 49:950 / 49:214.5.4 etc. | 22 | **22** ✓ |
+
+Both inbound channels target T49's APA chapter heavily
+(49:950, 49:951, 49:963 — the Administrative Procedure Act). This
+validates the LRS→LRS cross-corpus resolver for every cross-title
+edge written into the corpus during W5 and W6, retroactively.
+
+### Title 49 citation-edge breakdown
+
+426 edges from Title 49 sources (~0.71/section — new lowest density
+of any wave so far, just under T23's 0.78; consistent with the
+state-admin-statute style of self-contained Chapter-internal
+references). By destination corpus:
+
+| Dst corpus | Count |
+| --- | --- |
+| `rs` (intra-LRS) | 423 |
+| `ccp` | 2 |
+| `crp` | 1 |
+| `civcode` | 0 |
+| `evidence` | 0 |
+
+Top intra-LRS destinations: T49 self=228 (53.9% of T49-source rs
+edges — much lower self-ref ratio than T23 82.5%; T49 reaches
+broadly across the corpus), **T42=24** (public officers — natural
+companion to state admin), T30=18 (mineral law), T39=16 (state
+finance — predicted hub), T37=10, T36=9, T13=9 (courts), T43=9,
+T24=7 (industrial loans), T40=7, T17=7 (education), T6=7. T49
+shows the broadest cross-Title reach of any wave so far —
+consistent with state administration touching most subject-matter
+domains.
+
+### Acts parsing: 3 active raw-unparsed (3 new pattern families)
+
+**Active parse rate 478 / 527 = 90.70%**, the second-highest
+single-title rate (behind only T14 94.20%). The gap breaks down
+as:
+
+- **46 sections with no acts-line at all** (`acts_citations_raw is
+  null`) — legitimate; the legis page carries body only. In-family
+  with T9, T22, T23, T47. Not a parse failure.
+- **3 sections with raw text that didn't parse** — three new
+  pattern families:
+
+| Family | Count | Example |
+| --- | --- | --- |
+| Multi-section in one Acts line (`§1, 2.`) | 1 | R.S. 49:157 (State artist laureate): `Acts 1952, No. 14, §1, 2.` |
+| Compound enactment with comma separator (`§1, Amended by Acts ...`) | 1 | R.S. 49:159 (State bird): `Acts 1958, No. 486, §1, Amended by Acts 1966, No. 457, §1.` |
+| `1st Ex.Sess.` (ordinal-prefixed special session) | 1 | R.S. 49:211 (Commissions; formalities): `Added by Acts 1975, 1st Ex.Sess. No. 46, §1, eff. Feb. 20, 1975.` |
+
+All three are very narrow tail-end variants. The `1st Ex.Sess.`
+variant is interesting — the existing `Ex.Sess.` regex already
+parses 76/87 corpus-wide bare `Ex.Sess.` instances, so the
+ordinal prefix (`1st`) is the specific gap. Adding these to the
+consolidated CC-touch backlog rather than fixing standalone.
+
+**Corpus active parse rate**: 81.66% → **82.21%** (+0.55 points).
+**Per-title active parse rates**: T1 53.66%, T9 82.05%, T14
+94.20%, T22 69.22%, T23 88.15%, T47 90.04%, T49 90.70%.
+
+**No CC-touch budget consumed this wave.** Per the standing rule,
+the 3 T49 raw-unparsed are deferred and folded into the existing
+consolidated escalation backlog (now 22 active raw-unparsed across
+9 pattern families).
+
+### Marquee spot-checks
+
+| Citation | Heading | Depth | Body | Acts records | Breadcrumb |
+| --- | --- | --- | --- | --- | --- |
+| R.S. 49:1 | Gulfward boundary | 3 | 1,357 b | 3 | Title 49 › Chapter 1 › Part I |
+| R.S. 49:131 | Board created; members | 4 | 233 b | 1 | Title 49 › Chapter 1 › Part VII › Subpart A |
+| R.S. 49:200.51 | Public funding for abortion providers; prohibition | 2 | 2,974 b | 0 | Title 49 › Chapter 1-A |
+| R.S. 49:950 | Title and form of citation | 3 | 117 b | 1 | Title 49 › Chapter 13 › Part I |
+| R.S. 49:951 | Definitions | 3 | 4,003 b | 6 | Title 49 › Chapter 13 › Part I |
+| R.S. 49:963 | Department of Environmental Quality; procedure for adoption of rules | 3 | 9,713 b | 1 | Title 49 › Chapter 13 › Part II |
+| R.S. 49:157 | State artist laureate | 3 | 301 b | 0 | Title 49 › Chapter 1 › Part VIII (RAW-UNPARSED — multi-section in one Acts line) |
+| R.S. 49:159 | State bird | 3 | 286 b | 0 | Title 49 › Chapter 1 › Part VIII (RAW-UNPARSED — compound enactment) |
+| R.S. 49:211 | Commissions; formalities | 3 | 192 b | 0 | Title 49 › Chapter 2 › Part I (RAW-UNPARSED — `1st Ex.Sess.`) |
+
+R.S. 49:200.51 sits at depth 2 (chapter-direct) under Chapter
+1-A, which has no Parts. R.S. 49:131 lands at the deepest T49
+depth (4) under Chapter 1 / Part VII / Subpart A. R.S. 49:950 is
+the inbound target of the bulk of the T23 and T47 cross-corpus
+edges — the citation form of the Administrative Procedure Act
+that those external titles reference.
+
+### Tests
+
+Test count unchanged at **169 passed** (87 CC + 82 LRS). No new
+acts-parser tests, no new fixtures promoted. Title 49's Justia
+parse is unremarkable (no new structural features) — fine to
+defer fixture promotion until a wave needs it.
+
+### Source changes
+
+**None.** Fourth consecutive wave with zero edits to any file
+under `src/usufruct/`. Wave 7 is a pure data-pipeline rerun +
+new verification helper.
+
+Filesystem changes outside `data/rs/`:
+
+| Path | Change |
+| --- | --- |
+| `lars-test/wave7_verify.py` | NEW (read-only verification harness, retained for reuse — gitignored under lars-test/) |
+| `BUILDHISTORY.md` | This entry. |
+
+### Snapshot
+
+Cut to `snapshots/lrs-2026-05-22-w7/` (172 MB). Per the standing
+collision pattern, the CLI emits to `snapshots/lrs-<date>/` and
+same-day snapshots collide, so the snapshot was renamed
+post-write (W5 = `lrs-2026-05-22-w5/`, W6 =
+`lrs-2026-05-22-w6/`, W7 = `lrs-2026-05-22-w7/`). W4 state
+remains recoverable from commit `61923fd`.
+
+### Standing items (carry forward)
+
+- **Drop Phase 3 bypass** (`_hierarchy_path_from_justia_chain`
+  in orchestrate.py): still deferred. Prior session broke
+  something attempting this cleanup; root cause was never
+  captured in the standing-items notes, so don't touch without
+  reconstructing the breakage first.
+- **Consolidated CC-touch backlog** — now **22 active
+  raw-unparsed across 9 pattern families** (still deferred; one
+  escalation will fix all of these together once sized):
+  - T47 (18 in 5 families): `applicable to taxable years` (4);
+    `; Redesignated from R.S. X:Y pursuant to Acts ...` (6);
+    trailing `H.C.R. No. N, YYYY R.S.` (2); inline asterisk
+    footnote (3); should-parse-but-don't trio R.S. 47:813 /
+    47:1542.1 / 47:641 (3, needs diagnostic-first).
+  - T23 (1): trailing federal-code footnote tail in R.S.
+    23:1491.
+  - T49 (3 new this wave): multi-section in one Acts line
+    (49:157); compound enactment with comma separator (49:159);
+    `1st Ex.Sess.` ordinal-prefixed special session (49:211).
+  - `eff. See Act` family (R.S. 22:1059.7 / R.S. 1:60).
+- **Wave 8 candidates** (smallest first):
+  - Title 13 (~1,500, courts & judicial procedure — no
+    Subtitles). Heavy civcode/ccp cross-refs likely; a strong
+    "5th consecutive no-edit rerun" candidate.
+  - Title 39 (~1,500, state finance — T49 emits 16 outbound
+    into T39, so emitting T39 would close another inbound-edge
+    loop similar to T49's W7 validation).
+  - Title 33 (~2,500, municipalities — second Subtitle wave;
+    would re-exercise the Subtitle handling added during W5).
+  - Title 17 (~3,500, education — largest remaining mid-tier
+    title).
+  - Title 42 (~unknown, public officers and employees — T49
+    emitted 24 outbound edges into T42, the heaviest T49 cross-
+    ref destination; an inbound-edge closure candidate).
+
 ## 2026-05-22 — Wave 6 (Title 23 Labor and Worker's Compensation) end-to-end
 
 Sixth wave. Title 23 lands clean with **zero source-code edits**
