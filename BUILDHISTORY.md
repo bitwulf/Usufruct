@@ -1801,6 +1801,251 @@ aggregates (`data/rs/*.json{l,csv}` + Title 1 per-section JSONs).
   (~2,500, municipalities — second Subtitle wave), Title 17
   (~3,500, education — largest remaining mid-tier title).
 
+## 2026-05-22 — Wave 9 (Title 42 Public Officers and Employees) end-to-end
+
+Ninth wave. Title 42 lands clean with **zero source-code edits**
+(sixth consecutive pure data-pipeline wave). Two unusual aspects
+distinguish W9 from prior waves:
+
+- **Three consecutive exact inbound-closure matches.** T49 → T42 =
+  24 (predicted 24), T39 → T42 = 22 (predicted 22), combined 46
+  (predicted 46). With W7 (T23/T47 → T49 = 15/22 exact) and W8
+  (T49 → T39 = 16 exact), the inbound-closure prediction
+  methodology has now landed exact three waves in a row.
+- **First wave to drag corpus parse rate down.** T42 has the
+  third-lowest individual-title active parse rate (77.07% — below
+  T9 / T23 / T47 / T49 / T39 which all sit 82–94%). Corpus
+  active parse rate edged **82.86%** (down 0.25 pts from W8's
+  83.11%). The drag is structural, not regression — see the parse
+  analysis below.
+
+### Scope
+
+- **458 sections** in `data/rs/sections/rs_42_*.json` — **smallest
+  wave so far**, even under W7 T49's 598. Status: **410 active +
+  48 repealed + 0 blank**.
+- **75 containers** for Title 42: 1 title + 0 subtitles + 34
+  chapters + 34 parts + 6 subparts. No-Subtitle, depth-4 max
+  profile (same shape family as T14 / T22 / T23 / T49).
+  `hierarchy.json` total unchanged at 5,529.
+- Tree `max_depth = 7` (unchanged corpus-wide). T42 depth
+  distribution: 167 at d2 (chapter-direct, the modal shape), 243
+  at d3 (chapter/part), 48 at d4 (chapter/part/subpart).
+
+### Process
+
+1. `.venv/bin/usufruct rs phase3 --titles 1,9,14,22,47,23,49,39,42` —
+   symmetric form, 8 cached titles short-circuited, T42 fetched
+   fresh. Wall time ~4 min for the 458 fresh fetches at 2 req/s.
+2. `.venv/bin/usufruct rs phase4` — ~10s; rebuilt
+   tree/edges/chunks/markdown across the 11,676-section union.
+3. Verification via `lars-test/wave9_verify.py` (new, adapted from
+   wave8_verify.py): spotlights both T49 and T39 inbound to T42
+   plus their combined total against the briefing's 46.
+4. `.venv/bin/pytest -q` → **169 passed, zero regressions.**
+
+### Output deltas
+
+| Metric | Pre-Wave 9 (W1–8) | Post-Wave 9 | Δ |
+| --- | --- | --- | --- |
+| Sections emitted | 11,218 | 11,676 | +458 |
+| Containers (hierarchy) | 5,529 | 5,529 | 0 (T42 already in hierarchy.json) |
+| Tree max depth | 7 | 7 | 0 |
+| ActsCitation records | 21,481 | 22,530 | +1,049 |
+| Citation edges | 9,670 | 10,033 | +363 |
+| RAG chunks | 8,896 | 9,287 | +391 |
+| Markdown files | 11,218 | 11,676 | +458 |
+| Pytest passing | 169 | 169 | 0 |
+
+`validation_report.sections_without_hierarchy = []` (clean).
+`in_section_index_but_unemitted = 33,820` (down from 34,278 by
+exactly 458 — the T42 delta).
+
+### Cross-corpus inbound validation — three exact matches in a row
+
+| Source | Target | Briefing prediction | Observed |
+| --- | --- | --- | --- |
+| T49 → T42 | 42:11, 42:1123, 42:1157, 42:1170 etc. | 24 | **24** ✓ |
+| T39 → T42 | 42:11, 42:375.2 etc. | 22 | **22** ✓ |
+| **T49 + T39 → T42** | combined | **46** | **46** ✓ |
+
+Also surfaced: T22 → T42 = 12, T47 → T42 = 12, T23 → T42 = 10, T9
+→ T42 = 4 — **84 total cross-Title inbound edges closed** by
+emitting T42, the heaviest single-wave cross-corpus closure yet.
+The bulk of the inbound traffic targets the Code of Governmental
+Ethics chapter (Chapter 15 — R.S. 42:1123 Exceptions, R.S.
+42:1157 Late filing fees, R.S. 42:1170 Ethics education), which
+naturally is what state-admin (T49) and state-finance (T39)
+statutes cross-reference for officer conduct rules.
+
+### Title 42 citation-edge breakdown
+
+363 edges from Title 42 sources (~0.79/section — back up to the
+T22/T23 range, after the T39/T49 trough of 0.63–0.71). By
+destination corpus:
+
+| Dst corpus | Count |
+| --- | --- |
+| `rs` (intra-LRS) | 354 |
+| `civcode` | 9 |
+| `ccp` | 0 |
+| `crp` | 0 |
+| `evidence` | 0 |
+
+Top intra-LRS destinations: T42 self=210 (57.8% self-ref), T18=23
+(election code — natural neighbor for "public officers"), T49=17
+(state admin, bidirectional with T49's 24 inbound), T17=15
+(education), T24=11, T39=8 (also bidirectional, T39 sent 22),
+T40=8, T14=8, T33=7, T23=5, T13=5, T37=5. T42's 9 outbound civcode
+edges are the most civcode-rich Title yet — public-officer
+statutes reference Civil Code articles on bonds, fiduciary duty,
+etc.
+
+### Acts parsing: 2 active raw-unparsed (`Ex. Sess.` with space)
+
+**Active parse rate 316 / 410 = 77.07%**. This is the third-
+lowest single-title rate (above T22 69.22% and T1 53.66% — T1
+being too small to compare). The driver is **NOT parse failures**:
+
+- **92 sections with no acts-line at all** (`acts_citations_raw is
+  null`) — **22.4% of T42 active sections**, much higher than
+  other titles (T22 30.8%, T9 17.9%, others <10%). These are
+  legitimate no-raw cases; the legis page carries body only. T42
+  has many old-statute public-officer rules whose acts-line history
+  doesn't appear on the legis page.
+- **316 / 318 = 99.37% parse rate when raw text IS present** —
+  highest "raw → parsed" rate of any wave.
+- **2 sections with raw text that didn't parse**, both with the
+  same surface text:
+
+| Family | Count this wave | Cumulative cross-Title | Example |
+| --- | --- | --- | --- |
+| **`Ex. Sess.` (with space) bare form** — close cousin of the existing should-parse-but-don't `Ex.Sess.` (no space) family; this is the space-variant | 2 | 2 (new sub-family) | R.S. 42:1351 / 42:1358 (Code of Ethics public-records statutes): `Added by Acts 1974, Ex. Sess., No. 8, §1, eff. Jan. 1, 1975.` |
+
+A corpus-wide check turned up an instructive contrast in special-
+session variants:
+
+| Variant | Active sections with this text | Parses cleanly | Failure rate |
+| --- | --- | --- | --- |
+| `Ex. Sess.` **WITH** space | 793 | **791** | 0.25% |
+| `Ex.Sess.` **NO** space | 136 | 120 | 11.8% |
+
+So the space form (`Ex. Sess.`) is overwhelmingly the normalized
+one and parses 99.75% of the time; the no-space form (`Ex.Sess.`)
+is the rarer, problematic one with a 11.8% failure rate. **The
+T42 pair are the only 2 exceptions to the space-form pattern**
+corpus-wide — narrow, specific. The 16 `Ex.Sess.` (no-space)
+non-parsers cover most of the consolidated should-parse-but-don't
+backlog plus the redesignated-pursuant-to family and the
+1st.Ex.Sess. variant.
+
+**Corpus active parse rate**: 83.11% → **82.86%** (-0.25 pts —
+**first wave to drag corpus parse rate down**; structural cause
+is T42's no-raw-line proportion, not parser regression).
+**Per-title active parse rates**: T1 53.66%, T9 82.05%, T14 94.20%,
+T22 69.22%, T23 88.15%, T39 90.58%, T42 77.07%, T47 90.04%, T49
+90.70%.
+
+**No CC-touch budget consumed this wave.** Per the standing rule,
+the 2 T42 raw-unparsed are deferred and folded into the
+consolidated escalation backlog.
+
+### Marquee spot-checks
+
+| Citation | Heading | Depth | Body | Acts records | Breadcrumb |
+| --- | --- | --- | --- | --- | --- |
+| R.S. 42:1 | Public office defined | 2 | 359 b | 0 | Title 42 › Chapter 1 |
+| R.S. 42:11 | Short title | 2 | 72 b | 1 | Title 42 › Chapter 1-A |
+| R.S. 42:31 | Eligibility requirements for certain unclassified employees | 3 | 1,560 b | 1 | Title 42 › Chapter 2 › Part I |
+| R.S. 42:375.2 | Agency attrition analysis process, higher education systems | 2 | 2,360 b | 1 | Title 42 › Chapter 7 |
+| R.S. 42:801 | Administration | 4 | 579 b | 2 | Title 42 › Chapter 12 › Part I › Subpart A |
+| **R.S. 42:1123** | **Exceptions** | 3 | **44,268 b** | **87** | Title 42 › Chapter 15 › Part II (Code of Governmental Ethics — heaviest inbound target) |
+| R.S. 42:1157 | Late filing fees | 4 | 4,889 b | 17 | Title 42 › Chapter 15 › Part III › Subpart C |
+| R.S. 42:1170 | Ethics education; mandatory requirements; ethics designee | 3 | 8,355 b | 8 | Title 42 › Chapter 15 › Part IV |
+| R.S. 42:1351 | Qualifications; term of office | 3 | 392 b | 0 | Title 42 › Chapter 19 › Part I (RAW-UNPARSED — `Ex. Sess.` space form) |
+| R.S. 42:1358 | Contest of election | 3 | 196 b | 0 | Title 42 › Chapter 19 › Part I (RAW-UNPARSED — same pattern as 42:1351) |
+
+R.S. 42:1123 is the heaviest single section landed in any wave so
+far (44KB body, 87 acts records) — the "Exceptions" section in
+the Code of Governmental Ethics carrying decades of amendments.
+R.S. 42:11 (a 72-byte "Short title" section) is the most-cited
+inbound destination for both T39 and T49 — short-title sections
+are typical citation anchors.
+
+### Tests
+
+Test count unchanged at **169 passed** (87 CC + 82 LRS). No new
+acts-parser tests, no new fixtures promoted.
+
+### Source changes
+
+**None.** Sixth consecutive wave with zero edits to any file
+under `src/usufruct/`. Wave 9 is a pure data-pipeline rerun + new
+verification helper.
+
+Filesystem changes outside `data/rs/`:
+
+| Path | Change |
+| --- | --- |
+| `lars-test/wave9_verify.py` | NEW (read-only verification harness, retained for reuse — gitignored under lars-test/) |
+| `BUILDHISTORY.md` | This entry. |
+
+### Snapshot
+
+Cut to `snapshots/lrs-2026-05-22-w9/`. Per the standing collision
+pattern, the CLI emits to `snapshots/lrs-<date>/` and same-day
+snapshots collide, so the snapshot was renamed post-write (W5–W9
+all renamed). W4 state remains recoverable from commit `61923fd`.
+
+### CC-touch budget — escalation now on deck
+
+The standing rule was "accumulate parser gaps across W7/W8/W9,
+then do one consolidated CC-touch escalation." We've now done
+W7, W8, W9. The consolidated backlog stands at **33 active raw-
+unparsed across ~10 pattern families**, with the highest-yield
+single family being the **`Ex.Sess.` (no-space) should-parse-but-
+don't** group at **16 instances cross-Title** (47:813, 47:641,
+47:633.2, 47:338.87, 47:338.92–96, 39:1361, 39:1363, 39:1404,
+39:1406, 39:1422, 39:1425, 49:211) — note that several of those
+are caught up in adjacent families (`Redesignated`, `1st`-prefix,
+trailing-footnote) so the actual diagnostic-first scope is the 6
+bare-form cases (47:813, 47:641, 39:1361, 39:1363, 39:1404,
+39:1406).
+
+The 2 T42 `Ex. Sess.` (space-form) failures are a separate
+narrow family and likely fix with the same diagnostic.
+
+This is the natural next decision point: **continue waves
+(W10 = T13 or T38 or T33)** OR **spend the third CC-touch on
+the consolidated escalation now**. Recommend: one more wave (T13
+is small and exercises civcode/ccp cross-refs, broadening
+coverage) before the escalation, to maximize the value of a
+single diagnostic-first session against the largest possible
+backlog. But the call is the user's.
+
+### Standing items (carry forward)
+
+- **Drop Phase 3 bypass** (`_hierarchy_path_from_justia_chain`):
+  still deferred. Prior breakage uncaptured.
+- **Consolidated CC-touch backlog** — now **33 active raw-
+  unparsed**:
+  - T47 (18 in 5 sub-families)
+  - T39 (8 in 4 sub-families)
+  - T49 (3 in 3 sub-families)
+  - T42 (2 in 1 new sub-family — `Ex. Sess.` space form)
+  - T23 (1 federal-code footnote)
+  - T22 (1 `eff. See Act`)
+- **Wave 10 candidates** (smallest first):
+  - Title 13 (~1,500, courts & judicial procedure — no Subtitles,
+    the perennial "next small no-edit rerun"). Heavy civcode/ccp
+    cross-refs likely.
+  - Title 38 (T39 emits 26 outbound into T38; inbound-closure
+    candidate — would be **fourth consecutive** exact-match test).
+  - Title 33 (~2,500, municipalities — third Subtitle wave; T39
+    emits 7 into T33).
+  - Title 17 (~3,500, education — T42 emits 15, T39 emits 29 into
+    T17; combined 44-edge inbound-closure candidate).
+
 ## 2026-05-22 — Wave 8 (Title 39 State Finance) end-to-end
 
 Eighth wave. Title 39 lands clean with **zero source-code edits**
