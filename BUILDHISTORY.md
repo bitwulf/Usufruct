@@ -1801,6 +1801,224 @@ aggregates (`data/rs/*.json{l,csv}` + Title 1 per-section JSONs).
   (~2,500, municipalities — second Subtitle wave), Title 17
   (~3,500, education — largest remaining mid-tier title).
 
+## 2026-05-22 — Wave 11 (Title 38 Public Contracts, Works and Improvements) end-to-end
+
+Eleventh wave. Title 38 lands clean with **zero source-code edits**
+(eighth consecutive pure data-pipeline wave). Three distinguishing
+features:
+
+- **Fifth consecutive exact inbound-closure wave.** Pre-W11
+  prediction: T39=26, T49=5, T47=4, T42=1, T9=1 (sum 37). Post-W11:
+  every source matched exactly. The "All cross-Title inbound to T38"
+  table shows **only** those 5 sources — no other prior-processed
+  Title emits a single edge into T38. The streak now spans W7–W11
+  (five waves, twenty-one source-Title predictions all exact).
+- **Lowest outbound-rate wave so far.** T38's 582 source edges over
+  1,355 sections = **0.43 edges/section** — well below T13 (0.61),
+  T39 (0.63), T49 (0.71), T22 (0.79), T42 (0.79), T23 (0.93).
+  Public-contracts code is by nature a **citation target rather than
+  a citation source**: it gets referenced by finance/admin/works
+  statutes more than it cites them. Only 10 non-rs outbound edges
+  (6 ccp + 4 civcode + 0 crp + 0 evidence) — the inverse profile
+  of T13's 141.
+- **Second wave to drag corpus parse rate down.** Corpus active
+  parse rate 82.88% → **82.52%** (-0.36 pts, more drag than W9's
+  T42 drop of -0.25 pts). T38's own active parse rate is 78.93% —
+  fourth-lowest individual rate (above T22 69.22% and T1 53.66%
+  and T42 77.07%; below T13 82.96%). Driver: high no-raw proportion
+  (20.1%) plus a `emerg. eff. June 14, 1971` cluster.
+
+### Scope
+
+- **1,355 sections** in `data/rs/sections/rs_38_*.json`. Status:
+  **1,182 active + 171 repealed + 2 blank**. Same size as T39
+  exactly (W8 was also 1,355 sections — coincidence).
+- T38 has no Subtitles (depth-4 max profile, same shape family as
+  T13/T14/T22/T23/T42/T49). Depth distribution: 225 d2, 1,067 d3,
+  63 d4 (modal d3 — chapter/part). `hierarchy.json` unchanged.
+- Tree `max_depth = 7` (unchanged corpus-wide). Deepest T38 example:
+  R.S. 38:401 → Title 38 › Chapter 4 › Part VI › Subpart A.
+
+### Process
+
+1. `.venv/bin/usufruct rs phase3 --titles 1,9,14,22,47,23,49,39,42,13,38` —
+   symmetric form, 10 cached titles short-circuited, T38 fetched
+   fresh. Wall time ~11 min for the 1,355 fresh fetches at 2 req/s.
+2. `.venv/bin/usufruct rs phase4` — rebuilt
+   tree/edges/chunks/markdown across the 15,064-section union.
+3. Verification via `lars-test/wave11_verify.py` (new, per-source
+   inbound assertions against the 5-source baseline).
+4. `.venv/bin/pytest -q` → **169 passed, zero regressions.**
+
+### Output deltas
+
+| Metric | Pre-Wave 11 (W1–10) | Post-Wave 11 | Δ |
+| --- | --- | --- | --- |
+| Sections emitted | 13,709 | 15,064 | +1,355 |
+| Active / Repealed / Blank | 11,996 / 1,685 / 28 | 13,178 / 1,856 / 30 | +1,182 / +171 / +2 |
+| Containers (hierarchy) | 5,529 | 5,529 | 0 (T38 already in hierarchy.json) |
+| Tree max depth | 7 | 7 | 0 |
+| ActsCitation records | 26,427 | 28,269 | +1,842 |
+| Citation edges | 11,268 | 11,850 | +582 |
+| RAG chunks | 11,034 | 12,210 | +1,176 |
+| Markdown files | 13,709 | 15,064 | +1,355 |
+| Pytest passing | 169 | 169 | 0 |
+
+`validation_report.sections_without_hierarchy = 0` (clean).
+`in_section_index_but_unemitted = 30,432` (down from 31,787 by
+exactly 1,355 — the T38 delta).
+
+### Cross-corpus inbound validation — five exact matches, exhaustive
+
+| Source | Briefing prediction | Observed |
+| --- | --- | --- |
+| T39 → T38 | 26 | **26** ✓ |
+| T49 → T38 | 5 | **5** ✓ |
+| T47 → T38 | 4 | **4** ✓ |
+| T42 → T38 | 1 | **1** ✓ |
+| T9 → T38 | 1 | **1** ✓ |
+| **Sum** | **37** | **37** ✓ |
+
+The "All cross-Title inbound to T38 (top sources)" view shows
+exactly the same five sources with no others — **the predicted
+set was complete**, not just accurate. With only 11 titles
+processed, T38 receives inbound from less than half of them
+(5/10 prior titles); public-contracts is a relatively isolated
+node in the citation network.
+
+Cumulative streak: W7 (15+22 exact) + W8 (16 exact) + W9 (24+22
+exact) + W10 (8 sources, sum 145 exact) + W11 (5 sources, sum 37
+exact) = **22 source-Title predictions across 5 consecutive waves,
+all exact**.
+
+### Title 38 citation-edge breakdown
+
+582 edges from Title 38 sources (~0.43/section, lowest-ever
+outbound rate). By destination corpus:
+
+| Dst corpus | Count |
+| --- | --- |
+| `rs` (intra-LRS) | 572 |
+| `ccp` | 6 |
+| `civcode` | 4 |
+| `crp` | 0 |
+| `evidence` | 0 |
+
+Top intra-LRS destinations: T38 self=326 (56% self-ref —
+typical), T39=56 (bidirectional with the 26 inbound — net flow
+T38→T39 is +30), T49=52 (state admin), T47=24, T42=17, T14=15,
+T24=15, T33=13, T31=10, T45=8.
+
+### Acts parsing: 11 active raw-unparsed (one cluster dominates)
+
+**Active parse rate 933 / 1,182 = 78.93%**. T38 sits between
+T42 (77.07%) and T13 (82.96%) — fourth-lowest. 238 active
+sections legitimately have no acts-line (`acts_citations_raw is
+null` — 20.1% of T38 active, similar to T22's 30.8% but lower).
+
+The 11 active raw-unparsed cluster as follows:
+
+| Family | Count this wave | Cumulative cross-Title | Example |
+| --- | --- | --- | --- |
+| **`emerg. eff. June 14, 1971`** — same-date cluster from one Act | 6 | (single-instance family, 6 sequential sections) | R.S. 38:3102 / 3104 / 3106 / 3107 / 3108 / 3109 (`Acts 1971, No. 116, §1, emerg. eff. June 14, 1971.`) |
+| **`emerg. eff.` + trailing federal-code footnote** — composite of T23/T38 families | 1 | 2 (with T23:1491) | R.S. 38:3103 (`emerg. eff.` plus `1 12 U.S.C.A. §1715 L (d)(2). 2 15 U.S.C.A. §636(b)(3).`) |
+| **`Redesignated by Acts`** — existing T47 family | 1 | 7 (with T47:338.87/92–96) | R.S. 38:2212.3 (`Acts 1985, No. 922, §1. Redesignated by Acts 1999, No. 768, §3.`) |
+| **`S.C.R. No.`** (Senate Concurrent Resolution) — NEW family | 1 | 1 | R.S. 38:90.6 (`S.C.R. No. 4, 1986 1st Ex. Sess.; S.C.R. No. 2, 1988 1st Ex. Sess.`) |
+| **`As it appears in...original House Bill`** — variant of T39's "As appears in enrolled bill" | 1 | 2 (with T39:330.2) | R.S. 38:3053 (`1 As it appears in Acts 1970, No. 682 and in the original House Bill No. 1635.`) |
+| **Typo `, 6.` (missing `§`)** — NEW data quality | 1 | 1 | R.S. 38:2756 (`Added by Acts 1962, No. 308, 6.` — should be `§6.`) |
+
+Notable: **6 of 11** are the same `Acts 1971, No. 116, §1,
+emerg. eff. June 14, 1971` footer, occurring in consecutive
+sections of Chapter 14 (Administration of relocation assistance
+programs — 38:3102, 3104, 3106, 3107, 3108, 3109). This means a
+single regex update to handle `emerg. eff. <Month Day, Year>.`
+would close 6 T38 sections AND 38:3103 (the composite variant)
+AND T13:2488.2 / T39:991.1 (existing emerg.eff. instances) — a
+**9-section yield** from one targeted fix.
+
+**Corpus active parse rate**: 82.88% → **82.52%** (-0.36 pts;
+second wave to depress corpus parse rate, larger drag than W9's
+-0.25 pts).
+**Per-title active parse rates**: T1 53.66%, T9 82.05%, T13
+82.96%, T14 94.20%, T22 69.22%, T23 88.15%, T38 78.93%, T39
+90.58%, T42 77.07%, T47 90.04%, T49 90.70%.
+
+**No CC-touch budget consumed this wave.** The 11 T38 raw-
+unparsed are deferred and fold into the (LRS-side reframed)
+parser-extension backlog ([[feedback_cc_touch_budget_strategy]]).
+
+### Marquee spot-checks
+
+| Citation | Heading | Depth | Text | Acts records | Breadcrumb |
+| --- | --- | --- | --- | --- | --- |
+| R.S. 38:1 | Department of public works; domicile; service of process | 2 | 743 b | 1 | Title 38 › Chapter 1 |
+| R.S. 38:111 | Contracts by drainage districts, levee boards, and police juries | 3 | 1,162 b | 3 | Title 38 › Chapter 3 › Part I |
+| R.S. 38:401 | Levee boards and levee and drainage boards authorized to construct | 4 | 287 b | 1 | Title 38 › Chapter 4 › Part VI › Subpart A |
+| **R.S. 38:291** | **Naming; limits of districts; composition of boards** | 3 | **59,588 b** | **56** | Title 38 › Chapter 4 › Part II (heaviest T38 single section) |
+| R.S. 38:2211 | Definitions | 3 | 6,358 b | 13 | Title 38 › Chapter 10 › Part II (heaviest single-section inbound: 44, primarily from T39) |
+| R.S. 38:2212 | Advertisement and letting to lowest responsible and responsive bidders | 3 | 34,489 b | 53 | Title 38 › Chapter 10 › Part II (the LRS public-bidding statute — anchor of public-contracts law) |
+| R.S. 38:2212.3 | Right to reject bids from Communist countries | 3 | 526 b | 0 | Title 38 › Chapter 10 › Part II (RAW-UNPARSED — `Redesignated by Acts`; Cold War-era statute) |
+| R.S. 38:3102 | Administration of relocation assistance programs | 2 | 400 b | 0 | Title 38 › Chapter 14 (RAW-UNPARSED — `emerg. eff. June 14, 1971`, the dominant T38 cluster) |
+
+R.S. 38:2211 (Definitions for Part II — public bidding) is the
+single most-cited T38 section at 44 inbound edges, including the
+26 from T39. R.S. 38:291 (Naming, limits, boards composition for
+levee/drainage districts) is the heaviest T38 single section at
+59,588 b with 56 acts records — public-works districts have
+extensive amendment history.
+
+### Tests
+
+Test count unchanged at **169 passed** (87 CC + 82 LRS). No new
+acts-parser tests, no new fixtures promoted.
+
+### Source changes
+
+**None.** Eighth consecutive wave with zero edits to any file
+under `src/usufruct/`. Wave 11 is a pure data-pipeline rerun +
+new verification helper.
+
+Filesystem changes outside `data/rs/`:
+
+| Path | Change |
+| --- | --- |
+| `lars-test/wave11_verify.py` | NEW (read-only verification harness with per-source inbound assertions, retained for reuse — gitignored under lars-test/) |
+| `BUILDHISTORY.md` | This entry. |
+
+### Snapshot
+
+Cut to `snapshots/lrs-2026-05-22-w11/` (241 MB). Per the standing
+collision pattern, the CLI emits to `snapshots/lrs-<date>/` and
+same-day snapshots collide, so the snapshot was renamed post-
+write (W5–W11 all renamed). W4 state remains recoverable from
+commit `61923fd`.
+
+### Standing items (carry forward)
+
+- **Drop Phase 3 bypass** (`_hierarchy_path_from_justia_chain`):
+  still deferred. Prior breakage uncaptured ([[project_hierarchy_bypass_prior_breakage]]).
+- **LRS-side parser-extension backlog** — now **56 active raw-
+  unparsed** (was 45 post-W10):
+  - T13 (12), T38 (11 — 6 in single `emerg. eff. June 14, 1971`
+    cluster), T47 (18), T39 (8), T49 (3), T42 (2), T23 (1),
+    T22 (1)
+  - Highest-fix-leverage single regex: `emerg. eff. <Month Day,
+    Year>.` — closes 6 T38 + 1 T38 composite + 1 T13 + 1 T39 =
+    **9 sections from one diagnostic** (one of the densest
+    fix-yield ratios in the backlog).
+  - Highest-cumulative family: `Ex.Sess.` (no-space) at 21
+    cross-Title instances (T13 added 5 in W10).
+- **Wave 12 candidates** (smallest first):
+  - Title 33 (~2,500, municipalities — third Subtitle wave;
+    T39 emits 7, T13 emits 46, T38 emits 13 into T33; combined
+    ~66-edge inbound-closure).
+  - Title 40 (T13 emits 49 into T40 alone — heaviest single-
+    source inbound-closure prediction yet; T38 emits 7 also).
+  - Title 17 (~3,500, education — T42 emits 15, T39 emits 29,
+    T13 emits 13 into T17; combined ~57-edge inbound-closure).
+  - Title 18 (election code — T42 emitted 23 into T18 in W9;
+    likely the heaviest single-edge target from T42).
+
 ## 2026-05-22 — Wave 10 (Title 13 Courts and Judicial Procedure) end-to-end
 
 Tenth wave. Title 13 lands clean with **zero source-code edits**
