@@ -1318,3 +1318,144 @@ is now complete: `LRSHierarchyIndex` is structurally correct on its
 own, the Phase 3 bypass remains as belt-and-suspenders, and no
 follow-up `hierarchy.py` work is needed before any subsequent wave.
 
+## 2026-05-21 — CC `acts_parser.py` extension (second authorized CC touch)
+
+User-authorized extension to `src/usufruct/parse/acts_parser.py` to
+clear the 36 active sections across Titles 1+9+14 whose acts text the
+shared CC parser couldn't split. Per the strict-isolation rule this is
+the *second* allowed touch of the CC tree (the first was the
+special-session regex from the earlier session); any further CC edit
+needs new escalation. User decisions on the two design questions, taken
+2026-05-21:
+
+- **Multi-section emission** (`§§N, M`, `§§N-M`, `§§N to M`): emit one
+  `ActsCitation` record per section, all sharing `act_year`,
+  `act_number`, effective date, and role. No schema change.
+- **Scope**: all 36 sections, including the 10 adjacent patterns
+  outside the original "26 Title 9 misses" handoff list (Title 1's
+  ``No 128`` typo, Title 14's 2024-era ``, See Act.`` form).
+
+### 1. Patterns added (eleven, in two passes)
+
+**First pass — six patterns from the original audit:**
+
+| Pattern | Example | Witness |
+| --- | --- | --- |
+| Multi-section comma-list | `Acts 1999, No. 1315, §§1, 2, eff. Jan. 1, 2000.` | R.S. 9:3578.5 |
+| Multi-section hyphen range | `Acts 1968, No. 154, §§1-3.` | R.S. 9:2725 |
+| Multi-section `N to M` range | `Acts 1972, No. 451, §§1 to 3.` | R.S. 14:331 |
+| Embedded `{{NOTE: ...}}` block | `Acts 1986, No. 225, §3. {{NOTE: SEE ACTS ...}}` | R.S. 9:2802 |
+| Trailing `. NOTE: See Acts ...` | `Acts 2019, No. 325, §1. NOTE: See Acts 2019, No. 325, §§6, 7, and 10, regarding applicability.` | R.S. 9:4843 |
+| Trailing `, See Act.` | `Acts 2024, No. 670, §1, See Act.` | R.S. 14:112.11–13 |
+| Footnote-marker tail | `Acts 1999, No. 517, §1. 1 As appears in enrolled bill.` | R.S. 9:2945 |
+| `No 128` (missing period) | `Acts 2021, No 128, §1.` | R.S. 1:55.1 |
+
+**Second pass — five residual patterns** that surfaced as the post-first-pass
+unparsed remainder:
+
+| Pattern | Example | Witness |
+| --- | --- | --- |
+| Split ordinal `1 st Ex. Sess.` | `Acts 2011, 1 st Ex. Sess., No. 30, §1.` | R.S. 9:2921 |
+| Missing comma before `eff.` | `Acts 1974, No. 546, §1 eff. Jan. 1, 1975.` | R.S. 9:5131 |
+| Trailing `. *NOTE:` (leading asterisk) | `Acts 1985, No. 728, §1. *NOTE: AS APPEARS IN ENROLLED BILL.` | R.S. 9:5644 |
+| Trailing `. *Note ...` (no colon) | `Acts 1984, No. 331, §4. *Note error in English translation ...` | R.S. 9:2785 |
+| Trailing `. * See ...` (cross-ref) | `Acts 1950, No. 495, §1. * See R.S. 9:603, ...` | R.S. 9:675 |
+
+Implementation: three new compiled regexes (`_BRACED_NOTE_RE`,
+`_TRAILING_NOTE_RE`, `_TRAILING_STAR_SEE_RE`,
+`_TRAILING_SEE_ACT_RE`, `_FOOTNOTE_TAIL_RE`, `_ACT_MULTI_RE`), three
+tolerances in the existing `_ACT_RE` (`No\.?`, `\d+\s*(?:st|nd|rd|th)`,
+`,?\s+eff\.`), and one new helper `_expand_section_spec` to turn a
+spec like `"1, 2"` / `"1-3"` / `"1 to 3"` into a list of integers.
+Whole-line preprocessing strips brace + trailing-NOTE + trailing-star-See
+content; per-piece preprocessing strips `, See Act.` and footnote-marker
+tails (with a defensive `rstrip(".")` after each per-piece sub since the
+strip can leave the citation's own trailing period exposed).
+
+### 2. Tests — 21 new in `test_acts_parser.py` (16 → 37)
+
+First-pass (16): one parametrized table covering the five multi-section
+shapes; effective-date-carries-through pin; braced-NOTE strip; trailing
+unbraced NOTE; `, See Act.` strip (alone + combined with multi-section);
+footnote-marker strip (alone + combined with multi-section); the
+`No 128` missing-period case; direct unit test on `_expand_section_spec`
+covering comma list / hyphen range / word-to range / "and" connector /
+inverted range / empty input.
+
+Second-pass (5): one test per residual pattern from the table above.
+
+### 3. Live-data delta
+
+Re-ran `phase3 --titles 1,9,14` + `phase4` from cache (~22s).
+
+| | Pre-fix | Post-fix |
+| --- | ---: | ---: |
+| Title 1 raw-unparsed active | 1 | **0** |
+| Title 9 raw-unparsed active | 26 | **0** |
+| Title 14 raw-unparsed active | 9 | **0** |
+| **Total raw-unparsed** | **36** | **0** |
+| Title 1 total ActsCitation records | 100 | 105 |
+| Title 9 total ActsCitation records | 3,100 | 3,271 |
+| Title 14 total ActsCitation records | 1,987 | 2,119 |
+| **Total ActsCitation records** | **5,187** | **5,495 (+308)** |
+
+The +308 record delta breaks down as:
+
+- **36 newly-parsed sections** (those with raw text but `acts_citations=[]`
+  pre-fix) contribute **50 records** post-fix (more than 36 because
+  multi-section forms expand into one record per section).
+- **141 expanded-parse sections** (sections that parsed partially pre-fix
+  because one of their semicolon-separated pieces had an unparseable
+  form like `§§1, 2`) contribute **+258 additional records**. These were
+  silent improvements — sections that already had *some* parsed acts
+  but were missing entries the parser couldn't handle.
+- **0 regressions** — no section emerged with fewer records than before.
+
+### 4. Artifact diff vs `snapshots/lrs-2026-05-21/`
+
+| Artifact | Change | Why |
+| --- | --- | --- |
+| `sections.jsonl` (3,077 records) | CHANGED | new acts_citations; per-record `scrape_timestamp` drift |
+| `sections/*.json` (3,077 files) | CHANGED | same as above |
+| `markdown/*.md` (177 of 3,077) | CHANGED | frontmatter exposes acts_citations |
+| `manifest.json` | CHANGED | `generated_at`; total counts unchanged (still 3,077 emitted) |
+| `hierarchy.json`, `tree.json` | CHANGED | unrelated — from the earlier `LRSHierarchyIndex` re-keying in this same session |
+| `citation_edges.csv` | bit-identical | acts parsing doesn't affect intra-text citation extraction |
+| `chunks.jsonl` | bit-identical | chunks exclude acts data |
+| `validation_report.json` | bit-identical | no validation criteria depend on acts parsing |
+| `justia_section_index.json`, `section_index.json`, `notes.jsonl` | bit-identical | Phase 1/2 outputs untouched |
+
+The 177 changed markdown files = 36 newly-parsed + 141 expanded —
+exactly the sections whose `acts_citations` shape changed.
+
+### Tests
+
+`.venv/bin/pytest` → **169 passed** (87 CC + 82 LRS), zero regressions.
+
+- `tests/test_acts_parser.py`: 16 → 37 (+21).
+- All other test files unchanged.
+
+### CC-touch accounting
+
+This is the *second* authorized edit to `src/usufruct/parse/acts_parser.py`:
+- First touch (earlier session): extraordinary-session regex
+  (`1st/2nd/3rd Ex. Sess.,` + 1960-era no-space `1st Ex.Sess.,`).
+- Second touch (this session): eleven new patterns / tolerances as
+  enumerated above.
+
+No other CC file under `src/usufruct/{fetch,parse,pipeline,model}/`
+was touched. Any further CC edit still needs explicit escalation per
+the strict-isolation rule.
+
+### What's next
+
+Wave 4 (Title 22 Insurance, ~1,500 sections, or Title 47 Taxation,
+~2,500 sections + Subtitles) is the remaining open item. The hierarchy
+work and the acts-parser work are both complete; both `LRSHierarchyIndex`
+and `parse_acts_citation_line` are now corpus-clean for Waves 1–3 and
+ready for the next wave's data. The snapshot at
+`snapshots/lrs-2026-05-21/` predates today's two fixes — re-snapshot
+with `.venv/bin/usufruct rs snapshot` to refresh it (overwrites the
+same dir since the date is unchanged), or leave it as a bypass-only
+record of the pre-fix Wave 3 state.
+

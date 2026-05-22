@@ -19,11 +19,20 @@
     }
   ],
   "breadcrumb": "Title 1 › Chapter 2",
-  "acts_citations": [],
+  "acts_citations": [
+    {
+      "act_year": 2021,
+      "act_number": 128,
+      "section": 1,
+      "effective_date": null,
+      "effective_date_raw": null,
+      "role": "enactment"
+    }
+  ],
   "acts_citations_raw": "Acts 2021, No 128, §1.",
   "source_url": "https://legis.la.gov/legis/Law.aspx?d=1238710",
   "website_law_id": 1238710,
-  "scrape_timestamp": "2026-05-21T21:07:30Z",
+  "scrape_timestamp": "2026-05-21T21:30:23Z",
   "source_html_hash": "sha256:f2b05eeb1f1b3fada31feb69def33048af97fd2d1eda6bc518aa6e62a5908a2c",
   "schema_version": "1.0.0"
 }
