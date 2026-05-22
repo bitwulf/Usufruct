@@ -1459,3 +1459,151 @@ with `.venv/bin/usufruct rs snapshot` to refresh it (overwrites the
 same dir since the date is unchanged), or leave it as a bypass-only
 record of the pre-fix Wave 3 state.
 
+## 2026-05-22 — Wave 4 (Title 22 Insurance) end-to-end
+
+Fourth wave of LRS data landed. Title 22 (Insurance Code) walks Phases 3+4
+clean against legis.la.gov on its own and joined with Titles 1+9+14. Zero
+source-code edits this session — no new acts-line variant emerged and no
+hierarchy fix was needed. The wave was purely a fetch + parse + verify
+exercise against the existing parser/orchestrator surface.
+
+### Scope
+
+- **2,651 sections** in `data/rs/sections/rs_22_*.json` (handoff brief
+  estimated ~1,500; the actual count was uncovered in pre-flight from
+  `section_index.json`).
+- **182 containers** (1 title root + 22 chapters + 55 parts + 104
+  subparts; **no Subtitle level** — Title 22 is chapter/part/subpart
+  only, so the Subtitle code path is still unexercised. Title 47 would
+  be the first wave to exercise it).
+- Container status: 2,518 active + 132 repealed + 1 blank.
+
+### Process
+
+1. Promoted `lars-test/html/title-22.html` →
+   `tests/fixtures/lrs/justia/title-22.html` (no fixture change needed
+   — phase1/phase2 already covered Title 22 in earlier corpus-wide
+   runs; this just brings it under fixture-pin coverage).
+2. `.venv/bin/python -m usufruct.cli rs phase3 --titles 1,9,14,22`
+   (~44 min wall time at 1 req/s; Title 22 fully uncached at start,
+   Titles 1/9/14 fully cached and short-circuited).
+3. `.venv/bin/python -m usufruct.cli rs phase4` (~10s; rebuilds
+   tree/edges/chunks/markdown for the full union).
+4. Spot-checks + edge breakdown + acts-parse rate inspection.
+5. `.venv/bin/pytest -q` → **169 passed, zero regressions.**
+
+### Output deltas (Wave 4 effect on data/rs/)
+
+| Metric | Pre-Wave 4 (W1–3) | Post-Wave 4 | Δ |
+| --- | --- | --- | --- |
+| Sections emitted | 3,077 | 5,728 | +2,651 |
+| Containers (hierarchy) | 5,529 | 5,529 | 0 (unchanged; W4 containers were already in `hierarchy.json` from corpus-wide Phase 1) |
+| ActsCitation records | 5,495 | 10,210 | +4,715 |
+| Citation edges | 2,309 | 4,494 | +2,185 |
+| RAG chunks | 2,659 | 4,411 | +1,752 |
+| Markdown files | 3,077 | 5,728 | +2,651 |
+| Pytest passing | 169 | 169 | 0 |
+
+`validation_report.sections_without_hierarchy = 0` (clean).
+`in_section_index_but_unemitted` is 39,766 — all from Titles outside
+the {1,9,14,22} scope (expected).
+
+### Title 22 citation-edge breakdown
+
+2,185 edges originate from Title 22 sources (~0.82 edges per section,
+about half the Title 9 rate of 1.5 — insurance is meaty but less
+interleaved than family law). By destination corpus:
+
+| Dst corpus | Count |
+| --- | --- |
+| `rs` (intra-LRS) | 2,162 |
+| `civcode` | 8 |
+| `crp` | 9 |
+| `ccp` | 5 |
+| `evidence` | 1 |
+
+Top Title 22 intra-LRS destinations (top 8): T22 self=1,763,
+T49=71 (state administration / agencies), T44=39 (public records),
+T37=34 (professions/businesses), T40=33 (health/welfare),
+T23=31 (labor / worker comp), T32=27 (motor vehicles —
+auto-insurance touch), T51=24 (trade/commerce). Cross-corpus edge
+volume (23 total: 8+9+5+1) is small but non-zero — confirms the
+LRS→{civcode,ccp,crp,evidence} resolvers stay healthy under the
+larger Title 22 input.
+
+Wave 1–3 totals are unchanged (Title 1=8, Title 9=1,501, Title 14=800
+source edges → 2,309 total). No drift from the rerun.
+
+### Acts parsing: no new variant
+
+Title 22 has **133 raw-unparsed sections**, but **132 of 133 are
+repealed-status** — orchestrate.py:510 only parses
+`acts_citations_raw` for `status == "active"`, so all repealed
+sections retain their raw text without parsed records by design. This
+is the *same* mechanism that left 354 raw-unparsed records in Titles
+9+14 (298 + 56) in earlier waves. Corpus-wide the count is now
+486 raw-unparsed repealed sections, which matches the manifest's
+`by_status.repealed = 486` exactly.
+
+The single Title 22 active-status unparsed case:
+
+| Citation | Raw text | Why |
+| --- | --- | --- |
+| R.S. 22:1059.7 | `Acts 2025, No. 367, §1, eff. See Act.` | Effective-date slot contains the literal "See Act", which the shared parser's eff-date regex cannot capture. Known limit (same family as R.S. 1:60). Defer. |
+
+**No new acts_parser pattern was needed.** The eleven patterns added
+in the 2026-05-21 CC-touch session are sufficient for Title 22. The
+CC-touch budget remains spent (two touches: special-session regex,
+then the eleven-pattern extension). Any further `src/usufruct/parse/`
+edit still needs explicit escalation.
+
+### Marquee spot-checks
+
+| Citation | Heading | Hierarchy depth | Body | Acts |
+| --- | --- | --- | --- | --- |
+| R.S. 22:1 | Louisiana Insurance Code | 3 (title/ch/part) | 77 chars | 3 records (1958/1993/2003) |
+| R.S. 22:2 | Insurance regulated in the public interest | 4 (title/ch/part/subpart) | 3,347 chars | 18 records (heavy "Amended by Acts" history) |
+| R.S. 22:11 | Rules and regulations by commissioner | 4 | 7,808 chars | 6 records (handles `Redesignated from R.S. 22:3 by Acts ...`) |
+| R.S. 22:1011 | Employer-provided health plan; limitation to specific pharmacies prohibited | 4 | 936 chars | 1 record (trailing `NOTE: Former R.S. 22:...` stripped cleanly) |
+| R.S. 22:31 | Division of diversity and opportunity | 4 | 3,177 chars | 10 records (long enactment chain with multiple `eff.` clauses) |
+
+All hierarchy paths are root-anchored chains of `{level, number,
+name}` records. Title 22 doesn't exercise a deeper level than W1–3
+already exercised.
+
+### Tests
+
+Test counts unchanged at **169 passed** (87 CC + 82 LRS, same as
+post–2026-05-21). No new acts-parser tests were needed because no
+new pattern was added. No new orchestrator tests were needed because
+no orchestrate.py change was made.
+
+### Source changes
+
+**None.** This is the first wave to land with zero edits to any file
+under `src/usufruct/`. Wave 4 is a pure data-pipeline rerun.
+
+The only filesystem changes outside `data/rs/`:
+
+| Path | Change |
+| --- | --- |
+| `tests/fixtures/lrs/justia/title-22.html` | NEW (594KB, copied from `lars-test/html/title-22.html`) |
+| `BUILDHISTORY.md` | This entry. |
+
+### Standing items (carry forward)
+
+- **Re-snapshot**: `snapshots/lrs-2026-05-21/` still predates the
+  2026-05-21 hierarchy + acts_parser fixes AND now predates Wave 4
+  entirely. Re-snapshot would archive the post-W4 state under
+  `snapshots/lrs-2026-05-22/`. Quick (~5s, no fetch). Deferred pending
+  user go-ahead.
+- **Drop Phase 3 bypass** (`_hierarchy_path_from_justia_chain` in
+  orchestrate.py): trivial 15-line cleanup now that
+  `LRSHierarchyIndex.lookup` is structurally correct. Deferred.
+- **R.S. 22:1059.7** (`eff. See Act`): same family as the deferred
+  R.S. 1:60 multi-eff case. Known shared-parser limit, not in the
+  current CC-touch budget.
+- **Title 47** (~2,500 sections + 11 Subtitles): the natural Wave 5,
+  and the first wave that would exercise the Subtitle structural
+  level in `parse/justia_title_parser.py` end-to-end.
+
