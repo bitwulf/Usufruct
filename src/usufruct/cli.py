@@ -55,8 +55,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--rate-limit",
         type=float,
-        default=1.0,
-        help="Requests per second to legis.la.gov (default: 1.0)",
+        default=2.0,
+        help="Requests per second to legis.la.gov (default: 2.0)",
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
