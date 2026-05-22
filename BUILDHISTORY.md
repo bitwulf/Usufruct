@@ -1607,3 +1607,197 @@ The only filesystem changes outside `data/rs/`:
   and the first wave that would exercise the Subtitle structural
   level in `parse/justia_title_parser.py` end-to-end.
 
+## 2026-05-22 — Wave 5 (Title 47 Revenue and Taxation) end-to-end
+
+Fifth wave. Title 47 lands clean structurally — the Subtitle level
+propagates end-to-end through Phase 3 attachment, Phase 4
+breadcrumbs/tree/markdown, with **zero source-code edits** (second
+consecutive pure data-pipeline wave). Tree max depth bumps 6 → 7 as
+expected. The 2026-05-22 rate-limit bump (1 → 2 req/s, commit
+`c6caf18`) shipped its first practical use here: ~22 min wall time for
+the 2,602 fresh fetches vs. the projected ~45 min at the old rate.
+
+### Scope
+
+- **2,665 sections** in `data/rs/sections/rs_47_*.json` (handoff
+  estimated ~2,500; actual count from `section_index.json` was 2,663
+  joined + 2,665 Justia, the 2 unjoined are out of Justia-only scope).
+  Status breakdown: **2,239 active + 422 repealed + 4 blank**.
+- **235 containers** for Title 47: 1 title + **11 subtitles** + 62
+  chapters + 77 parts + 84 subparts. This is the first wave whose
+  hierarchy includes a Subtitle level; `hierarchy.json` total
+  unchanged at 5,529 (Title 47 containers were already present from
+  corpus-wide Phase 1).
+- All 2,665 Title 47 sections have **subtitle in `hierarchy_path`**
+  (verified). Depth distribution: 10 at depth 2 (title/subtitle), 703
+  at depth 3, 1,398 at depth 4, 554 at depth 5 (full
+  title/subtitle/chapter/part/subpart chain).
+
+### Process
+
+1. Wave 5 candidate selection: Title 47 over Title 13 / Title 23
+   because Subtitle was the only unexercised LRS structural level.
+2. `.venv/bin/python -m usufruct.cli rs phase3 --titles 1,9,14,22,47`
+   — symmetric form. ~22 min wall at 2 req/s (61 / 2,663 Title 47
+   pages were already cached from prior probes; the rest were fresh).
+   Titles 1/9/14/22 short-circuited via cache.
+3. `.venv/bin/python -m usufruct.cli rs phase4` — ~10s; rebuilt
+   tree/edges/chunks/markdown across the 8,393-section union.
+4. Verification via `lars-test/wave5_verify.py` (new, retained as
+   reproducible probe for future waves): Subtitle propagation,
+   acts-parse rate, citation edges, validation report.
+5. `.venv/bin/pytest -q` → **169 passed, zero regressions.**
+
+### Output deltas
+
+| Metric | Pre-Wave 5 (W1–4) | Post-Wave 5 | Δ |
+| --- | --- | --- | --- |
+| Sections emitted | 5,728 | 8,393 | +2,665 |
+| Containers (hierarchy) | 5,529 | 5,529 | 0 (Title 47 was already in hierarchy.json) |
+| Tree max depth | 6 | **7** | +1 (Subtitle exercised) |
+| ActsCitation records | 10,210 | 15,745 | +5,535 |
+| Citation edges | 4,494 | 7,706 | +3,212 |
+| RAG chunks | 4,411 | 6,625 | +2,214 |
+| Markdown files | 5,728 | 8,393 | +2,665 |
+| Pytest passing | 169 | 169 | 0 |
+
+`validation_report.sections_without_hierarchy = []` (clean).
+`in_section_index_but_unemitted = 37,103` (all outside the
+{1,9,14,22,47} scope, expected).
+
+### Subtitle end-to-end confirmation
+
+Sample breadcrumbs at each depth:
+
+| Depth | Sample | Breadcrumb |
+| --- | --- | --- |
+| 2 | R.S. 47:8051 | `Title 47 › Subtitle X` |
+| 3 | R.S. 47:1 | `Title 47 › Subtitle I › Chapter 1` |
+| 4 | R.S. 47:820.5.4.1 | `Title 47 › Subtitle II › Chapter 7 › Part VI` |
+| 5 | R.S. 47:21 | `Title 47 › Subtitle II › Chapter 1 › Part I › Subpart A` |
+
+`tree.json` nests Subtitles cleanly under Title 47 — `_build_tree`
+uses parent_chain keys, so Subtitle nesting was free. The breadcrumb
+formatter (`_level_label_for_node` at orchestrate.py:75) already had
+the Subtitle case wired from prior structural prep.
+
+### Title 47 citation-edge breakdown
+
+3,212 edges from Title 47 sources (~1.21/section — between Title 9's
+1.5 and Title 22's 0.82). By destination corpus:
+
+| Dst corpus | Count |
+| --- | --- |
+| `rs` (intra-LRS) | 3,192 |
+| `civcode` | 10 |
+| `ccp` | 8 |
+| `crp` | 2 |
+| `evidence` | 0 |
+
+Top intra-LRS destinations: T47 self=2,734, T32=53 (motor
+vehicles / fuel tax), T13=31, T39=25 (state revenue / budget),
+T46=24 (public welfare), T49=22 (state administration), T40=22
+(health), T33=22 (municipalities). Pattern reads as
+taxation-centric — heavy self-references, modest cross-references
+to revenue-adjacent Titles.
+
+### Acts parsing: 18 active raw-unparsed (new pattern families)
+
+Title 47 is the first wave to surface new acts-line patterns since
+the 2026-05-21 eleven-pattern extension. **Active parse rate 2,016 /
+2,239 = 90.04%** (cf. T22 89.6%, T9 82.0%, T14 94.2%). The gap
+breaks down as:
+
+- **205 sections with no acts-line at all** (`acts_citations_raw is
+  null`) — legitimate; the legis page carries body only. In-family
+  with T9 (363/2022), T22 (774/2518), T14 (38/655), T1 (19/41).
+  Not a parse failure.
+- **18 sections with raw text that didn't parse**. Five pattern
+  families:
+
+| Family | Count | Example |
+| --- | --- | --- |
+| `, applicable to taxable years...` | 4 | R.S. 47:120.191: `Acts 2013, No. 194, §1, applicable to taxable years on or after Jan. 1, 2013.` |
+| `; Redesignated from R.S. X:Y pursuant to Acts ...` | 6 | R.S. 47:338.87–338.96 |
+| Trailing `H.C.R. No. N, YYYY R.S.` | 2 | R.S. 47:305.9, 305.17 (House Concurrent Resolution) |
+| Inline asterisk footnote (`. *...`) | 3 | R.S. 47:138, 633.2, 6002 (`*In (A)(1)(c), "..." is as it appears in enrolled bill.`) |
+| Should-parse-but-don't | 3 | R.S. 47:813 (`Acts 1964, Ex.Sess., No. 3, §2.`), R.S. 47:1542.1, R.S. 47:641 |
+
+The "should-parse-but-don't" family is the most surprising — these
+are single Ex.Sess. citations or `Added by Acts YYYY, …. eff. DATE`
+forms that look syntactically equivalent to known-good citations
+elsewhere in the corpus (Ex.Sess. parses 76/87 times across all
+titles). Inline `parse_acts_citation_line` runs return 0 records
+silently. Likely an edge-case in the CC parser's continuation logic
+when there are no further citations after the Ex.Sess. one — but
+**confirming/fixing requires a CC-touch escalation** that has not
+been granted in this session.
+
+**No CC-touch budget consumed this wave.** Per the standing rule,
+the 18 raw-unparsed are deferred to a future escalation along with
+the 486 corpus-wide repealed-status raw-only sections and the
+already-deferred R.S. 1:60 / R.S. 22:1059.7 `eff. See Act` family.
+
+### Marquee spot-checks
+
+| Citation | Heading | Hierarchy depth | Body | Acts |
+| --- | --- | --- | --- | --- |
+| R.S. 47:1 | Citation of Title | 3 (title/subtitle/chapter) | 41 chars | 1 record (1950 enactment) |
+| R.S. 47:21 | Application of Chapter | 5 (title/subtitle/chapter/part/subpart) | 280 chars | 0 records (no_raw — legitimate) |
+| R.S. 47:120.191 | (income-tax check-off) | 5 | normal body | RAW-UNPARSED — `applicable to taxable years` clause |
+| R.S. 47:338.87 | (sales-tax redesignation) | 4 | normal body | RAW-UNPARSED — Redesignated-from semicolon tail |
+| R.S. 47:813 | (corporate franchise tax) | 4 | normal body | RAW-UNPARSED — clean Ex.Sess. but parser returns 0 (surprising) |
+
+### Tests
+
+Test count unchanged at **169 passed** (87 CC + 82 LRS). No new
+acts-parser tests were added because no new pattern was added; the
+should-parse-but-don't family is the only candidate that *might*
+warrant a test once the underlying CC behavior is understood, but
+that's gated on a CC-touch escalation.
+
+The pinned `tests/fixtures/lrs/justia/title-47.html` continues to
+exercise Title 47 Justia parsing — Subtitle level presence, dense
+Subpart letter gap (O → Q jump), and Subpart letters extending past
+M. Those tests already passed before Wave 5; Wave 5 adds the
+end-to-end Phase-3/4 demonstration.
+
+### Source changes
+
+**None.** Second consecutive wave with zero edits to any file under
+`src/usufruct/`. Wave 5 is a pure data-pipeline rerun + new
+verification helper.
+
+Filesystem changes outside `data/rs/`:
+
+| Path | Change |
+| --- | --- |
+| `lars-test/wave5_verify.py` | NEW (read-only verification harness, retained for reuse) |
+| `BUILDHISTORY.md` | This entry. |
+
+### Snapshot
+
+Cut to `snapshots/lrs-2026-05-22-w5/` (151 MB). The CLI emits to
+`snapshots/lrs-<date>/`, which collided with the W4 snapshot under
+the same date — so the snapshot was renamed post-write to disambiguate.
+The W4 data state is still recoverable from commit `61923fd`'s tracked
+aggregates (`data/rs/*.json{l,csv}` + Title 1 per-section JSONs).
+
+### Standing items (carry forward)
+
+- **Drop Phase 3 bypass** (`_hierarchy_path_from_justia_chain` in
+  orchestrate.py): still trivial; still deferred.
+- **18 Title 47 active raw-unparsed** (5 pattern families above): all
+  require a third CC-touch on `src/usufruct/parse/acts_parser.py` to
+  address. The **should-parse-but-don't** sub-family (R.S. 47:813,
+  47:641, 47:1542.1) is the most worth investigating; the other
+  families are genuinely new domain patterns.
+- **R.S. 22:1059.7 / R.S. 1:60** (`eff. See Act`): same family,
+  same CC-touch gate.
+- **Wave 6 candidates** (smallest first): Title 23 (~700, labor /
+  worker comp, cross-refs to T22/33), Title 13 (~1,500, courts &
+  judicial procedure — no Subtitles), Title 39 (~1,500, state
+  finance), Title 49 (~1,200, state administration), Title 33
+  (~2,500, municipalities — second Subtitle wave), Title 17
+  (~3,500, education — largest remaining mid-tier title).
+
