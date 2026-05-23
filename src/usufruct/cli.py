@@ -10,6 +10,7 @@
     usufruct rs phase1 [--titles N,M,...]   # Justia hierarchy → data/rs/
     usufruct rs phase3 [--limit N]          # legis section scrape → data/rs/sections/
     usufruct rs phase4                      # derived artifacts → data/rs/
+    usufruct rs reparse                     # re-parse acts citations on existing corpus (offline)
     usufruct rs all [--titles N,M,...]      # phase1 → 3 → 4 → snapshot
     usufruct rs snapshot                    # archive data/rs/ → snapshots/lrs-YYYY-MM-DD/
 """
@@ -40,6 +41,7 @@ from .lrs.pipeline import run_phase3 as _lrs_run_phase3
 from .lrs.pipeline import run_phase4 as _lrs_run_phase4
 from .lrs.pipeline import snapshot as _lrs_snapshot
 from .lrs.pipeline.orchestrate import run_phase2_with_index as _lrs_run_phase2_with_index
+from .lrs.pipeline.orchestrate import run_reparse as _lrs_run_reparse
 from .lrs.model import Container as _RSContainer
 from .lrs.model import RSSection
 from .lrs.parse import JustiaSectionEntry
@@ -96,6 +98,11 @@ def build_parser() -> argparse.ArgumentParser:
     p3.add_argument("--limit", type=int, default=None, help="Stop after N sections")
     p3.add_argument("--force-refetch", action="store_true")
     rs_sub.add_parser("phase4", help="Tree, citation edges, chunks, markdown")
+    rs_sub.add_parser(
+        "reparse",
+        help="Re-run acts-citation parsing on existing sections.jsonl "
+        "(offline; closes raw-unparsed sections via LRS-tolerant fallback)",
+    )
     pall = rs_sub.add_parser("all", help="phase1 + phase2 + phase3 + phase4 + snapshot")
     pall.add_argument(
         "--titles",
@@ -234,6 +241,17 @@ def _run_rs(args, client) -> int:
         )
         print(
             f"LRS pipeline complete; snapshot in {paths.snapshots}",
+            file=sys.stderr,
+        )
+    elif args.rs_command == "reparse":
+        stats = _lrs_run_reparse(paths)
+        print(
+            "Reparse complete: "
+            f"candidates={stats['candidates']}, "
+            f"closed={stats['closed']} "
+            f"({stats['closed']/max(1,stats['candidates'])*100:.1f}%), "
+            f"remaining={stats['remaining']}, "
+            f"new_citation_records={stats['new_citation_records']}",
             file=sys.stderr,
         )
     elif args.rs_command == "snapshot":

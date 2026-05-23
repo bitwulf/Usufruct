@@ -27,7 +27,7 @@ from typing import Dict, Iterable, List, Optional, Tuple
 from .. import LRS_SCHEMA_VERSION
 from ...fetch.client import CachedClient, FetchResult
 from ...model import ActsCitation
-from ...parse import parse_acts_citation_line
+from ..parse.lrs_acts_parser import parse_lrs_acts_citation_line
 from ..model import HierarchyNode
 from ..corpus import (
     JUSTIA_ROOT_URL,
@@ -117,36 +117,22 @@ def _section_slug(title_number: str, section_number: str) -> str:
     return f"rs_{title_number}_{safe_section}"
 
 
-# legis.la.gov serves several acts-line templates that the shared CC parser
-# (``parse_acts_citation_line``) was never designed for. We bridge here
-# without touching CC code per the LRS plan's strict-isolation rule.
-#
-# Variants observed in the corpus:
-#   1. CC-style with ``;`` between citations (R.S. 14:30) — handled natively.
-#   2. Period-separated form (R.S. 1:11.1 →
-#      ``"Acts 1958, No. 498, §1. Amended by Acts 1970, No. 465, §1."``) —
-#      we rewrite ``". Amended by Acts"`` and ``". Acts YYYY"`` to ``"; Acts"``.
-#   3. Leading ``"Added by Acts YYYY, …"`` (R.S. 14:30.1 "Second degree
-#      murder", added in 1973 after the 1950 codification) — the CC parser's
-#      ``_LEADING_NOISE`` only strips "Amended by " and "Acquired from ",
-#      so the leading "Added by " would otherwise wedge the first piece
-#      and drop the enactment entry. We strip it here.
-_LRS_ACTS_AMENDED_RE = re.compile(
-    r"\.\s+Amended\s+by\s+Acts\b", re.IGNORECASE
-)
-_LRS_ACTS_PERIOD_NEXT_RE = re.compile(r"\.\s+(Acts\s+\d{4})")
-_LRS_ACTS_LEADING_ADDED_BY_RE = re.compile(
-    r"^\s*Added\s+by\s+(?=Acts\b)", re.IGNORECASE
-)
+# LRS-specific text normalization and tolerant fallback parsing for
+# acts-citation lines live in src/usufruct/lrs/parse/lrs_acts_parser.py.
+# ``parse_lrs_acts_citation_line`` (imported above) is the single entry
+# point used by Phase 3. The thin re-export below preserves the legacy
+# ``_normalize_lrs_acts_text`` symbol referenced by tests in
+# ``tests/test_lrs_orchestrate.py`` and ``tests/test_lrs_legis_section.py``.
+
+from ..parse.lrs_acts_parser import _normalize_acts_text as _normalize_acts_text_impl
 
 
-def _normalize_lrs_acts_text(raw: Optional[str]) -> Optional[str]:
+def _normalize_lrs_acts_text(raw):
+    if raw is None:
+        return None
     if not raw:
         return raw
-    out = _LRS_ACTS_AMENDED_RE.sub("; Acts", raw)
-    out = _LRS_ACTS_PERIOD_NEXT_RE.sub(r"; \1", out)
-    out = _LRS_ACTS_LEADING_ADDED_BY_RE.sub("", out)
-    return out
+    return _normalize_acts_text_impl(raw)
 
 
 # ---------- Phase 1: Justia hierarchy ----------
@@ -516,9 +502,7 @@ def run_phase3(
 
         acts_parsed: List[ActsCitation] = []
         if parsed.status == "active" and parsed.acts_citations_raw:
-            acts_parsed = parse_acts_citation_line(
-                _normalize_lrs_acts_text(parsed.acts_citations_raw)
-            )
+            acts_parsed = parse_lrs_acts_citation_line(parsed.acts_citations_raw)
 
         record = RSSection(
             urn=urn_for(title_number, section_number),
@@ -984,6 +968,78 @@ def _write_validation_report(
     paths.validation_report.write_text(
         json.dumps(report, indent=2, ensure_ascii=False)
     )
+
+
+# ---------- reparse (offline re-run of acts-citation parsing) ----------
+
+def run_reparse(paths: LRSPaths) -> Dict[str, int]:
+    """Re-run ``parse_lrs_acts_citation_line`` on every section whose
+    ``acts_citations_raw`` is set but ``acts_citations`` is empty.
+
+    Pure offline: no network, no Phase 3 fetch, no CC-touch. Sections that
+    re-parse to one or more ``ActsCitation`` records are written back to
+    disk (both the per-section JSON and ``sections.jsonl``); sections that
+    still fail to parse are left untouched.
+
+    Returns counts: ``candidates`` (raw-unparsed before), ``closed``
+    (sections that now parse), ``remaining`` (still unparsed),
+    ``new_citation_records`` (total new ``ActsCitation`` rows added).
+    """
+    if not paths.sections_jsonl.exists():
+        raise SystemExit(
+            f"Run `usufruct rs phase3` first: {paths.sections_jsonl} missing"
+        )
+
+    union: Dict[str, RSSection] = {}
+    with paths.sections_jsonl.open() as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            rec = RSSection.model_validate_json(line)
+            union[rec.urn] = rec
+
+    candidates = 0
+    closed = 0
+    new_citation_records = 0
+    updated: List[RSSection] = []
+    for rec in union.values():
+        if rec.status != "active":
+            continue
+        if not rec.acts_citations_raw:
+            continue
+        if rec.acts_citations:
+            continue
+        candidates += 1
+        parsed = parse_lrs_acts_citation_line(rec.acts_citations_raw)
+        if not parsed:
+            continue
+        rec.acts_citations = parsed
+        closed += 1
+        new_citation_records += len(parsed)
+        updated.append(rec)
+
+    paths.sections_dir.mkdir(parents=True, exist_ok=True)
+    for rec in updated:
+        slug = _section_slug(rec.title_number, rec.section_number)
+        (paths.sections_dir / f"{slug}.json").write_text(
+            json.dumps(rec.model_dump(), indent=2, ensure_ascii=False)
+        )
+
+    union_sorted = sorted(
+        union.values(),
+        key=lambda r: (r.title_number, section_sort_key(r.section_number)),
+    )
+    with paths.sections_jsonl.open("w") as jl:
+        for rec in union_sorted:
+            jl.write(json.dumps(rec.model_dump(), ensure_ascii=False) + "\n")
+
+    return {
+        "candidates": candidates,
+        "closed": closed,
+        "remaining": candidates - closed,
+        "new_citation_records": new_citation_records,
+    }
 
 
 # ---------- snapshot + all ----------

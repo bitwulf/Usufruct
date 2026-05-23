@@ -3414,3 +3414,179 @@ state remains recoverable from commit `61923fd`.
   the natural next "small" wave for a 5th consecutive no-edit
   rerun.
 
+## 2026-05-22 — LRS-side reparse: 397/422 raw-unparsed sections closed (no CC-touch)
+
+After corpus completion, the accumulated parser-extension backlog
+(366 active raw-unparsed at corpus-completion time, regrown to 422
+when the sample re-ran with current code) sat as the only
+remaining headline gap. The handoff's architectural clarification
+was crucial: the CC-touch budget rule applies to top-level
+`src/usufruct/{parse,fetch,pipeline,model}/`, NOT to LRS-side
+code. The right path was an LRS-side wrapper around CC's
+`parse_acts_citation_line` that does aggressive LRS-specific
+normalization and falls back to a tolerant per-piece regex when
+CC declines. That is what shipped this session.
+
+### Architecture
+
+New file: `src/usufruct/lrs/parse/lrs_acts_parser.py`. The single
+public entry point is `parse_lrs_acts_citation_line(raw)`:
+
+1. **Normalize** (LRS-aggressive text rewrites — Phase A):
+   - Strip trailing `at HH:MM A.M./P.M.` time-of-day, `Noon/Midnight`,
+     `*AS APPEARS IN ENROLLED BILL`, `1 N U.S.C.A.` footnotes (any
+     U.S.C. title — CC only matched "26"), `1 As (it) appears`,
+     `1 So in / In subsec / Present R.S. / Former` editorial
+     footnotes, `1 See / R.S. / LSA-Const / Acts YYYY...amended`
+     digit-prefix footnotes, `, applicable to taxable years`,
+     `, see Act for effective date [. NOTE: ...]`, `, see Act.`
+     short form, `. H.C.R.` / `. S.C.R.` resolution refs,
+     `. Redesignated from R.S. X pursuant to R.S. Y` reference
+     clauses, `, pars. N, M` paragraph specs.
+   - Rewrite period-separator pieces to semicolons: `. [Amended [by ] |
+     Added by ] Acts? YYYY...` → `; Acts? YYYY...`, plus three
+     specialized extractions for the trailing
+     `Renumbered from R.S.[1950, ]§X:Y by Acts ...`,
+     `Redesignated [from R.S. X:Y] by Acts ...`, and
+     `Redesignated from R.S. X. See Acts ...` patterns. Also
+     handles missing-period continuations (`§N Acts YYYY...`)
+     and anchored-end bare-Redesignated strips.
+2. **Split** on `;`.
+3. **Per piece**: try CC's `parse_acts_citation_line` first
+   (preserves CC behavior for the 99% case). If CC returns empty
+   for the piece, try the LRS-tolerant regex.
+
+The LRS-tolerant regex is a superset of CC's `_ACT_RE` with these
+tolerances: no-ordinal `Ex.Sess.` / `Ex. Sess.` (including the
+`E.S.` short variant), comma-after-ordinal (`1st,`), ordinal-with-
+period (`1st.`), `2d` ordinal, comma-after-`No.` optional,
+`Act No.` accepted, `No,` typo accepted, `operative DATE` and
+`emerg. eff. DATE` as eff. synonyms, single `Act` vs plural `Acts`,
+trailing-comma tolerance, alphanumeric §N suffix (`§2(A)`, `§8C`).
+For plural-section specs (`§§...`), an LRS-side `_lrs_expand_section_spec`
+accepts alphanumeric ids (`§§1, 3A` → integer prefixes `[1, 3]`,
+letter suffixes preserved in `acts_citations_raw`).
+
+Per-piece prefix stripping handles `Added by` / `Amended [by]` /
+`Acquired from` / `Renumbered from R.S.[1950, ]§X:Y by` /
+`Redesignated [from R.S. X:Y] by` continuations so the trailing
+`Acts ...` parses on its own.
+
+Per-piece tail cleanup handles the per-piece `1 N U.S.C.A.`
+footnote that CC's parser misses, plus a trailing comma.
+
+The "Acts " prefix synthesis (used when a piece doesn't begin with
+"Acts") is now `re.match(r"^Acts?\b", s, re.IGNORECASE)`-aware so
+singular `Act 1966` pieces aren't double-prefixed into the broken
+`Acts Act 1966` form.
+
+### CC-touch scope
+
+**Zero.** No edits to `src/usufruct/{parse,fetch,pipeline,model}/`.
+The CC parser, its regexes, its `_expand_section_spec`, and its
+`parse_effective_date` are reused but unchanged. Phase 3 already
+imported `parse_acts_citation_line` from `usufruct.parse`; that
+import is replaced with `parse_lrs_acts_citation_line` from the
+new LRS module. The legacy `_normalize_lrs_acts_text` in
+orchestrate.py is retained as a thin re-export shim that delegates
+to `lrs_acts_parser._normalize_acts_text` so the existing tests
+in `tests/test_lrs_orchestrate.py` and `tests/test_lrs_legis_section.py`
+keep importing the old symbol and the same behavior is preserved.
+
+### New CLI subcommand
+
+```sh
+.venv/bin/usufruct rs reparse
+```
+
+Offline (no network). Reads `data/rs/sections.jsonl`, re-runs the
+new parser on every active section where `acts_citations_raw`
+exists but `acts_citations` is empty, writes back the updated
+per-section JSONs + `sections.jsonl`. Prints
+`candidates / closed / remaining / new_citation_records`.
+
+`usufruct rs phase4` is run separately to refresh markdown
+frontmatter (which embeds parsed acts), manifest, and validation
+report. (`citation_edges.csv` and `chunks.jsonl` are unaffected —
+those derive from section body text, not acts citations.)
+
+### Closure measurement
+
+Before reparse: 422 active sections with `acts_citations_raw`
+but empty `acts_citations`. After: **25 remaining (94.1%
+closure, 397 sections recovered, +473 new ActsCitation records)**.
+
+Family-level breakdown (closed / original):
+
+| Family                        | Closed | Original |
+| ----------------------------- | -----: | -------: |
+| Ex.Sess. (no-space + ord.)    |   ~117 |     ~122 |
+| Renumbered / Redesignated     |   ~165 |     ~174 |
+| emerg. eff.                   |     31 |       31 |
+| federal-code (any U.S.C.A.)   |     20 |       20 |
+| Ex. Sess. (with space)        |     21 |       22 |
+| eff. See Act (long + short)   |     13 |       13 |
+| operative (vs eff.)           |      9 |        9 |
+| inline asterisk footnotes     |     14 |       14 |
+| typos (No, / Act No.)         |      5 |        5 |
+| trailing junk (HCR/SCR/pars.) |      4 |        4 |
+| applicable to taxable years   |      4 |        4 |
+| **Total**                     |**397** | **422**  |
+
+The remaining 25 are deep edge cases: bare-date eff. without
+keyword (`§1, June 19, 2002`), `eff,` typo, `special eff. date`
+literal, double-§ (`§279, §4`), bare integer continuations
+(`§1, 2.`), and editorial commentary that embeds plausible
+`Acts ` references (`1 House Bill No. 295 and Senate Bill...`).
+0.07% of the 33,418 active-with-raw sections.
+
+### Corpus impact
+
+- Active section parse rate: **98.74% → 99.93%** (33,393 / 33,418).
+- Total `ActsCitation` records: 87,254 → **87,727** (+473).
+- All structural counts unchanged: 45,774 sections, 5,529 containers,
+  tree max_depth 7, 31,631 citation edges, 37,020 RAG chunks,
+  validation report still clean (0 sections without hierarchy,
+  0 unemitted from index).
+- `bulk_verify.py` still reports **216/216 source-target pairs
+  exact match, cumulative streak 238 predictions all exact**.
+
+### Tests
+
+`tests/test_lrs_acts_parser.py` (NEW): 26 tests, one per parser
+family plus 4 transparent-delegation cases plus an idempotency
+test on the normalizer. Total suite: **169 → 195 passing**.
+
+### Files changed
+
+| Path | Change |
+| --- | --- |
+| `src/usufruct/lrs/parse/lrs_acts_parser.py` | NEW — wrapper + normalize + LRS-tolerant fallback (~330 lines) |
+| `src/usufruct/lrs/parse/__init__.py` | Export `parse_lrs_acts_citation_line` |
+| `src/usufruct/lrs/pipeline/orchestrate.py` | Swap CC `parse_acts_citation_line` call for `parse_lrs_acts_citation_line`; add `run_reparse`; legacy `_normalize_lrs_acts_text` becomes a re-export shim |
+| `src/usufruct/cli.py` | New `usufruct rs reparse` subcommand |
+| `tests/test_lrs_acts_parser.py` | NEW — 26 unit tests |
+| `data/rs/sections.jsonl` | Reparse output (gitignored; ~120 MB) |
+| `data/rs/sections/*.json` | 397 per-section files updated by reparse |
+| `data/rs/markdown/**/*.md` | Phase 4 refresh of frontmatter for the 397 |
+| `data/rs/manifest.json`, `validation_report.json` | Phase 4 refresh |
+
+### Standing items update
+
+- **Drop Phase 3 bypass** (`_hierarchy_path_from_justia_chain`):
+  still deferred (memory `hierarchy-bypass-prior-breakage` flags
+  this as non-trivial despite the standing-items label).
+- **Consolidated CC-touch backlog**: largely **OBSOLETED** by this
+  session. The Ex.Sess. / `eff. See Act` / federal-footnote / typo
+  families that were queued for CC-touch are all closed LRS-side.
+  Any future CC-touch escalation would target only the 25
+  remaining deep-edge sections (0.07% of active-with-raw) — a
+  poor ROI; defer indefinitely.
+
+### Snapshot
+
+Not cut this session — the LRS structural data hasn't changed
+(snapshots/lrs-2026-05-22-corpus-complete/ remains current for
+the corpus shape). The acts-parsing improvements are visible in
+the working `data/rs/` tree; a future snapshot will capture them.
+

@@ -10,6 +10,7 @@ from .legis_lrs_toc_parser import (
     parse_legis_title_toc,
 )
 from .legis_section_parser import ParsedRSSection, parse_legis_section
+from .lrs_acts_parser import parse_lrs_acts_citation_line
 
 __all__ = [
     "JustiaTitleListing",
@@ -22,4 +23,5 @@ __all__ = [
     "parse_legis_root_toc",
     "parse_legis_root_toc_titles",
     "parse_legis_title_toc",
+    "parse_lrs_acts_citation_line",
 ]
