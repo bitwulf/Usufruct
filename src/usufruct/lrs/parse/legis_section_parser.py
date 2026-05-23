@@ -23,7 +23,7 @@ from typing import List, Optional
 from bs4 import BeautifulSoup
 from bs4.element import Tag
 
-_LABELNAME_RE = re.compile(r"^RS\s+(\d+(?:-[A-Z])?)\s*:\s*([0-9.]+)$", re.IGNORECASE)
+_LABELNAME_RE = re.compile(r"^RS\s+(\d+(?:-[A-Z])?)\s*:\s*([0-9A-Za-z.\-]+)$", re.IGNORECASE)
 _SECTION_LINE_RE = re.compile(r"^§\s*([0-9.]+)\.\s*(.*)$", re.DOTALL)
 # Three legis-side prefixes mark a paragraph as the acts-citation block:
 #   * bare ``Acts YYYY, ...`` (single enactment, common in the Civil Code).

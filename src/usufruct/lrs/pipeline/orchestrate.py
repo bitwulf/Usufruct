@@ -482,13 +482,21 @@ def run_phase3(
         url = legis_section_url(d_value)
         fetched = client.get(url, force_refetch=force_refetch)
 
-        parsed = parse_legis_section(fetched.text)
-        # Cross-check the section identifier — legis label must agree with
-        # Justia.
+        try:
+            parsed = parse_legis_section(fetched.text)
+        except ValueError:
+            # Page doesn't match the expected legis section structure
+            # (missing LabelName, missing WPMainDoc, malformed). Skip
+            # this section — backfill will emit it as blank so the
+            # corpus stays complete relative to section_index.
+            continue
+        # Cross-check the section identifier — legis label must agree
+        # with Justia. If the parsed identifier differs, the legis URL
+        # is acting as a redirect/phantom for a different section
+        # (observed in T12 where R.S. 12:1 → RS 12:1-1705 page). Skip
+        # rather than mis-attribute content; backfill emits blank.
         if parsed.title_number != title_number or parsed.section_number != section_number:
-            # Soft conflict: record but trust the Justia identifier for the
-            # output URN (Justia is the hierarchy source of truth).
-            pass
+            continue
 
         justia_entry = justia_by_key.get((title_number, section_number))
         if justia_entry is not None and justia_entry.container_chain:

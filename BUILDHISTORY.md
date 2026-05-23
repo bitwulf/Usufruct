@@ -1801,6 +1801,269 @@ aggregates (`data/rs/*.json{l,csv}` + Title 1 per-section JSONs).
   (~2,500, municipalities — second Subtitle wave), Title 17
   (~3,500, education — largest remaining mid-tier title).
 
+## 2026-05-22 — Corpus completion: bulk-fetch remaining 42 Titles
+
+**Methodology shift.** After eleven per-wave runs (W1–W11) consumed
+~3 days and validated the inbound-closure prediction methodology
+across 22 source-target predictions (all exact), the marginal
+information value of another per-wave checkpoint had dropped to
+near zero. Per user direction, switched to a single bulk run for
+the remaining 42 numbered Titles: one phase3, one phase4, one
+pytest, one consolidated verify, one snapshot, one BUILDHISTORY
+entry, one commit.
+
+### Top-line result
+
+| Metric | Pre-bulk (W11) | Post-bulk | Δ |
+| --- | --- | --- | --- |
+| Titles processed | 11 | **53** (corpus-complete) | +42 |
+| Sections emitted | 15,064 | **45,774** | +30,710 |
+| Active / Repealed / Blank | 13,178 / 1,856 / 30 | 39,129 / 6,280 / 365 | +25,951 / +4,424 / +335 |
+| Containers (hierarchy) | 5,529 | 5,529 | 0 (all titles already in `hierarchy.json` from phase 1) |
+| Tree max depth | 7 | 7 | 0 |
+| ActsCitation records | 28,269 | **87,254** | +58,985 |
+| Citation edges | 11,850 | **31,631** | +19,781 |
+| RAG chunks | 12,210 | **37,020** | +24,810 |
+| Markdown files | 15,064 | 45,774 | +30,710 |
+| Pytest passing | 169 | 169 | 0 |
+| `in_section_index_but_unemitted` | 30,432 | **0** | -30,432 (corpus complete) |
+
+`validation_report.sections_without_hierarchy = 0` (clean).
+
+### Process
+
+1. **Capture pre-bulk prediction baseline.** Wrote
+   `lars-test/bulk_predictions.json` with per-source × per-target
+   inbound-edge counts for every (S, T) pair where S ∈ original 11
+   processed and T ∈ 42 remaining. **216 (S, T) pairs, total 1,860
+   predicted edges**.
+2. **Bulk phase3** (first attempt): `.venv/bin/usufruct --rate-limit
+   5.0 rs phase3 --titles <all 53>`. Crashed mid-run with
+   `ValueError: Could not locate LabelName on legis section page`
+   after fully fetching T11 (1,796 sections) and one T12 section.
+3. **Two LRS-side parser fixes** (see "Source changes" below).
+   Tests: 169 → 169 pass.
+4. **Bulk phase3** (re-run, with fixes): completed cleanly.
+   45,774 sections emitted across all 53 titles. ~2.5 hours wall
+   time for ~28,635 fresh fetches at observed ~3 req/s (rate-limit
+   5/s sets upper bound; HTML parse cost per page gates effective
+   throughput).
+5. **Bulk phase4**: tree(max_depth=7), 31,631 edges, 37,020 chunks,
+   45,774 markdown files — full corpus rebuild ~30s.
+6. **Pytest**: 169 passing.
+7. **Consolidated verify** (`lars-test/bulk_verify.py`): per-pair
+   inbound-closure check across all 216 predicted (S, T) pairs,
+   plus per-title parse rates and family-clustered raw-unparsed
+   backlog for all 42 new titles.
+8. **Snapshot**: `snapshots/lrs-2026-05-22-corpus-complete/`
+   (672 MB).
+
+### Inbound-closure validation — 216/216 exact
+
+| Aggregate | Result |
+| --- | --- |
+| Source-target pairs predicted | **216** |
+| Pairs with observed = predicted | **216** |
+| Total predicted edges | 1,860 |
+| Total observed edges | **1,860** |
+| Delta | **0** |
+| Cumulative streak (W7-W11 + bulk) | **238 predictions all exact** |
+
+The single-shot 216-way exact match across 42 newly-emitted target
+titles is the strongest possible validation that the cross-corpus
+citation resolver scales without degradation. Highlights from the
+prediction-vs-observed table:
+
+| Target | Predicted | Observed | Sources |
+| --- | --- | --- | --- |
+| T40 (Public Health) | 261 | **261** | T14=69, T13=49, T9=43, T22=33, T47=22 (+others) |
+| T46 (Public Welfare) | 150 | **150** | T14=41, T9=37, T47=24, T13=22 |
+| T32 (Military) | 149 | **149** | T47=53, T14=35, T22=27, T13=15, T9=12 |
+| T33 (Municipalities) | 131 | **131** | T13=46, T47=22, T9=21, T38=13 |
+| T15 (Criminal Procedure) | 129 | **129** | T14=66, T13=30, T39=9, T47=9 |
+| T17 (Education) | 125 | **125** | T14=30, T39=29, T47=19, T42=15, T13=13 |
+| T24 (Insurance Code redux) | 101 | **101** | T39=32, T38=15, T13=11, T42=11 |
+| T44 (House/Legislative) | 96 | **96** | T22=39, T13=18, T39=8 |
+| T37 (Telecomms/Utilities) | 87 | **87** | T22=34, T9=30, T49=10 |
+| T51 (Public Property) | 82 | **82** | T22=24, T47=18, T39=13, T9=9, T14=7 |
+| **(all 216 pairs exact; six targets at 0 predicted=0 observed)** | | | |
+
+### Source changes — two LRS-side parser fixes
+
+The first bulk-phase3 attempt surfaced a parser format the regex
+didn't handle: **R.S. 12:1** (`Law.aspx?d=1016260`) returns
+`LabelName = "RS 12:1-1705"` — a hyphenated section number from
+the 2015 Business Corporation Act renumbering. The strict regex
+`[0-9.]+` for the section group rejected the hyphen → ValueError
+→ whole-run abort. Two LRS-side fixes applied:
+
+| File | Change |
+| --- | --- |
+| `src/usufruct/lrs/parse/legis_section_parser.py` | Relax `_LABELNAME_RE` section group from `[0-9.]+` to `[0-9A-Za-z.\-]+`. Now accepts hyphens (R.S. 12:1-1705) and any future alphanumeric section identifiers. |
+| `src/usufruct/lrs/pipeline/orchestrate.py` | Wrap `parse_legis_section` in `try/except ValueError` → `continue` (let backfill emit blank). Replace the misleading "soft conflict" `pass` with `continue` (so legis-vs-Justia title/section mismatches no longer mis-attribute content; backfill emits blank instead). |
+
+Both fixes are LRS-side (`src/usufruct/lrs/`) — no CC-touch.
+Empirical result of the second fix: **52 sections** had genuine
+parse failures or title/section mismatches (mostly T12's
+hyphenated-numbering redirects — 249 T12 blanks total when
+combined with backfill); all gracefully emitted as blank
+placeholders rather than crashing the run.
+
+### Per-title parse-rate breakdown (newly-added 42)
+
+Distribution: **30 of 42 new titles** parse at ≥80%; **5** parse
+at 90%+. The bulk's high-parse-rate titles lifted the corpus
+active parse rate from W11's 82.52% → **84.33%** (+1.81 pts).
+
+| Tier | Titles | Cluster behavior |
+| --- | --- | --- |
+| ≥95% | T8 (99.49%), T26 (99.61%), T27 (99.26%), T28 (98.68%), T31 (99.54%), T6 (98.32%), T19 (98.01%), T32 (97.70%), T18 (96.47%), T37 (96.39%), T36 (98.84%) | Most have ≤2 raw-unparsed; modern statutes with consistent acts-line format |
+| 90–95% | T15 (94.35%), T46 (94.71%), T56 (94.36%), T4 (94.40%), T17 (91.55%), T52 (91.67%), T21 (90.62%), T24 (92.08%), T25 (92.27%) | Strong baseline with a handful of legacy edge-cases |
+| 80–90% | T2 (83.55%), T3 (86.83%), T12 (81.70%), T16 (84.21%), T29 (87.11%), T30 (87.90%), T34 (82.30%), T35 (81.82%), T40 (80.01%), T43 (84.93%), T48 (80.16%), T51 (89.69%) | Lower because of mixed-era statutes with older format clusters |
+| 60–80% | T11 (72.05%), T33 (73.10%), T44 (77.63%), T20 (60.00%) | T11 (Public Retirement) and T33 (Municipalities) — large titles with many legacy `1st Ex.Sess.` and `Redesignated` clusters |
+| <60% | T41 (58.90%), T45 (59.48%), T50 (39.02%), T53 (14.81%), T54 (22.22%), T55 (0.00%) | All but T41 and T45 are tiny (≤44 sections); their parse rates reflect 1-2 stuck sections rather than systemic gaps |
+
+### Citation network — cross-corpus and outbound-rate
+
+| Dst corpus | Edges | Notes |
+| --- | --- | --- |
+| `rs` (intra-LRS) | 30,942 | 97.8% of all edges |
+| `civcode` | 276 | up from 28 (T13's civcode-heavy share + new contributions) |
+| `ccp` | 238 | up from 100 |
+| `crp` | 156 | up from 22 |
+| `evidence` | 19 | up from 11 |
+
+Top outbound-rate newly-added titles (edges per section, intra-LRS
++ cross-corpus combined):
+
+| Title | Edges | Sections | Rate |
+| --- | --- | --- | --- |
+| T15 (Criminal Procedure) | 1,404 | 1,050 | **1.34**/section |
+| T18 (Election Code) | 776 | 591 | **1.31**/section |
+| T11 (Public Officers' Retirement) | 1,881 | 1,796 | **1.05**/section |
+| T32 (Military) | 880 | 871 | **1.01**/section |
+| T30 (Mineral / Wildlife) | 778 | 1,025 | 0.76/section |
+| T17 (Education) | 1,458 | 2,162 | 0.67/section |
+| T33 (Municipalities) | 2,531 | 4,117 | 0.61/section |
+| T40 (Public Health) | 1,951 | 3,330 | 0.59/section |
+| T46 (Public Welfare) | 669 | 1,237 | 0.54/section |
+| T37 (Telecomms / Utilities) | 1,016 | 2,014 | 0.50/section |
+
+### Marquee spot-checks (heaviest sections from the bulk)
+
+| Citation | Heading | Depth | Text | Acts records | Breadcrumb |
+| --- | --- | --- | --- | --- | --- |
+| **R.S. 33:9038.76** | **College economic development districts** | 3 | **93,339 b** | 1 | Title 33 › Chapter 27 › Part XII-A (NEW corpus heavyweight, surpassing R.S. 13:5554's 72,326 b) |
+| R.S. 33:1236 | Powers of parish governing authorities | 3 | 90,860 b | 61 | Title 33 › Chapter 4 › Part I |
+| R.S. 33:4720.151 | East Baton Rouge Redevelopment Authority | 2 | 72,651 b | 6 | Title 33 › Chapter 27-A |
+| R.S. 33:4720.181 | New Iberia Redevelopment Authority | 2 | 69,923 b | 2 | Title 33 › Chapter 27-A |
+| R.S. 33:4720.161 | Parish redevelopment authority | 3 | 69,587 b | 3 | Title 33 › Chapter 27-A |
+| R.S. 13:5554 | Group insurance; kinds; amounts; subrogation | 3 | 72,326 b | 81 | Title 13 (prior champ, now #5) |
+
+T33 (Municipalities and Parishes) dominates the heaviest-section
+list — its redevelopment-authority and parish-governance statutes
+carry decades of compounded amendments.
+
+### Raw-unparsed backlog — 366 active raw-unparsed across new titles
+
+Up from W11's 56 cross-Title cumulative. Family clustering across
+the 42 new titles (active status only):
+
+| Family | New (bulk) | Cumulative (cross-Title) | Notes |
+| --- | --- | --- | --- |
+| **OTHER** | 102 | 102 | Largely `Renumbered from R.S.1950, §X:Y by Acts ...` — a major NEW family from older codification cleanup (esp. T12, T29) |
+| `Ex.Sess.` (no-space) | 101 | 122 (was 21) | Existing top-leverage family — 5× growth from the bulk |
+| `Redesignated` | 67 | 74 (was 7) | T11 alone contributed dozens (R.S. 17:7XX → 11:9XX transfers) |
+| `emerg. eff.` | 22 | 24 (was 2) | Modest growth; the `<date>` regex would now close 22 instances |
+| `Ex. Sess.` (with space) | 19 | 21 (was 2) | The space-form cousin |
+| `federal-code footnote` (`U.S.C.A.`) | 19 | 20 (was 1) | T12, T17 — banking/education with federal-code refs |
+| `eff. See Act` | 11 | 12 (was 2) | T17 cluster |
+| `operative` (vs `eff.`) | 8 | 9 (was 1) | T25 cluster |
+| `inline asterisk footnote` | 6 | 9 (was 3) | T26, T33, T41 |
+| `As-appears-in` footnote | 4 | 5 (was 1) | T25, T45, T48 |
+| typo `No,` | 3 | 4 (was 1) | T17, T33, T4 |
+| `§N(A)` parenthesized subsection | 2 | 3 (was 1) | T11 cluster |
+| `Act No.` (vs `No.`) | 2 | 3 (was 1) | T33 cluster |
+
+The top three families (OTHER, `Ex.Sess.` no-space, `Redesignated`)
+account for **270 of 366 (74%)** of the post-bulk backlog. A
+focused LRS-side parser-extension pass against those three would
+collapse the backlog to ~100 sections — and the OTHER bucket is
+mostly one new pattern (`Renumbered from R.S.1950`) that a single
+regex would close.
+
+### Tests
+
+Test count unchanged at **169 passed** (87 CC + 82 LRS). The
+parser-regex relaxation and orchestrate.py exception handling did
+not affect existing test fixtures.
+
+### Per-title section emission summary
+
+Newly-added (42 titles, sorted by section count):
+
+```
+T33 4117 | T40 3330 | T17 2162 | T37 2014 | T11 1796 | T3 1436
+T46 1237 | T51 1237 | T15 1050 | T30 1025 | T56 896 | T34 901
+T48 927 | T32 871 | T6 809 | T18 591 | T45 554 | T25 545
+T12 924 | T36 350 | T28 365 | T29 476 | T16 272 | T26 272
+T4 273 | T24 284 | T27 313 | T44 207 | T19 203 | T8 200
+T31 230 | T41 305 | T2 188 | T35 129 | T43 81 | T50 44
+T21 32 | T53 27 | T54 18 | T20 5 | T52 13 | T55 1
+```
+
+Together with the original 11 (T1, T9, T13, T14, T22, T23, T38,
+T39, T42, T47, T49) the corpus now covers all 53 numbered Titles
+present in `section_index.json`.
+
+### Files committed
+
+- **BUILDHISTORY.md** — this entry (above all per-wave W1–W11
+  entries; remains reverse-chronological).
+- **src/usufruct/lrs/parse/legis_section_parser.py** — regex
+  relaxation.
+- **src/usufruct/lrs/pipeline/orchestrate.py** — exception
+  handling and mismatch-skip.
+- **data/rs/{citation_edges.csv, manifest.json, tree.json,
+  validation_report.json}** — corpus metadata aggregates.
+- **data/rs/sections/rs_1_*.json** — T1 sample (per the
+  `.gitignore` allowlist; other titles' section JSONs remain
+  local-only and regenerable from the data/raw/ cache).
+- **`.gitignore`** — added `data/rs/sections.jsonl` (~120 MB) and
+  `data/rs/chunks.jsonl` (~80 MB) to the ignore list. Both
+  crossed GitHub's file-size limits after corpus completion and
+  are trivially rebuilt by phase4; they ship via local cache +
+  Releases rather than git.
+- **lars-test/bulk_predictions.json** — gitignored.
+- **lars-test/bulk_verify.py** — gitignored.
+
+### Snapshot
+
+`snapshots/lrs-2026-05-22-corpus-complete/` (672 MB). Renamed
+post-write per the standing collision pattern. All prior W4–W11
+snapshots retained.
+
+### Standing items (carry forward)
+
+- **Drop Phase 3 bypass** (`_hierarchy_path_from_justia_chain`):
+  still deferred ([[project_hierarchy_bypass_prior_breakage]]).
+- **LRS-side parser-extension backlog** — now **366 cross-Title
+  active raw-unparsed** (was 56 post-W11). With the corpus now
+  complete, this is the natural next session: build
+  `src/usufruct/lrs/parse/lrs_acts_parser.py` (wrapper around the
+  CC `parse_acts_citation_line` with LRS-specific fallback regexes
+  for the top families) + `usufruct rs reparse` CLI subcommand
+  (in-place reparse of `acts_citations_raw` for sections where
+  `acts_citations == []`). Estimated fix yield: ~70–80% of the
+  backlog from the top three families alone.
+- **CC `parse_acts_citation_line` itself remains untouched** —
+  no CC-touch was consumed by the bulk run.
+- **52 parse-skipped sections + 313 backfill blanks = 365 blank
+  sections.** Most concentrate in T12 (249) where the legis
+  section URLs redirect to the 2015 corporations-code numbering
+  that doesn't match Justia's section_index. Recoverable via a
+  future reverse-lookup phase if needed.
+
 ## 2026-05-22 — Wave 11 (Title 38 Public Contracts, Works and Improvements) end-to-end
 
 Eleventh wave. Title 38 lands clean with **zero source-code edits**

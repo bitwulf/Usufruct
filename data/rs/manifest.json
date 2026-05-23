@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-05-22T21:21:15Z",
+  "generated_at": "2026-05-23T00:06:06Z",
   "corpus": "rs",
   "totals": {
     "containers": 5529,
-    "sections_emitted": 15064,
+    "sections_emitted": 45774,
     "by_status": {
-      "active": 13178,
-      "repealed": 1856,
-      "blank": 30
+      "active": 39129,
+      "repealed": 6280,
+      "blank": 365
     }
   },
   "sources": {
@@ -27,6 +27,46 @@
         "total": 41
       },
       {
+        "title": "2",
+        "active": 152,
+        "repealed": 36,
+        "reserved": 0,
+        "blank": 0,
+        "total": 188
+      },
+      {
+        "title": "3",
+        "active": 1139,
+        "repealed": 297,
+        "reserved": 0,
+        "blank": 0,
+        "total": 1436
+      },
+      {
+        "title": "4",
+        "active": 250,
+        "repealed": 21,
+        "reserved": 0,
+        "blank": 2,
+        "total": 273
+      },
+      {
+        "title": "6",
+        "active": 772,
+        "repealed": 37,
+        "reserved": 0,
+        "blank": 0,
+        "total": 809
+      },
+      {
+        "title": "8",
+        "active": 198,
+        "repealed": 2,
+        "reserved": 0,
+        "blank": 0,
+        "total": 200
+      },
+      {
         "title": "9",
         "active": 2022,
         "repealed": 298,
@@ -35,27 +75,99 @@
         "total": 2325
       },
       {
-        "title": "13",
-        "active": 1807,
-        "repealed": 221,
+        "title": "11",
+        "active": 1671,
+        "repealed": 125,
         "reserved": 0,
-        "blank": 5,
+        "blank": 0,
+        "total": 1796
+      },
+      {
+        "title": "12",
+        "active": 552,
+        "repealed": 123,
+        "reserved": 0,
+        "blank": 249,
+        "total": 924
+      },
+      {
+        "title": "13",
+        "active": 1804,
+        "repealed": 222,
+        "reserved": 0,
+        "blank": 7,
         "total": 2033
       },
       {
         "title": "14",
-        "active": 655,
+        "active": 654,
         "repealed": 56,
         "reserved": 0,
-        "blank": 0,
+        "blank": 1,
         "total": 711
       },
       {
-        "title": "22",
-        "active": 2518,
-        "repealed": 132,
+        "title": "15",
+        "active": 902,
+        "repealed": 147,
         "reserved": 0,
         "blank": 1,
+        "total": 1050
+      },
+      {
+        "title": "16",
+        "active": 266,
+        "repealed": 6,
+        "reserved": 0,
+        "blank": 0,
+        "total": 272
+      },
+      {
+        "title": "17",
+        "active": 1715,
+        "repealed": 434,
+        "reserved": 0,
+        "blank": 13,
+        "total": 2162
+      },
+      {
+        "title": "18",
+        "active": 510,
+        "repealed": 79,
+        "reserved": 0,
+        "blank": 2,
+        "total": 591
+      },
+      {
+        "title": "19",
+        "active": 201,
+        "repealed": 1,
+        "reserved": 0,
+        "blank": 1,
+        "total": 203
+      },
+      {
+        "title": "20",
+        "active": 5,
+        "repealed": 0,
+        "reserved": 0,
+        "blank": 0,
+        "total": 5
+      },
+      {
+        "title": "21",
+        "active": 32,
+        "repealed": 0,
+        "reserved": 0,
+        "blank": 0,
+        "total": 32
+      },
+      {
+        "title": "22",
+        "active": 2517,
+        "repealed": 132,
+        "reserved": 0,
+        "blank": 2,
         "total": 2651
       },
       {
@@ -65,6 +177,118 @@
         "reserved": 0,
         "blank": 3,
         "total": 872
+      },
+      {
+        "title": "24",
+        "active": 240,
+        "repealed": 43,
+        "reserved": 0,
+        "blank": 1,
+        "total": 284
+      },
+      {
+        "title": "25",
+        "active": 401,
+        "repealed": 144,
+        "reserved": 0,
+        "blank": 0,
+        "total": 545
+      },
+      {
+        "title": "26",
+        "active": 258,
+        "repealed": 13,
+        "reserved": 0,
+        "blank": 1,
+        "total": 272
+      },
+      {
+        "title": "27",
+        "active": 272,
+        "repealed": 41,
+        "reserved": 0,
+        "blank": 0,
+        "total": 313
+      },
+      {
+        "title": "28",
+        "active": 228,
+        "repealed": 136,
+        "reserved": 0,
+        "blank": 1,
+        "total": 365
+      },
+      {
+        "title": "29",
+        "active": 388,
+        "repealed": 48,
+        "reserved": 0,
+        "blank": 40,
+        "total": 476
+      },
+      {
+        "title": "30",
+        "active": 868,
+        "repealed": 157,
+        "reserved": 0,
+        "blank": 0,
+        "total": 1025
+      },
+      {
+        "title": "31",
+        "active": 217,
+        "repealed": 13,
+        "reserved": 0,
+        "blank": 0,
+        "total": 230
+      },
+      {
+        "title": "32",
+        "active": 783,
+        "repealed": 86,
+        "reserved": 0,
+        "blank": 2,
+        "total": 871
+      },
+      {
+        "title": "33",
+        "active": 3628,
+        "repealed": 485,
+        "reserved": 0,
+        "blank": 4,
+        "total": 4117
+      },
+      {
+        "title": "34",
+        "active": 729,
+        "repealed": 172,
+        "reserved": 0,
+        "blank": 0,
+        "total": 901
+      },
+      {
+        "title": "35",
+        "active": 99,
+        "repealed": 30,
+        "reserved": 0,
+        "blank": 0,
+        "total": 129
+      },
+      {
+        "title": "36",
+        "active": 259,
+        "repealed": 91,
+        "reserved": 0,
+        "blank": 0,
+        "total": 350
+      },
+      {
+        "title": "37",
+        "active": 1719,
+        "repealed": 292,
+        "reserved": 0,
+        "blank": 3,
+        "total": 2014
       },
       {
         "title": "38",
@@ -83,12 +307,60 @@
         "total": 1355
       },
       {
+        "title": "40",
+        "active": 2917,
+        "repealed": 406,
+        "reserved": 0,
+        "blank": 7,
+        "total": 3330
+      },
+      {
+        "title": "41",
+        "active": 292,
+        "repealed": 13,
+        "reserved": 0,
+        "blank": 0,
+        "total": 305
+      },
+      {
         "title": "42",
         "active": 410,
         "repealed": 48,
         "reserved": 0,
         "blank": 0,
         "total": 458
+      },
+      {
+        "title": "43",
+        "active": 73,
+        "repealed": 8,
+        "reserved": 0,
+        "blank": 0,
+        "total": 81
+      },
+      {
+        "title": "44",
+        "active": 152,
+        "repealed": 55,
+        "reserved": 0,
+        "blank": 0,
+        "total": 207
+      },
+      {
+        "title": "45",
+        "active": 538,
+        "repealed": 16,
+        "reserved": 0,
+        "blank": 0,
+        "total": 554
+      },
+      {
+        "title": "46",
+        "active": 889,
+        "repealed": 347,
+        "reserved": 0,
+        "blank": 1,
+        "total": 1237
       },
       {
         "title": "47",
@@ -99,17 +371,81 @@
         "total": 2665
       },
       {
+        "title": "48",
+        "active": 771,
+        "repealed": 156,
+        "reserved": 0,
+        "blank": 0,
+        "total": 927
+      },
+      {
         "title": "49",
         "active": 527,
         "repealed": 64,
         "reserved": 0,
         "blank": 7,
         "total": 598
+      },
+      {
+        "title": "50",
+        "active": 41,
+        "repealed": 3,
+        "reserved": 0,
+        "blank": 0,
+        "total": 44
+      },
+      {
+        "title": "51",
+        "active": 1009,
+        "repealed": 226,
+        "reserved": 0,
+        "blank": 2,
+        "total": 1237
+      },
+      {
+        "title": "52",
+        "active": 12,
+        "repealed": 1,
+        "reserved": 0,
+        "blank": 0,
+        "total": 13
+      },
+      {
+        "title": "53",
+        "active": 27,
+        "repealed": 0,
+        "reserved": 0,
+        "blank": 0,
+        "total": 27
+      },
+      {
+        "title": "54",
+        "active": 18,
+        "repealed": 0,
+        "reserved": 0,
+        "blank": 0,
+        "total": 18
+      },
+      {
+        "title": "55",
+        "active": 1,
+        "repealed": 0,
+        "reserved": 0,
+        "blank": 0,
+        "total": 1
+      },
+      {
+        "title": "56",
+        "active": 762,
+        "repealed": 133,
+        "reserved": 0,
+        "blank": 1,
+        "total": 896
       }
     ],
     "tree_max_depth": 7,
-    "total_citation_edges": 11850,
-    "rag_chunks": 12210,
-    "markdown_files": 15064
+    "total_citation_edges": 31631,
+    "rag_chunks": 37020,
+    "markdown_files": 45774
   }
 }

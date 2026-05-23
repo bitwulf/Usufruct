@@ -45,15 +45,22 @@ data/citation_edges.csv
 data/tree.json
 snapshots/
 
-# data/rs/ — track top-level aggregates (manifest, indexes, jsonl,
+# data/rs/ — track top-level metadata aggregates (manifest, indexes,
 # tree, validation_report, citation_edges) plus Title 1 as a small
 # representative per-section sample. Per-section JSON + markdown for
 # Titles 9, 14, 22, ... stay local and are recoverable via
 # `usufruct rs phase3 + phase4` from the data/raw/ cache.
+#
+# sections.jsonl (~120 MB) and chunks.jsonl (~80 MB) crossed
+# GitHub's file-size limits after corpus completion; both are
+# trivially rebuilt by phase4, so they ship via local cache +
+# Releases rather than git.
 data/rs/sections/*.json
 !data/rs/sections/rs_1_*.json
 data/rs/markdown/title-*/
 !data/rs/markdown/title-1/
+data/rs/sections.jsonl
+data/rs/chunks.jsonl
 
 # AI-assist files used during development — kept local, not shipped publicly.
 CLAUDE.md
