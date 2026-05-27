@@ -3719,3 +3719,119 @@ updated, defeating the no-coordination point.
 - Site-side `corpus.ts` refactor to consume `rs/` lives in
   `bitwulf/theusufruct-site` repo — not in scope here.
 
+
+## 2026-05-27 — theusufruct-site: LRS rollout end-to-end
+
+Implemented the full plan in `theusufruct-site-lars-refactor-plan.md`. The
+site now publishes both the Civil Code and the Revised Statutes from a single
+release bundle.
+
+### Phase 1 — Shared infrastructure
+
+- Split `src/lib/corpus.ts` (~445 LOC) into:
+  - `src/lib/corpus.ts` (now ~90 LOC): shared file readers (`readJSON`,
+    `readJSONL`, `readCSV` — accept an optional `root` arg so RS can read
+    from `tmp/corpus/usufruct-<TAG>/rs/`), `ACTIVE_TAG`, `CORPUS_ROOT`,
+    `release`, and shared types (`Status`, `ActsCitation`, `CrumbLink`).
+  - `src/lib/cc.ts` (~280 LOC): all CC-specific exports
+    (`articles`, `articlesByNumber`, `allContainers`, `outgoingRefs`,
+    `incomingRefs`, `articleBreadcrumb`, `containerBreadcrumb`, `stepLabel`,
+    `stepFullLabel`, `markdownPath`, …). Re-exports `manifest` as alias
+    for `ccManifest` to keep the existing import surface working.
+- Parameterized `containerPath(prefix, ancestors, self)` in `src/lib/slug.ts`
+  with a corpus prefix (`/cc` or `/rs`). Renamed `articlePath` →
+  `ccArticlePath`, added `rsSectionPath(title, section)`.
+- Updated all 17 importers across pages/components/layouts. Net result:
+  `npm run build` produces the byte-identical dist file list (4,041 pages,
+  18,692 files) as before.
+
+### Phase 2 — LRS data loading + types
+
+- New `src/lib/rs.ts` (~330 LOC): `Section`, `RsTreeNode`, `RsTree`,
+  `RsManifest`, `RsContainer`, `RsCitationEdge` types; loaders for
+  `sections.jsonl`, `tree.json`, `manifest.json`, `citation_edges.csv`.
+  Built `sectionsByKey` (Map keyed by `title:section`), `rsAllContainers`,
+  `rsContainersByPath`, `rsRootContainers`, per-title prev/next indexes
+  (`sectionNeighbors`), RS↔RS edge index (`rsOutgoingRefs`,
+  `rsIncomingRefs`).
+- LRS edge CSV has a different schema than CC's (8 columns: includes
+  `src_corpus`, `dst_corpus`, `dst_urn`, `char_offset`) — handled.
+- LRS markdown/JSON filenames encode "." as "_" (e.g.
+  `title-14/30_1.md`, `rs_14_30_1.json`) — `rsMarkdownPath` and
+  `rsSectionJsonPath` apply the transformation.
+- Added LRS citation form to `src/lib/cite.ts`: `lrsCitation(title, section)`
+  produces "La. Rev. Stat. Ann. § 14:30 (2026)." Bluebook plus permalink and
+  BibTeX.
+- Smoke test: 45,774 sections, 5,529 containers, 65 root titles all load
+  correctly; `14:30` resolves with valid heading, neighbors, refs.
+
+### Phase 3 — /rs/ routes
+
+- `src/pages/rs/[...slug].astro` catch-all renders both section pages
+  (`/rs/title-14/section-30`) and container browse pages
+  (`/rs/title-14/chapter-1/part-2`). `getStaticPaths` enumerates explicitly:
+  45,774 sections + 5,529 containers = 51,303 routes.
+- `src/pages/rs/index.astro`: 65-Title browse root.
+- `src/pages/rs/[...slug].md.ts` and `[...slug].json.ts`: per-section
+  downloads matching CC's pattern (e.g. `/rs/title-14/section-30.md`).
+- Components made corpus-aware via discriminated-union props:
+  - `CrossRefs`: accepts `corpus: 'cc' | 'rs'`; for RS, link items are
+    `title:section` keyed and render as "R.S. T:S".
+  - `PrevNext`: accepts `corpus` + (`number` | `title`+`section`).
+    Toggle script reads new data-* attributes for href prefix and unit label.
+  - `CiteDialog`: accepts `corpus` + (`number` | `title`+`section`).
+- Added new LRS hierarchy levels to `src/lib/slug.ts`: `part`, `subpart`,
+  `subtitle`, `subgroup`, `code_book`, `code_title`,
+  `code_preliminary_title`. Made `section_range` optional on RsContainer
+  (some malformed/empty containers in the tree have it null).
+- Updated `feed.xml.ts` and `sitemap.xml.ts` to include both corpora.
+  Feed: single per-snapshot entry summarizing both (per-section entries
+  would bloat to 45K items).
+- Updated `404.astro` with parallel nearest-neighbor logic for
+  `/rs/title-N/section-X` URLs (in addition to the existing CC one).
+
+### Phase 5 — Polish
+
+- Added Pagefind filter `corpus:cc` / `corpus:rs` to both article and
+  section pages so search results are filterable by corpus.
+- Home page: second CTA "Read the Statutes →"; updated prose to cover
+  both corpora; combined active-records line.
+- About / Data / Roadmap / Colophon / Search: updated copy to mention LRS
+  alongside CC, with totals from both manifests.
+- Nav header: "Code" → "Civil Code"; added "Statutes" link to `/rs`.
+
+### Verification
+
+- `npm run build`: 55,345 pages, 211,507 files in `dist/` (was 4,041
+  pages, 18,692 files). Build time ~44s.
+- Pagefind: 49,397 pages indexed (3,623 CC + 45,774 LRS); 4 filters
+  (corpus, status, book, title); 25 filter index files.
+- Sitemap: 4,033 CC URLs + 51,303 RS URLs.
+- Spot checks: `/rs/title-14/section-30` (First degree murder) renders
+  with correct breadcrumb, body, references (R.S. 14:107.1, 40:2402),
+  cited-by (17 entries), legislative history (29 entries), prev/next
+  (R.S. 14:29 / 14:30.1), cite dialog ("La. Rev. Stat. Ann. § 14:30
+  (2026)."). Existing CC pages (e.g. `/cc/2315`) still render correctly
+  with the addition of inert prev/next data attributes.
+
+### Known data-quality artifacts (pre-existing, not site bugs)
+
+- LRS `tree.json` has 11 "chapter" root containers (orphaned UCC
+  chapters from Title 9) that render at `/rs/chapter-N` instead of under
+  Title 9. Renders correctly but visually surfaces a corpus-side issue.
+- Two roots with `number: "2"` — the second has a malformed name
+  combining the title with a chapter ("AERONAUTICSCHAPTER 1..."). The
+  Map-key collision means only the second renders at `/rs/title-2`. To
+  fix, the corpus needs to clean its tree; site behaves gracefully.
+- Title 33 has an empty name field; Title 10 absent. Both visible on
+  `/rs` browse page; flagged as upstream data issues.
+
+### Things deliberately deferred
+
+- Phase 4 (Cloudflare R2 + Worker hosting cutover) is operational —
+  needs Cloudflare console access, not code changes. The plan documents
+  it; this implementation is ready when the user is.
+- Cross-corpus reference rendering: `citation_edges.csv` in `rs/`
+  carries dst_corpus, so RS→CC edges are available. Current rendering
+  only shows RS→RS in the cross-ref list. Future polish.
+
