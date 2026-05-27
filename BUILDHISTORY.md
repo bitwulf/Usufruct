@@ -3590,3 +3590,132 @@ Not cut this session — the LRS structural data hasn't changed
 the corpus shape). The acts-parsing improvements are visible in
 the working `data/rs/` tree; a future snapshot will capture them.
 
+## 2026-05-22 — Release packaging: bundled CC + LRS in single zip
+
+### Goal
+
+Ship LRS data to a public artifact without breaking the live
+site (theusufruct.com), which auto-pulls "latest" from this
+repo's GitHub Releases via `scripts/fetch-corpus.sh` in the
+sibling `bitwulf/theusufruct-site` repo.
+
+### Constraint mapping
+
+- `theusufruct-site/scripts/fetch-corpus.sh:12` reads
+  `USUFRUCT_TAG="${USUFRUCT_TAG:-latest}"`. Site repo's
+  `package.json` `prebuild` and `predev` both invoke this
+  script with no env override, so any new release auto-flows
+  to the next CF Pages build.
+- `scripts/verify_release.sh:109` requires a **single
+  top-level directory** in the zip; `:118` enforces an exact
+  filename list at that dir's root (`articles.jsonl`,
+  `chunks.jsonl`, `citation_edges.csv`, `tree.json`,
+  `hierarchy.json`, `article_index.json`, `manifest.json`,
+  `validation_report.json`, plus `articles/` and `markdown/`
+  dirs).
+- `verify_release.sh:134-138` rejects any release containing
+  `.venv`, `.git`, `__pycache__`, `.DS_Store`,
+  `.pytest_cache`, `.mypy_cache`, `.ruff_cache`, `CLAUDE.md`,
+  `prompt.md`, `.env`, `.env.*`.
+- `verify_release.sh:164-170` cross-checks `articles.jsonl`
+  line count against `manifest.json:totals.articles_emitted`
+  — must match exactly.
+
+### Architecture decision: bundle, not split
+
+Considered split-zip layout
+(`usufruct-cc-<TAG>.zip` + `usufruct-rs-<TAG>.zip`). Rejected
+because:
+
+- Site fetches `usufruct-${TAG}.zip` by exact name; a renamed
+  CC asset would 404 on the next CF Pages build.
+- Site validation expects CC files at the root of the
+  unpacked directory; an LRS-only zip would fail validation.
+- Coordinating a `USUFRUCT_TAG` pin in the site's deploy
+  environment before publishing requires cross-repo work;
+  the bundle approach needs zero coordination.
+
+Bundle approach: keep CC at root unchanged from 2026-05-20,
+add `rs/` subdir under the same top-level directory. Both
+`fetch-corpus.sh` and `verify_release.sh` are blind to the
+`rs/` subdir (it doesn't trip the leak detector and isn't on
+the required-files list). Current CC-only site code consumes
+the same CC content it always has and ignores `rs/`. When the
+site-side `corpus.ts` refactor lands to consume LRS, no new
+release is needed — `rs/` is already there.
+
+### LRS inclusion rules
+
+Mirror of CC contents under `rs/`:
+
+- `sections.jsonl` (= CC's `articles.jsonl`)
+- `citation_edges.csv`, `hierarchy.json`, `manifest.json`,
+  `tree.json`, `validation_report.json`
+- `section_index.json` (= CC's `article_index.json`)
+- `sections/` per-section JSON (flat, 45,774 files)
+- `markdown/title-N/` per-section markdown (45,774 files)
+
+**Excluded** (scraper-internal or out-of-scope):
+
+- `chunks.jsonl` — 80 MB; not needed pre-refactor. Add in a
+  follow-up release if/when site builds RAG/search over LRS.
+- `folder_map.json` — title → Justia folder ID mapping, used
+  by scraper to build URLs. Not consumer-facing.
+- `justia_section_index.json` — 23 MB scraper-internal index.
+- `notes.jsonl` — cross-reference notes; schema is not yet
+  externally usable (no explicit URNs).
+- `phase2_gaps.json` — internal scrape-completeness analysis.
+
+### Two-manifest pattern
+
+CC `manifest.json` at root stays exactly as-is (preserves the
+`verify_release.sh:164-170` cross-check against
+`articles.jsonl`). A separate `rs/manifest.json` carries LRS
+metadata (`totals.sections_emitted`, `by_status`, completeness
+by title). NO unified top-level manifest — would break the
+articles_emitted cross-check unless the site script were also
+updated, defeating the no-coordination point.
+
+### Implementation: `scripts/build_release.sh`
+
+- Allowlist-driven copy (no wholesale rsync of `data/`).
+  Explicit `CC_FILES`, `CC_DIRS`, `RS_FILES`, `RS_DIRS`
+  arrays document what ships.
+- rsync of subdirectories filters known leak patterns
+  defensively even though the allowlist excludes them
+  structurally.
+- Pre-zip verification: leak scan + both line-count
+  cross-checks (CC articles, LRS sections). Fails fast
+  before spending CPU on zip.
+- Output: `dist/usufruct-<TAG>.zip` +
+  `dist/usufruct-<TAG>.zip.sha256`. `dist/` is already
+  gitignored.
+- Does NOT auto-publish to GitHub — prints the `gh release
+  create` command so the human runs it deliberately.
+
+### Verification of the 2026-05-22 build
+
+- 144 MB zip, SHA-256
+  `36807cf04ce892af00d16e00f4e589f63c4ea91a7dce66b5cef3faa9be56be2b`.
+- CC: 3,623 articles (matches
+  `manifest.totals.articles_emitted`).
+- LRS: 45,774 sections in `rs/sections/`, 45,774 markdown
+  files in `rs/markdown/`, matches
+  `rs/manifest.totals.sections_emitted`.
+- Replicated `verify_release.sh` content audit locally
+  against the unpacked zip — all checks green. (The published
+  script only knows how to verify a release that's already on
+  GitHub; the inline pre-zip checks in `build_release.sh`
+  cover the pre-publish path.)
+- 195 pytest pass — no regressions from adding the script.
+
+### Open follow-ups (not done here)
+
+- Actual publish via `gh release create 2026-05-22` —
+  deferred to user-driven step.
+- After publish, run `scripts/verify_release.sh 2026-05-22`
+  against the live GitHub Releases asset to confirm public
+  reachability + SHA match.
+- Site-side `corpus.ts` refactor to consume `rs/` lives in
+  `bitwulf/theusufruct-site` repo — not in scope here.
+
